@@ -208,7 +208,6 @@ $("allocation-dialog").addEventListener("close", () => {
   if (destination === "undo") showStatus("Allocation applied.");
 });
 
-
 // Keep the visible panel and its expanded state in sync for mouse and keyboard users
 function setDropdown(triggerId, panelId, open) {
   $(panelId).hidden = !open;

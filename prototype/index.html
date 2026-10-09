@@ -68,7 +68,6 @@
       <div class="section-heading"><div><h2 id="experiment-title">Try an allocation</h2></div></div>
       <form id="preview-form" class="preview-controls"><div class="asset-control"><label id="candidate-label" for="candidate-toggle">Asset</label><div class="dropdown" id="candidate-dropdown"><input id="candidate" type="hidden" value="IEF"><button id="candidate-toggle" class="select-toggle" type="button" aria-expanded="false" aria-controls="candidate-options" aria-labelledby="candidate-label candidate-value"><span id="candidate-value">IEF</span></button><div id="candidate-options" class="dropdown-panel" hidden></div></div></div><label>Weight (%)<input id="target" type="number" min="0" max="100" step="0.01" value="15" required></label></form>
 
-
       <!-- This error belongs to the proposed change, not the holdings editor above -->
       <p id="preview-error" role="alert"></p>
       <div id="preview" hidden><div class="preview-heading"><h3 id="preview-title"></h3></div><table><caption class="sr-only">Allocation changes before applying</caption><thead><tr><th scope="col">Position</th><th scope="col" class="number">Current</th><th scope="col" class="number">Proposed</th></tr></thead><tbody id="preview-body"></tbody></table><p>Risk and return are not calculated.</p><div class="actions"><button id="apply" class="primary">Apply change</button><button id="discard">Discard</button></div></div>

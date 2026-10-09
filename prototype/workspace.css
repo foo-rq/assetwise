@@ -134,7 +134,6 @@ dd { margin: 0; color: var(--muted); white-space: nowrap; }
 /* Keep the status written out: colour alone must not carry the meaning */
 .metrics dd { color: var(--unavailable-text); font-weight: 700; }
 
-
 /* This tool uses the same dialog shell as the explanation, with more room for the comparison table */
 
 /* Keep the desktop experiment compact without shrinking the shared heading and label styles */
@@ -240,7 +239,6 @@ dialog p { line-height: 1.65; margin: 16px 0 22px; }
 /* The explanation sits outside this footer, above its divider */
 .dialog-footer-actions { display: flex; justify-content: flex-end; align-items: center; gap: 8px; flex-wrap: wrap; }
 .dialog-footer-actions form { margin: 0; }
-
 
 /* An empty feedback paragraph must not inherit the dialog's paragraph margins */
 .experiment .status:empty { min-height: 0; height: 0; margin: 0; padding: 0; }
