@@ -1,0 +1,261 @@
+/* Verdana has wider strokes and open letters Keep the wordmark's font separate below */
+:root {
+  --ink: #25332f;
+  --muted: #56635d;
+  --line: #cbd3ce;
+  --field-line: #829188;
+  --surface: #f2f5f3;
+  --accent: #a75b24;
+  color-scheme: light;
+  font-family: Verdana, Arial, sans-serif;
+  color: var(--ink);
+  background: #ffffff;
+  font-synthesis: none;
+
+  /* Change these together instead of giving each section its own text sizes */
+  --section-size: 17px;
+  --label-size: 13px;
+  --heading-weight: 700;
+
+  /* Use a muted brown related to the logo dot for data limitations, not ordinary values */
+  --unavailable-text: #88482e;
+  --unavailable-background: #faf0eb;
+}
+
+/* Count padding inside each declared width so inputs do not push beyond their columns */
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 14px; line-height: 1.5; }
+
+/* Separate buttons from fields so actions do not look like more boxes to fill in */
+button, input, select { font: inherit; color: inherit; }
+
+/* Secondary actions share a compact outline style Reserve bold filled buttons for the next main action */
+button { cursor: pointer; font-size: 12px; line-height: 1.4; font-weight: 400; border: 1px solid var(--line); border-radius: 4px; background: #fff; padding: 5px 9px; min-height: 30px; }
+
+/* Every field uses the same border on all sides Focus replaces that edge instead of adding a second box */
+input, select { border: 1px solid var(--field-line); border-radius: 4px; background: #fff; padding: 11px 12px; min-height: 44px; }
+input:hover, select:hover { border-color: var(--muted); }
+
+/* An inset outline stays inside the existing field, so focusing it cannot change its size */
+input:focus, select:focus { border-color: var(--ink); outline: 2px solid var(--ink); outline-offset: -2px; }
+input::placeholder { color: var(--muted); opacity: 1; }
+button:hover:not(:disabled) { background: var(--surface); }
+
+/* Disabled actions keep their button shape but cannot be mistaken for available actions */
+button:disabled { color: var(--muted); background: var(--surface); border-color: var(--line); opacity: 1; cursor: not-allowed; }
+
+/* Keep a visible outline when moving between controls with the keyboard */
+button:focus-visible, a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.primary { background: var(--ink); border-color: var(--ink); color: white; font-weight: 700; }
+
+/* Secondary buttons keep a visible container Only small utility links are borderless */
+#undo, #reset { font-weight: 700; }
+.primary:hover:not(:disabled) { background: var(--ink); }
+.brand { display: flex; gap: 32px; align-items: center; padding: 18px max(24px, calc((100% - 1160px) / 2)); border-bottom: 1px solid var(--line); background: #fff; }
+
+/* The wordmark keeps its approved font and colour even when the body font changes */
+.brand a { font-family: "Segoe UI", Arial, sans-serif; color: var(--ink); font-size: 25px; font-weight: 750; letter-spacing: -1px; text-decoration: none; }
+.brand a span { color: var(--accent); }
+main { max-width: 1208px; margin: auto; padding: 30px 24px 16px; }
+.intro, .section-heading, .preview-heading, .cash, .total { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+h1 { font-size: 24px; font-weight: 600; letter-spacing: -.3px; margin: 2px 0 5px; }
+h2 { font-size: var(--section-size); font-weight: var(--heading-weight); margin: 0; }
+h3 { font-size: 16px; margin: 0; }
+p { margin: 10px 0; }
+.intro p { margin: 0; }
+
+/* The analysis header is a report title, without the editor's action-button row */
+.analysis-header { margin-bottom: 24px; }
+
+/* Results differ through layout and the large value, not another one-off heading size */
+.analysis-header p { margin: 6px 0 0; font-size: 13px; color: var(--muted); }
+.notice { margin: 20px 0; border-left: 2px solid var(--muted); padding: 8px 12px; background: var(--surface); font-size: 13px; }
+.notice strong { margin-right: 5px; }
+.workspace { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+
+/* min-width: 0 lets these grid children shrink instead of forcing the page wider */
+.holdings, .analysis { min-width: 0; }
+
+/* Only the editor gets an enclosing border The results sit on an open report surface */
+.holdings { padding: 22px; border: 1px solid var(--line); }
+.analysis { padding: 18px 0 0; border-top: 4px solid var(--ink); }
+.section-heading { margin-bottom: 20px; }
+
+/* Search and comparison fields share the same label size, weight and spacing */
+#search-form label, .preview-controls label, .asset-control > label {
+  font-size: var(--label-size);
+  font-weight: var(--heading-weight);
+  line-height: 1.5;
+  color: var(--ink);
+}
+#search-form label { display: block; margin-bottom: 5px; }
+
+/* Use an explicit text size and line height so the search field has predictable vertical spacing */
+#search { width: 100%; min-height: 40px; height: 40px; padding: 9px 10px; font-size: 14px; line-height: 20px; }
+.subtle { font-size: 13px; color: var(--muted); }
+
+/* A data limitation gets its own colour and boundary so it cannot be mistaken for a finding */
+.data-note { font-size: 13px; color: var(--unavailable-text); background: var(--unavailable-background); border-left: 3px solid var(--unavailable-text); padding: 10px 12px; margin: 14px 0; }
+.data-note strong { display: block; margin-bottom: 4px; }
+#search-note { margin: 5px 0 14px; }
+
+
+table { border-collapse: collapse; width: 100%; }
+th { font-size: 13px; font-weight: 600; color: var(--muted); text-align: left; padding: 10px 0; }
+td { padding: 14px 0; border-top: 1px solid var(--line); }
+td small { display: block; color: var(--muted); font-size: 13px; }
+
+/* Equal-width digits keep percentages aligned as their values change */
+.number { text-align: right; font-variant-numeric: tabular-nums; }
+.weight { width: 88px; text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; padding: 8px; }
+.remove { margin-left: 8px; padding: 4px 6px; background: transparent; border-color: transparent; }
+.cash { padding: 16px 0; border-top: 1px solid var(--line); font-size: 13px; }
+.cash strong, .total strong, .allocation-finding strong { font-variant-numeric: tabular-nums; }
+
+/* The unfilled background represents cash JavaScript gives each holding its percentage width */
+.allocation { height: 7px; display: flex; background: var(--line); overflow: hidden; }
+.allocation span { border-right: 2px solid white; }
+.total { margin-top: 10px; font-size: 13px; }
+
+/* Put the result on its own line A label beside a small value looked too much like a form */
+.allocation-finding { display: flex; flex-direction: column; align-items: start; gap: 8px; }
+.allocation-finding span { font-size: 13px; }
+.allocation-finding strong { font-size: 28px; line-height: 1.2; font-weight: 700; letter-spacing: -.8px; }
+
+/* Space the result from the metric list without adding a sentence that repeats its value */
+.allocation-finding { margin-bottom: 24px; }
+.metrics { margin: 0; }
+.metrics div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; padding: 6px 0; font-size: 13px; }
+
+/* One rule groups the unavailable metrics without turning each result into a field */
+.metrics { border-top: 1px solid var(--line); padding-top: 12px; }
+dd { margin: 0; color: var(--muted); white-space: nowrap; }
+
+/* Keep the status written out: colour alone must not carry the meaning */
+.metrics dd { color: var(--unavailable-text); font-weight: 700; }
+
+
+/* This tool uses the same dialog shell as the explanation, with more room for the comparison table */
+
+/* Keep the desktop experiment compact without shrinking the shared heading and label styles */
+dialog.experiment { width: min(480px, calc(100% - 32px)); padding: 20px; font-size: 13px; }
+
+/* Fields keep their own sizing Dialog buttons use the same compact action styles as the page */
+.experiment input, .experiment select { font-size: 13px; min-height: 36px; padding: 7px 10px; }
+.experiment p { margin: 10px 0 14px; line-height: 1.5; }
+.experiment td, .experiment th { padding-top: 8px; padding-bottom: 8px; }
+.experiment h3 { font-size: 14px; }
+.experiment #preview { padding: 12px; margin-top: 14px; }
+.experiment .actions { margin-top: 12px; }
+.dialog-close { margin-top: 20px; display: flex; justify-content: flex-end; }
+
+/* This launches the main experiment, so restore its larger size and separate it from the allocation total */
+#open-allocation { margin-top: 24px; font-size: 14px; padding: 10px 14px; font-weight: 700; }
+.experiment .section-heading { display: block; margin-bottom: 14px; }
+.experiment .section-heading .subtle { display: block; margin-top: 4px; }
+
+/* Let long asset names shrink with the editor column instead of widening the page */
+.preview-controls label:first-child { flex: 1 1 210px; min-width: 0; }
+.preview-controls select { width: 100%; min-width: 0; }
+
+/* The explanation opens above the page Its button should read like help, not an editing action */
+.text-button { border: 0; padding: 5px 0; background: transparent; text-decoration: underline; text-underline-offset: 3px; }
+dialog { box-sizing: border-box; width: min(480px, calc(100% - 32px)); max-height: calc(100dvh - 32px); overflow: auto; border: 1px solid var(--muted); padding: 24px; color: var(--ink); background: white; }
+dialog::backdrop { background: rgb(0 0 0 / 25%); }
+dialog p { line-height: 1.65; margin: 16px 0 22px; }
+.preview-controls { display: flex; align-items: end; gap: 12px; flex-wrap: wrap; }
+.preview-controls label { display: grid; gap: 5px; }
+.preview-controls input { width: 112px; font-weight: 700; }
+
+#preview { margin-top: 20px; padding: 20px 24px; border-left: 3px solid var(--ink); background: var(--surface); }
+.preview-heading { margin-bottom: 12px; font-size: 13px; }
+#preview p { font-size: 13px; }
+.actions { display: flex; gap: 10px; margin-top: 16px; }
+[role="alert"] { color: var(--unavailable-text); font-size: 13px; }
+
+/* An empty error message should not leave a gap in the layout */
+[role="alert"]:empty { display: none; }
+.status { font-size: 13px; min-height: 20px; margin-top: 16px; color: var(--accent); opacity: 0; transition: opacity 150ms ease; }
+.status.is-visible { opacity: 1; }
+
+/* Keep the live region ready for edits without showing a redundant startup message */
+.status:empty { min-height: 0; height: 0; margin: 0; padding: 0; }
+
+/* Keep the timed dismissal but skip the animation if the user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) { .status { transition: none; } }
+
+/* Hide table captions visually while keeping them available to screen readers */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+
+/* Keep a hidden preview hidden even if another selector sets its display property */
+[hidden] { display: none !important; }
+
+/* Below 760px, stack analysis under holdings and let the form fields use the full width */
+@media (max-width: 760px) {
+  .workspace { grid-template-columns: 1fr; gap: 24px; }
+  .intro, .experiment .section-heading { align-items: start; flex-direction: column; }
+  .brand { gap: 16px; padding: 14px 18px; }
+  main { padding: 22px 16px; }
+  .holdings { padding: 14px; }
+  .analysis { padding: 18px 0 0; }
+  .preview-controls label, .preview-controls select { width: 100%; min-width: 0; }
+  .preview-controls { align-items: stretch; }
+  .preview-heading { flex-wrap: wrap; }
+
+  /* Leave more room for the asset name when the phone screen is especially narrow */
+  .weight { width: 74px; }
+  .remove { padding: 4px 2px; margin-left: 4px; }
+  td small { overflow-wrap: anywhere; }
+}
+
+/* Touch controls need more room than mouse controls This does not change desktop density */
+@media (pointer: coarse) { button, input, select { min-height: 44px; } button { min-width: 44px; } input, select { font-size: 16px; } }
+
+/* The smaller desktop dialog must not make touch targets or mobile editing text smaller */
+@media (pointer: coarse) {
+  .experiment button, .experiment input, .experiment select { min-height: 44px; }
+  .experiment input, .experiment select { font-size: 16px; }
+}
+
+/* Both pickers share a floating surface anchored to the field, outside the page flow */
+.dropdown { position: relative; min-width: 0; }
+.dropdown-panel { position: absolute; z-index: 10; inset: calc(100% + 4px) 0 auto; background: white; border: 1px solid var(--field-line); border-radius: 4px; padding: 4px; max-height: 220px; overflow-y: auto; box-shadow: 0 4px 12px rgb(37 51 47 / 10%); }
+.dropdown-panel button { display: block; width: 100%; text-align: left; border: 0; border-radius: 2px; padding: 9px 10px; font-size: 13px; white-space: normal; }
+.dropdown-panel button:hover, .dropdown-panel button:focus-visible { background: var(--surface); outline: 2px solid var(--ink); outline-offset: -2px; }
+.dropdown-panel p { padding: 6px 10px; margin: 0; font-size: 13px; color: var(--muted); }
+
+/* The allocation fields stack evenly, with the action aligned below instead of squeezed beside them */
+.experiment .preview-controls { display: grid; grid-template-columns: minmax(0, 1fr) 112px; gap: 12px; align-items: end; }
+.asset-control { min-width: 0; }
+.asset-control > label { display: block; margin-bottom: 5px; }
+.select-toggle { position: relative; width: 100%; text-align: left; border-color: var(--field-line); padding: 8px 30px 8px 10px; min-height: 36px; font-size: 13px; }
+.select-toggle::after { content: ""; position: absolute; right: 12px; top: calc(50% - 5px); width: 6px; height: 6px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: rotate(45deg); pointer-events: none; }
+.select-toggle:focus-visible { outline-offset: -2px; }
+.experiment .section-heading { margin-bottom: 24px; }
+
+/* Give the fields room below them while keeping the funding note close to the footer divider */
+.experiment .funding-note { margin: 24px 0 6px; }
+.experiment .dialog-close { margin-top: 0; padding-top: 12px; border-top: 1px solid var(--line); display: block; }
+
+/* The explanation sits outside this footer, above its divider */
+.dialog-footer-actions { display: flex; justify-content: flex-end; align-items: center; gap: 8px; flex-wrap: wrap; }
+.dialog-footer-actions form { margin: 0; }
+
+
+/* An empty feedback paragraph must not inherit the dialog's paragraph margins */
+.experiment .status:empty { min-height: 0; height: 0; margin: 0; padding: 0; }
+
+/* Give both fields the same box height and text alignment without clipping the weight label */
+.experiment .select-toggle, .experiment #target { height: 36px; min-height: 36px; line-height: 20px; padding-top: 7px; padding-bottom: 7px; }
+.experiment .preview-controls > label { white-space: nowrap; }
+
+/* Short names keep the closed picker readable, while the open list shows each full asset name */
+#candidate-value { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+@media (max-width: 420px) { .experiment .preview-controls { grid-template-columns: minmax(0, 1fr); } }
+@media (pointer: coarse) { .select-toggle, .dropdown-panel button { min-height: 44px; } }
+
+/* Keep touch editing comfortable while the desktop fields stay compact */
+@media (pointer: coarse) {
+  #search, .experiment .select-toggle, .experiment #target { height: 44px; min-height: 44px; }
+  #search { font-size: 16px; }
+}

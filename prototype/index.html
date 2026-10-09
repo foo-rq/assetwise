@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assetwise · Portfolio workspace</title>
+  <link rel="stylesheet" href="workspace.css">
+
+</head>
+<body>
+  <header class="brand"><a href="index.html">assetwise<span>.</span></a></header>
+  <main>
+    <div class="intro"><div><h1>Build your portfolio</h1></div><button id="reset">Reset example</button></div>
+
+    <!-- Keep this visible: the editable allocations are examples and have no price history -->
+    <div class="notice"><strong>Sample data.</strong> Changes are not saved.</div>
+    <div class="workspace">
+      <section class="holdings" aria-labelledby="holdings-title">
+        <div class="section-heading"><h2 id="holdings-title">Your holdings</h2><button id="undo" disabled>Undo</button></div>
+        <form id="search-form"><label for="search">Search assets</label><div class="dropdown" id="search-dropdown"><input id="search" type="search" placeholder="Name or ticker" autocomplete="off" aria-describedby="search-note" aria-controls="search-results" aria-expanded="false"><div id="search-results" class="dropdown-panel" hidden></div></div><p id="search-note" class="subtle">Search by name or ticker. This demo includes AAPL, SPY, IEF and GLD.</p></form>
+
+        <!-- Search inserts buttons here Holding rows are built separately in holdings-body -->
+
+        <table><caption class="sr-only">Current holdings and editable portfolio weights</caption><thead><tr><th scope="col">Asset</th><th scope="col" class="number">Weight %</th><th scope="col"><span class="sr-only">Actions</span></th></tr></thead><tbody id="holdings-body"></tbody></table>
+        <p id="empty" hidden>No holdings. Search to add an asset.</p>
+
+        <!-- Validation writes here so the error is visible and announced by screen readers -->
+        <p id="error" role="alert"></p>
+        <div class="cash"><span>Unallocated cash</span><strong id="cash"></strong></div>
+
+        <!-- The table already gives the exact weights, so hide this duplicate visual from screen readers -->
+        <div class="allocation" id="allocation" aria-hidden="true"></div>
+        <div class="total"><span>Total, including cash</span><strong>100.00%</strong></div>
+
+        <!-- The experiment opens separately so its fields do not compete with the holdings editor -->
+        <button id="open-allocation" type="button" aria-haspopup="dialog">Try an allocation</button>
+      </section>
+
+      <!-- These labels reserve space for future calculations Do not substitute invented metrics -->
+      <section class="analysis" aria-labelledby="analysis-title">
+
+        <!-- State the role in words as well as styling: this area reports results and takes no allocation input -->
+        <div class="analysis-header"><h2 id="analysis-title">Portfolio analysis</h2><p>USD</p></div>
+        <div class="allocation-finding"><span>Largest position, including cash</span><strong id="largest"></strong></div>
+        <dl class="metrics"><div><dt>Annualised volatility</dt><dd>Not connected</dd></div><div><dt>Historical annualised return</dt><dd>Not connected</dd></div><div><dt>Maximum drawdown</dt><dd>Not connected</dd></div><div><dt>Sharpe ratio</dt><dd>Not connected</dd></div></dl>
+
+        <!-- Repeat the data state in words so the status colour is not the only clue -->
+        <p class="data-note"><strong>Market data unavailable</strong></p>
+        <button id="about-analysis" class="text-button" type="button" aria-haspopup="dialog">Analysis limits</button>
+      </section>
+    </div>
+
+    <!-- Announce completed edits here without moving focus away from the active control -->
+    <p id="status" role="status" class="status"></p>
+
+    <!-- A native dialog sits above the page, so opening this explanation cannot push other sections down -->
+    <dialog id="analysis-dialog" aria-labelledby="analysis-dialog-title" aria-describedby="analysis-dialog-copy">
+      <h2 id="analysis-dialog-title">Analysis limits</h2>
+      <p id="analysis-dialog-copy">Only allocation weights are calculated. Risk and return require price history. ETF holdings are not analysed.</p>
+
+      <!-- method="dialog" closes this window without submitting anything or reloading the page -->
+      <form method="dialog"><button autofocus>Close</button></form>
+    </dialog>
+    <dialog id="allocation-dialog" class="experiment" aria-labelledby="experiment-title">
+      <div class="section-heading"><div><h2 id="experiment-title">Try an allocation</h2></div></div>
+      <form id="preview-form" class="preview-controls"><div class="asset-control"><label id="candidate-label" for="candidate-toggle">Asset</label><div class="dropdown" id="candidate-dropdown"><input id="candidate" type="hidden" value="IEF"><button id="candidate-toggle" class="select-toggle" type="button" aria-expanded="false" aria-controls="candidate-options" aria-labelledby="candidate-label candidate-value"><span id="candidate-value">IEF</span></button><div id="candidate-options" class="dropdown-panel" hidden></div></div></div><label>Weight (%)<input id="target" type="number" min="0" max="100" step="0.01" value="15" required></label></form>
+
+
+      <!-- This error belongs to the proposed change, not the holdings editor above -->
+      <p id="preview-error" role="alert"></p>
+      <div id="preview" hidden><div class="preview-heading"><h3 id="preview-title"></h3></div><table><caption class="sr-only">Allocation changes before applying</caption><thead><tr><th scope="col">Position</th><th scope="col" class="number">Current</th><th scope="col" class="number">Proposed</th></tr></thead><tbody id="preview-body"></tbody></table><p>Risk and return are not calculated.</p><div class="actions"><button id="apply" class="primary">Apply change</button><button id="discard">Discard</button></div></div>
+
+      <!-- Dialog feedback stays inside the modal so it remains accessible while the page is inactive -->
+      <p id="allocation-status" role="status" class="status"></p>
+      <p class="subtle funding-note">Other holdings and cash scale proportionally to fund this weight.</p>
+      <div class="dialog-close">
+        <div class="dialog-footer-actions">
+          <button class="primary" type="submit" form="preview-form">Preview change</button>
+          <form method="dialog"><button>Close</button></form>
+        </div>
+      </div>
+    </dialog>
+  </main>
+</body>
+</html>
