@@ -1,0 +1,7 @@
+# Keep indirect dependencies at the versions tested with this batch
+-c requirements-lock.txt
+
+# Runtime dependencies for the local API and its response schema
+fastapi==0.143.0
+pydantic==2.14.0
+uvicorn==0.54.0

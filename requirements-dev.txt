@@ -1,0 +1,6 @@
+# Install the app dependencies before the test tools
+-r requirements.txt
+
+# The installed Starlette TestClient uses HTTPX2 without opening a network port
+httpx2==2.13.1
+pytest==9.1.1
