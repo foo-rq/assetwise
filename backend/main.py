@@ -1,9 +1,10 @@
 from typing import Literal
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
 from backend.simulation import SimulatedHistory, build_simulated_history
+from backend.analytics import AllocationRequest, PortfolioAnalysis, analyse_portfolio
 
 # Uvicorn imports this object when we start backend.main:app
 app = FastAPI(title="Assetwise API", version="0.1.0")
@@ -22,3 +23,12 @@ def health() -> HealthResponse:
 @app.get("/demo/history", response_model=SimulatedHistory, tags=["demo"])
 def demo_history() -> SimulatedHistory:
     return build_simulated_history()
+
+# Accept allocation percentages while keeping the simulated history controlled by the server
+@app.post("/demo/analysis", response_model=PortfolioAnalysis, tags=["demo"])
+def demo_analysis(allocation: AllocationRequest) -> PortfolioAnalysis:
+    try:
+        return analyse_portfolio(build_simulated_history(), allocation)
+    except ValueError as error:
+        # Invalid allocations need an actionable response rather than a server error
+        raise HTTPException(status_code=422, detail=str(error)) from error
