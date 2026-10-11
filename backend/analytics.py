@@ -1,6 +1,6 @@
 from decimal import Decimal
-from math import fsum, isfinite, prod, sqrt
-from statistics import mean, stdev
+from math import fsum, isfinite, sqrt
+from statistics import StatisticsError, correlation, mean, stdev
 from typing import Annotated, Literal
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
@@ -27,6 +27,16 @@ class AllocationRequest(BaseModel):
         return self
 
 
+class AssetCorrelation(BaseModel):
+    # Return each distinct pair once, with identifiers rather than positional matrix labels
+    asset_a: str
+    asset_b: str
+
+    # A constant return series has undefined correlation, not a correlation of 0
+    value: float | None
+    unavailable_reason: str | None = None
+
+
 class PortfolioAnalysis(BaseModel):
     source: Literal["simulated"] = "simulated"
     dataset_version: str
@@ -47,6 +57,16 @@ class PortfolioAnalysis(BaseModel):
     annualised_arithmetic_return: float
     annualised_volatility: float
 
+    # Include the initial value so a loss in the first session counts as a drawdown
+    portfolio_index: list[float]
+
+    # Drawdowns are positive loss fractions, so 0.2 means 20% below the prior peak
+    drawdowns: list[float]
+    maximum_drawdown: float
+
+    # Only positive-weight assets appear, with cash excluded because its return is constant
+    asset_correlations: list[AssetCorrelation]
+
 
 def analyse_portfolio(
     history: SimulatedHistory, allocation: AllocationRequest
@@ -65,6 +85,9 @@ def analyse_portfolio(
         raise ValueError("Unknown asset identifier in weights")
 
     weighted_returns = []
+
+    # Retain unweighted returns for correlation so allocation size cannot distort the inputs
+    asset_returns = {}
     for symbol, percent in allocation.weights.items():
         # A zero-weight holding contributes nothing and needs no usable history
         if percent == 0:
@@ -78,12 +101,13 @@ def analyse_portfolio(
         # Divide each new index by its previous value to get that session's simple return
         # Applying the same weight every session assumes daily rebalancing, not buy-and-hold
         returns = [
-            (after / before - 1) * (percent / 100)
+            after / before - 1
             for before, after in zip(values, values[1:])
         ]
         if any(not isfinite(value) for value in returns):
             raise ValueError("Index changes are too large to calculate")
-        weighted_returns.append(returns)
+        asset_returns[symbol] = returns
+        weighted_returns.append([value * (percent / 100) for value in returns])
 
     # An empty allocation is all cash, so fsum of no contributions gives 0 each session
     session_returns = [
@@ -93,7 +117,21 @@ def analyse_portfolio(
 
     # Compounding describes the whole sample, while mean times 252 is an arithmetic estimate
     # Neither quantity predicts future returns or represents actual market performance
-    cumulative = prod(1 + value for value in session_returns) - 1
+    portfolio_index = [1.0]
+    drawdowns = [0.0]
+    peak = 1.0
+    for value in session_returns:
+        # Grow the same rebalanced portfolio used by the return and volatility calculations
+        current = portfolio_index[-1] * (1 + value)
+        if not isfinite(current) or current <= 0:
+            raise ValueError("Portfolio path exceeds the supported numeric range")
+        portfolio_index.append(current)
+
+        # Update the running peak before measuring loss, so a new high has zero drawdown
+        peak = max(peak, current)
+        drawdowns.append(1 - current / peak)
+
+    cumulative = portfolio_index[-1] - 1
     annual_mean = mean(session_returns) * 252
 
     # Sample standard deviation uses n-1 and includes how the assets move together
@@ -102,6 +140,24 @@ def analyse_portfolio(
     annual_volatility = stdev(session_returns) * sqrt(252)
     if not all(isfinite(value) for value in (cumulative, annual_mean, annual_volatility)):
         raise ValueError("Calculated results exceed the supported numeric range")
+
+    # Sort identifiers so dictionary insertion order does not change the pair ordering
+    symbols = sorted(asset_returns)
+    pairs = []
+    for index, asset_a in enumerate(symbols):
+        for asset_b in symbols[index + 1:]:
+            # Pearson correlation uses matched session returns, never index levels
+            try:
+                value = correlation(asset_returns[asset_a], asset_returns[asset_b])
+                reason = None
+            except StatisticsError:
+                # Lengths were checked above, leaving constant returns as the undefined case
+                value = None
+                reason = "Correlation is undefined when an asset has constant returns"
+            pairs.append(AssetCorrelation(
+                asset_a=asset_a, asset_b=asset_b,
+                value=value, unavailable_reason=reason,
+            ))
 
     # Calculate the remainder without changing any allocation supplied by the user
     invested = sum(Decimal(str(weight)) for weight in allocation.weights.values())
@@ -114,4 +170,8 @@ def analyse_portfolio(
         cumulative_return=cumulative,
         annualised_arithmetic_return=annual_mean,
         annualised_volatility=annual_volatility,
+        portfolio_index=portfolio_index,
+        drawdowns=drawdowns,
+        maximum_drawdown=max(drawdowns),
+        asset_correlations=pairs,
     )

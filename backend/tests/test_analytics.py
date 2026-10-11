@@ -110,3 +110,69 @@ def test_api_preserves_labels_and_rejects_unknown_assets():
     assert body["return_observations"] == 252
     assert "not market history" in body["notice"]
     assert unknown.status_code == excessive.status_code == typo.status_code == 422
+
+
+@pytest.mark.parametrize("values, expected", [
+    ([100, 80, 90], [0, 0.2, 0.1]),
+    ([100, 120, 90, 120, 132], [0, 0, 0.25, 0, 0]),
+    ([100, 110, 120], [0, 0, 0]),
+])
+def test_drawdowns_include_initial_losses_and_recovery(values, expected):
+    # Set the shared sessions explicitly for these longer hand-verifiable paths
+    history = history_for(A=values)
+    history.sessions = list(range(len(values)))
+    result = analyse_portfolio(history, AllocationRequest(weights={"A": 100}))
+    assert result.portfolio_index == pytest.approx([value / 100 for value in values])
+    assert result.drawdowns == pytest.approx(expected)
+    assert result.maximum_drawdown == pytest.approx(max(expected))
+    assert result.cumulative_return == pytest.approx(result.portfolio_index[-1] - 1)
+
+
+def test_cash_path_and_drawdown():
+    history = history_for(A=[100, 80, 100])
+    half = analyse_portfolio(history, AllocationRequest(weights={"A": 50}))
+    cash = analyse_portfolio(history, AllocationRequest(weights={}))
+
+    # Rebalancing at half exposure gives 1, 0.9, 1.0125 rather than a buy-and-hold path
+    assert half.portfolio_index == pytest.approx([1, 0.9, 1.0125])
+    assert half.maximum_drawdown == pytest.approx(0.1)
+    assert cash.portfolio_index == [1, 1, 1]
+    assert cash.drawdowns == [0, 0, 0]
+    assert cash.asset_correlations == []
+
+
+@pytest.mark.parametrize("second, expected", [([100, 110, 99], 1), ([100, 90, 99], -1)])
+def test_correlations_use_returns_and_ignore_weight_sizes(second, expected):
+    result = analyse_portfolio(
+        history_for(A=[100, 110, 99], B=second),
+        AllocationRequest(weights={"B": 10, "A": 60}),
+    )
+
+    # The pair is ordered by identifier and excludes the 30% cash remainder
+    assert len(result.asset_correlations) == 1
+    pair = result.asset_correlations[0]
+    assert (pair.asset_a, pair.asset_b) == ("A", "B")
+    assert pair.value == pytest.approx(expected)
+    assert pair.unavailable_reason is None
+
+
+def test_constant_asset_correlation_is_unavailable_and_zero_weights_are_excluded():
+    history = history_for(A=[100, 110, 99], B=[100, 100, 100], UNUSED=[])
+    result = analyse_portfolio(history, AllocationRequest(weights={"A": 50, "B": 50, "UNUSED": 0}))
+
+    # Missing history for an unheld asset must not prevent analysis of the actual portfolio
+    assert len(result.asset_correlations) == 1
+    assert result.asset_correlations[0].value is None
+    assert "constant returns" in result.asset_correlations[0].unavailable_reason
+
+
+def test_api_returns_drawdown_path_and_correlation_pairs():
+    with TestClient(app) as client:
+        response = client.post("/demo/analysis", json={"weights": {"DEMO-EQ1": 50, "DEMO-EQ2": 50}})
+    assert response.status_code == 200
+    body = response.json()
+
+    # Path and drawdown include session 0, while returns begin with the first change
+    assert len(body["portfolio_index"]) == len(body["drawdowns"]) == 253
+    assert body["maximum_drawdown"] == max(body["drawdowns"])
+    assert len(body["asset_correlations"]) == 1

@@ -55,7 +55,7 @@ Calculation assumptions:
 - Annualised arithmetic return = average session return multiplied by 252, not compounded growth or a forecast
 - Annualised volatility = sample standard deviation of portfolio returns multiplied by the square root of 252. This equals the covariance-based calculation for aligned constant weights
 
-The engine currently requires consecutive synthetic sessions and at least 3 index observations, giving 2 returns for sample volatility. That is a mathematical minimum, not a sufficient history requirement for real investment analysis. Missing held-asset values are rejected rather than filled. Drawdown, Sharpe ratio and real-calendar alignment are not implemented yet.
+The engine currently requires consecutive synthetic sessions and at least 3 index observations, giving 2 returns for sample volatility. That is a mathematical minimum, not a sufficient history requirement for real investment analysis. Missing held-asset values are rejected rather than filled. Sharpe ratio and real-calendar alignment are not implemented yet.
 
 The [interactive API documentation](http://127.0.0.1:8000/docs) can send the example request. Manual inspection of raw numbers is optional; automated tests verify hand-calculated cases. The visible prototype will use these calculations in a separate batch.
 
@@ -79,3 +79,11 @@ Open `prototype/index.html` in a browser. It still runs independently of the API
 - [Python random generator](https://docs.python.org/3.14/library/random.html#notes-on-reproducibility) for seeded local random state
 - [CFA Institute: portfolio risk and return](https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/portfolio-risk-return-part-1) for portfolio variance and covariance
 - [Python sample standard deviation](https://docs.python.org/3.14/library/statistics.html#statistics.stdev)
+
+## Drawdown and correlations
+
+The analysis response now includes a portfolio index starting at 1 and a drawdown for every session, including session 0. Drawdown is the loss from the highest portfolio value reached so far, expressed as a positive decimal. A value of 0.2 means a 20% decline. Maximum drawdown keeps the worst decline even after recovery. The path uses the same daily rebalancing and cash assumptions as the other metrics.
+
+Asset correlations use Pearson correlation of aligned session returns for positive-weight holdings. Each distinct pair appears once. Cash and zero-weight assets are excluded. Constant returns produce `null` with an explicit reason because correlation is undefined, not zero. A cash-only or single-asset portfolio has no pairs. Correlations from short samples or simulated data do not establish real-world relationships.
+
+References: [PerformanceAnalytics drawdown definition](https://search.r-project.org/CRAN/refmans/PerformanceAnalytics/html/maxDrawdown.html) and [Python correlation documentation](https://docs.python.org/3.14/library/statistics.html#statistics.correlation).
