@@ -15,12 +15,12 @@
   <main>
     <div class="intro"><div><h1>Build your portfolio</h1></div><button id="reset">Reset example</button></div>
 
-    <!-- Keep this visible: the editable allocations are examples and have no price history -->
-    <div class="notice"><strong>Sample data.</strong> Changes are not saved.</div>
+    <!-- Keep this visible: fictional paths must not be mistaken for market history -->
+    <div class="notice"><strong>Simulated assets and returns.</strong> Changes are not saved.</div>
     <div class="workspace">
       <section class="holdings" aria-labelledby="holdings-title">
         <div class="section-heading"><h2 id="holdings-title">Your holdings</h2><button id="undo" disabled>Undo</button></div>
-        <form id="search-form"><label for="search">Search assets</label><div class="dropdown" id="search-dropdown"><input id="search" type="search" placeholder="Name or ticker" autocomplete="off" aria-describedby="search-note" aria-controls="search-results" aria-expanded="false"><div id="search-results" class="dropdown-panel" hidden></div></div><p id="search-note" class="subtle">Search by name or ticker. This demo includes AAPL, SPY, IEF and GLD.</p></form>
+        <form id="search-form"><label for="search">Search assets</label><div class="dropdown" id="search-dropdown"><input id="search" type="search" placeholder="Name or ticker" autocomplete="off" aria-describedby="search-note" aria-controls="search-results" aria-expanded="false"><div id="search-results" class="dropdown-panel" hidden></div></div><p id="search-note" class="subtle">Search by name or ticker. Explore 12 fictional equity, bond, property and commodity assets.</p></form>
 
         <!-- Search inserts buttons here Holding rows are built separately in holdings-body -->
 
@@ -39,16 +39,17 @@
         <button id="open-allocation" type="button" aria-haspopup="dialog">Try an allocation</button>
       </section>
 
-      <!-- These labels reserve space for future calculations Do not substitute invented metrics -->
+      <!-- Results come from the Python API using the current allocation -->
       <section class="analysis" aria-labelledby="analysis-title">
 
         <!-- State the role in words as well as styling: this area reports results and takes no allocation input -->
-        <div class="analysis-header"><h2 id="analysis-title">Portfolio analysis</h2><p>USD</p></div>
+        <div class="analysis-header"><h2 id="analysis-title">Portfolio analysis</h2><p>Simulation</p></div>
         <div class="allocation-finding"><span>Largest position, including cash</span><strong id="largest"></strong></div>
-        <dl class="metrics"><div><dt>Annualised volatility</dt><dd>Not connected</dd></div><div><dt>Historical annualised return</dt><dd>Not connected</dd></div><div><dt>Maximum drawdown</dt><dd>Not connected</dd></div><div><dt>Sharpe ratio</dt><dd>Not connected</dd></div></dl>
+        <dl class="metrics"><div><dt>Annualised volatility</dt><dd id="volatility">Unavailable</dd></div><div><dt>Annualised return (arithmetic)</dt><dd id="return">Unavailable</dd></div><div><dt>Maximum drawdown</dt><dd id="drawdown">Unavailable</dd></div><div><dt>Sharpe ratio</dt><dd>Unavailable</dd></div></dl>
 
         <!-- Repeat the data state in words so the status colour is not the only clue -->
-        <p class="data-note"><strong>Market data unavailable</strong></p>
+        <p class="data-note"><strong id="analysis-state" role="status">Loading assets</strong></p>
+        <button id="retry-analysis" type="button" hidden>Retry</button>
         <button id="about-analysis" class="text-button" type="button" aria-haspopup="dialog">Analysis limits</button>
       </section>
     </div>
@@ -59,18 +60,18 @@
     <!-- A native dialog sits above the page, so opening this explanation cannot push other sections down -->
     <dialog id="analysis-dialog" aria-labelledby="analysis-dialog-title" aria-describedby="analysis-dialog-copy">
       <h2 id="analysis-dialog-title">Analysis limits</h2>
-      <p id="analysis-dialog-copy">Only allocation weights are calculated. Risk and return require price history. ETF holdings are not analysed.</p>
+      <p id="analysis-dialog-copy">Results use fictional data, not market history or forecasts. Weights rebalance every simulated session. Cash earns 0%; costs and taxes are excluded. Return is the arithmetic mean multiplied by 252; volatility uses the square root of 252. Maximum drawdown is the largest decline from a previous peak. Sharpe ratio is unavailable because no risk-free rate is set. Underlying fund holdings are not analysed.</p>
 
       <!-- method="dialog" closes this window without submitting anything or reloading the page -->
       <form method="dialog"><button autofocus>Close</button></form>
     </dialog>
     <dialog id="allocation-dialog" class="experiment" aria-labelledby="experiment-title">
       <div class="section-heading"><div><h2 id="experiment-title">Try an allocation</h2></div></div>
-      <form id="preview-form" class="preview-controls"><div class="asset-control"><label id="candidate-label" for="candidate-toggle">Asset</label><div class="dropdown" id="candidate-dropdown"><input id="candidate" type="hidden" value="IEF"><button id="candidate-toggle" class="select-toggle" type="button" aria-expanded="false" aria-controls="candidate-options" aria-labelledby="candidate-label candidate-value"><span id="candidate-value">IEF</span></button><div id="candidate-options" class="dropdown-panel" hidden></div></div></div><label>Weight (%)<input id="target" type="number" min="0" max="100" step="0.01" value="15" required></label></form>
+      <form id="preview-form" class="preview-controls"><div class="asset-control"><label id="candidate-label" for="candidate-toggle">Asset</label><div class="dropdown" id="candidate-dropdown"><input id="candidate" type="hidden" value="DEMO-BOND"><button id="candidate-toggle" class="select-toggle" type="button" aria-expanded="false" aria-controls="candidate-options" aria-labelledby="candidate-label candidate-value"><span id="candidate-value">Loading</span></button><div id="candidate-options" class="dropdown-panel" hidden></div></div></div><label>Weight (%)<input id="target" type="number" min="0" max="100" step="0.01" value="15" required></label></form>
 
       <!-- This error belongs to the proposed change, not the holdings editor above -->
       <p id="preview-error" role="alert"></p>
-      <div id="preview" hidden><div class="preview-heading"><h3 id="preview-title"></h3></div><table><caption class="sr-only">Allocation changes before applying</caption><thead><tr><th scope="col">Position</th><th scope="col" class="number">Current</th><th scope="col" class="number">Proposed</th></tr></thead><tbody id="preview-body"></tbody></table><p>Risk and return are not calculated.</p><div class="actions"><button id="apply" class="primary">Apply change</button><button id="discard">Discard</button></div></div>
+      <div id="preview" hidden><div class="preview-heading"><h3 id="preview-title"></h3></div><table><caption class="sr-only">Allocation changes before applying</caption><thead><tr><th scope="col">Position</th><th scope="col" class="number">Current</th><th scope="col" class="number">Proposed</th></tr></thead><tbody id="preview-body"></tbody></table><p>This preview compares weights only. Apply to recalculate portfolio analysis.</p><div class="actions"><button id="apply" class="primary">Apply change</button><button id="discard">Discard</button></div></div>
 
       <!-- Dialog feedback stays inside the modal so it remains accessible while the page is inactive -->
       <p id="allocation-status" role="status" class="status"></p>

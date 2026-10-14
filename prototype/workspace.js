@@ -1,18 +1,17 @@
 "use strict";
 
-// Interaction study only No market data or financial-risk model is included
-const assets = {
+// Load identifiers and names from the API so both sides use the same asset universe
+let assets = {};
+const startingWeights = { "DEMO-EQ1": 70, "DEMO-EQ2": 20 };
 
-  // This is the whole searchable list for now These colours only identify bar segments
-  AAPL: { name: "Apple", colour: "#25332f" },
-  SPY: { name: "SPDR S&P 500 ETF", colour: "#566f62" },
-  IEF: { name: "iShares 7–10 Year Treasury Bond ETF", colour: "#8d9f94" },
-  GLD: { name: "SPDR Gold Shares", colour: "#b8c5bd" }
-};
+// Escape API strings before inserting them into table and dropdown HTML
+const escapeHTML = value => String(value).replace(/[&<>"']/g, character => ({
+  "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+})[character]);
 const $ = id => document.getElementById(id);
 
 // Store 70 for 70%, not 0.7 Cash is calculated from whatever is left over
-let weights = { AAPL: 70, SPY: 20 };
+let weights = {};
 
 // Each entry is the allocation before an edit Undo takes the last entry off this list
 let history = [];
@@ -67,7 +66,7 @@ function render() {
   // These names come from our fixed list, not user text Escape them before using API data here
 
   // data-weight and data-remove let the table listeners identify the affected ticker
-  $("holdings-body").innerHTML = Object.entries(weights).map(([ticker, weight]) => `<tr><td><strong>${ticker}</strong><small>${assets[ticker].name}</small></td><td class="number"><input class="weight" type="number" min="0" max="100" step="0.01" value="${weight}" aria-label="${ticker} weight in percent" aria-describedby="error" data-weight="${ticker}"></td><td class="number"><button class="remove" data-remove="${ticker}" aria-label="Remove ${ticker}">Remove</button></td></tr>`).join("");
+  $("holdings-body").innerHTML = Object.entries(weights).map(([ticker, weight]) => `<tr><td><strong>${ticker}</strong><small>${escapeHTML(assets[ticker].name)}</small></td><td class="number"><input class="weight" type="number" min="0" max="100" step="0.01" value="${weight}" aria-label="${ticker} weight in percent" aria-describedby="error" data-weight="${ticker}"></td><td class="number"><button class="remove" data-remove="${ticker}" aria-label="Remove ${ticker}">Remove</button></td></tr>`).join("");
 
   // Show the empty message only after the last holding is removed
   $("empty").hidden = Object.keys(weights).length > 0;
@@ -79,15 +78,18 @@ function render() {
   $("largest").textContent = `${largest[0]} ${percent(largest[1])}`;
   $("undo").disabled = history.length === 0;
   $("error").textContent = ""; search();
+
+  // Refresh results after accepted edits, including Undo and Reset
+  updateAnalysis();
 }
 function search() {
 
-  // Lowercase both sides so typing apple or AAPL works Ignore spaces at either end
+  // Lowercase names and identifiers so search ignores letter case and surrounding spaces
   const query = $("search").value.trim().toLowerCase();
 
   // Exclude held tickers so the same asset cannot be added twice
-  const matches = Object.entries(assets).filter(([ticker, asset]) => !(ticker in weights) && `${ticker} ${asset.name}`.toLowerCase().includes(query));
-  $("search-results").innerHTML = query ? matches.map(([ticker, asset]) => `<button type="button" data-add="${ticker}">Add ${ticker} · ${asset.name}</button>`).join("") : "";
+  const matches = Object.entries(assets).filter(([ticker, asset]) => !(ticker in weights) && `${ticker} ${escapeHTML(asset.name)}`.toLowerCase().includes(query));
+  $("search-results").innerHTML = query ? matches.map(([ticker, asset]) => `<button type="button" data-add="${ticker}">Add ${ticker} · ${escapeHTML(asset.name)}</button>`).join("") : "";
   if (query && !matches.length) $("search-results").innerHTML = "<p>No matches outside your holdings.</p>";
   setDropdown("search", "search-results", Boolean(query) && document.activeElement === $("search"));
 }
@@ -132,11 +134,7 @@ $("holdings-body").addEventListener("click", event => {
 $("undo").addEventListener("click", () => { if (!history.length) return; weights = history.pop(); clearPreview(); render(); showStatus("Previous allocation restored."); });
 
 // Reset is a normal edit so it can be undone too
-$("reset").addEventListener("click", () => change({ AAPL: 70, SPY: 20 }, "Example restored."));
-$("candidate-options").innerHTML = Object.entries(assets).map(([ticker, asset]) => `<button type="button" data-candidate="${ticker}">${ticker} · ${asset.name}</button>`).join("");
-$("candidate").value = "IEF";
-$("candidate-value").textContent = "IEF · Treasury bond ETF";
-
+$("reset").addEventListener("click", () => change({ ...startingWeights }, "Example restored."));
 // Once either input changes, the old preview no longer describes the requested change
 for (const id of ["candidate", "target"]) $(id).addEventListener("input", clearPreview);
 $("preview-form").addEventListener("submit", event => {
@@ -252,9 +250,8 @@ $("candidate-toggle").addEventListener("click", () => {
 $("candidate-options").addEventListener("click", event => {
   const ticker = event.target.dataset.candidate;
   if (!ticker) return;
-  const shortNames = { AAPL: "Apple", SPY: "S&P 500 ETF", IEF: "Treasury bond ETF", GLD: "Gold ETF" };
   $("candidate").value = ticker;
-  $("candidate-value").textContent = `${ticker} · ${shortNames[ticker]}`;
+  $("candidate-value").textContent = `${ticker} · ${escapeHTML(assets[ticker].name)}`;
   clearPreview();
   setDropdown("candidate-toggle", "candidate-options", false);
   $("candidate-toggle").focus();
@@ -265,5 +262,98 @@ $("allocation-dialog").addEventListener("close", () => {
   setDropdown("candidate-toggle", "candidate-options", false);
 });
 
-// Populate the starting table after the deferred script has access to the page elements
-render();
+// Hold one request at a time and ignore older results after the allocation changes
+let analysisRequest;
+let requestNumber = 0;
+let datasetVersion;
+const metricFields = {
+  volatility: "annualised_volatility",
+  return: "annualised_arithmetic_return",
+  drawdown: "maximum_drawdown"
+};
+
+async function updateAnalysis() {
+  const current = ++requestNumber;
+  analysisRequest?.abort();
+  const controller = new AbortController();
+  analysisRequest = controller;
+  const timeout = setTimeout(() => controller.abort(), 10000);
+
+  // Replace old results while the current allocation is being calculated
+  for (const id of Object.keys(metricFields)) {
+    $(id).textContent = "Calculating";
+  }
+  $("analysis-state").textContent = "Calculating";
+  $("retry-analysis").hidden = true;
+  try {
+    const response = await fetch("/demo/analysis", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ weights }),
+      signal: controller.signal
+    });
+    if (!response.ok) throw new Error("Analysis failed");
+    const result = await response.json();
+    if (current !== requestNumber) return;
+
+    // A server restart with a different dataset must not silently change the comparison basis
+    if (result.source !== "simulated" || result.dataset_version !== datasetVersion) {
+      throw new Error("Dataset changed");
+    }
+    for (const field of Object.values(metricFields)) {
+      if (!Number.isFinite(result[field])) throw new Error("Invalid result");
+    }
+    for (const [id, field] of Object.entries(metricFields)) {
+      $(id).textContent = percent(result[field] * 100);
+      $(id).classList.add("available");
+    }
+    $("analysis-state").textContent = `${result.return_observations} simulated sessions`;
+  } catch (error) {
+    if (current !== requestNumber) return;
+
+    // Failures stay visible until a successful retry or edit replaces them
+    for (const id of Object.keys(metricFields)) {
+      $(id).textContent = "Unavailable";
+      $(id).classList.remove("available");
+    }
+    $("analysis-state").textContent = "Analysis unavailable. Check the server or reload the page.";
+    $("retry-analysis").hidden = false;
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+$("retry-analysis").addEventListener("click", updateAnalysis);
+
+async function loadAssets() {
+  // Keep controls disabled until there are names and identifiers to render safely
+  for (const id of ["search", "reset", "open-allocation"]) $(id).disabled = true;
+  try {
+    const response = await fetch("/demo/history", { signal: AbortSignal.timeout(10000) });
+    if (!response.ok) throw new Error("Asset loading failed");
+    const data = await response.json();
+    if (data.source !== "simulated" || !Array.isArray(data.assets)) throw new Error("Invalid source");
+    const colours = ["#25332f", "#566f62", "#8d9f94", "#b8c5bd"];
+    assets = Object.fromEntries(data.assets.map((asset, index) => {
+      if (!/^DEMO-[A-Z0-9]+$/.test(asset.symbol) || typeof asset.name !== "string") {
+        throw new Error("Invalid asset");
+      }
+      return [asset.symbol, { name: asset.name, colour: colours[index % colours.length] }];
+    }));
+    if (![...Object.keys(startingWeights), "DEMO-BOND"].every(symbol => assets[symbol])) {
+      throw new Error("Starting assets missing");
+    }
+    datasetVersion = data.dataset_version;
+    weights = { ...startingWeights };
+    $("candidate-options").innerHTML = Object.entries(assets).map(([ticker, asset]) =>
+      `<button type="button" data-candidate="${escapeHTML(ticker)}">${escapeHTML(ticker)} · ${escapeHTML(asset.name)}</button>`
+    ).join("");
+    $("candidate").value = "DEMO-BOND";
+    $("candidate-value").textContent = assets["DEMO-BOND"].name;
+    for (const id of ["search", "reset", "open-allocation"]) $(id).disabled = false;
+    render();
+  } catch (error) {
+    $("error").textContent = "Assets could not load. Start the API and reload this page at http://127.0.0.1:8000/workspace/";
+    $("analysis-state").textContent = "Analysis unavailable";
+  }
+}
+loadAssets();

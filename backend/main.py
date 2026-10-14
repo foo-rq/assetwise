@@ -1,3 +1,5 @@
+from pathlib import Path
+from fastapi.staticfiles import StaticFiles
 from typing import Literal
 
 from fastapi import FastAPI, HTTPException
@@ -32,3 +34,7 @@ def demo_analysis(allocation: AllocationRequest) -> PortfolioAnalysis:
     except ValueError as error:
         # Invalid allocations need an actionable response rather than a server error
         raise HTTPException(status_code=422, detail=str(error)) from error
+
+# Serve only the interface folder, never the repository or local context files
+# Resolve from this file so starting the server in another directory still works
+app.mount("/workspace", StaticFiles(directory=Path(__file__).resolve().parent.parent / "prototype", html=True), name="workspace")

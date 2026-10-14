@@ -257,3 +257,9 @@ dialog p { line-height: 1.65; margin: 16px 0 22px; }
   #search, .experiment .select-toggle, .experiment #target { height: 44px; min-height: 44px; }
   #search { font-size: 16px; }
 }
+
+/* Computed values use the main ink while unavailable results retain their distinct colour */
+.metrics dd.available { color: var(--ink); }
+
+/* Longer fictional identifiers must wrap within the existing narrow layout */
+td strong { overflow-wrap: anywhere; }
