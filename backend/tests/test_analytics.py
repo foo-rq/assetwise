@@ -105,7 +105,7 @@ def test_api_preserves_labels_and_rejects_unknown_assets():
     assert response.status_code == 200
     body = response.json()
     assert body["source"] == "simulated"
-    assert body["dataset_version"] == "demo-v1"
+    assert body["dataset_version"] == "demo-v2"
     assert body["cash_weight_percent"] == 40
     assert body["return_observations"] == 252
     assert "not market history" in body["notice"]
