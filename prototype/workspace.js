@@ -19,6 +19,10 @@ let history = [];
 // Keep the preview separate so trying an allocation cannot change the current holdings
 let proposed = null;
 
+// A changed input or closed dialog cancels the previous comparison
+let comparisonRequest;
+let comparisonNumber = 0;
+
 let statusFadeTimer;
 let statusClearTimer;
 
@@ -53,7 +57,15 @@ const cash = values => Math.max(0, 100 - total(values));
 
 // Round for display only Keep the original values for the next allocation calculation
 const percent = value => `${value.toFixed(2)}%`;
-function clearPreview() { proposed = null; $("preview").hidden = true; $("preview-error").textContent = ""; }
+function clearPreview() {
+  comparisonNumber += 1;
+  comparisonRequest?.abort();
+  proposed = null;
+  $("preview").hidden = true;
+  $("preview-error").textContent = "";
+  $("comparison-state").textContent = "";
+  $("apply").disabled = true;
+}
 function change(next, message) {
 
   // Copy the old object before replacing it, otherwise Undo could lose the previous weights
@@ -161,19 +173,21 @@ $("preview-form").addEventListener("submit", event => {
   // Scale every other holding, then set the selected asset to its requested weight
 
   // The remaining cash scales by the same factor because it is calculated as the remainder
-  proposed = Object.fromEntries(Object.entries(weights).filter(([key]) => key !== ticker).map(([key, value]) => [key, value * factor]));
+  // Trim tiny fractional tails so floating-point noise cannot push funded weights above 100%
+  proposed = Object.fromEntries(Object.entries(weights).filter(([key]) => key !== ticker).map(([key, value]) => [key, Math.floor(value * factor * 1e10) / 1e10]));
   proposed[ticker] = target;
 
   // Include tickers from both versions, without duplicates, so new assets appear in the table
   const rows = [...new Set([...Object.keys(weights), ...Object.keys(proposed)])];
-  $("preview-body").innerHTML = rows.map(key => `<tr><th scope="row">${key}</th><td class="number">${percent(weights[key] || 0)}</td><td class="number">${percent(proposed[key] || 0)}</td></tr>`).join("") + `<tr><th scope="row">Cash</th><td class="number">${percent(cash(weights))}</td><td class="number">${percent(cash(proposed))}</td></tr>`;
-  $("preview-title").textContent = `Set ${ticker} to ${percent(target)}`;
-  $("preview").hidden = false; showStatus("Preview ready.");
+  $("preview-body").innerHTML = rows.map(key => `<tr><th scope="row">${escapeHTML(key)}</th><td class="number">${percent(weights[key] || 0)}</td><td class="number">${percent(proposed[key] || 0)}</td></tr>`).join("") + `<tr><th scope="row">Cash</th><td class="number">${percent(cash(weights))}</td><td class="number">${percent(cash(proposed))}</td></tr>`;
+  $("preview-title").textContent = `Set ${escapeHTML(ticker)} to ${percent(target)}`;
+  $("preview").hidden = false;
+  updateComparison();
 });
 
 // Apply uses the same edit path as a manual weight change, including the Undo snapshot
 $("apply").addEventListener("click", () => {
-  if (!proposed) return;
+  if (!proposed || $("apply").disabled) return;
   change({ ...proposed }, "Allocation applied.");
 
   // Close before focusing Undo because controls outside an open modal cannot receive focus
@@ -215,6 +229,19 @@ $("allocation-dialog").addEventListener("close", () => {
 
 // Keep the visible panel and its expanded state in sync for mouse and keyboard users
 function setDropdown(triggerId, panelId, open) {
+  // Position the dialog menu against the viewport so it cannot grow the dialog's scroll area
+  if (panelId === "candidate-options" && open) {
+    const field = $(triggerId).getBoundingClientRect();
+    const panel = $(panelId);
+    const below = window.innerHeight - field.bottom - 12;
+    const above = field.top - 12;
+    const useBelow = below >= Math.min(220, above);
+    panel.style.left = `${field.left}px`;
+    panel.style.width = `${field.width}px`;
+    panel.style.maxHeight = `${Math.min(220, useBelow ? below : above)}px`;
+    panel.style.top = useBelow ? `${field.bottom + 4}px` : "auto";
+    panel.style.bottom = useBelow ? "auto" : `${window.innerHeight - field.top + 4}px`;
+  }
   $(panelId).hidden = !open;
   $(triggerId).setAttribute("aria-expanded", String(open));
 }
@@ -250,6 +277,9 @@ function wireDropdown(rootId, triggerId, panelId) {
 }
 wireDropdown("search-dropdown", "search", "search-results");
 wireDropdown("candidate-dropdown", "candidate-toggle", "candidate-options");
+// Dismiss the floating menu when its field moves, rather than leaving it detached
+window.addEventListener("resize", () => setDropdown("candidate-toggle", "candidate-options", false));
+$("allocation-dialog").addEventListener("scroll", () => setDropdown("candidate-toggle", "candidate-options", false));
 $("search").addEventListener("focus", search);
 
 // Clicking an already focused field reopens the list after Escape
@@ -368,3 +398,64 @@ async function loadAssets() {
   }
 }
 loadAssets();
+
+
+async function updateComparison() {
+  // Capture this request so an older response cannot replace a newer preview
+  const current = ++comparisonNumber;
+  const controller = new AbortController();
+  comparisonRequest?.abort();
+  comparisonRequest = controller;
+  const timeout = setTimeout(() => controller.abort(), 10000);
+  $("apply").disabled = true;
+  $("comparison-results").hidden = true;
+  $("comparison-state").textContent = "Calculating comparison";
+  try {
+    const response = await fetch("/demo/comparison", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ current: { weights }, proposed: { weights: proposed } }),
+      signal: controller.signal
+    });
+    if (response.status === 404) throw new Error("Server update required");
+    if (!response.ok) throw new Error("Comparison failed");
+    const result = await response.json();
+    if (current !== comparisonNumber) return;
+
+    // Both columns must describe the dataset loaded into this workspace
+    for (const side of [result.current, result.proposed]) {
+      if (side.source !== "simulated" || side.dataset_version !== datasetVersion) {
+        throw new Error("Dataset changed");
+      }
+      for (const field of Object.values(metricFields)) {
+        if (!Number.isFinite(side[field])) throw new Error("Invalid result");
+      }
+    }
+    if (result.current.return_observations !== result.proposed.return_observations) {
+      throw new Error("Mismatched sessions");
+    }
+    const labels = {
+      annualised_volatility: "Annualised volatility",
+      annualised_arithmetic_return: "Annualised return (arithmetic)",
+      maximum_drawdown: "Maximum drawdown"
+    };
+
+    // Reuse the main report's percentage formatting and show both sides without claiming an improvement
+    $("comparison-body").innerHTML = Object.entries(labels).map(([field, label]) =>
+      `<tr><th scope="row">${label}</th><td class="number">${percent(result.current[field] * 100)}</td><td class="number">${percent(result.proposed[field] * 100)}</td></tr>`
+    ).join("");
+    $("comparison-results").hidden = false;
+    $("comparison-state").textContent = `${result.current.return_observations} simulated sessions. Same assumptions as portfolio analysis.`;
+    $("apply").disabled = false;
+  } catch (error) {
+    if (current !== comparisonNumber) return;
+
+    // Keep the weights for inspection but require a successful preview before applying
+    $("comparison-state").textContent = "";
+    $("preview-error").textContent = error.message === "Server update required"
+      ? "Restart the Assetwise server to load allocation comparisons, then try Preview change again."
+      : "Comparison unavailable. Try Preview change again or close and keep your holdings.";
+  } finally {
+    clearTimeout(timeout);
+  }
+}

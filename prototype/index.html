@@ -71,7 +71,11 @@
 
       <!-- This error belongs to the proposed change, not the holdings editor above -->
       <p id="preview-error" role="alert"></p>
-      <div id="preview" hidden><div class="preview-heading"><h3 id="preview-title"></h3></div><table><caption class="sr-only">Allocation changes before applying</caption><thead><tr><th scope="col">Position</th><th scope="col" class="number">Current</th><th scope="col" class="number">Proposed</th></tr></thead><tbody id="preview-body"></tbody></table><p>This preview compares weights only. Apply to recalculate portfolio analysis.</p><div class="actions"><button id="apply" class="primary">Apply change</button><button id="discard">Discard</button></div></div>
+      <div id="preview" hidden><div class="preview-heading"><h3 id="preview-title"></h3></div><table><caption class="sr-only">Allocation changes before applying</caption><thead><tr><th scope="col">Position</th><th scope="col" class="number">Current</th><th scope="col" class="number">Proposed</th></tr></thead><tbody id="preview-body"></tbody></table>
+
+        <!-- Keep the same column order as the allocation table so both comparisons read together -->
+        <table id="comparison-results" hidden><caption class="sr-only">Simulated portfolio results before applying</caption><thead><tr><th scope="col">Metric</th><th scope="col" class="number">Current</th><th scope="col" class="number">Proposed</th></tr></thead><tbody id="comparison-body"></tbody></table>
+        <p id="comparison-state" role="status" class="subtle"></p><div class="actions"><button id="apply" class="primary">Apply change</button><button id="discard">Discard</button></div></div>
 
       <!-- Dialog feedback stays inside the modal so it remains accessible while the page is inactive -->
       <p id="allocation-status" role="status" class="status"></p>

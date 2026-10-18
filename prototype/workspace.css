@@ -268,3 +268,21 @@ dialog p { line-height: 1.65; margin: 16px 0 22px; }
 
 /* Longer fictional identifiers must wrap within the existing narrow layout */
 td strong { overflow-wrap: anywhere; }
+
+
+/* Separate calculated results from editable weights without adding another panel */
+#comparison-results { margin-top: 18px; }
+#comparison-results .number { font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+
+/* Keep Current and Proposed in the same columns across weights and calculated results */
+#preview table { table-layout: fixed; }
+#preview th:first-child { width: 52%; overflow-wrap: anywhere; }
+#preview .number { width: 24%; }
+
+
+/* Reserve scrollbar space so a longer preview cannot move the weight field sideways */
+dialog.experiment { scrollbar-gutter: stable; }
+
+/* The asset menu floats outside the dialog's scrollable content */
+#candidate-options { position: fixed; inset: auto; }
