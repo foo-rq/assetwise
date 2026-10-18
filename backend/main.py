@@ -7,6 +7,7 @@ from pydantic import BaseModel
 
 from backend.simulation import SimulatedHistory, build_simulated_history
 from backend.analytics import AllocationRequest, PortfolioAnalysis, analyse_portfolio
+from backend.comparison import ComparisonRequest, PortfolioComparison, compare_portfolios
 
 # Uvicorn imports this object when we start backend.main:app
 app = FastAPI(title="Assetwise API", version="0.1.0")
@@ -33,6 +34,15 @@ def demo_analysis(allocation: AllocationRequest) -> PortfolioAnalysis:
         return analyse_portfolio(build_simulated_history(), allocation)
     except ValueError as error:
         # Invalid allocations need an actionable response rather than a server error
+        raise HTTPException(status_code=422, detail=str(error)) from error
+
+# Compare submitted allocations without saving or applying either one
+@app.post("/demo/comparison", response_model=PortfolioComparison, tags=["demo"])
+def demo_comparison(request: ComparisonRequest) -> PortfolioComparison:
+    try:
+        return compare_portfolios(build_simulated_history(), request)
+    except ValueError as error:
+        # Reject the whole comparison if either side cannot be calculated honestly
         raise HTTPException(status_code=422, detail=str(error)) from error
 
 # Serve only the interface folder, never the repository or local context files
