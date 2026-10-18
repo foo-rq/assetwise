@@ -71,7 +71,7 @@ function change(next, message) {
   // Copy the old object before replacing it, otherwise Undo could lose the previous weights
 
   // A holdings edit also invalidates any preview made from the old allocation
-  history.push({ ...weights }); weights = next; clearPreview(); render(); showStatus(message);
+  history.push({ ...weights }); weights = next; clearPreview(); render(); savePortfolio(); showStatus(message);
 }
 function render() {
 
@@ -150,7 +150,7 @@ $("holdings-body").addEventListener("click", event => {
 });
 
 // Do not call change() here: that would add another history entry while undoing one
-$("undo").addEventListener("click", () => { if (!history.length) return; weights = history.pop(); clearPreview(); render(); showStatus("Previous allocation restored."); });
+$("undo").addEventListener("click", () => { if (!history.length) return; weights = history.pop(); clearPreview(); render(); savePortfolio(); showStatus("Previous allocation restored."); });
 
 // Reset is a normal edit so it can be undone too
 $("reset").addEventListener("click", () => change({ ...startingWeights }, "Example restored."));
@@ -365,6 +365,19 @@ async function updateAnalysis() {
 }
 $("retry-analysis").addEventListener("click", updateAnalysis);
 
+function savePortfolio() {
+  try {
+
+    // Accessing localStorage can itself fail when the browser blocks persistence
+    portfolioStorage.write(window.localStorage, weights, datasetVersion);
+    $("save-state").textContent = "Saved in this browser.";
+  } catch (error) {
+
+    // Keep editing usable but do not claim that a blocked or full store saved the change
+    $("save-state").textContent = "Changes could not be saved. Keep this tab open to retain them.";
+  }
+}
+
 async function loadAssets() {
   // Keep controls disabled until there are names and identifiers to render safely
   for (const id of ["search", "reset", "open-allocation"]) $(id).disabled = true;
@@ -385,6 +398,19 @@ async function loadAssets() {
     }
     datasetVersion = data.dataset_version;
     weights = { ...startingWeights };
+    try {
+
+      // Restore only after the API supplies the current universe and dataset version
+      const saved = portfolioStorage.read(window.localStorage, assets, datasetVersion);
+      if (saved !== null) {
+        weights = saved;
+        $("save-state").textContent = "Saved in this browser.";
+      }
+    } catch (error) {
+
+      // Preserve an unreadable save until the user deliberately edits the example
+      $("save-state").textContent = "Saved portfolio could not load. Showing the example; your next edit will try to replace the save.";
+    }
     $("candidate-options").innerHTML = Object.entries(assets).map(([ticker, asset]) =>
       `<button type="button" data-candidate="${escapeHTML(ticker)}">${escapeHTML(ticker)} · ${escapeHTML(asset.name)}</button>`
     ).join("");

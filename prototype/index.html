@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="workspace.css">
 
   <!-- defer waits until the page elements exist before the script attaches its listeners -->
+  <script src="portfolio-storage.js" defer></script>
   <script src="workspace.js" defer></script>
 
 </head>
@@ -16,7 +17,7 @@
     <div class="intro"><div><h1>Build your portfolio</h1></div><button id="reset">Reset example</button></div>
 
     <!-- Keep this visible: fictional paths must not be mistaken for market history -->
-    <div class="notice"><strong>Simulated assets and returns.</strong> Changes are not saved.</div>
+    <div class="notice"><strong>Simulated assets and returns.</strong> <span id="save-state" role="status">Edits save in this browser.</span></div>
     <div class="workspace">
       <section class="holdings" aria-labelledby="holdings-title">
         <div class="section-heading"><h2 id="holdings-title">Your holdings</h2><button id="undo" disabled>Undo</button></div>
