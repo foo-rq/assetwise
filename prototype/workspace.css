@@ -125,14 +125,19 @@ td small { display: block; color: var(--muted); font-size: 13px; }
 /* Space the result from the metric list without adding a sentence that repeats its value */
 .allocation-finding { margin-bottom: 24px; }
 .metrics { margin: 0; }
-.metrics div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; padding: 6px 0; font-size: 13px; }
+
+/* Reserve the same result column while labels wrap independently */
+.metrics div { display: grid; grid-template-columns: minmax(0, 1fr) 112px; gap: 8px 16px; padding: 6px 0; font-size: 13px; }
 
 /* One rule groups the unavailable metrics without turning each result into a field */
 .metrics { border-top: 1px solid var(--line); padding-top: 12px; }
 dd { margin: 0; color: var(--muted); white-space: nowrap; }
 
 /* Keep the status written out: colour alone must not carry the meaning */
-.metrics dd { color: var(--unavailable-text); font-weight: 700; }
+.metrics dd { color: var(--unavailable-text); font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Keep each result in place without displaying an outdated number during a request */
+.metrics dd.pending { visibility: hidden; }
 
 /* This tool uses the same dialog shell as the explanation, with more room for the comparison table */
 

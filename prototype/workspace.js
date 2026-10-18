@@ -87,11 +87,18 @@ function search() {
   // Lowercase names and identifiers so search ignores letter case and surrounding spaces
   const query = $("search").value.trim().toLowerCase();
 
-  // Exclude held tickers so the same asset cannot be added twice
-  const matches = Object.entries(assets).filter(([ticker, asset]) => !(ticker in weights) && `${ticker} ${escapeHTML(asset.name)}`.toLowerCase().includes(query));
-  $("search-results").innerHTML = query ? matches.map(([ticker, asset]) => `<button type="button" data-add="${ticker}">Add ${ticker} · ${escapeHTML(asset.name)}</button>`).join("") : "";
-  if (query && !matches.length) $("search-results").innerHTML = "<p>No matches outside your holdings.</p>";
-  setDropdown("search", "search-results", Boolean(query) && document.activeElement === $("search"));
+  // Empty search includes every asset so there is no need to guess a name
+  const matches = Object.entries(assets).filter(([ticker, asset]) =>
+    `${ticker} ${asset.name}`.toLowerCase().includes(query)
+  );
+  $("search-results").innerHTML = matches.map(([ticker, asset]) => {
+
+    // Held assets stay visible but cannot be added a second time
+    const held = ticker in weights;
+    return `<button type="button" data-add="${escapeHTML(ticker)}" ${held ? "disabled" : ""}>${held ? "Held" : "Add"} ${escapeHTML(ticker)} · ${escapeHTML(asset.name)}</button>`;
+  }).join("");
+  if (!matches.length) $("search-results").innerHTML = "<p>No matching assets.</p>";
+  setDropdown("search", "search-results", document.activeElement === $("search"));
 }
 
 // Enter in the search field must not reload the page and erase the session
@@ -224,7 +231,7 @@ function wireDropdown(rootId, triggerId, panelId) {
       return;
     }
     if (!["ArrowDown", "ArrowUp"].includes(event.key)) return;
-    const buttons = [...panel.querySelectorAll("button")];
+    const buttons = [...panel.querySelectorAll("button:not(:disabled)")];
     if (!buttons.length) return;
     event.preventDefault();
     setDropdown(triggerId, panelId, true);
@@ -244,6 +251,9 @@ function wireDropdown(rootId, triggerId, panelId) {
 wireDropdown("search-dropdown", "search", "search-results");
 wireDropdown("candidate-dropdown", "candidate-toggle", "candidate-options");
 $("search").addEventListener("focus", search);
+
+// Clicking an already focused field reopens the list after Escape
+$("search").addEventListener("click", search);
 $("candidate-toggle").addEventListener("click", () => {
   setDropdown("candidate-toggle", "candidate-options", $("candidate-options").hidden);
 });
@@ -279,9 +289,9 @@ async function updateAnalysis() {
   analysisRequest = controller;
   const timeout = setTimeout(() => controller.abort(), 10000);
 
-  // Replace old results while the current allocation is being calculated
+  // Hide stale numbers without changing their space while the new allocation is calculated
   for (const id of Object.keys(metricFields)) {
-    $(id).textContent = "Calculating";
+    $(id).classList.add("pending");
   }
   $("analysis-state").textContent = "Calculating";
   $("retry-analysis").hidden = true;
@@ -305,6 +315,7 @@ async function updateAnalysis() {
     }
     for (const [id, field] of Object.entries(metricFields)) {
       $(id).textContent = percent(result[field] * 100);
+      $(id).classList.remove("pending");
       $(id).classList.add("available");
     }
     $("analysis-state").textContent = `${result.return_observations} simulated sessions`;
@@ -314,7 +325,7 @@ async function updateAnalysis() {
     // Failures stay visible until a successful retry or edit replaces them
     for (const id of Object.keys(metricFields)) {
       $(id).textContent = "Unavailable";
-      $(id).classList.remove("available");
+      $(id).classList.remove("pending", "available");
     }
     $("analysis-state").textContent = "Analysis unavailable. Check the server or reload the page.";
     $("retry-analysis").hidden = false;
