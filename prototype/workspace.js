@@ -32,8 +32,9 @@ function showStatus(message) {
   clearTimeout(statusClearTimer);
 
   // Put dialog feedback inside the dialog, where it can be seen and announced while the page is inactive
-  const output = $("allocation-dialog").open ? $("allocation-status") : $("status");
-  for (const id of ["status", "allocation-status"]) {
+  const output = $("scenarios-dialog").open ? $("scenario-feedback")
+    : $("allocation-dialog").open ? $("allocation-status") : $("status");
+  for (const id of ["status", "allocation-status", "scenario-feedback"]) {
     $(id).textContent = "";
     $(id).classList.remove("is-visible");
   }
@@ -380,7 +381,7 @@ function savePortfolio() {
 
 async function loadAssets() {
   // Keep controls disabled until there are names and identifiers to render safely
-  for (const id of ["search", "reset", "open-allocation"]) $(id).disabled = true;
+  for (const id of ["search", "reset", "open-allocation", "open-scenarios"]) $(id).disabled = true;
   try {
     const response = await fetch("/demo/history", { signal: AbortSignal.timeout(10000) });
     if (!response.ok) throw new Error("Asset loading failed");
@@ -416,7 +417,7 @@ async function loadAssets() {
     ).join("");
     $("candidate").value = "DEMO-BOND";
     $("candidate-value").textContent = assets["DEMO-BOND"].name;
-    for (const id of ["search", "reset", "open-allocation"]) $(id).disabled = false;
+    for (const id of ["search", "reset", "open-allocation", "open-scenarios"]) $(id).disabled = false;
     render();
   } catch (error) {
     $("error").textContent = "Assets could not load. Start the API and reload this page at http://127.0.0.1:8000/workspace/";
@@ -485,3 +486,115 @@ async function updateComparison() {
     clearTimeout(timeout);
   }
 }
+
+
+function renderScenarios() {
+  $("scenario-list").replaceChildren();
+  const items = scenarioStorage.read(window.localStorage);
+  $("scenario-status").textContent = "";
+  if (!items.length) {
+    $("scenario-status").textContent = "No saved scenarios yet.";
+    return;
+  }
+  const query = $("scenario-search").value.trim().toLowerCase();
+  const matches = items.filter(item => item.name.toLowerCase().includes(query));
+  if (!matches.length) $("scenario-status").textContent = "No matching scenarios.";
+  for (const item of matches) {
+
+    // Use textContent so a user-entered name is always text, never executable HTML
+    const row = document.createElement("li");
+    const button = document.createElement("button");
+    button.textContent = item.name;
+    button.setAttribute("aria-label", `Load ${item.name}`);
+    try {
+      const allocation = scenarioStorage.allocation(item, assets, datasetVersion);
+      button.addEventListener("click", () => {
+
+        // Load through the normal edit path so autosave, analysis and Undo stay in sync
+        $("scenarios-dialog").close();
+        change({ ...allocation }, `Loaded ${item.name}.`);
+        $("undo").focus();
+      });
+    } catch (error) {
+
+      // Keep incompatible snapshots visible rather than dropping them from the collection
+      button.disabled = true;
+      button.textContent += " (unavailable for this dataset)";
+    }
+    row.append(button);
+    $("scenario-list").append(row);
+  }
+}
+
+$("open-scenarios").addEventListener("click", () => {
+  $("scenario-error").textContent = "";
+  $("scenario-status").textContent = "";
+  $("scenario-search").value = "";
+  setScenarioMenu(false);
+  $("scenarios-dialog").showModal();
+  try {
+    renderScenarios();
+  } catch (error) {
+    $("scenario-error").textContent = "Saved scenarios could not load. Browser storage may be blocked or damaged.";
+  }
+});
+
+$("save-scenario-form").addEventListener("submit", event => {
+  event.preventDefault();
+  $("scenario-error").textContent = "";
+  try {
+
+    // Read the latest collection on every save so another tab's new snapshots are retained
+    scenarioStorage.add(window.localStorage, $("scenario-name").value, weights, datasetVersion);
+    $("scenario-search").value = "";
+    renderScenarios();
+    $("scenario-name").value = "";
+    showStatus("Scenario saved.");
+  } catch (error) {
+    $("scenario-error").textContent = error.message.startsWith("That name") || error.message.startsWith("Enter a name")
+      ? error.message
+      : "Scenario could not be saved. Browser storage may be blocked, full or damaged.";
+  }
+});
+
+$("scenarios-dialog").addEventListener("close", () => $("open-scenarios").focus());
+
+
+// Filter names without changing the saved collection or current holdings
+$("scenario-search").addEventListener("input", () => {
+  try {
+    renderScenarios();
+  } catch (error) {
+    $("scenario-error").textContent = "Saved scenarios could not load. Try reopening this dialog.";
+  }
+});
+
+
+function setScenarioMenu(open) {
+  $("scenario-menu").hidden = !open;
+  $("open-scenario-list").setAttribute("aria-expanded", String(open));
+  if (!open) return;
+
+  // Anchor the menu to Load while keeping its edges inside the viewport
+  const field = $("open-scenario-list").getBoundingClientRect();
+  const menu = $("scenario-menu");
+  menu.style.left = `${Math.max(12, Math.min(field.right - menu.offsetWidth, window.innerWidth - menu.offsetWidth - 12))}px`;
+  menu.style.bottom = `${window.innerHeight - field.top + 4}px`;
+  menu.querySelector(".scenario-scroll").style.maxHeight = `${Math.max(60, Math.min(200, field.top - 155))}px`;
+}
+$("open-scenario-list").addEventListener("click", () => {
+  setScenarioMenu($("scenario-menu").hidden);
+  if (!$("scenario-menu").hidden) $("scenario-search").focus();
+});
+$("scenarios-dialog").addEventListener("pointerdown", event => {
+  if (!$("scenario-picker").contains(event.target)) setScenarioMenu(false);
+});
+$("scenario-picker").addEventListener("keydown", event => {
+  if (event.key === "Escape" && !$("scenario-menu").hidden) {
+    event.preventDefault();
+    event.stopPropagation();
+    setScenarioMenu(false);
+    $("open-scenario-list").focus();
+  }
+});
+window.addEventListener("resize", () => setScenarioMenu(false));

@@ -286,3 +286,34 @@ dialog.experiment { scrollbar-gutter: stable; }
 
 /* The asset menu floats outside the dialog's scrollable content */
 #candidate-options { position: fixed; inset: auto; }
+
+
+/* Keep scenario access beside Reset with the same secondary button weight */
+.intro-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* Keep the name field compact and place every scenario action below the same divider */
+#scenarios-dialog { width: min(480px, calc(100% - 32px)); padding: 20px; overflow: visible; font-size: 13px; }
+#save-scenario-form { display: grid; gap: 6px; margin-top: 24px; }
+#scenarios-dialog input { width: 100%; min-width: 0; min-height: 36px; padding: 7px 10px; font-size: 13px; }
+#scenarios-dialog .scenario-help { margin: 24px 0 6px; line-height: 1.5; }
+#scenarios-dialog .scenario-footer { display: flex; gap: 8px; flex-wrap: wrap; margin: 0; padding-top: 12px; border-top: 1px solid var(--line); }
+.scenario-footer form { margin: 0; }
+
+/* The picker floats above Load and scrolls internally instead of changing the dialog height */
+#scenario-menu { position: fixed; z-index: 12; width: min(360px, calc(100vw - 48px)); padding: 10px; border: 1px solid var(--field-line); border-radius: 4px; background: white; box-shadow: 0 4px 12px rgb(37 51 47 / 10%); }
+#scenario-menu label { display: block; margin-bottom: 6px; }
+.scenario-scroll { max-height: 200px; overflow-y: auto; scrollbar-gutter: stable; overscroll-behavior: contain; }
+#scenario-list { list-style: none; padding: 0; margin: 6px 0 0; }
+#scenario-list li { border-bottom: 1px solid var(--line); }
+#scenario-list button { display: block; width: 100%; text-align: left; border: 0; padding: 9px 6px; overflow-wrap: anywhere; }
+#scenario-status { color: var(--muted); font-size: 13px; margin: 8px 0; }
+#scenario-status:empty { display: none; }
+@media (pointer: coarse) { #scenarios-dialog input { min-height: 44px; font-size: 16px; } }
+
+
+/* Messages float above the dialog without reserving blank space or covering its controls */
+.scenario-message { position: absolute; bottom: calc(100% + 8px); left: 0; right: 0; }
+#scenarios-dialog .scenario-message p { margin: 0; min-height: 0; line-height: 1.5; padding: 8px 12px; background: white; border: 1px solid var(--line); border-radius: 4px; }
+#scenarios-dialog .scenario-message p:empty { display: none; }
+.scenario-message:has(#scenario-error:not(:empty)) #scenario-feedback { display: none; }
+#scenarios-dialog .scenario-help { margin: 16px 0 6px; }

@@ -14,7 +14,7 @@
 <body>
   <header class="brand"><a href="index.html">assetwise<span>.</span></a></header>
   <main>
-    <div class="intro"><div><h1>Build your portfolio</h1></div><button id="reset">Reset example</button></div>
+    <div class="intro"><div><h1>Build your portfolio</h1></div><div class="intro-actions"><button id="open-scenarios" type="button" aria-haspopup="dialog" disabled>Saved scenarios</button><button id="reset">Reset example</button></div></div>
 
     <!-- Keep this visible: fictional paths must not be mistaken for market history -->
     <div class="notice"><strong>Simulated assets and returns.</strong> <span id="save-state" role="status">Edits save in this browser.</span></div>
@@ -66,6 +66,36 @@
       <!-- method="dialog" closes this window without submitting anything or reloading the page -->
       <form method="dialog"><button autofocus>Close</button></form>
     </dialog>
+    <!-- Saved snapshots stay separate from the current draft and unapplied previews -->
+    <dialog id="scenarios-dialog" aria-labelledby="scenarios-title">
+      <h2 id="scenarios-title">Saved scenarios</h2>
+      <form id="save-scenario-form">
+        <label for="scenario-name">Scenario name</label>
+        <input id="scenario-name" maxlength="60" required autocomplete="off">
+      </form>
+      <!-- Float feedback outside the dialog content so messages cannot change its height -->
+      <div class="scenario-message">
+        <p id="scenario-error" role="alert"></p>
+        <p id="scenario-feedback" role="status" class="status"></p>
+      </div>
+      <p class="subtle scenario-help">Saved in this browser. Undo restores holdings after loading.</p>
+
+      <!-- All actions share the footer while the saved list opens only when requested -->
+      <div class="dialog-close scenario-footer">
+        <button class="primary" type="submit" form="save-scenario-form">Save current portfolio</button>
+        <div id="scenario-picker" class="dropdown">
+          <button id="open-scenario-list" type="button" aria-expanded="false" aria-controls="scenario-menu">Load</button>
+          <div id="scenario-menu" hidden>
+            <label for="scenario-search">Find a scenario</label>
+            <input id="scenario-search" type="search" placeholder="Search saved names" autocomplete="off">
+            <p id="scenario-status" role="status"></p>
+            <div class="scenario-scroll" tabindex="0" role="region" aria-label="Saved scenario list"><ul id="scenario-list"></ul></div>
+          </div>
+        </div>
+        <form method="dialog"><button>Close</button></form>
+      </div>
+    </dialog>
+
     <dialog id="allocation-dialog" class="experiment" aria-labelledby="experiment-title">
       <div class="section-heading"><div><h2 id="experiment-title">Try an allocation</h2></div></div>
       <form id="preview-form" class="preview-controls"><div class="asset-control"><label id="candidate-label" for="candidate-toggle">Asset</label><div class="dropdown" id="candidate-dropdown"><input id="candidate" type="hidden" value="DEMO-BOND"><button id="candidate-toggle" class="select-toggle" type="button" aria-expanded="false" aria-controls="candidate-options" aria-labelledby="candidate-label candidate-value"><span id="candidate-value">Loading</span></button><div id="candidate-options" class="dropdown-panel" hidden></div></div></div><label>Weight (%)<input id="target" type="number" min="0" max="100" step="0.01" value="15" required></label></form>
