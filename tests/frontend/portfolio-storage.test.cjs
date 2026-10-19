@@ -67,3 +67,24 @@ test('scenario loading rejects changed datasets', () => {
   scenarios.add(store, 'Old', {}, 'demo-v1');
   assert.throws(() => scenarios.allocation(scenarios.read(store)[0], assets, 'demo-v2'));
 });
+
+test('rename preserves weights and other snapshots', () => {
+  const store = memory();
+  scenarios.add(store, 'Original', { A: 70 }, 'demo-v2');
+  scenarios.add(store, 'Cash', {}, 'demo-v2');
+  scenarios.rename(store, 'Original', ' Renamed ');
+  const items = scenarios.read(store);
+  assert.equal(items[0].name, 'Renamed');
+  assert.equal(items[0].weights.A, 70);
+  assert.equal(items[1].name, 'Cash');
+});
+test('invalid renames preserve storage', () => {
+  const store = memory();
+  scenarios.add(store, 'Original', { A: 70 }, 'demo-v2');
+  scenarios.add(store, 'Cash', {}, 'demo-v2');
+  const before = store.getItem();
+  for (const [oldName, newName] of [['Original', 'cash'], ['Original', ' '], ['Missing', 'New']]) {
+    assert.throws(() => scenarios.rename(store, oldName, newName));
+    assert.equal(store.getItem(), before);
+  }
+});

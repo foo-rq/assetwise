@@ -69,6 +69,21 @@ const scenarioStorage = {
     storage.setItem(this.key, JSON.stringify({ version: 1, items }));
   },
 
+  rename(storage, oldName, newName) {
+    const name = newName.trim();
+    if (!name || name.length > 60) throw new Error("Enter a name with 1 to 60 characters");
+    const items = this.read(storage);
+    const item = items.find(entry => entry.name === oldName);
+
+    // Re-read storage before writing so renaming preserves snapshots saved since the list opened
+    if (!item) throw new Error("Scenario no longer exists. Reopen the list");
+    if (items.some(entry => entry !== item && entry.name.toLowerCase() === name.toLowerCase())) {
+      throw new Error("That name is already saved. Choose another name");
+    }
+    item.name = name;
+    storage.setItem(this.key, JSON.stringify({ version: 1, items }));
+  },
+
   allocation(item, assets, datasetVersion) {
 
     // Use the autosave validator so loading a scenario has the same allocation checks
