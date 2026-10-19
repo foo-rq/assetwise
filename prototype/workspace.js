@@ -521,7 +521,69 @@ function renderScenarios() {
       button.disabled = true;
       button.textContent += " (unavailable for this dataset)";
     }
-    row.append(button);
+    const rename = document.createElement("button");
+    rename.textContent = "Rename";
+    rename.className = "rename-scenario";
+    rename.setAttribute("aria-label", `Rename ${item.name}`);
+    rename.addEventListener("click", () => {
+      const input = document.createElement("input");
+      input.value = item.name;
+      input.maxLength = 60;
+      input.setAttribute("aria-label", `Rename ${item.name}`);
+      input.setAttribute("aria-describedby", "scenario-rename-error");
+      button.replaceWith(input);
+      rename.textContent = "Save";
+      let finished = false;
+
+      // Keep the row in place so renaming does not reset the list's scroll position
+      const cancel = () => {
+        if (finished) return;
+        finished = true;
+        rename.removeEventListener("click", saveClick, true);
+        input.replaceWith(button);
+        rename.textContent = "Rename";
+        $("scenario-rename-error").textContent = "";
+        button.focus();
+      };
+      const save = () => {
+        if (finished) return;
+        try {
+          scenarioStorage.rename(window.localStorage, item.name, input.value);
+          item.name = input.value.trim();
+          button.textContent = item.name;
+          button.setAttribute("aria-label", `Load ${item.name}`);
+          rename.setAttribute("aria-label", `Rename ${item.name}`);
+          cancel();
+        } catch (error) {
+
+          // Keep invalid names editable and put the error in the picker's reserved space
+          $("scenario-rename-error").textContent = /^(Enter a name|That name|Scenario no longer)/.test(error.message)
+            ? error.message : "Name could not be saved. Try again.";
+          input.setAttribute("aria-invalid", "true");
+        }
+      };
+      input.addEventListener("keydown", event => {
+        if (!["Enter", "Escape"].includes(event.key)) return;
+        event.preventDefault();
+        event.stopPropagation();
+        if (event.key === "Enter") save();
+        else cancel();
+      });
+
+      // The row action saves for mouse users; moving away cancels an unfinished edit
+      const saveClick = event => { event.stopImmediatePropagation(); save(); };
+      rename.addEventListener("click", saveClick, { capture: true });
+      input.addEventListener("blur", event => {
+        if (event.relatedTarget !== rename) cancel();
+        if (finished) rename.removeEventListener("click", saveClick, true);
+      });
+      rename.addEventListener("blur", event => {
+        if (event.relatedTarget !== input && !finished) cancel();
+      }, { once: true });
+      input.focus();
+      input.select();
+    });
+    row.append(button, rename);
     $("scenario-list").append(row);
   }
 }
