@@ -36,3 +36,42 @@ const portfolioStorage = {
     storage.setItem(this.key, JSON.stringify({ version: 1, datasetVersion, weights }));
   }
 };
+
+
+// Named snapshots use a different key so ordinary edits never overwrite a saved scenario
+const scenarioStorage = {
+  key: "assetwise.scenarios.v1",
+
+  read(storage) {
+    const raw = storage.getItem(this.key);
+    if (raw === null) return [];
+    const saved = JSON.parse(raw);
+
+    // Refuse an unreadable collection instead of replacing it with an empty list
+    if (!saved || saved.version !== 1 || !Array.isArray(saved.items) ||
+        saved.items.some(item => !item || typeof item.name !== "string" ||
+          !item.name.trim() || item.name.length > 60)) {
+      throw new Error("Saved scenarios could not be read");
+    }
+    return saved.items;
+  },
+
+  add(storage, name, weights, datasetVersion) {
+    const trimmed = name.trim();
+    if (!trimmed || trimmed.length > 60) throw new Error("Enter a name with 1 to 60 characters");
+    const items = this.read(storage);
+
+    // A repeated name must not silently replace a scenario the user wanted to keep
+    if (items.some(item => item.name.toLowerCase() === trimmed.toLowerCase())) {
+      throw new Error("That name is already saved. Choose another name");
+    }
+    items.push({ name: trimmed, version: 1, datasetVersion, weights: { ...weights } });
+    storage.setItem(this.key, JSON.stringify({ version: 1, items }));
+  },
+
+  allocation(item, assets, datasetVersion) {
+
+    // Use the autosave validator so loading a scenario has the same allocation checks
+    return portfolioStorage.read({ getItem: () => JSON.stringify(item) }, assets, datasetVersion);
+  }
+};
