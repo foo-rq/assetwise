@@ -1,328 +1,204 @@
-/* Verdana has wider strokes and open letters Keep the wordmark's font separate below */
 :root {
-  --ink: #25332f;
-  --muted: #56635d;
-  --line: #cbd3ce;
-  --field-line: #829188;
-  --surface: #f2f5f3;
-  --accent: #a75b24;
-  color-scheme: light;
-  font-family: Verdana, Arial, sans-serif;
-  color: var(--ink);
-  background: #ffffff;
-  font-synthesis: none;
-
-  /* Change these together instead of giving each section its own text sizes */
-  --section-size: 17px;
-  --label-size: 13px;
-  --heading-weight: 700;
-
-  /* Use a muted brown related to the logo dot for data limitations, not ordinary values */
-  --unavailable-text: #88482e;
-  --unavailable-background: #faf0eb;
+  --paper: #ffffff; --ink: #25332f; --muted: #56635d; --line: #cbd3ce;
+  --field-line: #829188; --surface: #f2f5f3; --accent: #a75b24;
+  --unavailable-text: #88482e; --backdrop: rgb(0 0 0 / 25%); --shadow: rgb(37 51 47 / 12%);
+  --body-font: Verdana, Arial, sans-serif; --brand-font: Georgia, "Times New Roman", serif;
+  --text-size: 13px; --small-size: 12px; --section-size: 18px; --control-height: 36px; --holding-action-width: 76px;
+  --text-leading: 1.5;
+  font-family: var(--body-font); color: var(--ink); background: var(--paper); color-scheme: light; font-synthesis: none;
 }
-
-/* Count padding inside each declared width so inputs do not push beyond their columns */
 * { box-sizing: border-box; }
-body { margin: 0; font-size: 14px; line-height: 1.5; }
-
-/* Separate buttons from fields so actions do not look like more boxes to fill in */
-button, input, select { font: inherit; color: inherit; }
-
-/* Secondary actions share a compact outline style Reserve bold filled buttons for the next main action */
-button { cursor: pointer; font-size: 12px; line-height: 1.4; font-weight: 400; border: 1px solid var(--line); border-radius: 4px; background: #fff; padding: 5px 9px; min-height: 30px; }
-
-/* Every field uses the same border on all sides Focus replaces that edge instead of adding a second box */
-input, select { border: 1px solid var(--field-line); border-radius: 4px; background: #fff; padding: 11px 12px; min-height: 44px; }
-input:hover, select:hover { border-color: var(--muted); }
-
-/* An inset outline stays inside the existing field, so focusing it cannot change its size */
-input:focus, select:focus { border-color: var(--ink); outline: 2px solid var(--ink); outline-offset: -2px; }
+html, body { overflow-x: clip; }
+/* Keep the page still behind a modal without shifting its horizontal position */
+html { scrollbar-gutter: stable; }
+html:has(dialog[open]), body:has(dialog[open]) { overflow-y: hidden; }
+/* Wrapped report text, form guidance and dialogs share one line rhythm at each text size */
+body { margin: 0; font-size: var(--text-size); line-height: var(--text-leading); }
+h1, h2, h3 { margin: 0; min-width: 0; overflow-wrap: break-word; text-wrap: balance; font-weight: 700; line-height: 1.35; }
+h1 { font-size: 24px; }
+h2 { font-size: var(--section-size); }
+h3 { font-size: var(--text-size); }
+p { margin: 12px 0; }
+a { color: var(--ink); text-underline-offset: 3px; }
+small, .subtle, .beginner-copy { font-size: var(--small-size); font-weight: 400; color: var(--muted); }
+button, input, select { font: inherit; font-weight: 400; color: inherit; }
+button { min-height: var(--control-height); padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px; background: var(--paper); cursor: pointer; line-height: var(--text-leading); }
+input, select { min-width: 0; min-height: var(--control-height); padding: 6px 10px; border: 1px solid var(--field-line); border-radius: 3px; background-color: var(--paper); line-height: var(--text-leading); }
 input::placeholder { color: var(--muted); opacity: 1; }
-button:hover:not(:disabled) { background: var(--surface); }
-
-/* Disabled actions keep their button shape but cannot be mistaken for available actions */
-button:disabled { color: var(--muted); background: var(--surface); border-color: var(--line); opacity: 1; cursor: not-allowed; }
-
-/* Keep a visible outline when moving between controls with the keyboard */
-button:focus-visible, a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
-.primary { background: var(--ink); border-color: var(--ink); color: white; font-weight: 700; }
-
-/* Secondary buttons keep a visible container Only small utility links are borderless */
-#undo, #reset { font-weight: 700; }
+input:focus, select:focus { outline: 2px solid var(--ink); outline-offset: -2px; }
+button:focus-visible, a:focus-visible, summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+button:disabled { color: var(--muted); background: var(--surface); cursor: not-allowed; }
+button:active:not(:disabled) { border-color: var(--ink); }
+@media (hover: hover) { button:hover:not(:disabled) { background: var(--surface); } }
+.primary { color: var(--paper); background: var(--ink); border-color: var(--ink); font-weight: 700; }
 .primary:hover:not(:disabled) { background: var(--ink); }
-.brand { display: flex; gap: 32px; align-items: center; padding: 18px max(24px, calc((100% - 1160px) / 2)); border-bottom: 1px solid var(--line); background: #fff; }
-
-/* The wordmark keeps its approved font and colour even when the body font changes */
-.brand a { font-family: "Segoe UI", Arial, sans-serif; color: var(--ink); font-size: 25px; font-weight: 750; letter-spacing: -1px; text-decoration: none; }
+.text-button { border: 0; padding: 6px 0; color: var(--muted); background: transparent; text-decoration: underline; text-underline-offset: 3px; }
+/* Native selection stays intact while every arrow has the same inset */
+select { appearance: none; padding-right: 36px; background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%); background-position: right 16px center, right 11px center; background-size: 5px 5px; background-repeat: no-repeat; }
+.brand { padding: 20px max(24px, calc((100% - 1160px) / 2)); border-bottom: 1px solid var(--line); }
+.brand a { font-family: var(--brand-font); font-size: 28px; font-weight: 700; line-height: 1; letter-spacing: -.6px; text-decoration: none; }
 .brand a span { color: var(--accent); }
-main { max-width: 1208px; margin: auto; padding: 30px 24px 16px; }
-.intro, .section-heading, .preview-heading, .cash, .total { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-h1 { font-size: 24px; font-weight: 600; letter-spacing: -.3px; margin: 2px 0 5px; }
-h2 { font-size: var(--section-size); font-weight: var(--heading-weight); margin: 0; }
-h3 { font-size: 16px; margin: 0; }
-p { margin: 10px 0; }
-.intro p { margin: 0; }
-
-/* The analysis header is a report title, without the editor's action-button row */
-.analysis-header { margin-bottom: 24px; }
-
-/* Results differ through layout and the large value, not another one-off heading size */
-.analysis-header p { margin: 6px 0 0; font-size: 13px; color: var(--muted); }
-.notice { margin: 20px 0; border-left: 2px solid var(--muted); padding: 8px 12px; background: var(--surface); font-size: 13px; }
-.notice strong { margin-right: 5px; }
-.workspace { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
-
-/* min-width: 0 lets these grid children shrink instead of forcing the page wider */
+main { max-width: 1208px; margin: auto; padding: 32px 24px; }
+.intro, .section-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.intro-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+/* Data provenance remains visible without competing with the report title */
+.notice { display: flex; flex-wrap: wrap; gap: 4px 12px; margin: 24px 0; padding: 12px 16px; border: 1px solid var(--line); font-size: var(--small-size); color: var(--muted); }
+#data-notice { flex-basis: 100%; font-weight: 400; color: var(--ink); }
+#save-state { flex: 1; }
+#resume-note { padding: 12px 16px; border: 1px solid var(--line); }
+.workspace { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 32px; align-items: start; }
+.workspace.empty-workspace { grid-template-columns: minmax(0, 680px); }
 .holdings, .analysis { min-width: 0; }
-
-/* Only the editor gets an enclosing border The results sit on an open report surface */
-.holdings { padding: 22px; border: 1px solid var(--line); }
-.analysis { padding: 18px 0 0; border-top: 4px solid var(--ink); }
-.section-heading { margin-bottom: 20px; }
-
-/* Search and comparison fields share the same label size, weight and spacing */
-#search-form label, .preview-controls label, .asset-control > label {
-  font-size: var(--label-size);
-  font-weight: var(--heading-weight);
-  line-height: 1.5;
-  color: var(--ink);
-}
-#search-form label { display: block; margin-bottom: 5px; }
-
-/* Use an explicit text size and line height so the search field has predictable vertical spacing */
-#search { width: 100%; min-height: 40px; height: 40px; padding: 9px 10px; font-size: 14px; line-height: 20px; }
-.subtle { font-size: 13px; color: var(--muted); }
-
-/* A data limitation gets its own colour and boundary so it cannot be mistaken for a finding */
-.data-note { font-size: 13px; color: var(--unavailable-text); background: var(--unavailable-background); border-left: 3px solid var(--unavailable-text); padding: 10px 12px; margin: 14px 0; }
-.data-note strong { display: block; margin-bottom: 4px; }
-#search-note { margin: 5px 0 14px; }
-
-
-table { border-collapse: collapse; width: 100%; }
-th { font-size: 13px; font-weight: 600; color: var(--muted); text-align: left; padding: 10px 0; }
-td { padding: 14px 0; border-top: 1px solid var(--line); }
-td small { display: block; color: var(--muted); font-size: 13px; }
-
-/* Equal-width digits keep percentages aligned as their values change */
-.number { text-align: right; font-variant-numeric: tabular-nums; }
-.weight { width: 88px; text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; padding: 8px; }
-.remove { margin-left: 8px; padding: 4px 6px; background: transparent; border-color: transparent; }
-.cash { padding: 16px 0; border-top: 1px solid var(--line); font-size: 13px; }
-.cash strong, .total strong, .allocation-finding strong { font-variant-numeric: tabular-nums; }
-
-/* The unfilled background represents cash JavaScript gives each holding its percentage width */
-.allocation { height: 7px; display: flex; background: var(--line); overflow: hidden; }
-.allocation span { border-right: 2px solid white; }
-.total { margin-top: 10px; font-size: 13px; }
-
-/* Put the result on its own line A label beside a small value looked too much like a form */
-.allocation-finding { display: flex; flex-direction: column; align-items: start; gap: 8px; }
-.allocation-finding span { font-size: 13px; }
-.allocation-finding strong { font-size: 28px; line-height: 1.2; font-weight: 700; letter-spacing: -.8px; }
-
-/* Space the result from the metric list without adding a sentence that repeats its value */
-.allocation-finding { margin-bottom: 24px; }
-.metrics { margin: 0; }
-
-/* Reserve the same result column while labels wrap independently */
-.metrics div { display: grid; grid-template-columns: minmax(0, 1fr) 112px; gap: 8px 16px; padding: 6px 0; font-size: 13px; }
-
-/* One rule groups the unavailable metrics without turning each result into a field */
-.metrics { border-top: 1px solid var(--line); padding-top: 12px; }
-dd { margin: 0; color: var(--muted); white-space: nowrap; }
-
-/* Keep the status written out: colour alone must not carry the meaning */
-.metrics dd { color: var(--unavailable-text); font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; }
-
-/* Keep each result in place without displaying an outdated number during a request */
+.holdings { padding: 20px; border: 1px solid var(--line); background: var(--surface); }
+.section-heading { margin-bottom: 24px; }
+.analysis { padding: 20px 0 0; border-top: 3px solid var(--ink); }
+.analysis-header { margin-bottom: 16px; }
+.analysis-header p { margin: 4px 0 0; color: var(--muted); font-size: var(--small-size); }
+#search-form label, #save-scenario-form label, #scenario-menu label { display: block; margin-bottom: 8px; font-weight: 400; }
+#search { width: 100%; }
+#search-note { margin: 8px 0 16px; }
+#entry-mode-label { display: flex; align-items: center; gap: 8px; margin: 16px 0 8px; }
+/* Row headings and values use the same padding and vertical alignment */
+caption { text-align: left; padding-bottom: 8px; color: var(--muted); font-size: var(--small-size); }
+table { width: 100%; border-collapse: collapse; font-size: var(--text-size); }
+th, td { padding: 12px 8px; text-align: left; vertical-align: middle; border-bottom: 1px solid var(--line); font-weight: 400; }
+thead th { color: var(--muted); font-size: var(--small-size); }
+th:first-child, td:first-child { padding-left: 0; }
+th:last-child, td:last-child { padding-right: 0; }
+td small { display: block; margin-top: 2px; }
+td strong { font-weight: 400; }
+.number { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+/* Reserve the same action column beside editable and summary values */
+.holdings th:last-child, .holdings td:last-child { width: var(--holding-action-width); }
+#weight-heading { padding-right: 19px; }
+.weight { appearance: textfield; width: 84px; text-align: right; font-variant-numeric: tabular-nums; }
+/* Native spinner gutters otherwise move typed amounts away from the numeric column */
+.weight::-webkit-inner-spin-button, .weight::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.remove { margin-left: 8px; padding: 6px 0 6px 8px; border-color: transparent; background: transparent; color: var(--muted); font-size: var(--small-size); }
+.cash, .total { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; font-size: var(--small-size); }
+.cash { padding: 16px calc(var(--holding-action-width) + 19px) 16px 0; }
+.total { padding-right: calc(var(--holding-action-width) + 19px); margin-top: 8px; color: var(--muted); }
+.cash strong, .total strong { font-weight: 400; font-variant-numeric: tabular-nums; }
+.allocation { display: flex; height: 4px; overflow: hidden; background: var(--line); }
+.allocation span { border-right: 1px solid var(--paper); }
+/* Matching text sizes keep labels and figures on one baseline above the helper text */
+.metrics { margin: 0 0 20px; }
+.metrics > div { display: grid; grid-template-columns: minmax(0, 1fr) 88px; align-items: baseline; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.metrics dt { min-width: 0; }
+/* Keep help beside its label rather than in a detached column */
+.metric-label { display: inline-flex; align-items: center; gap: 4px; }
+.metric-label .info-button { flex-shrink: 0; }
+.metrics dt small { display: block; margin-top: 4px; }
+.metrics dd { margin: 0; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--unavailable-text); font-size: var(--small-size); }
+.metrics dd.available { color: var(--ink); font-size: var(--text-size); font-weight: 700; }
 .metrics dd.pending { visibility: hidden; }
-
-/* This tool uses the same dialog shell as the explanation, with more room for the comparison table */
-
-/* Keep the desktop experiment compact without shrinking the shared heading and label styles */
-dialog.experiment { width: min(480px, calc(100% - 32px)); padding: 20px; font-size: 13px; }
-
-/* Fields keep their own sizing Dialog buttons use the same compact action styles as the page */
-.experiment input, .experiment select { font-size: 13px; min-height: 36px; padding: 7px 10px; }
-.experiment p { margin: 10px 0 14px; line-height: 1.5; }
-.experiment td, .experiment th { padding-top: 8px; padding-bottom: 8px; }
-.experiment h3 { font-size: 14px; }
-.experiment #preview { padding: 12px; margin-top: 14px; }
-.experiment .actions { margin-top: 12px; }
-.dialog-close { margin-top: 20px; display: flex; justify-content: flex-end; }
-
-/* This launches the main experiment, so restore its larger size and separate it from the allocation total */
-#open-allocation { margin-top: 24px; font-size: 14px; padding: 10px 14px; font-weight: 700; }
-.experiment .section-heading { display: block; margin-bottom: 14px; }
-.experiment .section-heading .subtle { display: block; margin-top: 4px; }
-
-/* Let long asset names shrink with the editor column instead of widening the page */
-.preview-controls label:first-child { flex: 1 1 210px; min-width: 0; }
-.preview-controls select { width: 100%; min-width: 0; }
-
-/* The explanation opens above the page Its button should read like help, not an editing action */
-.text-button { border: 0; padding: 5px 0; background: transparent; text-decoration: underline; text-underline-offset: 3px; }
-dialog { box-sizing: border-box; width: min(480px, calc(100% - 32px)); max-height: calc(100dvh - 32px); overflow: auto; border: 1px solid var(--muted); padding: 24px; color: var(--ink); background: white; }
-dialog::backdrop { background: rgb(0 0 0 / 25%); }
-dialog p { line-height: 1.65; margin: 16px 0 22px; }
-.preview-controls { display: flex; align-items: end; gap: 12px; flex-wrap: wrap; }
-.preview-controls label { display: grid; gap: 5px; }
-.preview-controls input { width: 112px; font-weight: 700; }
-
-#preview { margin-top: 20px; padding: 20px 24px; border-left: 3px solid var(--ink); background: var(--surface); }
-.preview-heading { margin-bottom: 12px; font-size: 13px; }
-#preview p { font-size: 13px; }
-.actions { display: flex; gap: 10px; margin-top: 16px; }
-[role="alert"] { color: var(--unavailable-text); font-size: 13px; }
-
-/* An empty error message should not leave a gap in the layout */
-[role="alert"]:empty { display: none; }
-.status { font-size: 13px; min-height: 20px; margin-top: 16px; color: var(--accent); opacity: 0; transition: opacity 150ms ease; }
-.status.is-visible { opacity: 1; }
-
-/* Keep the live region ready for edits without showing a redundant startup message */
-.status:empty { min-height: 0; height: 0; margin: 0; padding: 0; }
-
-/* Keep the timed dismissal but skip the animation if the user prefers reduced motion */
-@media (prefers-reduced-motion: reduce) { .status { transition: none; } }
-
-/* Hide table captions visually while keeping them available to screen readers */
-.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
-
-/* Keep a hidden preview hidden even if another selector sets its display property */
-[hidden] { display: none !important; }
-
-/* Below 760px, stack analysis under holdings and let the form fields use the full width */
-@media (max-width: 760px) {
-  .workspace { grid-template-columns: 1fr; gap: 24px; }
-  .intro, .experiment .section-heading { align-items: start; flex-direction: column; }
-  .brand { gap: 16px; padding: 14px 18px; }
-  main { padding: 22px 16px; }
-  .holdings { padding: 14px; }
-  .analysis { padding: 18px 0 0; }
-  .preview-controls label, .preview-controls select { width: 100%; min-width: 0; }
-  .preview-controls { align-items: stretch; }
-  .preview-heading { flex-wrap: wrap; }
-
-  /* Leave more room for the asset name when the phone screen is especially narrow */
-  .weight { width: 74px; }
-  .remove { padding: 4px 2px; margin-left: 4px; }
-  td small { overflow-wrap: anywhere; }
-}
-
-/* Touch controls need more room than mouse controls This does not change desktop density */
-@media (pointer: coarse) { button, input, select { min-height: 44px; } button { min-width: 44px; } input, select { font-size: 16px; } }
-
-/* The smaller desktop dialog must not make touch targets or mobile editing text smaller */
-@media (pointer: coarse) {
-  .experiment button, .experiment input, .experiment select { min-height: 44px; }
-  .experiment input, .experiment select { font-size: 16px; }
-}
-
-/* Both pickers share a floating surface anchored to the field, outside the page flow */
+#profile-reading { color: var(--unavailable-text); }
+#profile-reading:empty, #overlap-reading:empty, #portfolio-reading:empty { display: none; }
+.compact-explanations .beginner-copy { display: none; }
+summary { cursor: pointer; }
+#exposure-details { margin: 16px 0; }
+#exposure-content { margin-top: 12px; }
+#exposure-content ul { padding-left: 20px; max-height: 240px; overflow-y: auto; }
+#exposure-content a { overflow-wrap: anywhere; }
+.data-note { display: flex; align-items: center; gap: 4px; margin: 16px 0 8px; color: var(--muted); font-size: var(--small-size); }
+.data-note strong { font-weight: 400; }
+#show-detail { margin-right: 16px; }
+/* Alternatives read as report rows instead of another equally heavy panel */
+.suggestions { margin-top: 40px; border-top: 1px solid var(--line); padding-top: 24px; }
+#suggestion-state { color: var(--muted); max-width: 72ch; }
+#suggestion-list article { max-width: 760px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 24px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+#suggestion-list h3 { align-self: center; }
+#suggestion-list article > button { grid-column: 2; grid-row: 1; }
+#suggestion-list article > p { grid-column: 1 / -1; margin: 0; color: var(--muted); }
+.suggestion-comparison { grid-column: 1 / -1; min-width: 0; margin-top: 8px; }
+.suggestion-comparison table { max-width: 100%; table-layout: fixed; }
+.suggestion-comparison th:first-child { width: 48%; }
+.suggestion-comparison caption { text-align: left; font-size: var(--small-size); color: var(--muted); padding-bottom: 8px; }
+.suggestions details { margin-top: 16px; }
+.survey { max-width: 820px; margin: 0 auto; border: 1px solid var(--line); padding: 24px; }
+.survey > p { color: var(--muted); }
+.survey-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin: 24px 0; }
+.survey-fields label { display: flex; flex-direction: column; gap: 8px; font-weight: 400; }
+.survey-fields input, .survey-fields select { width: 100%; }
 .dropdown { position: relative; min-width: 0; }
-.dropdown-panel { position: absolute; z-index: 10; inset: calc(100% + 4px) 0 auto; background: white; border: 1px solid var(--field-line); border-radius: 4px; padding: 4px; max-height: 220px; overflow-y: auto; box-shadow: 0 4px 12px rgb(37 51 47 / 10%); }
-.dropdown-panel button { display: block; width: 100%; text-align: left; border: 0; border-radius: 2px; padding: 9px 10px; font-size: 13px; white-space: normal; }
-.dropdown-panel button:hover, .dropdown-panel button:focus-visible { background: var(--surface); outline: 2px solid var(--ink); outline-offset: -2px; }
-.dropdown-panel p { padding: 6px 10px; margin: 0; font-size: 13px; color: var(--muted); }
-
-/* The allocation fields stack evenly, with the action aligned below instead of squeezed beside them */
-.experiment .preview-controls { display: grid; grid-template-columns: minmax(0, 1fr) 112px; gap: 12px; align-items: end; }
-.asset-control { min-width: 0; }
-.asset-control > label { display: block; margin-bottom: 5px; }
-.select-toggle { position: relative; width: 100%; text-align: left; border-color: var(--field-line); padding: 8px 30px 8px 10px; min-height: 36px; font-size: 13px; }
-.select-toggle::after { content: ""; position: absolute; right: 12px; top: calc(50% - 5px); width: 6px; height: 6px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: rotate(45deg); pointer-events: none; }
-.select-toggle:focus-visible { outline-offset: -2px; }
-.experiment .section-heading { margin-bottom: 24px; }
-
-/* Give the fields room below them while keeping the funding note close to the footer divider */
-.experiment .funding-note { margin: 24px 0 6px; }
-.experiment .dialog-close { margin-top: 0; padding-top: 12px; border-top: 1px solid var(--line); display: block; }
-
-/* The explanation sits outside this footer, above its divider */
-.dialog-footer-actions { display: flex; justify-content: flex-end; align-items: center; gap: 8px; flex-wrap: wrap; }
-.dialog-footer-actions form { margin: 0; }
-
-/* An empty feedback paragraph must not inherit the dialog's paragraph margins */
-.experiment .status:empty { min-height: 0; height: 0; margin: 0; padding: 0; }
-
-/* Give both fields the same box height and text alignment without clipping the weight label */
-.experiment .select-toggle, .experiment #target { height: 36px; min-height: 36px; line-height: 20px; padding-top: 7px; padding-bottom: 7px; }
-.experiment .preview-controls > label { white-space: nowrap; }
-
-/* Short names keep the closed picker readable, while the open list shows each full asset name */
-#candidate-value { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-@media (max-width: 420px) { .experiment .preview-controls { grid-template-columns: minmax(0, 1fr); } }
-@media (pointer: coarse) { .select-toggle, .dropdown-panel button { min-height: 44px; } }
-
-/* Keep touch editing comfortable while the desktop fields stay compact */
-@media (pointer: coarse) {
-  #search, .experiment .select-toggle, .experiment #target { height: 44px; min-height: 44px; }
-  #search { font-size: 16px; }
-}
-
-/* Computed values use the main ink while unavailable results retain their distinct colour */
-.metrics dd.available { color: var(--ink); }
-
-/* Longer fictional identifiers must wrap within the existing narrow layout */
-td strong { overflow-wrap: anywhere; }
-
-
-/* Separate calculated results from editable weights without adding another panel */
-#comparison-results { margin-top: 18px; }
-#comparison-results .number { font-variant-numeric: tabular-nums; white-space: nowrap; }
-
-
-/* Keep Current and Proposed in the same columns across weights and calculated results */
-#preview table { table-layout: fixed; }
-#preview th:first-child { width: 52%; overflow-wrap: anywhere; }
-#preview .number { width: 24%; }
-
-
-/* Reserve scrollbar space so a longer preview cannot move the weight field sideways */
-dialog.experiment { scrollbar-gutter: stable; }
-
-/* The asset menu floats outside the dialog's scrollable content */
-#candidate-options { position: fixed; inset: auto; }
-
-
-/* Keep scenario access beside Reset with the same secondary button weight */
-.intro-actions { display: flex; gap: 8px; flex-wrap: wrap; }
-
-/* Keep the name field compact and place every scenario action below the same divider */
-#scenarios-dialog { width: min(480px, calc(100% - 32px)); padding: 20px; overflow: visible; font-size: 13px; }
-#save-scenario-form { display: grid; gap: 6px; margin-top: 24px; }
-#scenarios-dialog input { width: 100%; min-width: 0; min-height: 36px; padding: 7px 10px; font-size: 13px; }
-#scenarios-dialog .scenario-help { margin: 24px 0 6px; line-height: 1.5; }
-#scenarios-dialog .scenario-footer { display: flex; gap: 8px; flex-wrap: wrap; margin: 0; padding-top: 12px; border-top: 1px solid var(--line); }
-.scenario-footer form { margin: 0; }
-
-/* The picker floats above Load and scrolls internally instead of changing the dialog height */
-#scenario-menu { position: fixed; z-index: 12; width: min(360px, calc(100vw - 48px)); padding: 10px; border: 1px solid var(--field-line); border-radius: 4px; background: white; box-shadow: 0 4px 12px rgb(37 51 47 / 10%); }
-#scenario-menu label { display: block; margin-bottom: 6px; }
-.scenario-scroll { max-height: 200px; overflow-y: auto; scrollbar-gutter: stable; overscroll-behavior: contain; }
-#scenario-list { list-style: none; padding: 0; margin: 6px 0 0; }
-#scenario-list li { border-bottom: 1px solid var(--line); }
-#scenario-list button { display: block; width: 100%; text-align: left; border: 0; padding: 9px 6px; overflow-wrap: anywhere; }
-#scenario-status { color: var(--muted); font-size: 13px; margin: 8px 0; }
-#scenario-status:empty { display: none; }
-@media (pointer: coarse) { #scenarios-dialog input { min-height: 44px; font-size: 16px; } }
-
-
-/* Messages float above the dialog without reserving blank space or covering its controls */
+.dropdown-panel { position: absolute; z-index: 10; inset: calc(100% + 4px) 0 auto; max-height: 240px; overflow-y: auto; padding: 4px; border: 1px solid var(--field-line); background: var(--paper); box-shadow: 0 4px 12px var(--shadow); }
+.dropdown-panel button { display: block; width: 100%; text-align: left; border: 0; padding: 8px; white-space: normal; }
+.dropdown-panel p { margin: 0; padding: 8px; color: var(--muted); }
+.dropdown-panel button:focus-visible { outline-offset: -2px; }
+dialog { width: min(580px, calc(100% - 32px)); max-height: calc(100dvh - 32px); margin: auto; overflow: auto; padding: 24px; border: 1px solid var(--field-line); background: var(--paper); color: var(--ink); font-size: var(--text-size); }
+dialog::backdrop { background: var(--backdrop); }
+dialog h2 { margin-bottom: 16px; }
+.dialog-close { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 8px; margin-top: 24px; border-top: 1px solid var(--line); padding-top: 12px; }
+.dialog-close form { margin: 0; }
+/* Share one footer rule so both long dialogs keep their exit reachable */
+#proposal-dialog .dialog-close, #detail-dialog .dialog-close { position: sticky; bottom: -24px; background: var(--paper); padding-bottom: 12px; }
+#proposal-results { overflow: visible; }
+#proposal-results table { table-layout: fixed; border: 1px solid var(--line); }
+#proposal-results caption { padding: 12px; text-align: left; background: var(--surface); border: 1px solid var(--line); border-bottom: 0; font-weight: 700; }
+#proposal-results th:first-child { width: 48%; }
+#proposal-results th, #proposal-results td { padding: 12px; }
+#proposal-results table + table, #proposal-results details { margin-top: 24px; }
+#detail-content svg { display: block; width: 100%; color: var(--ink); }
+#detail-content svg text { font: 12px var(--body-font); fill: var(--muted); }
+#detail-content caption { text-align: left; font-weight: 700; padding: 16px 0 8px; }
+#scenarios-dialog { width: min(480px, calc(100% - 32px)); overflow: visible; }
+#save-scenario-form { margin-top: 24px; }
+#scenarios-dialog input { width: 100%; }
+.scenario-footer { margin-top: 16px; }
+.backup-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+#scenario-menu { position: fixed; z-index: 12; width: min(360px, calc(100% - 48px)); padding: 12px; border: 1px solid var(--field-line); background: var(--paper); box-shadow: 0 4px 12px var(--shadow); }
+.scenario-scroll { max-height: 200px; overflow-y: auto; overscroll-behavior: contain; }
+#scenario-list { list-style: none; padding: 0; margin: 8px 0 0; }
+#scenario-list li { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 8px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+#scenario-list li > :first-child { grid-column: 1 / -1; min-width: 0; }
+#scenario-list button { text-align: left; overflow-wrap: anywhere; }
+#scenario-list li > button:first-child { border: 0; padding-left: 0; }
+#scenario-status { color: var(--muted); }
+#restore-scenario { margin-top: 12px; }
 .scenario-message { position: absolute; bottom: calc(100% + 8px); left: 0; right: 0; }
-#scenarios-dialog .scenario-message p { margin: 0; min-height: 0; line-height: 1.5; padding: 8px 12px; background: white; border: 1px solid var(--line); border-radius: 4px; }
-#scenarios-dialog .scenario-message p:empty { display: none; }
+.scenario-message p, #scenario-rename-error:not(:empty) { margin: 0; padding: 8px 12px; border: 1px solid var(--line); background: var(--paper); }
 .scenario-message:has(#scenario-error:not(:empty)) #scenario-feedback { display: none; }
-#scenarios-dialog .scenario-help { margin: 16px 0 6px; }
-
-/* Editing a name stays in its existing row without opening another dialog */
-#scenario-list li { display: flex; align-items: center; gap: 8px; min-height: 38px; }
-#scenario-list li > :first-child { flex: 1; min-width: 0; }
-#scenario-list .rename-scenario { width: auto; flex-shrink: 0; border: 1px solid var(--line); padding: 4px 7px; }
-#scenarios-dialog #scenario-list input { min-height: 30px; height: 30px; padding: 4px 6px; }
-/* Rename errors also float, leaving the list height unchanged and no empty error slot */
-#scenario-menu #scenario-rename-error { position: absolute; top: calc(100% + 4px); left: 0; right: 0; margin: 0; padding: 8px 10px; line-height: 1.5; background: white; border: 1px solid var(--line); }
-#scenario-menu #scenario-rename-error:empty { display: none; }
+#scenario-rename-error:not(:empty) { position: absolute; top: calc(100% + 4px); left: 0; right: 0; }
+.info-button { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; min-height: 24px; padding: 4px; border: 0; background: transparent; vertical-align: middle; }
+.info-button img { width: 16px; height: 16px; flex-shrink: 0; }
+.info-popup { position: fixed; inset: auto; margin: 0; width: 310px; max-width: calc(100% - 24px); padding: 12px; border: 1px solid var(--field-line); background: var(--paper); color: var(--ink); font-size: var(--text-size); box-shadow: 0 4px 12px var(--shadow); }
+[role="alert"] { color: var(--unavailable-text); }
+[role="alert"]:empty, #scenario-status:empty, .scenario-message p:empty { display: none; }
+.status { color: var(--accent); margin-top: 16px; opacity: 0; transition: opacity 150ms ease; }
+.status.is-visible { opacity: 1; }
+.status:empty { margin: 0; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+[hidden] { display: none !important; }
+@media (max-width: 900px) {
+  main { padding: 24px 16px; }
+  .brand { padding: 20px 16px; }
+  .intro { align-items: start; flex-direction: column; }
+  .workspace, .workspace.empty-workspace { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .holdings { padding: 16px; }
+  .metrics > div { grid-template-columns: minmax(0, 1fr) 88px; gap: 12px; }
+  .weight { width: 76px; }
+  .holdings td small { overflow-wrap: anywhere; }
+  #suggestion-list article { grid-template-columns: minmax(0, 1fr); }
+  #suggestion-list article > button { grid-column: 1; grid-row: auto; justify-self: start; }
+}
+@media (max-width: 650px) {
+  /* Keep narrow dialogs readable without pushing their actions into another row */
+  dialog { padding: 16px; }
+  dialog button { padding-inline: 8px; }
+  #proposal-dialog .dialog-close, #detail-dialog .dialog-close { bottom: -16px; }
+  .survey { padding: 20px; }
+  .survey-fields { grid-template-columns: minmax(0, 1fr); }
+  #proposal-results table, .suggestion-comparison table { table-layout: fixed; }
+  #proposal-results th:first-child, .suggestion-comparison th:first-child { width: 46%; }
+  #proposal-results th, #proposal-results td { padding: 12px 6px; }
+  #detail-content svg text { font-size: 20px; }
+}
+/* Touch controls change together rather than inheriting separate desktop exceptions */
+@media (pointer: coarse) {
+  :root { --control-height: 44px; }
+  input, select { font-size: 16px; }
+  button { min-width: 44px; }
+  .info-button { width: 44px; height: 44px; }
+}
+@media (prefers-reduced-motion: reduce) { .status { transition: none; } }
+@media (forced-colors: active) { select { appearance: auto; background-image: none; } }

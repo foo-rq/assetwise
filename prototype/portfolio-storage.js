@@ -5,18 +5,20 @@ const portfolioStorage = {
   key: "assetwise.portfolio.v1",
 
   read(storage, assets, datasetVersion) {
-    const raw = storage.getItem(this.key);
+    // The price correction retains the same symbols; preserve the old save until the user edits
+    const raw = storage.getItem(this.key) ?? (datasetVersion === "archive-2017-v2"
+      ? storage.getItem("assetwise.portfolio.v1:archive-2017-v1") : null);
     if (raw === null) return null;
     const saved = JSON.parse(raw);
 
     // Never silently restore weights against a changed simulation or unknown asset universe
-    if (!saved || saved.version !== 1 || saved.datasetVersion !== datasetVersion ||
+    const correctedArchive = saved?.datasetVersion === "archive-2017-v1" && datasetVersion === "archive-2017-v2";
+    if (!saved || saved.version !== 1 || (saved.datasetVersion !== datasetVersion && !correctedArchive) ||
         !saved.weights || typeof saved.weights !== "object" || Array.isArray(saved.weights)) {
       throw new Error("Saved portfolio is incompatible");
     }
     let invested = 0;
     for (const [symbol, weight] of Object.entries(saved.weights)) {
-
       // Storage can be edited outside the app, so validate numbers before rendering them
       if (!Object.hasOwn(assets, symbol) || typeof weight !== "number" ||
           !Number.isFinite(weight) || weight < 0 || weight > 100) {
@@ -31,12 +33,10 @@ const portfolioStorage = {
   },
 
   write(storage, weights, datasetVersion) {
-
     // Save only holdings, never an unapplied preview or calculated results that can become stale
     storage.setItem(this.key, JSON.stringify({ version: 1, datasetVersion, weights }));
   }
 };
-
 
 // Named snapshots use a different key so ordinary edits never overwrite a saved scenario
 const scenarioStorage = {
@@ -61,6 +61,9 @@ const scenarioStorage = {
     if (!trimmed || trimmed.length > 60) throw new Error("Enter a name with 1 to 60 characters");
     const items = this.read(storage);
 
+    // Match the server limit before mutating the in-memory collection
+    if (items.length >= 100) throw new Error("You can save up to 100 scenarios. Remove 1 before saving another");
+
     // A repeated name must not silently replace a scenario the user wanted to keep
     if (items.some(item => item.name.toLowerCase() === trimmed.toLowerCase())) {
       throw new Error("That name is already saved. Choose another name");
@@ -84,8 +87,25 @@ const scenarioStorage = {
     storage.setItem(this.key, JSON.stringify({ version: 1, items }));
   },
 
-  allocation(item, assets, datasetVersion) {
+  remove(storage, name) {
+    const items = this.read(storage);
+    const item = items.find(entry => entry.name === name);
+    if (!item) throw new Error("Scenario no longer exists");
 
+    // Save one recoverable removal before changing the collection
+    storage.setItem(`${this.key}.removed`, JSON.stringify(item));
+    storage.setItem(this.key, JSON.stringify({ version: 1, items: items.filter(entry => entry !== item) }));
+  },
+
+  restore(storage) {
+    const raw = storage.getItem(`${this.key}.removed`);
+    if (!raw) throw new Error("No removed scenario to restore");
+    const item = JSON.parse(raw);
+    this.add(storage, item.name, item.weights, item.datasetVersion);
+    storage.removeItem(`${this.key}.removed`);
+  },
+
+  allocation(item, assets, datasetVersion) {
     // Use the autosave validator so loading a scenario has the same allocation checks
     return portfolioStorage.read({ getItem: () => JSON.stringify(item) }, assets, datasetVersion);
   }

@@ -3,30 +3,61 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Assetwise · Portfolio workspace</title>
+  <title>Assetwise portfolio workspace</title>
+  <meta name="description" content="Build a hypothetical portfolio and compare estimated future risk and return.">
   <link rel="stylesheet" href="workspace.css">
 
   <!-- defer waits until the page elements exist before the script attaches its listeners -->
   <script src="portfolio-storage.js" defer></script>
+  <script src="sql-storage.js" defer></script>
   <script src="workspace.js" defer></script>
+  <script src="planning.js" defer></script>
+  <script src="experience.js" defer></script>
+  <script src="help.js" defer></script>
 
 </head>
 <body>
-  <header class="brand"><a href="index.html">assetwise<span>.</span></a></header>
+  <header class="brand"><a href="index.html">Asset<span>wise</span></a></header>
   <main>
-    <div class="intro"><div><h1>Build your portfolio</h1></div><div class="intro-actions"><button id="open-scenarios" type="button" aria-haspopup="dialog" disabled>Saved scenarios</button><button id="reset">Reset example</button></div></div>
-
-    <!-- Keep this visible: fictional paths must not be mistaken for market history -->
-    <div class="notice"><strong>Simulated assets and returns.</strong> <span id="save-state" role="status">Edits save in this browser.</span></div>
+    <noscript><p>Enable JavaScript to edit allocations and calculate your portfolio. Your saved portfolios remain stored on the server.</p></noscript>
+    <section id="onboarding" class="survey" aria-labelledby="survey-title">
+      <h1 id="survey-title">Before you begin</h1>
+      <p>Set your preferences, then explore an idea or investments you own. You can leave the number fields blank if unsure.</p>
+      <form id="profile-form">
+        <div class="survey-fields">
+          <label>How familiar are you with investing?<select name="experience" required><option value="">Choose</option><option value="new">I'm new to investing</option><option value="some">I've invested; I want guidance</option><option value="confident">I'm comfortable with finance</option></select></label>
+          <label>What is your main aim?<select name="goal" required><option value="">Choose</option><option value="learn">Learn and experiment</option><option value="growth">Grow money over time</option><option value="preserve">Protect money I may need</option></select></label>
+          <label>In how many years might you need this money?<input name="horizon_years" type="number" min="0.25" max="40" step="0.25" placeholder="Leave blank if unsure"><small>Used to compare modelled growth over your investment period.</small></label>
+          <label>What loss could you accept without affecting this plan?<input name="max_loss_percent" type="number" min="0" max="100" step="1" placeholder="Loss in %, or leave blank if unsure"><small>For example, 20% means $1,000 falling to $800. This is a screening limit, not protection against larger losses.</small></label>
+          <label>How would a loss affect your needs?<select name="capacity" required><option value="">Choose</option><option value="essential">It could affect essential expenses</option><option value="spare">Separate from essential needs</option><option value="unsure">I'm not sure yet</option></select></label>
+          <label>Total amount to explore (USD)<input name="amount" type="number" min="0" max="1000000000000" step="0.01" placeholder="Optional"><small>Enter an amount to allocate in dollars, or leave blank to use percentages.</small></label>
+        </div>
+        <p class="subtle">Your answers guide explanations and comparison rules. You can change them later.</p>
+        <p id="profile-error" role="alert"></p>
+        <button type="submit" class="primary" id="profile-submit" disabled>Start exploring</button>
+        <button type="button" id="cancel-profile" hidden>Cancel</button>
+      </form>
+    </section>
+    <div id="portfolio-workspace" hidden>
+    <div class="intro"><h1>Your portfolio</h1><div class="intro-actions"><button id="edit-profile" type="button">Your preferences</button><button id="open-scenarios" type="button" aria-haspopup="dialog" disabled>Saved portfolios</button><button id="reset">Start fresh</button></div></div>
+    <div class="notice">
+      <strong id="data-notice">Loading historical data</strong>
+      <span id="save-state" role="status">Connecting saving</span>
+      <button id="retry-save" type="button" hidden>Retry saving</button>
+    </div>
+    <p id="resume-note" hidden>You have a saved portfolio. <button id="resume-portfolio" type="button">Resume saved portfolio</button> Or add assets to explore a new idea.</p>
     <div class="workspace">
       <section class="holdings" aria-labelledby="holdings-title">
-        <div class="section-heading"><h2 id="holdings-title">Your holdings</h2><button id="undo" disabled>Undo</button></div>
-        <form id="search-form"><label for="search">Search assets</label><div class="dropdown" id="search-dropdown"><input id="search" type="search" placeholder="Name or ticker" autocomplete="off" aria-describedby="search-note" aria-controls="search-results" aria-expanded="false"><div id="search-results" class="dropdown-panel" hidden></div></div><p id="search-note" class="subtle">Search by name or ticker. Explore 12 fictional equity, bond, property and commodity assets.</p></form>
+        <div class="section-heading"><h2 id="holdings-title">Assets and allocations</h2><button id="undo" disabled>Undo</button></div>
+        <form id="search-form"><label for="search">Search assets <button type="button" class="info-button" aria-label="About stocks and funds" data-help="A stock is a share in a company. An exchange-traded fund (ETF) holds a collection of investments and trades on an exchange. A ticker is its short identifier, such as AAPL for Apple. Funds can still be concentrated or risky."><img src="info-outline.svg" width="16" height="16" alt=""></button></label><div class="dropdown" id="search-dropdown"><input id="search" type="search" placeholder="Name or ticker" autocomplete="off" aria-describedby="search-note" aria-controls="search-results" aria-expanded="false"><div id="search-results" class="dropdown-panel" hidden></div></div><p id="search-note" class="subtle">Loading the supported asset universe.</p></form>
 
         <!-- Search inserts buttons here Holding rows are built separately in holdings-body -->
 
-        <table><caption class="sr-only">Current holdings and editable portfolio weights</caption><thead><tr><th scope="col">Asset</th><th scope="col" class="number">Weight %</th><th scope="col"><span class="sr-only">Actions</span></th></tr></thead><tbody id="holdings-body"></tbody></table>
-        <p id="empty" hidden>No holdings. Search to add an asset.</p>
+        <p id="allocation-help" class="beginner-copy">Choose an asset, then enter its share of your portfolio. 25% means 25 of every 100. Anything unallocated stays as cash.</p>
+        <div id="holding-details" hidden>
+        <label id="entry-mode-label" hidden>Enter allocations in <select id="entry-mode"><option value="percent">Percentages</option><option value="amount">USD amounts</option></select></label>
+        <table><caption class="sr-only">Current holdings and editable portfolio weights</caption><thead><tr><th scope="col">Asset</th><th scope="col" class="number" id="weight-heading">Weight %</th><th scope="col"><span class="sr-only">Actions</span></th></tr></thead><tbody id="holdings-body"></tbody></table>
+        <p id="empty" hidden>Add an asset to begin.</p>
 
         <!-- Validation writes here so the error is visible and announced by screen readers -->
         <p id="error" role="alert"></p>
@@ -36,23 +67,41 @@
         <div class="allocation" id="allocation" aria-hidden="true"></div>
         <div class="total"><span>Total, including cash</span><strong>100.00%</strong></div>
 
-        <!-- The experiment opens separately so its fields do not compete with the holdings editor -->
-        <button id="open-allocation" type="button" aria-haspopup="dialog">Try an allocation</button>
+        </div>
       </section>
 
       <!-- Results come from the Python API using the current allocation -->
-      <section class="analysis" aria-labelledby="analysis-title">
+      <section id="portfolio-analysis" hidden class="analysis" aria-labelledby="analysis-title">
 
         <!-- State the role in words as well as styling: this area reports results and takes no allocation input -->
-        <div class="analysis-header"><h2 id="analysis-title">Portfolio analysis</h2><p>Simulation</p></div>
-        <div class="allocation-finding"><span>Largest position, including cash</span><strong id="largest"></strong></div>
-        <dl class="metrics"><div><dt>Annualised volatility</dt><dd id="volatility">Unavailable</dd></div><div><dt>Annualised return (arithmetic)</dt><dd id="return">Unavailable</dd></div><div><dt>Maximum drawdown</dt><dd id="drawdown">Unavailable</dd></div><div><dt>Sharpe ratio</dt><dd>Unavailable</dd></div></dl>
+        <div class="analysis-header"><h2 id="analysis-title">Portfolio analysis</h2><p id="analysis-basis">Loading</p></div>
+        <dl class="metrics"><div><dt><span id="forecast-growth-label">Expected annual return</span><small id="forecast-growth-hint">Model estimate, not a promised return</small></dt><dd id="expected-return">Unavailable</dd></div><div><dt>Estimated annual volatility<small>How widely returns may fluctuate on a yearly scale</small></dt><dd id="estimated-volatility">Unavailable</dd></div></dl>
+        <p id="forecast-period-note" class="subtle"></p>
+        <details id="forecast-details" hidden><summary>Forecast range and assumptions</summary><div id="forecast-detail-content"></div></details>
+        <details><summary>Historical performance</summary>
+        <dl class="metrics"><div><dt><span class="metric-label">Annualised volatility <button type="button" class="info-button" aria-label="About volatility" data-help="How much daily returns fluctuate, expressed on a yearly scale using 252 trading days. Lower means a smoother path in this sample. It does not measure every risk or tell you the most you could lose."><img src="info-outline.svg" width="16" height="16" alt=""></button></span><small class="beginner-copy">How widely returns fluctuated</small></dt><dd id="volatility">Unavailable</dd></div><div><dt><span class="metric-label">Annualised return (arithmetic) <button type="button" class="info-button" aria-label="About annualised return" data-help="The average daily percentage return multiplied by 252. This is a sample average, not compound yearly growth or a forecast. A positive average can still include large losses."><img src="info-outline.svg" width="16" height="16" alt=""></button></span><small class="beginner-copy">Average daily return expressed per year, not a forecast</small></dt><dd id="return">Unavailable</dd></div><div><dt><span class="metric-label">Maximum drawdown <button type="button" class="info-button" aria-label="About drawdown" data-help="The largest percentage fall from an earlier peak to a later low in the calculated portfolio path. A 20% drawdown means a fall from 100 to 80. Future losses could be larger."><img src="info-outline.svg" width="16" height="16" alt=""></button></span><small class="beginner-copy">Largest fall from a previous peak in this sample</small></dt><dd id="drawdown">Unavailable</dd></div><div><dt><span class="metric-label">Sharpe ratio <button type="button" class="info-button" aria-label="About Sharpe ratio" data-help="Average daily excess return divided by its variability, annualised using the square root of 252. The Treasury-bill reference converts monthly returns to daily equivalents; it is not an observed daily rate. Higher means more excess return per unit of fluctuation in this sample, not a guarantee of better future results."><img src="info-outline.svg" width="16" height="16" alt=""></button></span><small class="beginner-copy">Return above Treasury bills per unit of fluctuation</small></dt><dd id="sharpe">Unavailable</dd></div></dl>
+        </details>
+        <p id="portfolio-reading" class="reading"></p>
+        <p id="overlap-reading"></p>
+        <details id="exposure-details"><summary>Sectors and overlapping holdings</summary><div id="exposure-content"></div></details>
+        <p id="profile-reading" class="subtle"></p>
+
 
         <!-- Repeat the data state in words so the status colour is not the only clue -->
-        <p class="data-note"><strong id="analysis-state" role="status">Loading assets</strong></p>
+        <p class="data-note"><strong id="analysis-state" role="status">Loading assets</strong><button type="button" class="info-button" aria-label="About trading sessions" data-help="Each observation measures the change between 2 consecutive closing prices. The historical archive has 1,226 dated prices and therefore 1,225 daily returns. Trading dates exclude weekends and market holidays."><img src="info-outline.svg" width="16" height="16" alt=""></button></p>
         <button id="retry-analysis" type="button" hidden>Retry</button>
+        <button id="show-detail" class="text-button" type="button" aria-haspopup="dialog">Returns and correlations</button>
         <button id="about-analysis" class="text-button" type="button" aria-haspopup="dialog">Analysis limits</button>
       </section>
+    </div>
+
+    <section id="suggestions" class="suggestions" hidden aria-labelledby="suggestions-title">
+      <h2 id="suggestions-title">Changes to consider</h2>
+      <p id="suggestion-state" role="status"></p>
+      <div id="suggestion-list"></div>
+      <button id="retry-suggestions" type="button" hidden>Retry suggestions</button>
+      <details><summary>How these suggestions are calculated</summary><p>We start with 15% and 30% asset allocations and show up to 3 changes. We also test adding cash to each mix when needed to meet your loss screens, so final percentages may be smaller. Other positions scale proportionally; protected cash stays available. Your period sets the growth comparison. Your loss limit checks past drawdown and modelled losses along the way. Future losses can exceed both. Volatility must fall by 0.1 percentage points, except when a smaller reduction meets your loss limit. Growth and preservation use different rankings. Keeping your portfolio is also an option.</p></details>
+    </section>
     </div>
 
     <!-- Announce completed edits here without moving focus away from the active control -->
@@ -61,16 +110,19 @@
     <!-- A native dialog sits above the page, so opening this explanation cannot push other sections down -->
     <dialog id="analysis-dialog" aria-labelledby="analysis-dialog-title" aria-describedby="analysis-dialog-copy">
       <h2 id="analysis-dialog-title">Analysis limits</h2>
-      <p id="analysis-dialog-copy">Results use fictional data, not market history or forecasts. Weights rebalance every simulated session. Cash earns 0%; costs and taxes are excluded. Return is the arithmetic mean multiplied by 252; volatility uses the square root of 252. Maximum drawdown is the largest decline from a previous peak. Sharpe ratio is unavailable because no risk-free rate is set. Underlying fund holdings are not analysed.</p>
+      <p id="analysis-dialog-copy">Historical prices include provider adjustments for splits and distributions. Future returns are estimates. Weights rebalance every session. Cash earns 0%; costs and taxes are excluded. Return is the arithmetic mean multiplied by 252; volatility uses the square root of 252. Maximum drawdown is the largest decline from a previous peak. Sharpe uses monthly Treasury-bill returns converted to daily equivalents. Forecasts use only data through the displayed decision date. Dated fund holdings have partial coverage, shown in the portfolio report.</p>
+
+      <p><a id="source-link" href="https://www.kaggle.com/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs" target="_blank" rel="noopener noreferrer" hidden>Archive source and publisher licence</a></p>
 
       <!-- method="dialog" closes this window without submitting anything or reloading the page -->
       <form method="dialog"><button autofocus>Close</button></form>
     </dialog>
+
     <!-- Saved snapshots stay separate from the current draft and unapplied previews -->
     <dialog id="scenarios-dialog" aria-labelledby="scenarios-title">
-      <h2 id="scenarios-title">Saved scenarios</h2>
+      <h2 id="scenarios-title">Saved portfolios</h2>
       <form id="save-scenario-form">
-        <label for="scenario-name">Scenario name</label>
+        <label for="scenario-name">Portfolio name</label>
         <input id="scenario-name" maxlength="60" required autocomplete="off">
       </form>
       <!-- Float feedback outside the dialog content so messages cannot change its height -->
@@ -78,47 +130,56 @@
         <p id="scenario-error" role="alert"></p>
         <p id="scenario-feedback" role="status" class="status"></p>
       </div>
-      <p class="subtle scenario-help">Saved in this browser. Undo restores holdings after loading.</p>
+      <p class="subtle scenario-help">Saved to your private workspace, linked to this browser. Undo restores holdings after loading.</p>
+      <details class="backup-controls"><summary>Backup and restore</summary>
+      <p class="subtle">Importing a backup replaces saved portfolios and survey answers. Export your current saves first.</p>
+      <div class="backup-actions">
+      <button id="export-backup" type="button" disabled>Export backup</button>
+      <button id="import-backup" type="button">Import backup</button>
+      </div>
+      <input id="backup-file" type="file" accept=".json,application/json" hidden>
+      </details>
 
       <!-- All actions share the footer while the saved list opens only when requested -->
       <div class="dialog-close scenario-footer">
-        <button class="primary" type="submit" form="save-scenario-form">Save current portfolio</button>
+        <button class="primary" type="submit" form="save-scenario-form">Save portfolio</button>
         <div id="scenario-picker" class="dropdown">
           <button id="open-scenario-list" type="button" aria-expanded="false" aria-controls="scenario-menu">Load</button>
           <div id="scenario-menu" hidden>
-            <label for="scenario-search">Find a scenario</label>
+            <label for="scenario-search">Find a saved portfolio</label>
             <input id="scenario-search" type="search" placeholder="Search saved names" autocomplete="off">
             <p id="scenario-status" role="status"></p>
             <p id="scenario-rename-error" role="alert"></p>
             <div class="scenario-scroll" tabindex="0" role="region" aria-label="Saved scenario list"><ul id="scenario-list"></ul></div>
+            <button id="restore-scenario" type="button" hidden>Undo removal</button>
           </div>
         </div>
         <form method="dialog"><button>Close</button></form>
       </div>
     </dialog>
 
-    <dialog id="allocation-dialog" class="experiment" aria-labelledby="experiment-title">
-      <div class="section-heading"><div><h2 id="experiment-title">Try an allocation</h2></div></div>
-      <form id="preview-form" class="preview-controls"><div class="asset-control"><label id="candidate-label" for="candidate-toggle">Asset</label><div class="dropdown" id="candidate-dropdown"><input id="candidate" type="hidden" value="DEMO-BOND"><button id="candidate-toggle" class="select-toggle" type="button" aria-expanded="false" aria-controls="candidate-options" aria-labelledby="candidate-label candidate-value"><span id="candidate-value">Loading</span></button><div id="candidate-options" class="dropdown-panel" hidden></div></div></div><label>Weight (%)<input id="target" type="number" min="0" max="100" step="0.01" value="15" required></label></form>
+    <!-- These explicit limits guide calculations without claiming a personal suitability assessment -->
+    <dialog id="detail-dialog" aria-labelledby="detail-title">
+      <h2 id="detail-title" tabindex="-1">Returns and correlations</h2>
+      <div id="detail-content"></div>
+      <p id="detail-assumptions" class="subtle">Dated sector and overlap coverage is shown in the portfolio report. Uncovered funds remain unknown.</p>
+      <form method="dialog" class="dialog-close"><button>Close</button></form>
+    </dialog>
 
-      <!-- This error belongs to the proposed change, not the holdings editor above -->
-      <p id="preview-error" role="alert"></p>
-      <div id="preview" hidden><div class="preview-heading"><h3 id="preview-title"></h3></div><table><caption class="sr-only">Allocation changes before applying</caption><thead><tr><th scope="col">Position</th><th scope="col" class="number">Current</th><th scope="col" class="number">Proposed</th></tr></thead><tbody id="preview-body"></tbody></table>
-
-        <!-- Keep the same column order as the allocation table so both comparisons read together -->
-        <table id="comparison-results" hidden><caption class="sr-only">Simulated portfolio results before applying</caption><thead><tr><th scope="col">Metric</th><th scope="col" class="number">Current</th><th scope="col" class="number">Proposed</th></tr></thead><tbody id="comparison-body"></tbody></table>
-        <p id="comparison-state" role="status" class="subtle"></p><div class="actions"><button id="apply" class="primary">Apply change</button><button id="discard">Discard</button></div></div>
-
-      <!-- Dialog feedback stays inside the modal so it remains accessible while the page is inactive -->
-      <p id="allocation-status" role="status" class="status"></p>
-      <p class="subtle funding-note">Other holdings and cash scale proportionally to fund this weight.</p>
+    <!-- Every suggestion and saved scenario gets a full comparison before it can change holdings -->
+    <dialog id="proposal-dialog" aria-labelledby="proposal-title">
+      <h2 id="proposal-title">Compare portfolio</h2>
+      <p id="proposal-state" role="status"></p>
+      <p id="proposal-explanation"></p>
+      <p id="proposal-error" role="alert"></p>
+      <div id="proposal-results" class="bounded-results"></div>
+      <p id="proposal-assumptions" class="subtle"></p>
       <div class="dialog-close">
-        <div class="dialog-footer-actions">
-          <button class="primary" type="submit" form="preview-form">Preview change</button>
-          <form method="dialog"><button>Close</button></form>
-        </div>
+        <button id="apply-proposal" class="primary" type="button" disabled>Apply change</button>
+        <form method="dialog"><button>Close</button></form>
       </div>
     </dialog>
+
   </main>
 </body>
 </html>

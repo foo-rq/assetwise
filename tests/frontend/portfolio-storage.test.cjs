@@ -21,6 +21,23 @@ test('missing save starts fresh', () => {
   assert.equal(storage.read(memory(), assets, 'demo-v2'), null);
 });
 
+test('corrected archive reuses allocation weights without overwriting the original save', () => {
+  const original = JSON.stringify({ version: 1, datasetVersion: 'archive-2017-v1', weights: { A: 70 } });
+  const values = new Map([['assetwise.portfolio.v1:archive-2017-v1', original]]);
+  const store = { getItem: key => values.get(key) ?? null };
+  const previousKey = storage.key;
+  storage.key = 'assetwise.portfolio.v1:archive-2017-v2';
+  try {
+    assert.equal(storage.read(store, assets, 'archive-2017-v2').A, 70);
+    assert.equal(values.size, 1);
+    assert.equal(values.get('assetwise.portfolio.v1:archive-2017-v1'), original);
+    values.set(storage.key, JSON.stringify({ version: 1, datasetVersion: 'archive-2017-v2', weights: {} }));
+    assert.equal(JSON.stringify(storage.read(store, assets, 'archive-2017-v2')), '{}');
+  } finally {
+    storage.key = previousKey;
+  }
+});
+
 test('rejects corrupt or incompatible saves without overwriting them', () => {
   const invalid = ['broken', 'null', ...[
     { version: 2, datasetVersion: 'demo-v2', weights: {} },
@@ -87,4 +104,16 @@ test('invalid renames preserve storage', () => {
     assert.throws(() => scenarios.rename(store, oldName, newName));
     assert.equal(store.getItem(), before);
   }
+});
+
+
+test('removal can be restored without changing allocation data', () => {
+  const values = new Map();
+  const store = { getItem: key => values.get(key) ?? null, setItem: (key, value) => values.set(key, value), removeItem: key => values.delete(key) };
+  scenarios.add(store, 'Recover me', { A: 60 }, 'demo-v2');
+  scenarios.remove(store, 'Recover me');
+  assert.equal(scenarios.read(store).length, 0);
+  scenarios.restore(store);
+  assert.equal(scenarios.read(store)[0].weights.A, 60);
+  assert.equal(store.getItem(`${scenarios.key}.removed`), null);
 });
