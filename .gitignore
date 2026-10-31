@@ -191,7 +191,7 @@ cython_debug/
 # .idea/
 
 # Abstra
-#   Abstra is an AI-powered process automation framework.
+#   Abstra is a process automation framework.
 #   Ignore directories containing user credentials, local state, and settings.
 #   Learn more at https://abstra.io/docs
 .abstra/
@@ -223,3 +223,10 @@ __marimo__/
 /context/
 /docs/
 /AGENTS.md
+
+# Private SQL files and backups never belong in the source repository
+/.assetwise/
+*.sqlite3
+*.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm

@@ -1,10 +1,25 @@
 # Assetwise
 
-A hypothetical portfolio builder with a Python API. The current version has an interactive design prototype, reproducible simulated history and portfolio return/volatility calculations. Market data and SQL storage are not implemented yet.
+A portfolio analysis app for exploring investments, understanding risk and comparing possible changes before applying them. Built with **Python, FastAPI, SQLite and vanilla JavaScript**.
 
-## Run the API on Windows
+Assetwise uses a dated market archive ending in November 2017. It estimates future outcomes from that information and evaluates recommendations against later prices separately. It does not provide live prices or place trades.
 
-Use Python 3.14. Run these commands in PowerShell from the repository folder:
+## What you can do
+
+- Set your experience, goal, investment period and acceptable loss through a short survey
+- Build a practice portfolio or explore holdings you already own
+- Read returns, volatility, maximum drawdown, correlations and covered fund overlap
+- Preview up to 3 calculated alternatives with their allocations, estimated outcomes and trade-offs
+- Apply a change, undo it or keep your original portfolio
+- Save portfolios and preferences to SQLite, then export/import backups
+
+Experience changes the amount of explanation. The goal, period, loss tolerance and essential-expense needs affect the recommendation. An optional USD amount enables dollar entry without changing the percentage-based calculations.
+
+## Quick start
+
+Requirements: **Python 3.14**. **Node.js** is also needed to run the frontend tests. There is no frontend build step, market-data API key or separate database service.
+
+From the repository folder on Windows:
 
 ```powershell
 python -m venv .venv
@@ -12,78 +27,97 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m uvicorn backend.main:app --reload --host 127.0.0.1 --port 8000
 ```
 
-The virtual environment keeps this project's packages separate from other Python projects. Using its Python directly avoids PowerShell activation-policy changes. Create the environment once; repeat the install command when dependencies change.
+Open [Assetwise](http://127.0.0.1:8000/workspace/). Complete the survey, search for an asset and enter an allocation to see its analysis. Unallocated money stays in cash. Returning visitors can explicitly resume their saved portfolio.
 
-The requirements files pin the tested packages, including indirect dependencies in `requirements-lock.txt`. For an API-only install without test tools, use `requirements.txt` instead of `requirements-dev.txt`.
+The server also exposes [interactive API documentation](http://127.0.0.1:8000/docs) and a [health check](http://127.0.0.1:8000/health). If port 8000 is occupied, change both the command and browser address. Serve the app through FastAPI rather than opening the HTML file directly.
 
-Open [the health endpoint](http://127.0.0.1:8000/health). It should return:
+## Data and calculations
 
-```json
-{"status":"ok"}
+| Coverage | Included |
+| --- | --- |
+| Assets | 22 stocks and 24 funds, all US-listed |
+| Price window | 2 January 2013 to 10 November 2017 |
+| Adjusted prices | 56,396 observations: 1,226 per asset |
+| Daily returns | 1,225 per asset |
+| Fund composition | 1,117 equity positions in 12 dated schedules; 6 of the 24 searchable funds covered |
+
+Adjusted closes account for provider-recorded splits and distributions. Holdings schedules are dated 30 September 2017, not a history of changing constituents. Uncovered funds and unclassified securities remain explicitly unknown. See [data provenance and rebuild instructions](backend/data/README.md) for sources, checks and redistribution limitations.
+
+Historical analytics use aligned daily returns, sample covariance, 252 trading sessions per year and the compounded portfolio path. Sharpe uses a reconstructed Treasury-bill reference. Nonnegative allocations may total at most 100%; the remainder earns 0% as cash.
+
+Forecasts combine estimated returns with Ledoit-Wolf covariance. Return estimation is selected using completed pre-cutoff validation periods. The chosen horizon affects compounded growth, uncertainty and a modelled drawdown screen. Suggestions compare asset mixes and cash reserves against the user's constraints. A growth sacrifice is shown when reducing risk takes priority. No change is a valid outcome.
+
+**The model assumes constant portfolio weights, equivalent to daily rebalancing.** This is a calculation assumption, not an instruction to trade daily. Holdings drift when left alone. Trading schedules and costs are evaluated separately. Live projections exclude fees, taxes and inflation, and model ranges are not guaranteed returns or maximum losses.
+
+## Validation and limitations
+
+Financial tests cover hand-calculated results, corporate actions, timing, cash, invalid inputs and meaningful edge cases. Separate retrospective evaluations freeze decisions before measuring later outcomes. They retain unsuccessful suggestions and no-change decisions.
+
+In one broader evaluation of **459 portfolio/date cases**, using a **1-year horizon**, **20% acceptable loss**, **annual rebalancing** and assumed **0.1% costs per risky dollar traded**:
+
+| Observed outcome | Cases |
+| --- | ---: |
+| Stayed within the stated drawdown limit | 451/459 |
+| Finished with a positive nominal return | 358/459 |
+| Beat the unchanged starting portfolio | 173/459 |
+
+These are development results, **not a prediction-accuracy score**. Cases overlap, the asset universe contains selected survivors and later outcomes were inspected during development. Passing calculation tests does not establish that future recommendations will be profitable.
+
+The 8 loss-limit breaches occurred in 2020 and 2022, with drawdowns of 20.44% to 22.39%. The worst case, starting from TLT alone, returned approximately -20.20%. Separately, 588 fixed-2017 cases with explicit loss budgets had 0 breaches with annual maintenance but 41 when holdings were left untouched. Neither result establishes a universally best trading schedule.
+
+The maintenance evaluation covers 1,243 frozen decisions across 6 schedules and 2 fee assumptions: 14,916 policy rows and 44,748 portfolio paths. The 9-year example remains incomplete at the evaluation endpoint of 27 October 2026. Model interval coverage has not yet been fully assessed against the corrected maintenance results. Modelled loss screens omit jumps and changing market conditions.
+
+## Saving and recovery
+
+SQLite stores profiles, portfolios and holding weights in `.assetwise/portfolios.sqlite3`. The file is excluded from Git and survives local server restarts. To use another local path, set this before starting the server:
+
+```powershell
+$env:ASSETWISE_DB_PATH = 'C:\AssetwiseData\portfolios.sqlite3'
 ```
 
-This confirms that the API responds. It does not check a database or market-data service. [Interactive API documentation](http://127.0.0.1:8000/docs) is available while the server runs. Press Ctrl+C in the terminal to stop it.
+A private browser key identifies each workspace; the database stores its hash. This provides browser-linked saving, not accounts or cross-device synchronisation. Clearing browser site data loses that key. Export a backup first.
 
-If port 8000 is already in use, change `--port 8000` to `--port 8001` and use that port in the browser links. If `python` is not found, install Python from [python.org](https://www.python.org/downloads/) and reopen PowerShell.
+- **Export backup** saves preferences and allocations without the private key
+- **Import backup** validates the file before replacing the saved collection; export existing saves first
+- Conflicting edits from another tab are rejected instead of silently overwriting newer saves
+- If saving fails, keep the tab open and export your edits before reloading
 
-## Simulated history
+Back up the database while the app is stopped or through SQLite's backup API.
 
-Open [the demo history endpoint](http://127.0.0.1:8000/demo/history) while the API runs. It returns 4 fictional assets with 253 index values each: a starting value of 100 followed by 252 synthetic daily changes. Refreshing returns the same dataset, identified as `demo-v1` with `source: simulated`.
+## Hosting
 
-The generator combines a shared movement with a separate movement per asset. Its coefficients are invented and its movements are bounded. This is demonstration data, not a calibrated market model, historical performance or a forecast. Session numbers have no calendar dates. The indices have no currency or separate dividends. Asset names do not represent real securities.
+The interface and API run as 1 service. Docker needs a persistent volume for saved portfolios:
 
-The prototype is not connected to this endpoint yet. Change the dataset version when changing its generation rules so saved comparisons can identify their inputs.
-
-## Portfolio calculations
-
-`POST /demo/analysis` accepts percentages by fictional asset identifier:
-
-```json
-{"weights": {"DEMO-EQ1": 60, "DEMO-BOND": 30}}
+```text
+docker build -t assetwise .
+docker run --rm -p 127.0.0.1:8000:8000 -v assetwise-data:/app/.assetwise assetwise
 ```
 
-This leaves 10% in cash earning 0%. An empty `weights` object means 100% cash. Negative weights, totals above 100%, unknown identifiers and nonnumeric values are rejected with HTTP 422. Weights are never silently normalised.
+Retain `assetwise-data` when replacing the container. Use 1 application instance per SQLite file on local storage, not a shared network filesystem. A custom mounted path must be writable by the container's non-root user.
 
-The response includes session returns, cumulative return, annualised arithmetic return and annualised volatility. Results use decimals: `0.05` means 5%. Every response identifies its simulated source and dataset version.
+For public hosting, use HTTPS, request-size limits and backups. Forward `X-Workspace-Key` unchanged and disable caching for `/api/storage`. The existing `render.yaml` does not configure persistent storage, so it must not be used unchanged for durable SQL saving. Public deployment has not been verified.
 
-Calculation assumptions:
+After deployment, test saving, reloading and restarting with the volume retained. A healthy `/health` response alone does not verify storage. Also check workspace isolation and conflicting edits from 2 tabs.
 
-- Asset return = current index/previous index minus 1
-- Portfolio return = sum of asset returns multiplied by their decimal weights
-- Weights stay constant through daily rebalancing, excluding taxes and trading costs
-- Cumulative return compounds the session returns
-- Annualised arithmetic return = average session return multiplied by 252, not compounded growth or a forecast
-- Annualised volatility = sample standard deviation of portfolio returns multiplied by the square root of 252. This equals the covariance-based calculation for aligned constant weights
-
-The engine currently requires consecutive synthetic sessions and at least 3 index observations, giving 2 returns for sample volatility. That is a mathematical minimum, not a sufficient history requirement for real investment analysis. Missing held-asset values are rejected rather than filled. Sharpe ratio and real-calendar alignment are not implemented yet.
-
-The [interactive API documentation](http://127.0.0.1:8000/docs) can send the example request. Manual inspection of raw numbers is optional; automated tests verify hand-calculated cases. The visible prototype will use these calculations in a separate batch.
-
-## Run the tests
+## Development
 
 ```powershell
 .\.venv\Scripts\python.exe -m pytest backend/tests -q
+node --test tests/frontend/*.test.cjs
 ```
 
-Tests cover the health response, simulation repeatability, hand-calculated returns, diversification, cash handling and invalid inputs. They need no API key or internet connection once the packages are installed.
+Tests use temporary databases rather than personal saves. As of 29 October 2026, **232 backend tests and 52 frontend tests passed** after the runtime cleanup.
 
-## Open the prototype
+Earlier browser checks covered all 3 experience settings, survey entry, dollar allocations, previews, Apply/Undo, SQL resume and offline recovery. Desktop and 390px layouts were inspected. These are automated checks and scripted walkthroughs, not usability studies with real participants. Browser checks predate the final runtime-only cleanup.
 
-Open `prototype/index.html` in a browser. It still runs independently of the API and uses sample allocations. See [the prototype review steps](prototype/README.md) for its supported interactions and limitations.
+The Docker image built and passed save/reload, isolation and restart-persistence checks on 27 October. It has not been rebuilt after the latest changes. Before publishing, repeat the full browser flow, backup import/export, keyboard interactions and persistence checks in a disposable workspace.
 
-## Implementation references
+| Location | Purpose |
+| --- | --- |
+| `backend/` | API, calculations, forecasts and SQL storage |
+| `backend/data/` | Bundled historical inputs and provenance |
+| `prototype/` | Served HTML, CSS and JavaScript interface |
+| `backend/tests/`, `tests/frontend/` | Calculation, API, persistence and interface tests |
+| `scripts/` | Data imports and retrospective evaluation tools |
 
-- [FastAPI first steps](https://fastapi.tiangolo.com/tutorial/first-steps/)
-- [FastAPI testing](https://fastapi.tiangolo.com/tutorial/testing/)
-- [Starlette TestClient](https://starlette.dev/testclient/) for the current HTTPX2 dependency
-- [Python random generator](https://docs.python.org/3.14/library/random.html#notes-on-reproducibility) for seeded local random state
-- [CFA Institute: portfolio risk and return](https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/portfolio-risk-return-part-1) for portfolio variance and covariance
-- [Python sample standard deviation](https://docs.python.org/3.14/library/statistics.html#statistics.stdev)
-
-## Drawdown and correlations
-
-The analysis response now includes a portfolio index starting at 1 and a drawdown for every session, including session 0. Drawdown is the loss from the highest portfolio value reached so far, expressed as a positive decimal. A value of 0.2 means a 20% decline. Maximum drawdown keeps the worst decline even after recovery. The path uses the same daily rebalancing and cash assumptions as the other metrics.
-
-Asset correlations use Pearson correlation of aligned session returns for positive-weight holdings. Each distinct pair appears once. Cash and zero-weight assets are excluded. Constant returns produce `null` with an explicit reason because correlation is undefined, not zero. A cash-only or single-asset portfolio has no pairs. Correlations from short samples or simulated data do not establish real-world relationships.
-
-References: [PerformanceAnalytics drawdown definition](https://search.r-project.org/CRAN/refmans/PerformanceAnalytics/html/maxDrawdown.html) and [Python correlation documentation](https://docs.python.org/3.14/library/statistics.html#statistics.correlation).
+Research replays require additional local price caches that are not included in a fresh checkout. The bundled app and test suites do not require those caches. The local `docs/` directory retains research evidence, not extra setup instructions.

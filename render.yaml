@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: assetwise
+    runtime: docker
+
+    # Free compute has no persistent disk; do not use this blueprint for durable SQL saves
+    plan: free
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+
+    # Publish later updates only when you choose Manual Deploy in Render
+    autoDeployTrigger: "off"
+    envVars:
+
+      # Match the port used by the existing container startup command
+      - key: PORT
+        value: "8000"

@@ -1,0 +1,12 @@
+*
+!requirements.txt
+!requirements-lock.txt
+!backend/
+!backend/**
+!prototype/
+!prototype/**
+backend/tests/
+**/__pycache__/
+**/*.pyc
+**/*.sqlite3*
+prototype/README.md
