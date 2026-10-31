@@ -5,7 +5,8 @@ from typing import Annotated, Literal
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
-from backend.simulation import SimulatedHistory
+from backend.history import History
+from backend.forecast import ForecastComparison
 
 
 class AllocationRequest(BaseModel):
@@ -38,12 +39,15 @@ class AssetCorrelation(BaseModel):
 
 
 class PortfolioAnalysis(BaseModel):
-    source: Literal["simulated"] = "simulated"
+    source: Literal["simulated", "historical"] = "simulated"
+    dates: list[str] = []
+    value_basis: str = "Simulated index"
+    source_url: str | None = None
     dataset_version: str
     notice: str
 
     # These assumptions travel with the results when the interface requests them
-    rebalancing: str = "Constant weights, rebalanced every synthetic session"
+    rebalancing: str = "Constant weights, rebalanced every session"
     cash_assumption: str = "Unallocated cash earns 0%"
     exclusions: str = "Trading costs and taxes excluded"
     periods_per_year: int = 252
@@ -57,6 +61,14 @@ class PortfolioAnalysis(BaseModel):
     annualised_arithmetic_return: float
     annualised_volatility: float
 
+    # This dimensionless ratio uses daily excess returns, not return divided by portfolio volatility
+    sharpe_ratio: float | None = None
+    sharpe_unavailable_reason: str | None = None
+    benchmark_source: str | None = None
+    benchmark_basis: str | None = None
+    exposure: dict | None = None
+    forecast: ForecastComparison | None = None
+
     # Include the initial value so a loss in the first session counts as a drawdown
     portfolio_index: list[float]
 
@@ -69,13 +81,21 @@ class PortfolioAnalysis(BaseModel):
 
 
 def analyse_portfolio(
-    history: SimulatedHistory, allocation: AllocationRequest
+    history: History, allocation: AllocationRequest
 ) -> PortfolioAnalysis:
-    # This first engine accepts aligned synthetic sessions only, never filled market gaps
+    # Session positions stay consecutive for both sources; historical dates are validated separately
     if len(history.sessions) < 3:
         raise ValueError("At least 3 index observations are needed for sample volatility")
     if history.sessions != list(range(len(history.sessions))):
-        raise ValueError("Synthetic sessions must be consecutive and start at 0")
+        raise ValueError("Session positions must be consecutive and start at 0")
+
+    if history.source == "historical":
+        # Never let a real-data label pass through with missing or misaligned calendar dates
+        from datetime import date
+        dates = history.dates
+        if (len(dates) != len(history.sessions) or dates != sorted(set(dates))
+                or any(date.fromisoformat(value).isoformat() != value for value in dates)):
+            raise ValueError("Historical dates must be unique, ordered and aligned")
 
     # Duplicate identifiers would otherwise silently overwrite one asset's history
     assets = {asset.symbol: asset for asset in history.assets}
@@ -116,7 +136,7 @@ def analyse_portfolio(
     ]
 
     # Compounding describes the whole sample, while mean times 252 is an arithmetic estimate
-    # Neither quantity predicts future returns or represents actual market performance
+    # Neither quantity predicts future returns; results follow the supplied data basis
     portfolio_index = [1.0]
     drawdowns = [0.0]
     peak = 1.0
@@ -138,6 +158,22 @@ def analyse_portfolio(
     # For aligned constant weights this equals sqrt(w' sample_covariance w)
     # Multiplying by sqrt(252) is our annualisation convention, not a guarantee about markets
     annual_volatility = stdev(session_returns) * sqrt(252)
+    sharpe = None
+    sharpe_reason = "No matching Treasury-bill reference series"
+    if history.risk_free_returns:
+        # Reject partial or non-finite references instead of truncating zip or assuming zero rates
+        if (len(history.risk_free_returns) != len(session_returns)
+                or any(not isfinite(value) for value in history.risk_free_returns)):
+            raise ValueError("Risk-free returns must be finite and match every session return")
+        excess = [value - reference for value, reference in
+                  zip(session_returns, history.risk_free_returns)]
+        excess_volatility = stdev(excess)
+        if annual_volatility < 1e-12 or excess_volatility < 1e-12:
+            # A constant portfolio or differential path cannot support a useful risk-adjusted ratio
+            sharpe_reason = "Undefined for a constant portfolio or constant excess returns"
+        else:
+            sharpe = mean(excess) / excess_volatility * sqrt(252)
+            sharpe_reason = None
     if not all(isfinite(value) for value in (cumulative, annual_mean, annual_volatility)):
         raise ValueError("Calculated results exceed the supported numeric range")
 
@@ -161,8 +197,14 @@ def analyse_portfolio(
 
     # Calculate the remainder without changing any allocation supplied by the user
     invested = sum(Decimal(str(weight)) for weight in allocation.weights.values())
+    # Composition is a separate dated snapshot and never changes calculated historical returns
+    exposure = None
+    if history.source == "historical":
+        from backend.exposure import portfolio_exposure
+        exposure = portfolio_exposure(allocation.weights)
     return PortfolioAnalysis(
-        dataset_version=history.dataset_version,
+        source=history.source, dates=history.dates, value_basis=history.value_basis,
+        source_url=history.source_url, dataset_version=history.dataset_version,
         notice=history.notice,
         return_observations=len(session_returns),
         cash_weight_percent=float(Decimal(100) - invested),
@@ -170,6 +212,10 @@ def analyse_portfolio(
         cumulative_return=cumulative,
         annualised_arithmetic_return=annual_mean,
         annualised_volatility=annual_volatility,
+        sharpe_ratio=sharpe, sharpe_unavailable_reason=sharpe_reason,
+        benchmark_source=history.benchmark_source,
+        benchmark_basis=history.benchmark_basis,
+        exposure=exposure,
         portfolio_index=portfolio_index,
         drawdowns=drawdowns,
         maximum_drawdown=max(drawdowns),

@@ -3,7 +3,7 @@ from fastapi.testclient import TestClient
 
 from backend.comparison import ComparisonRequest, compare_portfolios
 from backend.main import app
-from backend.simulation import SimulatedAsset, SimulatedHistory
+from backend.tests.simulated_history import SimulatedAsset, SimulatedHistory
 
 
 def compare(current, proposed):
@@ -55,16 +55,16 @@ def test_cash_and_return_changes_use_percentage_points():
     assert result.proposed.annualised_volatility == pytest.approx(result.current.annualised_volatility / 2)
 
 
-def test_api_uses_one_simulation_basis():
-    response = TestClient(app).post("/demo/comparison", json={
-        "current": {"weights": {"DEMO-EQ1": 70, "DEMO-EQ2": 20}},
-        "proposed": {"weights": {"DEMO-EQ1": 59.5, "DEMO-EQ2": 17, "DEMO-BOND": 15}},
+def test_api_uses_one_historical_basis():
+    response = TestClient(app).post("/api/comparison", json={
+        "current": {"weights": {"AAPL": 70, "SPY": 20}},
+        "proposed": {"weights": {"AAPL": 59.5, "SPY": 17, "IEF": 15}},
     })
     assert response.status_code == 200
     result = response.json()
     for field in ("source", "dataset_version", "return_observations", "rebalancing", "cash_assumption"):
         assert result["current"][field] == result["proposed"][field]
-    assert result["current"]["source"] == "simulated"
+    assert result["current"]["source"] == "historical"
     assert result["proposed"]["cash_weight_percent"] == 8.5
 
 
@@ -73,4 +73,4 @@ def test_api_uses_one_simulation_basis():
 def test_api_rejects_invalid_allocations_on_either_side(side, weights):
     payload = {"current": {"weights": {}}, "proposed": {"weights": {}}}
     payload[side] = {"weights": weights}
-    assert TestClient(app).post("/demo/comparison", json=payload).status_code == 422
+    assert TestClient(app).post("/api/comparison", json=payload).status_code == 422

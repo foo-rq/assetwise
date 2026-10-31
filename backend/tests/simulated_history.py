@@ -1,21 +1,16 @@
+"""Deterministic fictional paths used only by calculation tests"""
+
 from random import Random
 from typing import Literal
 
-from pydantic import BaseModel
+from backend.history import AssetHistory, History
 
 
-class SimulatedAsset(BaseModel):
-    # DEMO identifiers keep invented paths separate from real stock tickers
-    symbol: str
-
-    # The readable name also says simulated when shown without the identifier
-    name: str
-
-    # Each position matches the same numbered session across all assets
-    index_values: list[float]
+# Preserve the demo asset name for existing calculation fixtures
+SimulatedAsset = AssetHistory
 
 
-class SimulatedHistory(BaseModel):
+class SimulatedHistory(History):
     # Literal prevents this response model from accepting a real-market source label
     source: Literal["simulated"] = "simulated"
 

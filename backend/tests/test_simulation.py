@@ -6,7 +6,7 @@ import json
 from fastapi.testclient import TestClient
 
 from backend.main import app
-from backend.simulation import build_simulated_history
+from backend.tests.simulated_history import build_simulated_history
 from backend.analytics import AllocationRequest, analyse_portfolio
 
 
@@ -47,26 +47,9 @@ def test_history_has_aligned_valid_paths_with_gains_and_losses():
         assert min(changes) < 0 < max(changes)
 
 
-def test_api_identifies_fictional_data_and_returns_stable_results():
-    # Exercise HTTP serialization too, so the check covers what the browser actually receives
+def test_demo_is_no_longer_a_public_product_route():
     with TestClient(app) as client:
-        response = client.get("/demo/history")
-        repeated = client.get("/demo/history")
-
-    assert response.status_code == 200
-    body = response.json()
-
-    # Refreshing must not silently replace the inputs used for an allocation comparison
-    assert body == repeated.json()
-
-    # Keep provenance and the warning in the public response, not only in Python comments
-    assert body["source"] == "simulated"
-    assert body["dataset_version"] == "demo-v2"
-    assert "not market history" in body["notice"]
-
-    # Real tickers must not accidentally appear beside these invented price paths
-    assert all(asset["symbol"].startswith("DEMO-") for asset in body["assets"])
-    assert len(body["sessions"]) == 253
+        assert client.get("/demo/history").status_code == 404
 
 
 def test_expansion_preserves_original_paths():

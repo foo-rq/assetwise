@@ -6,7 +6,7 @@ from pydantic import ValidationError
 
 from backend.analytics import AllocationRequest, analyse_portfolio
 from backend.main import app
-from backend.simulation import SimulatedAsset, SimulatedHistory
+from backend.tests.simulated_history import SimulatedAsset, SimulatedHistory
 
 
 def history_for(**paths):
@@ -96,19 +96,19 @@ def test_missing_sessions_and_duplicate_assets_are_rejected():
 
 def test_api_preserves_labels_and_rejects_unknown_assets():
     with TestClient(app) as client:
-        response = client.post("/demo/analysis", json={"weights": {"DEMO-EQ1": 60}})
-        unknown = client.post("/demo/analysis", json={"weights": {"AAPL": 100}})
-        excessive = client.post("/demo/analysis", json={"weights": {"DEMO-EQ1": 101}})
-        typo = client.post("/demo/analysis", json={"weight": {}})
+        response = client.post("/api/analysis", json={"weights": {"AAPL": 60}})
+        unknown = client.post("/api/analysis", json={"weights": {"UNKNOWN": 100}})
+        excessive = client.post("/api/analysis", json={"weights": {"DEMO-EQ1": 101}})
+        typo = client.post("/api/analysis", json={"weight": {}})
 
     # Check the real HTTP response so provenance survives serialization
     assert response.status_code == 200
     body = response.json()
-    assert body["source"] == "simulated"
-    assert body["dataset_version"] == "demo-v2"
+    assert body["source"] == "historical"
+    assert body["dataset_version"] == "archive-2017-v2"
     assert body["cash_weight_percent"] == 40
-    assert body["return_observations"] == 252
-    assert "not market history" in body["notice"]
+    assert body["return_observations"] == 1225
+    assert body["dates"][-1] == "2017-11-10"
     assert unknown.status_code == excessive.status_code == typo.status_code == 422
 
 
@@ -168,11 +168,11 @@ def test_constant_asset_correlation_is_unavailable_and_zero_weights_are_excluded
 
 def test_api_returns_drawdown_path_and_correlation_pairs():
     with TestClient(app) as client:
-        response = client.post("/demo/analysis", json={"weights": {"DEMO-EQ1": 50, "DEMO-EQ2": 50}})
+        response = client.post("/api/analysis", json={"weights": {"AAPL": 50, "SPY": 50}})
     assert response.status_code == 200
     body = response.json()
 
     # Path and drawdown include session 0, while returns begin with the first change
-    assert len(body["portfolio_index"]) == len(body["drawdowns"]) == 253
+    assert len(body["portfolio_index"]) == len(body["drawdowns"]) == 1226
     assert body["maximum_drawdown"] == max(body["drawdowns"])
     assert len(body["asset_correlations"]) == 1
