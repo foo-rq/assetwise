@@ -1,0 +1,306 @@
+L3201: QUALCOMM, Inc  |    |    | 4,818,801  |    |    |    | 249,806,644  |
+L3202: Skyworks Solutions, Inc  |    |    | 625,191  |    |    |    | 63,706,963  |
+L3203: Texas Instruments, Inc  |    |    | 3,235,954  |    |    |    | 290,070,917  |
+L3204: Xilinx, Inc. (b)  |    |    | 846,195  |    |    |    | 59,935,992  |
+L3205:  |    |  |  |  |    |    |    |
+L3206:  |    |  |  |  |    |    | 2,660,520,586  |
+L3207:  |    |  |  |  |    |    |    |
+L3208: SOFTWARE — 20.1%  |
+L3209: Activision Blizzard, Inc  |    |    | 2,517,171  |    |    |    | 162,382,701  |
+L3210: Adobe Systems, Inc. (a)  |    |    | 1,617,393  |    |    |    | 241,282,688  |
+L3211: ANSYS, Inc. (a)  |    |    | 274,380  |    |    |    | 33,674,658  |
+L3212: Autodesk, Inc. (a)  |    |    | 744,577  |    |    |    | 83,586,214  |
+L3213: CA, Inc  |    |    | 1,079,231  |    |    |    | 36,024,731  |
+L3214: Cadence Design Systems, Inc. (a)  |    |    | 898,422  |    |    |    | 35,460,716  |
+L3215: Citrix Systems, Inc. (a)  |    |    | 488,322  |    |    |    | 37,512,896  |
+L3216: Electronic Arts, Inc. (a)  |    |    | 1,026,156  |    |    |    | 121,147,977  |
+L3217: Intuit, Inc  |    |    | 804,936  |    |    |    | 114,413,603  |
+L3218: Microsoft Corp  |    |    | 24,933,079  |    |    |    | 1,857,265,055  |
+L3219: Oracle Corp  |    |    | 9,821,561  |    |    |    | 474,872,474  |
+L3220: Red Hat, Inc. (a)  |    |    | 600,407  |    |    |    | 66,561,120  |
+L3221: salesforce.com, Inc. (a)  |    |    | 2,235,891  |    |    |    | 208,876,937  |
+L3222: Symantec Corp  |    |    | 2,083,480  |    |    |    | 68,358,979  |
+L3223: Synopsys, Inc. (a)  |    |    | 487,225  |    |    |    | 39,236,229  |
+L3224:  |    |  |  |  |    |    |    |
+L3225:  |    |  |  |  |    |    | 3,580,656,978  |
+L3226:  |    |  |  |  |    |    |    |
+L3227: TECHNOLOGY HARDWARE, STORAGE & PERIPHERALS — 16.6%  |
+L3228: Apple, Inc  |    |    | 16,721,591  |    |    |    | 2,577,131,605  |
+L3229: Hewlett Packard Enterprise Co  |    |    | 5,425,519  |    |    |    | 79,809,384  |
+L3230: HP, Inc  |    |    | 5,563,810  |    |    |    | 111,053,647  |
+L3231: NetApp, Inc  |    |    | 949,433  |    |    |    | 41,547,188  |
+L3232: Seagate Technology PLC (b)  |    |    | 1,013,017  |    |    |    | 33,601,774  |
+L3233: Western Digital Corp  |    |    | 999,304  |    |    |    | 86,339,866  |
+L3234: Xerox Corp  |    |    | 739,513  |    |    |    | 24,618,388  |
+L3235:  |    |  |  |  |    |    |    |
+L3236:  |    |  |  |  |    |    | 2,954,101,852  |
+L3237:  |    |  |  |  |    |    |    |
+L3238: TOTAL COMMON STOCKS
+L3239: (Cost $15,478,135,440)  |    |  |  |  |    |    | 17,805,503,596  |
+L3240:  |    |  |  |  |    |    |    |
+L3241: SHORT-TERM INVESTMENTS — 0.2%  |
+L3242: State Street Institutional U.S. Government Money Market Fund, Class G Shares 0.96% (c) (d)  |    |    | 26,740,576  |    |    |    | 26,740,576  |
+L3243: State Street Navigator Securities Lending Government Money Market Portfolio (c) (e)  |    |    | 979,738  |    |    |    | 979,738  |
+L3244:  |    |  |  |  |    |    |    |
+L3245: TOTAL SHORT-TERM INVESTMENTS
+L3246: (Cost $27,720,314)  |    |  |  |  |    |    | 27,720,314  |
+L3247:  |    |  |  |  |    |    |    |
+L3248: TOTAL INVESTMENTS — 100.0%  |    |  |  |  |    |  |  |
+L3249: (Cost $15,505,855,754)  |    |  |  |  |    |    | 17,833,223,910  |
+L3250: LIABILITIES IN EXCESS OF OTHER ASSETS — (0.0)% (f)  |    |  |  |  |    |    | (779,606  | )
+L3251:  |    |  |  |  |    |    |    |
+L3252: NET ASSETS — 100.0%  |    |  |  |  |    | $  | 17,832,444,304  |
+L3253:  |    |  |  |  |    |    |    |
+L3254: 
+L3255: 
+L3256: See accompanying notes to financial statements.
+L3257: 
+L3258: 
+L3259: 
+L3260: 58
+L3261: 
+L3262: * * *
+L3263: ##### cite0†Table of Contents L3264: 
+L3265: The Technology Select Sector SPDR Fund
+L3266: 
+L3267: SCHEDULE OF INVESTMENTS (continued)
+L3268: 
+L3269: September 30, 2017
+L3270: (a)  | Non-income producing security.
+L3271: (b)  | All or a portion of the shares of the security are on loan at September 30, 2017.
+L3272: (c)  | The Fund invested in certain money market funds managed by SSGA Funds Management, Inc. Amounts related to these transactions during the period ended September 30, 2017 are shown in the Affiliate Table below.
+L3273: (d)  | The rate shown is the annualized seven-day yield at September 30, 2017.
+L3274: (e)  | Investment of cash collateral for securities loaned.
+L3275: (f)  | Amount is less than 0.05% of net assets.
+L3276: 
+L3277: 
+L3278: The following table summarizes the value of the Fund’s investments according to the fair value hierarchy as of September 30, 2017.
+L3279:  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+L3280: Description  |     | Level 1 —
+L3281: Quoted Prices  |    |     | Level 2 —
+L3282: Other Significant
+L3283: Observable Inputs  |    |     | Level 3 —
+L3284: Significant
+L3285: Unobservable Inputs  |    |     | Total  |
+L3286: ASSETS:  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L3287: INVESTMENTS:  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L3288: Common Stocks  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L3289: Communications Equipment  |     | $  | 711,573,699  |    |     | $  | —  |    |     | $  | —  |    |     | $  | 711,573,699  |
+L3290: Diversified Telecommunication Services  |     |    | 1,406,868,612  |    |     |    | —  |    |     |    | —  |    |     |    | 1,406,868,612  |
+L3291: Electronic Equipment, Instruments & Components  |     |    | 294,001,199  |    |     |    | —  |    |     |    | —  |    |     |    | 294,001,199  |
+L3292: Internet Software & Services  |     |    | 3,374,939,961  |    |     |    | —  |    |     |    | —  |    |     |    | 3,374,939,961  |
+L3293: IT Services  |     |    | 2,822,840,709  |    |     |    | —  |    |     |    | —  |    |     |    | 2,822,840,709  |
+L3294: Semiconductors & Semiconductor Equipment  |     |    | 2,660,520,586  |    |     |    | —  |    |     |    | —  |    |     |    | 2,660,520,586  |
+L3295: Software  |     |    | 3,580,656,978  |    |     |    | —  |    |     |    | —  |    |     |    | 3,580,656,978  |
+L3296: Technology Hardware, Storage & Peripherals  |     |    | 2,954,101,852  |    |     |    | —  |    |     |    | —  |    |     |    | 2,954,101,852  |
+L3297: Short-Term Investments  |     |    | 27,720,314  |    |     |    | —  |    |     |    | —  |    |     |    | 27,720,314  |
+L3298:  |     |    |    |    |     |    |    |    |     |    |    |    |     |    |    |
+L3299: TOTAL INVESTMENTS  |     | $  | 17,833,223,910  |    |     | $  | —  |    |     | $  | —  |    |     | $  | 17,833,223,910  |
+L3300:  |     |    |    |    |     |    |    |    |     |    |    |    |     |    |    |
+L3301: Affiliate Table
+L3302:  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+L3303:    |    | Number
+L3304: of Shares
+L3305: Held at
+L3306: 9/30/16  |    |    | Value At
+L3307: 9/30/16  |    |    | Cost of
+L3308: Purchases  |    |    | Proceeds from
+L3309: Shares Sold  |    |    | Realized
+L3310: Gain
+L3311: (Loss)  |    |    | Change in
+L3312: Unrealized
+L3313: Appreciation/
+L3314: Depreciation  |    |    | Number
+L3315: of Shares
+L3316: Held at
+L3317: 9/30/17  |    |    | Value at
+L3318: 9/30/17  |    |    | Dividend
+L3319: Income  |
+L3320: State Street Institutional Liquid Reserves Fund, Premier Class  |    |    | 27,822,383  |    |    | $  | 27,822,383  |    |    | $  | 2,030,483  |    |    | $  | 29,852,866  |    |    | $  | —  |    |    | $  | —  |    |    |    | —  |    |    | $  | —  |    |    | $  | 712  |
+L3321: State Street Institutional U.S. Government Money Market Fund, Class G Shares  |    |    | —  |    |    |    | —  |    |    |    | 211,247,493  |    |    |    | 184,506,917  |    |    |    | —  |    |    |    | —  |    |    |    | 26,740,576  |    |    |    | 26,740,576  |    |    |    | 151,358  |
+L3322: State Street Institutional U.S. Government Money Market Fund, Premier Class  |    |    | —  |    |    |    | —  |    |    |    | 343,519,938  |    |    |    | 343,519,938  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | 97,104  |
+L3323: State Street Navigator Securities Lending Government Money Market Portfolio*  |    |    | 29,868,275  |    |    |    | 29,868,275  |    |    |    | 76,506,528  |    |    |    | 105,395,065  |    |    |    | —  |    |    |    | —  |    |    |    | 979,738  |    |    |    | 979,738  |    |    |    | 19,578  |
+L3324:  |    |  |  |  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |  |  |  |    |    |    |    |    |    |    |
+L3325: TOTAL  |    |  |  |  |    | $  | 57,690,658  |    |    | $  | 633,304,442  |    |    | $  | 663,274,786  |    |    | $  | —  |    |    | $  | —  |    |    |  |  |  |    | $  | 27,720,314  |    |    | $  | 268,752  |
+L3326:  |    |  |  |  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |  |  |  |    |    |    |    |    |    |    |
+L3327: 
+L3328: 
+L3329: *  | Effective October 5, 2016, the name of State Street Navigator Securities Lending Prime Portfolio was changed to State Street Navigator Securities Lending Government Money Market Portfolio.
+L3330: 
+L3331: 
+L3332: 
+L3333: See accompanying notes to financial statements.
+L3334: 
+L3335: 
+L3336: 
+L3337: 59
+L3338: 
+L3339: * * *
+L3340: ##### cite0†Table of Contents L3341: 
+L3342: The Utilities Select Sector SPDR Fund
+L3343: 
+L3344: SCHEDULE OF INVESTMENTS
+L3345: 
+L3346: September 30, 2017
+L3347:  |  |  |  |  |  |  |  |
+L3348: Security Description  |    | Shares  |    |    | Value  |
+L3349: COMMON STOCKS — 99.6%  |
+L3350: ELECTRIC UTILITIES — 62.3%  |
+L3351: Alliant Energy Corp  |    |    | 2,668,894  |    |    | $  | 110,945,923  |
+L3352: American Electric Power Co., Inc  |    |    | 5,704,374  |    |    |    | 400,675,230  |
+L3353: Duke Energy Corp  |    |    | 7,453,430  |    |    |    | 625,491,846  |
+L3354: Edison International  |    |    | 3,778,211  |    |    |    | 291,564,543  |
+L3355: Entergy Corp  |    |    | 2,072,608  |    |    |    | 158,264,347  |
+L3356: Eversource Energy  |    |    | 3,658,459  |    |    |    | 221,117,262  |
+L3357: Exelon Corp  |    |    | 11,097,086  |    |    |    | 418,027,230  |
+L3358: FirstEnergy Corp  |    |    | 5,129,768  |    |    |    | 158,150,747  |
+L3359: NextEra Energy, Inc  |    |    | 5,405,104  |    |    |    | 792,117,991  |
+L3360: PG&E Corp  |    |    | 5,952,503  |    |    |    | 405,305,929  |
+L3361: Pinnacle West Capital Corp  |    |    | 1,318,689  |    |    |    | 111,508,342  |
+L3362: PPL Corp  |    |    | 7,917,071  |    |    |    | 300,452,844  |
+L3363: Southern Co  |    |    | 11,540,949  |    |    |    | 567,122,234  |
+L3364: Xcel Energy, Inc  |    |    | 5,912,721  |    |    |    | 279,789,958  |
+L3365:  |    |  |  |  |    |    |    |
+L3366:  |    |  |  |  |    |    | 4,840,534,426  |
+L3367:  |    |  |  |  |    |    |    |
+L3368: INDEPENDENT POWER PRODUCERS & ENERGY TRADERS — 2.2%  |
+L3369: AES Corp  |    |    | 7,667,964  |    |    |    | 84,500,963  |
+L3370: NRG Energy, Inc  |    |    | 3,465,234  |    |    |    | 88,675,338  |
+L3371:  |    |  |  |  |    |    |    |
+L3372:  |    |  |  |  |    |    | 173,176,301  |
+L3373:  |    |  |  |  |    |    |    |
+L3374: MULTI-UTILITIES — 32.9%  |
+L3375: Ameren Corp.  |    |    | 2,824,865  |    |    |    | 163,390,192  |
+L3376: CenterPoint Energy, Inc  |    |    | 5,047,014  |    |    |    | 147,423,279  |
+L3377: CMS Energy Corp  |    |    | 3,328,165  |    |    |    | 154,160,603  |
+L3378: Consolidated Edison, Inc (a)  |    |    | 3,603,414  |    |    |    | 290,723,442  |
+L3379: Dominion Energy, Inc  |    |    | 7,423,869  |    |    |    | 571,118,242  |
+L3380: DTE Energy Co  |    |    | 2,093,075  |    |    |    | 224,712,532  |
+L3381: NiSource, Inc  |    |    | 3,822,857  |    |    |    | 97,826,911  |
+L3382:  |  |
+L3383: Public Service Enterprise Group, Inc  |    |    | 5,840,502  |    |    | $  | 270,123,217  |
+L3384: SCANA Corp  |    |    | 1,650,111  |    |    |    | 80,013,882  |
+L3385: Sempra Energy  |    |    | 2,914,444  |    |    |    | 332,625,494  |
+L3386: WEC Energy Group, Inc  |    |    | 3,643,448  |    |    |    | 228,735,665  |
+L3387:  |    |  |  |  |    |    |    |
+L3388:  |    |  |  |  |    |    | 2,560,853,459  |
+L3389:  |    |  |  |  |    |    |    |
+L3390: WATER UTILITIES — 2.2%  |
+L3391: American Water Works Co., Inc  |    |    | 2,058,315  |    |    |    | 166,538,267  |
+L3392:  |    |  |  |  |    |    |    |
+L3393: TOTAL COMMON STOCKS
+L3394: (Cost $8,045,918,369)  |    |  |  |  |    |    | 7,741,102,453  |
+L3395:  |    |  |  |  |    |    |    |
+L3396: SHORT-TERM INVESTMENT — 0.2%  |
+L3397: State Street Institutional U.S. Government Money Market Fund, Class G Shares 0.96% (b) (c)
+L3398: (Cost $18,133,795)  |    |    | 18,133,795  |    |    |    | 18,133,795  |
+L3399:  |    |  |  |  |    |    |    |
+L3400: TOTAL INVESTMENTS — 99.8%  |    |  |  |  |    |  |  |
+L3401: (Cost $8,064,052,164)  |    |  |  |  |    |    | 7,759,236,248  |
+L3402: OTHER ASSETS IN EXCESS OF
+L3403: LIABILITIES — 0.2%  |    |  |  |  |    |    | 16,178,013  |
+L3404:  |    |  |  |  |    |    |    |
+L3405: NET ASSETS — 100.0%  |    |  |  |  |    | $  | 7,775,414,261  |
+L3406:  |    |  |  |  |    |    |    |
+L3407: 
+L3408: 
+L3409: (a)  | All or a portion of the shares of the security are on loan at September 30, 2017.
+L3410: (b)  | The Fund invested in certain money market funds managed by SSGA Funds Management, Inc. Amounts related to these transactions during the period ended September 30, 2017 are shown in the Affiliate Table below.
+L3411: (c)  | The rate shown is the annualized seven-day yield at September 30, 2017.
+L3412: The following table summarizes the value of the Fund’s investments according to the fair value hierarchy as of September 30, 2017.
+L3413:  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+L3414: Description  |     | Level 1 —
+L3415: Quoted Prices  |    |     | Level 2 —
+L3416: Other Significant
+L3417: Observable Inputs  |    |     | Level 3 —
+L3418: Significant
+L3419: Unobservable Inputs  |    |     | Total  |
+L3420: ASSETS:  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L3421: INVESTMENTS:  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L3422: Common Stocks  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L3423: Electric Utilities  |     | $  | 4,840,534,426  |    |     | $  | —  |    |     | $  | —  |    |     | $  | 4,840,534,426  |
+L3424: Independent Power Producers & Energy Traders  |     |    | 173,176,301  |    |     |    | —  |    |     |    | —  |    |     |    | 173,176,301  |
+L3425: Multi-Utilities  |     |    | 2,560,853,459  |    |     |    | —  |    |     |    | —  |    |     |    | 2,560,853,459  |
+L3426: Water Utilities.  |     |    | 166,538,267  |    |     |    | —  |    |     |    | —  |    |     |    | 166,538,267  |
+L3427: Short-Term Investment  |     |    | 18,133,795  |    |     |    | —  |    |     |    | —  |    |     |    | 18,133,795  |
+L3428:  |     |    |    |    |     |    |    |    |     |    |    |    |     |    |    |
+L3429: TOTAL INVESTMENTS  |     | $  | 7,759,236,248  |    |     | $  | —  |    |     | $  | —  |    |     | $  | 7,759,236,248  |
+L3430:  |     |    |    |    |     |    |    |    |     |    |    |    |     |    |    |
+L3431: 
+L3432: 
+L3433: See accompanying notes to financial statements.
+L3434: 
+L3435: 
+L3436: 
+L3437: 60
+L3438: 
+L3439: * * *
+L3440: ##### cite0†Table of Contents L3441: 
+L3442: The Utilities Select Sector SPDR Fund
+L3443: 
+L3444: SCHEDULE OF INVESTMENTS (continued)
+L3445: 
+L3446: September 30, 2017
+L3447: 
+L3448: 
+L3449: 
+L3450: 
+L3451: 
+L3452: 
+L3453: 
+L3454: Affiliate Table
+L3455:  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+L3456:    |    | Number
+L3457: of Shares
+L3458: Held at
+L3459: 9/30/16  |    |    | Value At
+L3460: 9/30/16  |    |    | Cost of
+L3461: Purchases  |    |    | Proceeds from
+L3462: Shares Sold  |    |    | Realized
+L3463: Gain
+L3464: (Loss)  |    |    | Change in
+L3465: Unrealized
+L3466: Appreciation/
+L3467: Depreciation  |    |    | Number
+L3468: of Shares
+L3469: Held at
+L3470: 9/30/17  |    |    | Value at
+L3471: 9/30/17  |    |    | Dividend
+L3472: Income  |
+L3473: State Street Institutional Liquid Reserves Fund, Premier Class  |    |    | 13,352,521  |    |    | $  | 13,352,521  |    |    | $  | 3,961,660  |    |    | $  | 17,314,181  |    |    | $  | —  |    |    | $  | —  |    |    |    | —  |    |    | $  | —  |    |    | $  | 265  |
+L3474: State Street Institutional U.S. Government Money Market Fund, Class G Shares  |    |    | —  |    |    |    | —  |    |    |    | 181,511,065  |    |    |    | 163,377,270  |    |    |    | —  |    |    |    | —  |    |    |    | 18,133,795  |    |    |    | 18,133,795  |    |    |    | 93,653  |
+L3475: State Street Institutional U.S. Government Money Market Fund, Premier Class  |    |    | —  |    |    |    | —  |    |    |    | 234,952,807  |    |    |    | 234,952,807  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | 55,365  |
+L3476:  |    |  |  |  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |  |  |  |    |    |    |    |    |    |    |
+L3477: TOTAL  |    |  |  |  |    | $  | 13,352,521  |    |    | $  | 420,425,532  |    |    | $  | 415,644,258  |    |    | $  | —  |    |    | $  | —  |    |    |  |  |  |    | $  | 18,133,795  |    |    | $  | 149,283  |
+L3478:  |    |  |  |  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |  |  |  |    |    |    |    |    |    |    |
+L3479: 
+L3480: 
+L3481: See accompanying notes to financial statements.
+L3482: 
+L3483: 
+L3484: 
+L3485: 61
+L3486: 
+L3487: * * *
+L3488: ##### cite0†Table of Contents L3489: 
+L3490: THE SELECT SECTOR SPDR TRUST
+L3491: 
+L3492: STATEMENTS OF ASSETS AND LIABILITIES
+L3493: 
+L3494: September 30, 2017
+L3495:  |  |  |  |  |  |  |  |  |  |  |  |
+L3496:    |     | The Consumer
+L3497: Discretionary
+L3498: Select Sector
+L3499: SPDR Fund  |    |    | The Consumer
+L3500: Staples
+L3501: Select Sector
+L3502: SPDR Fund  |    |    | The Energy
+L3503: Select Sector
+L3504: SPDR Fund  |
+L3505: ASSETS  |     |  |  |  |    |  |  |  |    |  |  |
+L3506: Investments in unaffiliated issuers, at value * (Note 2)  |     | $  | 11,493,355,325  |    |    | $  | 8,783,650,030  |    |    | $  | 16,603,445,488  |
+L3507: Investments in affiliated issuers, at value (Notes 2 and 3)  |     |    | 44,878,892  |    |    |    | 3,856,474  |    |    |    | 53,801,921  |
+L3508:  |     |    |    |    |    |    |    |    |    |    |    |
+L3509: Total Investments  |     |    | 11,538,234,217  |    |    |    | 8,787,506,504  |    |    |    | 16,657,247,409  |
+L3510: Cash  |     |    | 151,457  |    |    |    | 3,003,674  |    |    |    | 38,699  |

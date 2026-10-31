@@ -1,0 +1,129 @@
+L3124: The Technology Select Sector SPDR Fund
+L3125: 
+L3126: SCHEDULE OF INVESTMENTS
+L3127: 
+L3128: September 30, 2017
+L3129:  |  |  |  |  |  |  |  |
+L3130: Security Description  |    | Shares  |    |    | Value  |
+L3131: COMMON STOCKS — 99.8%  |
+L3132: COMMUNICATIONS EQUIPMENT — 4.0%  |
+L3133: Cisco Systems, Inc  |    |    | 16,253,119  |    |    | $  | 546,592,392  |
+L3134: F5 Networks, Inc. (a)  |    |    | 222,019  |    |    |    | 26,766,611  |
+L3135: Harris Corp  |    |    | 410,424  |    |    |    | 54,044,632  |
+L3136: Juniper Networks, Inc  |    |    | 1,325,908  |    |    |    | 36,900,020  |
+L3137: Motorola Solutions, Inc  |    |    | 556,970  |    |    |    | 47,270,044  |
+L3138:  |    |  |  |  |    |    |    |
+L3139:  |    |  |  |  |    |    | 711,573,699  |
+L3140:  |    |  |  |  |    |    |    |
+L3141: DIVERSIFIED TELECOMMUNICATION SERVICES — 7.9%  |
+L3142: AT&T, Inc  |    |    | 19,875,705  |    |    |    | 778,531,365  |
+L3143: CenturyLink, Inc. (b)  |    |    | 1,850,122  |    |    |    | 34,967,306  |
+L3144: Level 3 Communications, Inc. (a)  |    |    | 989,236  |    |    |    | 52,716,386  |
+L3145: Verizon Communications, Inc  |    |    | 10,924,501  |    |    |    | 540,653,555  |
+L3146:  |    |  |  |  |    |    |    |
+L3147:  |    |  |  |  |    |    | 1,406,868,612  |
+L3148:  |    |  |  |  |    |    |    |
+L3149: ELECTRONIC EQUIPMENT, INSTRUMENTS & COMPONENTS — 1.6%  |
+L3150: Amphenol Corp. Class A  |    |    | 1,022,378  |    |    |    | 86,534,074  |
+L3151: Corning, Inc  |    |    | 3,006,207  |    |    |    | 89,945,713  |
+L3152: FLIR Systems, Inc  |    |    | 506,070  |    |    |    | 19,691,184  |
+L3153: TE Connectivity, Ltd  |    |    | 1,177,826  |    |    |    | 97,830,228  |
+L3154:  |    |  |  |  |    |    |    |
+L3155:  |    |  |  |  |    |    | 294,001,199  |
+L3156:  |    |  |  |  |    |    |    |
+L3157: INTERNET SOFTWARE & SERVICES — 18.9%  |
+L3158: Akamai Technologies, Inc. (a)  |    |    | 589,808  |    |    |    | 28,735,446  |
+L3159: Alphabet, Inc. Class A (a)  |    |    | 964,711  |    |    |    | 939,358,395  |
+L3160: Alphabet, Inc. Class C (a)  |    |    | 977,052  |    |    |    | 937,100,343  |
+L3161: eBay, Inc. (a)  |    |    | 3,299,965  |    |    |    | 126,916,654  |
+L3162: Facebook, Inc. Class A (a)  |    |    | 7,672,715  |    |    |    | 1,311,036,812  |
+L3163: VeriSign, Inc. (a) (b)  |    |    | 298,828  |    |    |    | 31,792,311  |
+L3164:  |    |  |  |  |    |    |    |
+L3165:  |    |  |  |  |    |    | 3,374,939,961  |
+L3166:  |    |  |  |  |    |    |    |
+L3167: IT SERVICES — 15.8%  |
+L3168: Accenture PLC Class A  |    |    | 2,017,498  |    |    |    | 272,503,455  |
+L3169: Alliance Data Systems Corp  |    |    | 164,804  |    |    |    | 36,512,326  |
+L3170: Automatic Data Processing, Inc  |    |    | 1,459,571  |    |    |    | 159,560,302  |
+L3171: Cognizant Technology Solutions Corp. Class A  |    |    | 1,945,005  |    |    |    | 141,090,663  |
+L3172: CSRA, Inc  |    |    | 629,479  |    |    |    | 20,313,287  |
+L3173: DXC Technology Co  |    |    | 918,676  |    |    |    | 78,895,895  |
+L3174: Fidelity National Information Services, Inc  |    |    | 1,104,335  |    |    |    | 103,133,846  |
+L3175: Fiserv, Inc. (a)  |    |    | 698,440  |    |    |    | 90,070,822  |
+L3176: Gartner, Inc. (a)  |    |    | 293,220  |    |    |    | 36,479,500  |
+L3177: Global Payments, Inc  |    |    | 520,453  |    |    |    | 49,458,649  |
+L3178: International Business Machines Corp  |    |    | 2,817,963  |    |    |    | 408,830,072  |
+L3179: Mastercard, Inc. Class A  |    |    | 3,042,906  |    |    |    | 429,658,327  |
+L3180: Paychex, Inc  |    |    | 1,069,470  |    |    |    | 64,125,421  |
+L3181: PayPal Holdings, Inc. (a)  |    |    | 3,713,285  |    |    |    | 237,761,638  |
+L3182: Total System Services, Inc  |    |    | 579,559  |    |    |    | 37,961,114  |
+L3183: Visa, Inc. Class A  |    |    | 5,946,482  |    |    |    | 625,807,766  |
+L3184: Western Union Co  |    |    | 1,597,793  |    |    |    | 30,677,626  |
+L3185:  |    |  |  |  |    |    |    |
+L3186:  |    |  |  |  |    |    | 2,822,840,709  |
+L3187:  |    |  |  |  |    |    |    |
+L3188: SEMICONDUCTORS & SEMICONDUCTOR EQUIPMENT — 14.9%  |
+L3189: Advanced Micro Devices, Inc. (a) (b)  |    |    | 2,965,232  |    |    |    | 37,806,708  |
+L3190: Analog Devices, Inc  |    |    | 1,232,414  |    |    |    | 106,197,114  |
+L3191: Applied Materials, Inc  |    |    | 3,533,285  |    |    |    | 184,048,816  |
+L3192: Broadcom, Ltd  |    |    | 1,329,844  |    |    |    | 322,540,364  |
+L3193:  |  |
+L3194: Intel Corp  |    |    | 15,271,612  |    |    | $  | 581,542,985  |
+L3195: KLA-Tencor Corp  |    |    | 534,152  |    |    |    | 56,620,112  |
+L3196: Lam Research Corp  |    |    | 548,207  |    |    |    | 101,440,223  |
+L3197: Microchip Technology, Inc. (b)  |    |    | 794,730  |    |    |    | 71,350,859  |
+L3198: Micron Technology, Inc. (a)  |    |    | 3,760,521  |    |    |    | 147,901,291  |
+L3199: NVIDIA Corp  |    |    | 1,990,860  |    |    |    | 355,906,042  |
+L3200: Qorvo, Inc. (a) (b)  |    |    | 447,730  |    |    |    | 31,645,556  |
+L3201: QUALCOMM, Inc  |    |    | 4,818,801  |    |    |    | 249,806,644  |
+L3202: Skyworks Solutions, Inc  |    |    | 625,191  |    |    |    | 63,706,963  |
+L3203: Texas Instruments, Inc  |    |    | 3,235,954  |    |    |    | 290,070,917  |
+L3204: Xilinx, Inc. (b)  |    |    | 846,195  |    |    |    | 59,935,992  |
+L3205:  |    |  |  |  |    |    |    |
+L3206:  |    |  |  |  |    |    | 2,660,520,586  |
+L3207:  |    |  |  |  |    |    |    |
+L3208: SOFTWARE — 20.1%  |
+L3209: Activision Blizzard, Inc  |    |    | 2,517,171  |    |    |    | 162,382,701  |
+L3210: Adobe Systems, Inc. (a)  |    |    | 1,617,393  |    |    |    | 241,282,688  |
+L3211: ANSYS, Inc. (a)  |    |    | 274,380  |    |    |    | 33,674,658  |
+L3212: Autodesk, Inc. (a)  |    |    | 744,577  |    |    |    | 83,586,214  |
+L3213: CA, Inc  |    |    | 1,079,231  |    |    |    | 36,024,731  |
+L3214: Cadence Design Systems, Inc. (a)  |    |    | 898,422  |    |    |    | 35,460,716  |
+L3215: Citrix Systems, Inc. (a)  |    |    | 488,322  |    |    |    | 37,512,896  |
+L3216: Electronic Arts, Inc. (a)  |    |    | 1,026,156  |    |    |    | 121,147,977  |
+L3217: Intuit, Inc  |    |    | 804,936  |    |    |    | 114,413,603  |
+L3218: Microsoft Corp  |    |    | 24,933,079  |    |    |    | 1,857,265,055  |
+L3219: Oracle Corp  |    |    | 9,821,561  |    |    |    | 474,872,474  |
+L3220: Red Hat, Inc. (a)  |    |    | 600,407  |    |    |    | 66,561,120  |
+L3221: salesforce.com, Inc. (a)  |    |    | 2,235,891  |    |    |    | 208,876,937  |
+L3222: Symantec Corp  |    |    | 2,083,480  |    |    |    | 68,358,979  |
+L3223: Synopsys, Inc. (a)  |    |    | 487,225  |    |    |    | 39,236,229  |
+L3224:  |    |  |  |  |    |    |    |
+L3225:  |    |  |  |  |    |    | 3,580,656,978  |
+L3226:  |    |  |  |  |    |    |    |
+L3227: TECHNOLOGY HARDWARE, STORAGE & PERIPHERALS — 16.6%  |
+L3228: Apple, Inc  |    |    | 16,721,591  |    |    |    | 2,577,131,605  |
+L3229: Hewlett Packard Enterprise Co  |    |    | 5,425,519  |    |    |    | 79,809,384  |
+L3230: HP, Inc  |    |    | 5,563,810  |    |    |    | 111,053,647  |
+L3231: NetApp, Inc  |    |    | 949,433  |    |    |    | 41,547,188  |
+L3232: Seagate Technology PLC (b)  |    |    | 1,013,017  |    |    |    | 33,601,774  |
+L3233: Western Digital Corp  |    |    | 999,304  |    |    |    | 86,339,866  |
+L3234: Xerox Corp  |    |    | 739,513  |    |    |    | 24,618,388  |
+L3235:  |    |  |  |  |    |    |    |
+L3236:  |    |  |  |  |    |    | 2,954,101,852  |
+L3237:  |    |  |  |  |    |    |    |
+L3238: TOTAL COMMON STOCKS
+L3239: (Cost $15,478,135,440)  |    |  |  |  |    |    | 17,805,503,596  |
+L3240:  |    |  |  |  |    |    |    |
+L3241: SHORT-TERM INVESTMENTS — 0.2%  |
+L3242: State Street Institutional U.S. Government Money Market Fund, Class G Shares 0.96% (c) (d)  |    |    | 26,740,576  |    |    |    | 26,740,576  |
+L3243: State Street Navigator Securities Lending Government Money Market Portfolio (c) (e)  |    |    | 979,738  |    |    |    | 979,738  |
+L3244:  |    |  |  |  |    |    |    |
+L3245: TOTAL SHORT-TERM INVESTMENTS
+L3246: (Cost $27,720,314)  |    |  |  |  |    |    | 27,720,314  |
+L3247:  |    |  |  |  |    |    |    |
+L3248: TOTAL INVESTMENTS — 100.0%  |    |  |  |  |    |  |  |
+L3249: (Cost $15,505,855,754)  |    |  |  |  |    |    | 17,833,223,910  |
+L3250: LIABILITIES IN EXCESS OF OTHER ASSETS — (0.0)% (f)  |    |  |  |  |    |    | (779,606  | )
+L3251:  |    |  |  |  |    |    |    |
+L3252: NET ASSETS — 100.0%  |    |  |  |  |    | $  | 17,832,444,304  |

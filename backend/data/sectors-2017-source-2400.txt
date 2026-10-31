@@ -1,0 +1,396 @@
+L2400: The Health Care Select Sector SPDR Fund
+L2401: 
+L2402: SCHEDULE OF INVESTMENTS
+L2403: 
+L2404: September 30, 2017
+L2405:  |  |  |  |  |  |  |  |
+L2406: Security Description  |    | Shares  |    |    | Value  |
+L2407:  |  |
+L2408: COMMON STOCKS — 99.8%  |    |  |  |  |    |  |  |
+L2409: BIOTECHNOLOGY — 21.9%  |    |  |  |  |    |  |  |
+L2410: AbbVie, Inc  |    |    | 8,978,331  |    |    | $  | 797,814,493  |
+L2411: Alexion Pharmaceuticals, Inc. (a)  |    |    | 1,256,762  |    |    |    | 176,311,141  |
+L2412: Amgen, Inc  |    |    | 4,108,771  |    |    |    | 766,080,353  |
+L2413: Biogen, Inc. (a)  |    |    | 1,217,296  |    |    |    | 381,159,724  |
+L2414: Celgene Corp. (a)  |    |    | 4,404,861  |    |    |    | 642,316,831  |
+L2415: Gilead Sciences, Inc  |    |    | 7,354,111  |    |    |    | 595,830,073  |
+L2416: Incyte Corp. (a)  |    |    | 961,157  |    |    |    | 112,205,468  |
+L2417: Regeneron Pharmaceuticals, Inc. (a)  |    |    | 432,620  |    |    |    | 193,433,054  |
+L2418: Vertex Pharmaceuticals, Inc. (a)  |    |    | 1,419,908  |    |    |    | 215,882,812  |
+L2419:  |    |  |  |  |    |    |    |
+L2420:  |    |  |  |  |    |    | 3,881,033,949  |
+L2421:  |    |  |  |  |    |    |    |
+L2422: HEALTH CARE EQUIPMENT & SUPPLIES — 18.9%  |
+L2423: Abbott Laboratories  |    |    | 8,297,850  |    |    |    | 442,773,276  |
+L2424: Align Technology, Inc. (a)  |    |    | 406,036  |    |    |    | 75,632,326  |
+L2425: Baxter International, Inc  |    |    | 2,865,471  |    |    |    | 179,808,305  |
+L2426: Becton Dickinson and Co  |    |    | 1,316,750  |    |    |    | 258,017,163  |
+L2427: Boston Scientific Corp. (a)  |    |    | 7,798,321  |    |    |    | 227,477,024  |
+L2428: C.R. Bard, Inc  |    |    | 435,668  |    |    |    | 139,631,594  |
+L2429: Cooper Cos., Inc  |    |    | 275,113  |    |    |    | 65,232,043  |
+L2430: Danaher Corp  |    |    | 3,445,937  |    |    |    | 295,592,476  |
+L2431: DENTSPLY SIRONA, Inc  |    |    | 1,292,452  |    |    |    | 77,301,554  |
+L2432: Edwards Lifesciences Corp. (a)  |    |    | 1,183,411  |    |    |    | 129,358,656  |
+L2433: Hologic, Inc. (a)  |    |    | 1,587,063  |    |    |    | 58,229,341  |
+L2434: IDEXX Laboratories, Inc. (a)  |    |    | 528,000  |    |    |    | 82,098,720  |
+L2435: Intuitive Surgical, Inc. (a)  |    |    | 209,999  |    |    |    | 219,633,754  |
+L2436: Medtronic PLC  |    |    | 7,663,263  |    |    |    | 595,971,964  |
+L2437: ResMed, Inc  |    |    | 801,670  |    |    |    | 61,696,523  |
+L2438: Stryker Corp  |    |    | 1,842,165  |    |    |    | 261,624,273  |
+L2439: Varian Medical Systems, Inc. (a)  |    |    | 517,008  |    |    |    | 51,731,821  |
+L2440: Zimmer Biomet Holdings, Inc  |    |    | 1,153,607  |    |    |    | 135,075,844  |
+L2441:  |    |  |  |  |    |    |    |
+L2442:  |    |  |  |  |    |    | 3,356,886,657  |
+L2443:  |    |  |  |  |    |    |    |
+L2444: HEALTH CARE PROVIDERS & SERVICES — 19.0%  |
+L2445: Aetna, Inc  |    |    | 1,918,596  |    |    |    | 305,075,950  |
+L2446: AmerisourceBergen Corp  |    |    | 947,703  |    |    |    | 78,422,423  |
+L2447: Anthem, Inc  |    |    | 1,517,943  |    |    |    | 288,227,017  |
+L2448: Cardinal Health, Inc  |    |    | 1,799,905  |    |    |    | 120,449,643  |
+L2449: Centene Corp. (a)  |    |    | 971,926  |    |    |    | 94,053,279  |
+L2450: Cigna Corp  |    |    | 1,466,765  |    |    |    | 274,197,049  |
+L2451: DaVita, Inc. (a)  |    |    | 861,233  |    |    |    | 51,148,628  |
+L2452: Envision Healthcare Corp. (a)  |    |    | 710,197  |    |    |    | 31,923,355  |
+L2453: Express Scripts Holding Co. (a)  |    |    | 3,423,336  |    |    |    | 216,765,636  |
+L2454: HCA Healthcare, Inc. (a)  |    |    | 1,614,315  |    |    |    | 128,483,331  |
+L2455: Henry Schein, Inc. (a)  |    |    | 893,493  |    |    |    | 73,257,491  |
+L2456: Humana, Inc  |    |    | 874,765  |    |    |    | 213,118,997  |
+L2457: Laboratory Corp. of America Holdings (a)  |    |    | 573,301  |    |    |    | 86,551,252  |
+L2458: McKesson Corp  |    |    | 1,219,702  |    |    |    | 187,358,424  |
+L2459: Patterson Cos., Inc. (b)  |    |    | 462,383  |    |    |    | 17,871,103  |
+L2460: Quest Diagnostics, Inc  |    |    | 796,739  |    |    |    | 74,606,640  |
+L2461: UnitedHealth Group, Inc  |    |    | 5,489,598  |    |    |    | 1,075,137,768  |
+L2462: Universal Health Services, Inc. Class B  |    |    | 497,652  |    |    |    | 55,209,513  |
+L2463:  |    |  |  |  |    |    |    |
+L2464:  |    |  |  |  |    |    | 3,371,857,499  |
+L2465:  |    |  |  |  |    |    |    |
+L2466: HEALTH CARE TECHNOLOGY — 0.7%  |
+L2467: Cerner Corp. (a)  |    |    | 1,774,838  |    |    |    | 126,581,446  |
+L2468:  |    |  |  |  |    |    |    |
+L2469: LIFE SCIENCES TOOLS & SERVICES — 5.7%  |
+L2470: Agilent Technologies, Inc  |    |    | 1,809,566  |    |    | $  | 116,174,137  |
+L2471: Illumina, Inc. (a)  |    |    | 823,644  |    |    |    | 164,069,885  |
+L2472: Mettler-Toledo International, Inc. (a)  |    |    | 144,552  |    |    |    | 90,512,680  |
+L2473: PerkinElmer, Inc  |    |    | 618,511  |    |    |    | 42,658,704  |
+L2474: Quintiles IMS Holdings, Inc. (a)  |    |    | 854,197  |    |    |    | 81,208,509  |
+L2475: Thermo Fisher Scientific, Inc  |    |    | 2,254,130  |    |    |    | 426,481,396  |
+L2476: Waters Corp. (a)  |    |    | 449,503  |    |    |    | 80,694,778  |
+L2477:  |    |  |  |  |    |    |    |
+L2478:  |    |  |  |  |    |    | 1,001,800,089  |
+L2479:  |    |  |  |  |    |    |    |
+L2480: PHARMACEUTICALS — 33.6%  |
+L2481: Allergan PLC  |    |    | 1,986,608  |    |    |    | 407,155,309  |
+L2482: Bristol-Myers Squibb Co  |    |    | 9,281,747  |    |    |    | 591,618,554  |
+L2483: Eli Lilly & Co  |    |    | 5,455,911  |    |    |    | 466,698,627  |
+L2484: Johnson & Johnson  |    |    | 15,114,133  |    |    |    | 1,964,988,431  |
+L2485: Merck & Co., Inc  |    |    | 15,402,789  |    |    |    | 986,240,580  |
+L2486: Mylan NV (a)  |    |    | 3,023,383  |    |    |    | 94,843,525  |
+L2487: Perrigo Co. PLC  |    |    | 746,317  |    |    |    | 63,175,734  |
+L2488: Pfizer, Inc  |    |    | 33,607,236  |    |    |    | 1,199,778,325  |
+L2489: Zoetis, Inc  |    |    | 2,768,751  |    |    |    | 176,535,564  |
+L2490:  |    |  |  |  |    |    |    |
+L2491:  |    |  |  |  |    |    | 5,951,034,649  |
+L2492:  |    |  |  |  |    |    |    |
+L2493: TOTAL COMMON STOCKS
+L2494: (Cost $17,038,820,656)  |    |  |  |  |    |    | 17,689,194,289  |
+L2495:  |    |  |  |  |    |    |    |
+L2496: SHORT-TERM INVESTMENT — 0.1%  |
+L2497: State Street Institutional U.S. Government Money Market Fund, Class G Shares 0.96% (c) (d)
+L2498: (Cost $10,549,299)  |    |    | 10,549,299  |    |    |    | 10,549,299  |
+L2499:  |    |  |  |  |    |    |    |
+L2500: TOTAL INVESTMENTS — 99.9%  |    |  |  |  |    |  |  |
+L2501: (Cost $17,049,369,955)  |    |  |  |  |    |    | 17,699,743,588  |
+L2502: OTHER ASSETS IN EXCESS OF LIABILITIES — 0.1%  |    |  |  |  |    |    | 11,882,999  |
+L2503:  |    |  |  |  |    |    |    |
+L2504: NET ASSETS — 100.0%  |    |  |  |  |    | $  | 17,711,626,587  |
+L2505:  |    |  |  |  |    |    |    |
+L2506: 
+L2507: 
+L2508: (a)  | Non-income producing security.
+L2509: (b)  | All or a portion of the shares of the security are on loan at September 30, 2017.
+L2510: (c)  | The Fund invested in certain money market funds managed by SSGA Funds Management, Inc. Amounts related to these transactions during the period ended September 30, 2017 are shown in the Affiliate Table below.
+L2511: (d)  | The rate shown is the annualized seven-day yield at September 30, 2017.
+L2512: 
+L2513: 
+L2514: 
+L2515: See accompanying notes to financial statements.
+L2516: 
+L2517: 
+L2518: 
+L2519: 50
+L2520: 
+L2521: * * *
+L2522: ##### cite0†Table of Contents L2523: 
+L2524: The Health Care Select Sector SPDR Fund
+L2525: 
+L2526: SCHEDULE OF INVESTMENTS (continued)
+L2527: 
+L2528: September 30, 2017
+L2529: 
+L2530: 
+L2531: 
+L2532: 
+L2533: 
+L2534: 
+L2535: 
+L2536: The following table summarizes the value of the Fund’s investments according to the fair value hierarchy as of September 30, 2017.
+L2537:  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+L2538: Description  |     | Level 1 —
+L2539: Quoted Prices  |    |     | Level 2 —
+L2540: Other Significant
+L2541: Observable Inputs  |    |     | Level 3 —
+L2542: Significant
+L2543: Unobservable Inputs  |    |     | Total  |
+L2544: ASSETS:  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L2545: INVESTMENTS:  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L2546: Common Stocks  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L2547: Biotechnology  |     | $  | 3,881,033,949  |    |     | $  | —  |    |     | $  | —  |    |     | $  | 3,881,033,949  |
+L2548: Health Care Equipment & Supplies  |     |    | 3,356,886,657  |    |     |    | —  |    |     |    | —  |    |     |    | 3,356,886,657  |
+L2549: Health Care Providers & Services  |     |    | 3,371,857,499  |    |     |    | —  |    |     |    | —  |    |     |    | 3,371,857,499  |
+L2550: Health Care Technology  |     |    | 126,581,446  |    |     |    | —  |    |     |    | —  |    |     |    | 126,581,446  |
+L2551: Life Sciences Tools & Services  |     |    | 1,001,800,089  |    |     |    | —  |    |     |    | —  |    |     |    | 1,001,800,089  |
+L2552: Pharmaceuticals  |     |    | 5,951,034,649  |    |     |    | —  |    |     |    | —  |    |     |    | 5,951,034,649  |
+L2553: Short-Term Investment  |     |    | 10,549,299  |    |     |    | —  |    |     |    | —  |    |     |    | 10,549,299  |
+L2554:  |     |    |    |    |     |    |    |    |     |    |    |    |     |    |    |
+L2555: TOTAL INVESTMENTS  |     | $  | 17,699,743,588  |    |     | $  | —  |    |     | $  | —  |    |     | $  | 17,699,743,588  |
+L2556:  |     |    |    |    |     |    |    |    |     |    |    |    |     |    |    |
+L2557: Affiliate Table
+L2558:  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+L2559:    |    | Number
+L2560: of Shares
+L2561: Held at
+L2562: 9/30/16  |    |    | Value At
+L2563: 9/30/16  |    |    | Cost of
+L2564: Purchases  |    |    | Proceeds from
+L2565: Shares Sold  |    |    | Realized
+L2566: Gain
+L2567: (Loss)  |    |    | Change in
+L2568: Unrealized
+L2569: Appreciation/
+L2570: Depreciation  |    |    | Number
+L2571: of Shares
+L2572: Held at
+L2573: 9/30/17  |    |    | Value at
+L2574: 9/30/17  |    |    | Dividend
+L2575: Income  |
+L2576: State Street Institutional Liquid Reserves Fund, Premier Class  |    |    | 5,734,739  |    |    | $  | 5,734,739  |    |    | $  | 599,604  |    |    | $  | 6,334,343  |    |    | $  | —  |    |    | $  | —  |    |    |    | —  |    |    | $  | —  |    |    | $  | —  |
+L2577: State Street Institutional U.S. Government Money Market Fund, Class G Shares  |    |    | —  |    |    |    | —  |    |    |    | 188,076,812  |    |    |    | 177,527,513  |    |    |    | —  |    |    |    | —  |    |    |    | 10,549,299  |    |    |    | 10,549,299  |    |    |    | 89,350  |
+L2578: State Street Institutional U.S. Government Money Market Fund, Premier Class  |    |    | —  |    |    |    | —  |    |    |    | 337,283,000  |    |    |    | 337,283,000  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | 72,068  |
+L2579: State Street Navigator Securities Lending Government Money Market Portfolio*  |    |    | 6,558,639  |    |    |    | 6,558,639  |    |    |    | 17,370,405  |    |    |    | 23,929,044  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | 476  |
+L2580:  |    |  |  |  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |  |  |  |    |    |    |    |    |    |    |
+L2581: TOTAL  |    |  |  |  |    | $  | 12,293,378  |    |    | $  | 543,329,821  |    |    | $  | 545,073,900  |    |    | $  | —  |    |    | $  | —  |    |    |  |  |  |    | $  | 10,549,299  |    |    | $  | 161,894  |
+L2582:  |    |  |  |  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |  |  |  |    |    |    |    |    |    |    |
+L2583: 
+L2584: 
+L2585: *  | Effective October 5, 2016, the name of State Street Navigator Securities Lending Prime Portfolio was changed to State Street Navigator Securities Lending Government Money Market Portfolio.
+L2586: 
+L2587: 
+L2588: 
+L2589: See accompanying notes to financial statements.
+L2590: 
+L2591: 
+L2592: 
+L2593: 51
+L2594: 
+L2595: * * *
+L2596: ##### cite0†Table of Contents L2597: 
+L2598: The Industrial Select Sector SPDR Fund
+L2599: 
+L2600: SCHEDULE OF INVESTMENTS
+L2601: 
+L2602: September 30, 2017
+L2603:  |  |  |  |  |  |  |  |
+L2604: Security Description  |    | Shares  |    |    | Value  |
+L2605:  |  |
+L2606: COMMON STOCKS — 99.8%  |    |  |  |  |    |  |  |
+L2607: AEROSPACE & DEFENSE — 24.8%  |    |  |  |  |    |  |  |
+L2608: Arconic, Inc  |    |    | 1,834,602  |    |    | $  | 45,644,898  |
+L2609: Boeing Co  |    |    | 2,758,423  |    |    |    | 701,218,711  |
+L2610: General Dynamics Corp  |    |    | 1,440,146  |    |    |    | 296,065,214  |
+L2611: L3 Technologies, Inc  |    |    | 372,153  |    |    |    | 70,124,790  |
+L2612: Lockheed Martin Corp  |    |    | 1,262,549  |    |    |    | 391,756,329  |
+L2613: Northrop Grumman Corp  |    |    | 893,065  |    |    |    | 256,952,662  |
+L2614: Raytheon Co  |    |    | 1,508,276  |    |    |    | 281,414,136  |
+L2615: Rockwell Collins, Inc  |    |    | 998,469  |    |    |    | 130,509,883  |
+L2616: Textron, Inc  |    |    | 1,582,243  |    |    |    | 85,251,253  |
+L2617: TransDigm Group, Inc. (a)  |    |    | 231,578  |    |    |    | 59,202,916  |
+L2618: United Technologies Corp  |    |    | 3,665,686  |    |    |    | 425,512,831  |
+L2619:  |    |  |  |  |    |    |    |
+L2620:  |    |  |  |  |    |    | 2,743,653,623  |
+L2621:  |    |  |  |  |    |    |    |
+L2622: AIR FREIGHT & LOGISTICS — 7.1%  |
+L2623: C.H. Robinson Worldwide, Inc. (a)  |    |    | 667,024  |    |    |    | 50,760,526  |
+L2624: Expeditors International of Washington, Inc  |    |    | 853,186  |    |    |    | 51,071,714  |
+L2625: FedEx Corp  |    |    | 1,258,532  |    |    |    | 283,899,649  |
+L2626: United Parcel Service, Inc. Class B  |    |    | 3,334,866  |    |    |    | 400,484,058  |
+L2627:  |    |  |  |  |    |    |    |
+L2628:  |    |  |  |  |    |    | 786,215,947  |
+L2629:  |    |  |  |  |    |    |    |
+L2630: AIRLINES — 4.8%  |
+L2631: Alaska Air Group, Inc  |    |    | 585,360  |    |    |    | 44,645,407  |
+L2632: American Airlines Group, Inc  |    |    | 2,048,793  |    |    |    | 97,297,180  |
+L2633: Delta Air Lines, Inc  |    |    | 3,152,931  |    |    |    | 152,034,333  |
+L2634: Southwest Airlines Co  |    |    | 2,858,876  |    |    |    | 160,039,878  |
+L2635: United Continental Holdings, Inc. (b)  |    |    | 1,224,913  |    |    |    | 74,572,703  |
+L2636:  |    |  |  |  |    |    |    |
+L2637:  |    |  |  |  |    |    | 528,589,501  |
+L2638:  |    |  |  |  |    |    |    |
+L2639: BUILDING PRODUCTS — 3.4%  |
+L2640: Allegion PLC  |    |    | 451,079  |    |    |    | 39,004,801  |
+L2641: AO Smith Corp  |    |    | 696,444  |    |    |    | 41,389,667  |
+L2642: Fortune Brands Home & Security, Inc  |    |    | 728,540  |    |    |    | 48,979,744  |
+L2643: Johnson Controls International PLC  |    |    | 4,441,444  |    |    |    | 178,945,779  |
+L2644: Masco Corp  |    |    | 1,686,114  |    |    |    | 65,775,307  |
+L2645:  |    |  |  |  |    |    |    |
+L2646:  |    |  |  |  |    |    | 374,095,298  |
+L2647:  |    |  |  |  |    |    |    |
+L2648: COMMERCIAL SERVICES & SUPPLIES — 3.0%  |
+L2649: Cintas Corp  |    |    | 493,532  |    |    |    | 71,206,797  |
+L2650: Republic Services, Inc  |    |    | 1,088,639  |    |    |    | 71,915,492  |
+L2651: Stericycle, Inc. (b)  |    |    | 403,682  |    |    |    | 28,911,705  |
+L2652: Waste Management, Inc  |    |    | 2,100,176  |    |    |    | 164,380,776  |
+L2653:  |    |  |  |  |    |    |    |
+L2654:  |    |  |  |  |    |    | 336,414,770  |
+L2655:  |    |  |  |  |    |    |    |
+L2656: CONSTRUCTION & ENGINEERING — 0.9%  |
+L2657: Fluor Corp  |    |    | 962,743  |    |    |    | 40,531,480  |
+L2658: Jacobs Engineering Group, Inc  |    |    | 570,315  |    |    |    | 33,232,255  |
+L2659: Quanta Services, Inc. (b)  |    |    | 719,607  |    |    |    | 26,891,714  |
+L2660:  |    |  |  |  |    |    |    |
+L2661:  |    |  |  |  |    |    | 100,655,449  |
+L2662:  |    |  |  |  |    |    |    |
+L2663: ELECTRICAL EQUIPMENT — 5.9%  |
+L2664: Acuity Brands, Inc. (a)  |    |    | 199,742  |    |    |    | 34,211,810  |
+L2665: AMETEK, Inc  |    |    | 1,089,817  |    |    |    | 71,971,515  |
+L2666: Eaton Corp. PLC  |    |    | 2,589,359  |    |    |    | 198,836,877  |
+L2667: Emerson Electric Co  |    |    | 3,231,071  |    |    |    | 203,040,502  |
+L2668: Rockwell Automation, Inc  |    |    | 789,406  |    |    |    | 140,680,043  |
+L2669:  |    |  |  |  |    |    |    |
+L2670:  |    |  |  |  |    |    | 648,740,747  |
+L2671:  |    |  |  |  |    |    |    |
+L2672: INDUSTRIAL CONGLOMERATES — 18.2%  |
+L2673: 3M Co  |    |    | 2,909,912  |    |    | $  | 610,790,529  |
+L2674: General Electric Co  |    |    | 30,477,543  |    |    |    | 736,946,990  |
+L2675: Honeywell International, Inc  |    |    | 3,824,859  |    |    |    | 542,135,515  |
+L2676: Roper Technologies, Inc  |    |    | 486,101  |    |    |    | 118,316,983  |
+L2677:  |    |  |  |  |    |    |    |
+L2678:  |    |  |  |  |    |    | 2,008,190,017  |
+L2679:  |    |  |  |  |    |    |    |
+L2680: MACHINERY — 17.4%  |
+L2681: Caterpillar, Inc  |    |    | 2,997,573  |    |    |    | 373,827,329  |
+L2682: Cummins, Inc  |    |    | 1,381,197  |    |    |    | 232,082,532  |
+L2683: Deere & Co  |    |    | 1,704,392  |    |    |    | 214,054,591  |
+L2684: Dover Corp  |    |    | 892,128  |    |    |    | 81,531,578  |
+L2685: Flowserve Corp  |    |    | 618,491  |    |    |    | 26,341,532  |
+L2686: Fortive Corp  |    |    | 1,629,703  |    |    |    | 115,366,676  |
+L2687: Illinois Tool Works, Inc  |    |    | 1,564,816  |    |    |    | 231,530,175  |
+L2688: Ingersoll-Rand PLC  |    |    | 1,212,055  |    |    |    | 108,078,944  |
+L2689: PACCAR, Inc  |    |    | 1,943,778  |    |    |    | 140,612,901  |
+L2690: Parker-Hannifin Corp  |    |    | 795,607  |    |    |    | 139,247,137  |
+L2691: Pentair PLC  |    |    | 793,475  |    |    |    | 53,924,561  |
+L2692: Snap-on, Inc. (a)  |    |    | 274,329  |    |    |    | 40,877,764  |
+L2693: Stanley Black & Decker, Inc  |    |    | 728,364  |    |    |    | 109,961,113  |
+L2694: Xylem, Inc  |    |    | 850,962  |    |    |    | 53,295,750  |
+L2695:  |    |  |  |  |    |    |    |
+L2696:  |    |  |  |  |    |    | 1,920,732,583  |
+L2697:  |    |  |  |  |    |    |    |
+L2698: PROFESSIONAL SERVICES — 3.0%  |
+L2699: Equifax, Inc  |    |    | 774,573  |    |    |    | 82,096,992  |
+L2700: IHS Markit, Ltd. (b)  |    |    | 1,737,039  |    |    |    | 76,568,679  |
+L2701: Nielsen Holdings PLC  |    |    | 1,590,529  |    |    |    | 65,927,427  |
+L2702: Robert Half International, Inc  |    |    | 851,615  |    |    |    | 42,870,299  |
+L2703: Verisk Analytics, Inc. (b)  |    |    | 739,457  |    |    |    | 61,515,428  |
+L2704:  |    |  |  |  |    |    |    |
+L2705:  |    |  |  |  |    |    | 328,978,825  |
+L2706:  |    |  |  |  |    |    |    |
+L2707: ROAD & RAIL — 9.7%  |
+L2708: CSX Corp  |    |    | 5,233,248  |    |    |    | 283,956,037  |
+L2709: JB Hunt Transport Services, Inc  |    |    | 406,184  |    |    |    | 45,118,919  |
+L2710: Kansas City Southern  |    |    | 502,315  |    |    |    | 54,591,594  |
+L2711: Norfolk Southern Corp  |    |    | 1,610,714  |    |    |    | 213,000,819  |
+L2712: Union Pacific Corp  |    |    | 4,141,063  |    |    |    | 480,239,076  |
+L2713:  |    |  |  |  |    |    |    |
+L2714:  |    |  |  |  |    |    | 1,076,906,445  |
+L2715:  |    |  |  |  |    |    |    |
+L2716: TRADING COMPANIES & DISTRIBUTORS — 1.6%  |
+L2717: Fastenal Co  |    |    | 1,369,570  |    |    |    | 62,425,001  |
+L2718: United Rentals, Inc. (b)  |    |    | 400,226  |    |    |    | 55,527,355  |
+L2719: W.W. Grainger, Inc. (a)  |    |    | 326,882  |    |    |    | 58,757,039  |
+L2720:  |    |  |  |  |    |    |    |
+L2721:  |    |  |  |  |    |    | 176,709,395  |
+L2722:  |    |  |  |  |    |    |    |
+L2723: TOTAL COMMON STOCKS
+L2724: (Cost $10,609,769,085)  |    |  |  |  |    |    | 11,029,882,600  |
+L2725:  |    |  |  |  |    |    |    |
+L2726: SHORT-TERM INVESTMENT — 0.1%  |
+L2727: State Street Institutional U.S. Government Money Market Fund, Class G Shares 0.96% (c) (d)
+L2728: (Cost $15,980,490)  |    |    | 15,980,490  |    |    |    | 15,980,490  |
+L2729:  |    |  |  |  |    |    |    |
+L2730: TOTAL INVESTMENTS — 99.9%  |    |  |  |  |    |  |  |
+L2731: (Cost $10,625,749,575)  |    |  |  |  |    |    | 11,045,863,090  |
+L2732: OTHER ASSETS IN EXCESS OF LIABILITIES — 0.1%  |    |  |  |  |    |    | 9,816,171  |
+L2733:  |    |  |  |  |    |    |    |
+L2734: NET ASSETS — 100.0%  |    |  |  |  |    | $  | 11,055,679,261  |
+L2735:  |    |  |  |  |    |    |    |
+L2736: 
+L2737: 
+L2738: See accompanying notes to financial statements.
+L2739: 
+L2740: 
+L2741: 
+L2742: 52
+L2743: 
+L2744: * * *
+L2745: ##### cite0†Table of Contents L2746: 
+L2747: The Industrial Select Sector SPDR Fund
+L2748: 
+L2749: SCHEDULE OF INVESTMENTS (continued)
+L2750: 
+L2751: September 30, 2017
+L2752: (a)  | All or a portion of the shares of the security are on loan at September 30, 2017.
+L2753: (b)  | Non-income producing security.
+L2754: (c)  | The Fund invested in certain money market funds managed by SSGA Funds Management, Inc. Amounts related to these transactions during the period ended September 30, 2017 are shown in the Affiliate Table below.
+L2755: (d)  | The rate shown is the annualized seven-day yield at September 30, 2017.
+L2756: The following table summarizes the value of the Fund’s investments according to the fair value hierarchy as of September 30, 2017.
+L2757:  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+L2758: Description  |     | Level 1 —
+L2759: Quoted Prices  |    |     | Level 2 —
+L2760: Other Significant
+L2761: Observable Inputs  |    |     | Level 3 —
+L2762: Significant
+L2763: Unobservable Inputs  |    |     | Total  |
+L2764: ASSETS:  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L2765: INVESTMENTS:  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L2766: Common Stocks  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L2767: Aerospace & Defense.  |     | $  | 2,743,653,623  |    |     | $  | —  |    |     | $  | —  |    |     | $  | 2,743,653,623  |
+L2768: Air Freight & Logistics  |     |    | 786,215,947  |    |     |    | —  |    |     |    | —  |    |     |    | 786,215,947  |
+L2769: Airlines.  |     |    | 528,589,501  |    |     |    | —  |    |     |    | —  |    |     |    | 528,589,501  |
+L2770: Building Products  |     |    | 374,095,298  |    |     |    | —  |    |     |    | —  |    |     |    | 374,095,298  |
+L2771: Commercial Services & Supplies  |     |    | 336,414,770  |    |     |    | —  |    |     |    | —  |    |     |    | 336,414,770  |
+L2772: Construction & Engineering  |     |    | 100,655,449  |    |     |    | —  |    |     |    | —  |    |     |    | 100,655,449  |
+L2773: Electrical Equipment  |     |    | 648,740,747  |    |     |    | —  |    |     |    | —  |    |     |    | 648,740,747  |
+L2774: Industrial Conglomerates  |     |    | 2,008,190,017  |    |     |    | —  |    |     |    | —  |    |     |    | 2,008,190,017  |
+L2775: Machinery  |     |    | 1,920,732,583  |    |     |    | —  |    |     |    | —  |    |     |    | 1,920,732,583  |
+L2776: Professional Services  |     |    | 328,978,825  |    |     |    | —  |    |     |    | —  |    |     |    | 328,978,825  |
+L2777: Road & Rail  |     |    | 1,076,906,445  |    |     |    | —  |    |     |    | —  |    |     |    | 1,076,906,445  |
+L2778: Trading Companies & Distributors  |     |    | 176,709,395  |    |     |    | —  |    |     |    | —  |    |     |    | 176,709,395  |
+L2779: Short-Term Investment  |     |    | 15,980,490  |    |     |    | —  |    |     |    | —  |    |     |    | 15,980,490  |
+L2780:  |     |    |    |    |     |    |    |    |     |    |    |    |     |    |    |
+L2781: TOTAL INVESTMENTS  |     | $  | 11,045,863,090  |    |     | $  | —  |    |     | $  | —  |    |     | $  | 11,045,863,090  |
+L2782:  |     |    |    |    |     |    |    |    |     |    |    |    |     |    |    |
+L2783: Affiliate Table
+L2784:  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+L2785:    |    | Number
+L2786: of Shares
+L2787: Held at
+L2788: 9/30/16  |    |    | Value At
+L2789: 9/30/16  |    |    | Cost of
+L2790: Purchases  |    |    | Proceeds from
+L2791: Shares Sold  |    |    | Realized
+L2792: Gain
+L2793: (Loss)  |    |    | Change in
+L2794: Unrealized
+L2795: Appreciation/
+L2796: Depreciation  |    |    | Number
+L2797: of Shares
+L2798: Held at

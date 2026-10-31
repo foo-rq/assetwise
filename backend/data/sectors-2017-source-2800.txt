@@ -1,0 +1,290 @@
+L2799: 9/30/17  |    |    | Value at
+L2800: 9/30/17  |    |    | Dividend
+L2801: Income  |
+L2802: State Street Institutional Liquid Reserves Fund, Premier Class  |    |    | 6,148,750  |    |    | $  | 6,148,750  |    |    | $  | 673,408  |    |    | $  | 6,822,158  |    |    | $  | —  |    |    | $  | —  |    |    |    | —  |    |    | $  | —  |    |    | $  | 86  |
+L2803: State Street Institutional U.S. Government Money Market Fund, Class G Shares  |    |    | —  |    |    |    | —  |    |    |    | 158,347,688  |    |    |    | 142,367,198  |    |    |    | —  |    |    |    | —  |    |    |    | 15,980,490  |    |    |    | 15,980,490  |    |    |    | 57,756  |
+L2804: State Street Institutional U.S. Government Money Market Fund, Premier Class  |    |    | —  |    |    |    | —  |    |    |    | 191,003,404  |    |    |    | 191,003,404  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | 65,526  |
+L2805: State Street Navigator Securities Lending Government Money Market Portfolio*  |    |    | —  |    |    |    | —  |    |    |    | 5,652,423  |    |    |    | 5,652,423  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | 323  |
+L2806:  |    |  |  |  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |  |  |  |    |    |    |    |    |    |    |
+L2807: TOTAL  |    |  |  |  |    | $  | 6,148,750  |    |    | $  | 355,676,923  |    |    | $  | 345,845,183  |    |    | $  | —  |    |    | $  | —  |    |    |  |  |  |    | $  | 15,980,490  |    |    | $  | 123,691  |
+L2808:  |    |  |  |  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |  |  |  |    |    |    |    |    |    |    |
+L2809: 
+L2810: 
+L2811: *  | Effective October 5, 2016, the name of State Street Navigator Securities Lending Prime Portfolio was changed to State Street Navigator Securities Lending Government Money Market Portfolio.
+L2812: 
+L2813: 
+L2814: 
+L2815: See accompanying notes to financial statements.
+L2816: 
+L2817: 
+L2818: 
+L2819: 53
+L2820: 
+L2821: * * *
+L2822: ##### cite0†Table of Contents L2823: 
+L2824: The Materials Select Sector SPDR Fund
+L2825: 
+L2826: SCHEDULE OF INVESTMENTS
+L2827: 
+L2828: September 30, 2017
+L2829:  |  |  |  |  |  |  |  |
+L2830: Security Description  |    | Shares  |    |    | Value  |
+L2831:  |  |
+L2832: COMMON STOCKS — 99.8%  |    |  |  |  |    |  |  |
+L2833: CHEMICALS — 72.8%  |    |  |  |  |    |  |  |
+L2834: Air Products & Chemicals, Inc  |    |    | 1,393,924  |    |    | $  | 210,789,187  |
+L2835: Albemarle Corp  |    |    | 731,209  |    |    |    | 99,671,099  |
+L2836: CF Industries Holdings, Inc  |    |    | 1,602,298  |    |    |    | 56,336,798  |
+L2837: DowDuPont, Inc  |    |    | 13,413,810  |    |    |    | 928,638,066  |
+L2838: Eastman Chemical Co  |    |    | 965,388  |    |    |    | 87,357,960  |
+L2839: Ecolab, Inc  |    |    | 1,665,000  |    |    |    | 214,135,650  |
+L2840: FMC Corp  |    |    | 897,893  |    |    |    | 80,190,824  |
+L2841: International Flavors & Fragrances, Inc  |    |    | 530,332  |    |    |    | 75,789,746  |
+L2842: LyondellBasell Industries NV Class A  |    |    | 1,850,015  |    |    |    | 183,243,986  |
+L2843: Monsanto Co  |    |    | 2,791,666  |    |    |    | 334,497,420  |
+L2844: Mosaic Co  |    |    | 2,429,087  |    |    |    | 52,443,988  |
+L2845: PPG Industries, Inc  |    |    | 1,656,433  |    |    |    | 179,988,010  |
+L2846: Praxair, Inc  |    |    | 1,824,106  |    |    |    | 254,900,573  |
+L2847: Sherwin-Williams Co  |    |    | 530,329  |    |    |    | 189,878,995  |
+L2848:  |    |  |  |  |    |    |    |
+L2849:  |    |  |  |  |    |    | 2,947,862,302  |
+L2850:  |    |  |  |  |    |    |    |
+L2851: CONSTRUCTION MATERIALS — 4.7%  |
+L2852: Martin Marietta Materials, Inc  |    |    | 418,545  |    |    |    | 86,316,535  |
+L2853: Vulcan Materials Co  |    |    | 871,689  |    |    |    | 104,254,005  |
+L2854:  |    |  |  |  |    |    |    |
+L2855:  |    |  |  |  |    |    | 190,570,540  |
+L2856:  |    |  |  |  |    |    |    |
+L2857: CONTAINERS & PACKAGING — 13.1%  |
+L2858: Avery Dennison Corp  |    |    | 603,705  |    |    |    | 59,368,350  |
+L2859: Ball Corp  |    |    | 2,327,847  |    |    |    | 96,140,081  |
+L2860: International Paper Co  |    |    | 2,679,777  |    |    |    | 152,264,929  |
+L2861: Packaging Corp. of America  |    |    | 634,525  |    |    |    | 72,767,327  |
+L2862: Sealed Air Corp  |    |    | 1,306,798  |    |    |    | 55,826,410  |
+L2863: WestRock Co  |    |    | 1,681,478  |    |    |    | 95,390,247  |
+L2864:  |    |  |  |  |    |    |    |
+L2865:  |    |  |  |  |    |    | 531,757,344  |
+L2866:  |    |  |  |  |    |    |    |
+L2867: METALS & MINING — 9.2%  |
+L2868: Freeport-McMoRan, Inc. (a)  |    |    | 8,799,113  |    |    | $  | 123,539,546  |
+L2869: Newmont Mining Corp  |    |    | 3,480,195  |    |    |    | 130,542,114  |
+L2870: Nucor Corp  |    |    | 2,093,752  |    |    |    | 117,333,862  |
+L2871:  |    |  |  |  |    |    |    |
+L2872:  |    |  |  |  |    |    | 371,415,522  |
+L2873:  |    |  |  |  |    |    |    |
+L2874: TOTAL COMMON STOCKS
+L2875: (Cost $4,018,231,664)  |    |  |  |  |    |    | 4,041,605,708  |
+L2876:  |    |  |  |  |    |    |    |
+L2877: SHORT-TERM INVESTMENT — 0.1%  |
+L2878: State Street Institutional U.S. Government Money Market Fund, Class G Shares 0.96% (b) (c)
+L2879: (Cost $4,874,539)  |    |    | 4,874,539  |    |    |    | 4,874,539  |
+L2880:  |    |  |  |  |    |    |    |
+L2881: TOTAL INVESTMENTS — 99.9%  |
+L2882: (Cost $4,023,106,203)  |    |  |  |  |    |    | 4,046,480,247  |
+L2883: OTHER ASSETS IN EXCESS OF LIABILITIES — 0.1%  |    |  |  |  |    |    | 4,921,604  |
+L2884:  |    |  |  |  |    |    |    |
+L2885: NET ASSETS — 100.0%  |    |  |  |  |    | $  | 4,051,401,851  |
+L2886:  |    |  |  |  |    |    |    |
+L2887: 
+L2888: 
+L2889: (a)  | Non-income producing security.
+L2890: (b)  | The Fund invested in certain money market funds managed by SSGA Funds Management, Inc. Amounts related to these transactions during the period ended September 30, 2017 are shown in the Affiliate Table below.
+L2891: (c)  | The rate shown is the annualized seven-day yield at September 30, 2017.
+L2892: 
+L2893: 
+L2894: 
+L2895: The following table summarizes the value of the Fund’s investments according to the fair value hierarchy as of September 30, 2017.
+L2896:  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+L2897: Description  |     | Level 1 —
+L2898: Quoted Prices  |    |     | Level 2 —
+L2899: Other Significant
+L2900: Observable Inputs  |    |     | Level 3 —
+L2901: Significant
+L2902: Unobservable Inputs  |    |     | Total  |
+L2903: ASSETS:  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L2904: INVESTMENTS:  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L2905: Common Stocks  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L2906: Chemicals.  |     | $  | 2,947,862,302  |    |     | $  | —  |    |     | $  | —  |    |     | $  | 2,947,862,302  |
+L2907: Construction Materials.  |     |    | 190,570,540  |    |     |    | —  |    |     |    | —  |    |     |    | 190,570,540  |
+L2908: Containers & Packaging  |     |    | 531,757,344  |    |     |    | —  |    |     |    | —  |    |     |    | 531,757,344  |
+L2909: Metals & Mining.  |     |    | 371,415,522  |    |     |    | —  |    |     |    | —  |    |     |    | 371,415,522  |
+L2910: Short-Term Investment  |     |    | 4,874,539  |    |     |    | —  |    |     |    | —  |    |     |    | 4,874,539  |
+L2911:  |     |    |    |    |     |    |    |    |     |    |    |    |     |    |    |
+L2912: TOTAL INVESTMENTS  |     | $  | 4,046,480,247  |    |     | $  | —  |    |     | $  | —  |    |     | $  | 4,046,480,247  |
+L2913:  |     |    |    |    |     |    |    |    |     |    |    |    |     |    |    |
+L2914: 
+L2915: 
+L2916: See accompanying notes to financial statements.
+L2917: 
+L2918: 
+L2919: 
+L2920: 54
+L2921: 
+L2922: * * *
+L2923: ##### cite0†Table of Contents L2924: 
+L2925: The Materials Select Sector SPDR Fund
+L2926: 
+L2927: SCHEDULE OF INVESTMENTS (continued)
+L2928: 
+L2929: September 30, 2017
+L2930: 
+L2931: 
+L2932: 
+L2933: 
+L2934: 
+L2935: 
+L2936: 
+L2937: 
+L2938: 
+L2939: Affiliate Table
+L2940:  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+L2941:    |    | Number
+L2942: of Shares
+L2943: Held at
+L2944: 9/30/16  |    |    | Value At
+L2945: 9/30/16  |    |    | Cost of
+L2946: Purchases  |    |    | Proceeds from
+L2947: Shares Sold  |    |    | Realized
+L2948: Gain
+L2949: (Loss)  |    |    | Change in
+L2950: Unrealized
+L2951: Appreciation/
+L2952: Depreciation  |    |    | Number
+L2953: of Shares
+L2954: Held at
+L2955: 9/30/17  |    |    | Value at
+L2956: 9/30/17  |    |    | Dividend
+L2957: Income  |
+L2958: State Street Institutional Liquid Reserves Fund, Premier Class  |    |    | 1,117,308  |    |    | $  | 1,117,308  |    |    | $  | 482,047  |    |    | $  | 1,599,355  |    |    | $  | —  |    |    | $  | —  |    |    |    | —  |    |    | $  | —  |    |    | $  | —  |
+L2959: State Street Institutional U.S. Government Money Market Fund, Class G Shares  |    |    | —  |    |    |    | —  |    |    |    | 92,931,588  |    |    |    | 88,057,049  |    |    |    | —  |    |    |    | —  |    |    |    | 4,874,539  |    |    |    | 4,874,539  |    |    |    | 26,041  |
+L2960: State Street Institutional U.S. Government Money Market Fund, Premier Class  |    |    | —  |    |    |    | —  |    |    |    | 68,440,077  |    |    |    | 68,440,077  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | 15,181  |
+L2961:  |    |  |  |  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |  |  |  |    |    |    |    |    |    |    |
+L2962: TOTAL  |    |  |  |  |    | $  | 1,117,308  |    |    | $  | 161,853,712  |    |    | $  | 158,096,481  |    |    | $  | —  |    |    | $  | —  |    |    |  |  |  |    | $  | 4,874,539  |    |    | $  | 41,222  |
+L2963:  |    |  |  |  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |  |  |  |    |    |    |    |    |    |    |
+L2964: 
+L2965: 
+L2966: See accompanying notes to financial statements.
+L2967: 
+L2968: 
+L2969: 
+L2970: 55
+L2971: 
+L2972: * * *
+L2973: ##### cite0†Table of Contents L2974: 
+L2975: The Real Estate Select Sector SPDR Fund
+L2976: 
+L2977: SCHEDULE OF INVESTMENTS
+L2978: 
+L2979: September 30, 2017
+L2980:  |  |  |  |  |  |  |  |
+L2981: Security Description  |    | Shares  |    |    | Value  |
+L2982: COMMON STOCKS — 99.8%  |
+L2983: REAL ESTATE INVESTMENT TRUSTS (REITS) — 98.0%  |
+L2984: Alexandria Real Estate Equities, Inc. REIT  |    |    | 341,508  |    |    | $  | 40,629,207  |
+L2985: American Tower Corp. REIT  |    |    | 1,565,326  |    |    |    | 213,948,758  |
+L2986: Apartment Investment & Management Co. Class A REIT  |    |    | 570,846  |    |    |    | 25,037,306  |
+L2987: AvalonBay Communities, Inc. REIT  |    |    | 503,646  |    |    |    | 89,860,519  |
+L2988: Boston Properties, Inc. REIT  |    |    | 562,809  |    |    |    | 69,157,970  |
+L2989: Crown Castle International Corp. REIT  |    |    | 1,481,727  |    |    |    | 148,143,065  |
+L2990: Digital Realty Trust, Inc. REIT  |    |    | 746,661  |    |    |    | 88,352,396  |
+L2991: Duke Realty Corp. REIT  |    |    | 1,297,472  |    |    |    | 37,393,143  |
+L2992: Equinix, Inc. REIT  |    |    | 284,134  |    |    |    | 126,809,004  |
+L2993: Equity Residential REIT  |    |    | 1,339,699  |    |    |    | 88,326,355  |
+L2994: Essex Property Trust, Inc. REIT  |    |    | 240,690  |    |    |    | 61,142,481  |
+L2995: Extra Space Storage, Inc. REIT (a)  |    |    | 459,288  |    |    |    | 36,706,297  |
+L2996: Federal Realty Investment Trust REIT  |    |    | 263,549  |    |    |    | 32,735,421  |
+L2997: GGP, Inc. REIT (a)  |    |    | 2,279,399  |    |    |    | 47,343,117  |
+L2998: HCP, Inc. REIT  |    |    | 1,710,431  |    |    |    | 47,601,295  |
+L2999: Host Hotels & Resorts, Inc. REIT  |    |    | 2,699,142  |    |    |    | 49,907,136  |
+L3000: Iron Mountain, Inc. REIT  |    |    | 962,408  |    |    |    | 37,437,671  |
+L3001: Kimco Realty Corp. REIT (a)  |    |    | 1,547,502  |    |    |    | 30,253,664  |
+L3002: Macerich Co. REIT  |    |    | 397,113  |    |    |    | 21,829,302  |
+L3003: Mid-America Apartment Communities, Inc. REIT  |    |    | 414,380  |    |    |    | 44,288,934  |
+L3004: Prologis, Inc. REIT  |    |    | 1,939,843  |    |    |    | 123,102,437  |
+L3005: Public Storage REIT  |    |    | 545,761  |    |    |    | 116,787,396  |
+L3006: Realty Income Corp. REIT (a)  |    |    | 999,614  |    |    |    | 57,167,925  |
+L3007: Regency Centers Corp. REIT  |    |    | 539,650  |    |    |    | 33,479,886  |
+L3008: SBA Communications Corp. REIT (b)  |    |    | 439,027  |    |    |    | 63,241,839  |
+L3009: Simon Property Group, Inc. REIT  |    |    | 1,133,754  |    |    |    | 182,545,732  |
+L3010: SL Green Realty Corp. REIT  |    |    | 360,945  |    |    |    | 36,570,947  |
+L3011: UDR, Inc. REIT  |    |    | 975,910  |    |    |    | 37,113,857  |
+L3012: Ventas, Inc. REIT  |    |    | 1,298,972  |    |    |    | 84,602,046  |
+L3013:  |  |
+L3014: Vornado Realty Trust REIT  |    |    | 628,800  |    |    | $  | 48,342,144  |
+L3015: Welltower, Inc. REIT  |    |    | 1,345,463  |    |    |    | 94,559,140  |
+L3016: Weyerhaeuser Co. REIT  |    |    | 2,746,221  |    |    |    | 93,453,901  |
+L3017:  |    |  |  |  |    |    |    |
+L3018:  |    |  |  |  |    |    | 2,307,870,291  |
+L3019:  |    |  |  |  |    |    |    |
+L3020: REAL ESTATE MANAGEMENT & DEVELOPMENT — 1.8%  |
+L3021: CBRE Group, Inc. Class A (b)  |    |    | 1,096,982  |    |    |    | 41,553,678  |
+L3022:  |    |  |  |  |    |    |    |
+L3023: TOTAL COMMON STOCKS
+L3024: (Cost $2,434,228,038)  |    |  |  |  |    |    | 2,349,423,969  |
+L3025:  |    |  |  |  |    |    |    |
+L3026: SHORT-TERM INVESTMENT — 0.3%  |
+L3027: State Street Institutional U.S. Government Money Market Fund, Class G Shares 0.96% (c) (d)
+L3028: (Cost $6,853,382)  |    |    | 6,853,382  |    |    |    | 6,853,382  |
+L3029:  |    |  |  |  |    |    |    |
+L3030: TOTAL INVESTMENTS — 100.1%  |    |  |  |  |    |  |  |
+L3031: (Cost $2,441,081,420)  |    |  |  |  |    |    | 2,356,277,351  |
+L3032: LIABILITIES IN EXCESS OF OTHER ASSETS — (0.1)%  |    |  |  |  |    |    | (1,459,411  | )
+L3033:  |    |  |  |  |    |    |    |
+L3034: NET ASSETS — 100.0%  |    |  |  |  |    | $  | 2,354,817,940  |
+L3035:  |    |  |  |  |    |    |    |
+L3036: 
+L3037: 
+L3038: (a)  | All or a portion of the shares of the security are on loan at September 30, 2017.
+L3039: (b)  | Non-income producing security.
+L3040: (c)  | The Fund invested in certain money market funds managed by SSGA Funds Management, Inc. Amounts related to these transactions during the period ended September 30, 2017 are shown in the Affiliate Table below.
+L3041: (d)  | The rate shown is the annualized seven-day yield at September 30, 2017.
+L3042: REIT  | = Real Estate Investment Trust
+L3043: The following table summarizes the value of the Fund’s investments according to the fair value hierarchy as of September 30, 2017.
+L3044:  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+L3045: Description  |     | Level 1 —
+L3046: Quoted Prices  |    |     | Level 2 —
+L3047: Other Significant
+L3048: Observable Inputs  |    |     | Level 3 —
+L3049: Significant
+L3050: Unobservable Inputs  |    |     | Total  |
+L3051: ASSETS:  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L3052: INVESTMENTS:  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L3053: Common Stocks  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L3054: Real Estate Investment Trusts (REITs)  |     | $  | 2,307,870,291  |    |     | $  | —  |    |     | $  | —  |    |     | $  | 2,307,870,291  |
+L3055: Real Estate Management & Development  |     |    | 41,553,678  |    |     |    | —  |    |     |    | —  |    |     |    | 41,553,678  |
+L3056: Short-Term Investment  |     |    | 6,853,382  |    |     |    | —  |    |     |    | —  |    |     |    | 6,853,382  |
+L3057:  |     |    |    |    |     |    |    |    |     |    |    |    |     |    |    |
+L3058: TOTAL INVESTMENTS  |     | $  | 2,356,277,351  |    |     | $  | —  |    |     | $  | —  |    |     | $  | 2,356,277,351  |
+L3059:  |     |    |    |    |     |    |    |    |     |    |    |    |     |    |    |
+L3060: 
+L3061: 
+L3062: See accompanying notes to financial statements.
+L3063: 
+L3064: 
+L3065: 
+L3066: 56
+L3067: 
+L3068: * * *
+L3069: ##### cite0†Table of Contents L3070: 
+L3071: The Real Estate Select Sector SPDR Fund
+L3072: 
+L3073: SCHEDULE OF INVESTMENTS (continued)
+L3074: 
+L3075: September 30, 2017
+L3076: 
+L3077: 
+L3078: 
+L3079: 
+L3080: 
+L3081: 
+L3082: 
+L3083: Affiliate Table
+L3084:  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+L3085:    |    | Number
+L3086: of Shares
+L3087: Held at
+L3088: 9/30/16  |    |    | Value At
+L3089: 9/30/16  |    |    | Cost of
+L3090: Purchases  |    |    | Proceeds from
+L3091: Shares Sold  |    |    | Realized
+L3092: Gain

@@ -1,0 +1,242 @@
+L63:  |  |  |  |  |  |  |  |
+L64: Number
+L65: of Shares  |    |     |    |     | Value  |
+L66:  |  |  |     | Common Stocks and Other Equity Interests—100.0%  |
+L67:  |  |  |     | Airlines—0.3%  |     |  |  |
+L68:    | 3,716,169  |    |     | American Airlines Group, Inc.  |     | $  | 176,480,866  |
+L69:  |  |  |     |  |     |    |    |
+L70:  |  |  |     | Automobiles—0.8%  |     |  |  |
+L71:    | 1,273,516  |    |     | Tesla, Inc.^{(b)}  |     |    | 434,396,308  |
+L72:  |  |  |     |  |     |    |    |
+L73:  |  |  |     | Beverages—0.5%  |     |  |  |
+L74:    | 4,335,516  |    |     | Monster Beverage Corp.^{(b)}  |     |    | 239,537,259  |
+L75:  |  |  |     |  |     |    |    |
+L76:  |  |  |     | Biotechnology—8.6%  |     |  |  |
+L77:    | 1,703,017  |    |     | Alexion Pharmaceuticals, Inc.^{(b)}  |     |    | 238,916,255  |
+L78:    | 5,567,822  |    |     | Amgen, Inc.  |     |    | 1,038,120,412  |
+L79:    | 1,613,374  |    |     | Biogen, Inc.^{(b)}  |     |    | 505,179,667  |
+L80:    | 1,337,467  |    |     | BioMarin Pharmaceutical, Inc.^{(b)}  |     |    | 124,478,054  |
+L81:    | 5,970,075  |    |     | Celgene Corp.^{(b)}  |     |    | 870,556,336  |
+L82:    | 9,964,994  |    |     | Gilead Sciences, Inc.  |     |    | 807,363,814  |
+L83:    | 1,569,668  |    |     | Incyte Corp.^{(b)}  |     |    | 183,243,042  |
+L84:    | 803,061  |    |     | Regeneron Pharmaceuticals, Inc.^{(b)}  |     |    | 359,064,634  |
+L85:    | 556,236  |    |     | Shire PLC ADR  |     |    | 85,181,981  |
+L86:    | 1,923,859  |    |     | Vertex Pharmaceuticals, Inc.^{(b)}  |     |    | 292,503,522  |
+L87:  |  |  |     |  |     |    |    |
+L88:  |  |  |     |  |     |    | 4,504,607,717  |
+L89:  |  |  |     |  |     |    |    |
+L90:  |  |  |     | Commercial Services & Supplies—0.2%  |
+L91:    | 804,560  |    |     | Cintas Corp.  |     |    | 116,081,917  |
+L92:  |  |  |     |  |     |    |    |
+L93:  |  |  |     | Communications Equipment—2.5%  |
+L94:    | 38,153,360  |    |     | Cisco Systems, Inc.  |     |    | 1,283,097,497  |
+L95:  |  |  |     |  |     |    |    |
+L96:  |  |  |     | Food & Staples Retailing—2.3%  |
+L97:    | 3,346,766  |    |     | Costco Wholesale Corp.  |     |    | 549,840,186  |
+L98:    | 8,165,448  |    |     | Walgreens Boots Alliance, Inc.  |     |    | 630,535,895  |
+L99:  |  |  |     |  |     |    |    |
+L100:  |  |  |     |  |     |    | 1,180,376,081  |
+L101:  |  |  |     |  |     |    |    |
+L102:  |  |  |     | Food Products—2.3%  |
+L103:    | 9,295,935  |    |     | Kraft Heinz Co. (The)  |     |    | 720,899,759  |
+L104:    | 11,504,175  |    |     | Mondelez International, Inc., Class A  |     |    | 467,759,756  |
+L105:  |  |  |     |  |     |    |    |
+L106:  |  |  |     |  |     |    | 1,188,659,515  |
+L107:  |  |  |     |  |     |    |    |
+L108:  |  |  |     | Health Care Equipment & Supplies—1.1%  |     |  |  |
+L109:    | 1,751,272  |    |     | DENTSPLY Sirona, Inc.  |     |    | 104,743,578  |
+L110:    | 2,140,165  |    |     | Hologic, Inc.^{(b)}  |     |    | 78,522,654  |
+L111:    | 665,971  |    |     | IDEXX Laboratories, Inc.^{(b)}  |     |    | 103,551,831  |
+L112:    | 284,555  |    |     | Intuitive Surgical, Inc.^{(b)}  |     |    | 297,610,383  |
+L113:  |  |  |     |  |     |    |    |
+L114:  |  |  |     |  |     |    | 584,428,446  |
+L115:  |  |  |     |  |     |    |    |
+L116:  |  |  |     | Health Care Providers & Services—0.7%  |
+L117:    | 4,407,090  |    |     | Express Scripts Holding Co.^{(b)}  |     |    | 279,056,939  |
+L118:    | 1,206,518  |    |     | Henry Schein, Inc.^{(b)}  |     |    | 98,922,411  |
+L119:  |  |  |     |  |     |    |    |
+L120:  |  |  |     |  |     |    | 377,979,350  |
+L121:  |  |  |     |  |     |    |    |
+L122:  |  |  |     | Health Care Technology—0.3%  |
+L123:    | 2,530,204  |    |     | Cerner Corp.^{(b)}  |     |    | 180,454,149  |
+L124:  |  |  |     |  |     |    |    |
+L125:  |  |  |     | Hotels, Restaurants & Leisure—2.1%  |
+L126:    | 2,841,776  |    |     | Marriott International, Inc., Class A  |     |    | 313,334,222  |
+L127:    | 1,741,030  |    |     | Norwegian Cruise Line Holdings
+L128: Ltd.^{(b)}  |     |    | 94,102,672  |
+L129:    | 11,017,734  |    |     | Starbucks Corp.  |     |    | 591,762,493  |
+L130:    | 782,658  |    |     | Wynn Resorts Ltd.  |     |    | 116,553,429  |
+L131:  |  |  |     |  |     |    |    |
+L132:  |  |  |     |  |     |    | 1,115,752,816  |
+L133:  |  |  |     |  |     |    |    |
+L134:  |  |  |     | Internet & Direct Marketing Retail—10.6%  |     |  |  |
+L135:    | 3,665,578  |    |     | Amazon.Com, Inc.^{(b)}  |     |    | 3,523,903,410  |
+L136:    | 3,495,426  |    |     | Ctrip.com International Ltd. ADR^{(b)}  |     |    | 184,348,767  |
+L137:    | 1,059,410  |    |     | Expedia, Inc.  |     |    | 152,491,476  |
+L138:  |  |  |  |  |  |  |  |
+L139: Number
+L140: of Shares  |    |     |    |     | Value  |
+L141:  |  |  |     | Common Stocks and Other Equity Interests (continued)  |
+L142:  |  |  |     | Internet & Direct Marketing Retail (continued)  |
+L143:    | 7,004,502  |    |     | JD.com, Inc. ADR^{(b)}  |     | $  | 267,571,977  |
+L144:    | 3,219,720  |    |     | Liberty Interactive Corp. QVC Group, Series A^{(b)}  |     |    | 75,888,800  |
+L145:    | 620,565  |    |     | Liberty Ventures, Series A^{(b)}  |     |    | 35,713,516  |
+L146:    | 3,294,509  |    |     | NetFlix, Inc.^{(b)}  |     |    | 597,459,207  |
+L147:    | 374,365  |    |     | Priceline Group, Inc. (The)^{(b)}  |     |    | 685,394,929  |
+L148:  |  |  |     |  |     |    |    |
+L149:  |  |  |     |  |     |    | 5,522,772,082  |
+L150:  |  |  |     |  |     |    |    |
+L151:  |  |  |     | Internet Software & Services—17.2%  |     |  |  |
+L152:    | 1,308,100  |    |     | Akamai Technologies, Inc.^{(b)}  |     |    | 63,730,632  |
+L153:    | 2,274,302  |    |     | Alphabet, Inc., Class A^{(b)}  |     |    | 2,214,533,343  |
+L154:    | 2,653,456  |    |     | Alphabet, Inc., Class C^{(b)}  |     |    | 2,544,956,184  |
+L155:    | 2,102,422  |    |     | Baidu, Inc. ADR^{(b)}  |     |    | 520,748,905  |
+L156:    | 8,167,130  |    |     | eBay, Inc.^{(b)}  |     |    | 314,107,820  |
+L157:    | 18,086,933  |    |     | Facebook, Inc., Class A^{(b)}  |     |    | 3,090,514,242  |
+L158:    | 336,952  |    |     | MercadoLibre, Inc.  |     |    | 87,246,981  |
+L159:    | 578,929  |    |     | NetEase, Inc. ADR  |     |    | 152,727,260  |
+L160:  |  |  |     |  |     |    |    |
+L161:  |  |  |     |  |     |    | 8,988,565,367  |
+L162:  |  |  |     |  |     |    |    |
+L163:  |  |  |     | IT Services—3.2%  |
+L164:    | 3,390,889  |    |     | Automatic Data Processing, Inc.  |     |    | 370,691,985  |
+L165:    | 4,506,826  |    |     | Cognizant Technology Solutions Corp., Class A  |     |    | 326,925,158  |
+L166:    | 1,606,000  |    |     | Fiserv, Inc.^{(b)}  |     |    | 207,109,760  |
+L167:    | 2,742,397  |    |     | Paychex, Inc.  |     |    | 164,434,124  |
+L168:    | 9,174,963  |    |     | Paypal Holdings, Inc.^{(b)}  |     |    | 587,472,881  |
+L169:  |  |  |     |  |     |    |    |
+L170:  |  |  |     |  |     |    | 1,656,633,908  |
+L171:  |  |  |     |  |     |    |    |
+L172:  |  |  |     | Leisure Products—0.3%  |
+L173:    | 954,462  |    |     | Hasbro, Inc.  |     |    | 93,222,304  |
+L174:    | 2,615,232  |    |     | Mattel, Inc.  |     |    | 40,483,791  |
+L175:  |  |  |     |  |     |    |    |
+L176:  |  |  |     |  |     |    | 133,706,095  |
+L177:  |  |  |     |  |     |    |    |
+L178:  |  |  |     | Life Sciences Tools & Services—0.4%  |
+L179:    | 1,114,100  |    |     | Illumina, Inc.^{(b)}  |     |    | 221,928,720  |
+L180:  |  |  |     |  |     |    |    |
+L181:  |  |  |     | Machinery—0.4%  |
+L182:    | 2,681,248  |    |     | PACCAR, Inc.  |     |    | 193,961,480  |
+L183:  |  |  |     |  |     |    |    |
+L184:  |  |  |     | Media—6.0%  |     |  |  |
+L185:    | 1,967,787  |    |     | Charter Communications, Inc., Class A^{(b)}  |     |    | 715,133,151  |
+L186:    | 35,893,523  |    |     | Comcast Corp., Class A  |     |    | 1,381,182,765  |
+L187:    | 1,174,610  |    |     | Discovery Communications, Inc., Class A^{(b)}  |     |    | 25,007,447  |
+L188:    | 1,667,456  |    |     | Discovery Communications, Inc., Class C^{(b)}  |     |    | 33,782,658  |
+L189:    | 1,737,352  |    |     | DISH Network Corp., Class A^{(b)}  |     |    | 94,216,599  |
+L190:    | 1,720,630  |    |     | Liberty Global PLC, Class A^{(b)}  |     |    | 58,346,563  |
+L191:    | 4,544,486  |    |     | Liberty Global PLC, Class C^{(b)}  |     |    | 148,604,692  |
+L192:    | 371,388  |    |     | Liberty Global PLC Lilac, Class A^{(b)}  |     |    | 8,824,179  |
+L193:    | 921,623  |    |     | Liberty Global PLC Lilac, Class C^{(b)}  |     |    | 21,473,816  |
+L194:    | 35,199,831  |    |     | Sirius XM Holdings, Inc.  |     |    | 194,303,067  |
+L195:    | 8,031,470  |    |     | Twenty-First Century Fox, Inc., Class A  |     |    | 211,870,179  |
+L196:    | 6,093,202  |    |     | Twenty-First Century Fox, Inc., Class B  |     |    | 157,143,680  |
+L197:    | 2,691,439  |    |     | Viacom, Inc., Class B  |     |    | 74,929,662  |
+L198:  |  |  |     |  |     |    |    |
+L199:  |  |  |     |  |     |    | 3,124,818,458  |
+L200:  |  |  |     |  |     |    |    |
+L201:  |  |  |     | Multiline Retail—0.3%  |
+L202:    | 1,807,295  |    |     | Dollar Tree, Inc.^{(b)}  |     |    | 156,909,352  |
+L203:  |  |  |     |  |     |    |    |
+L204:  |  |  |     | Pharmaceuticals—0.2%  |
+L205:    | 4,092,188  |    |     | Mylan NV^{(b)}  |     |    | 128,371,937  |
+L206:  |  |  |     |  |     |    |    |
+L207: 
+L208: 
+L209: 
+L210: 
+L211: See accompanying Notes to Financial Statements which are an integral part of the financial statements.
+L212: 
+L213: 
+L214: 
+L215:  |  |  |  |
+L216:    |    | 2  |    |
+L217: 
+L218: * * *
+L219: 
+L220: 
+L221: 
+L222: Schedule of Investments^{(a)} (continued)
+L223: 
+L224: PowerShares QQQ Trust^{SM}, Series 1 (QQQ)
+L225: 
+L226: September 30, 2017
+L227:  |  |  |  |  |  |  |  |
+L228: Number
+L229: of Shares  |    |     |    |     | Value  |
+L230:  |  |  |     | Common Stocks and Other Equity Interests (continued)  |
+L231:  |  |  |     | Professional Services—0.2%  |
+L232:    | 1,255,683  |    |     | Verisk Analytics, Inc.^{(b)}  |     | $  | 104,460,269  |
+L233:  |  |  |     |  |     |    |    |
+L234:  |  |  |     | Road & Rail—0.9%  |     |  |  |
+L235:    | 6,969,086  |    |     | CSX Corp.  |     |    | 378,142,607  |
+L236:    | 835,091  |    |     | JB Hunt Transport Services, Inc.  |     |    | 92,761,908  |
+L237:  |  |  |     |  |     |    |    |
+L238:  |  |  |     |  |     |    | 470,904,515  |
+L239:  |  |  |     |  |     |    |    |
+L240:  |  |  |     | Semiconductors & Semiconductor Equipment—11.7%  |
+L241:    | 2,805,509  |    |     | Analog Devices, Inc.  |     |    | 241,750,710  |
+L242:    | 8,137,913  |    |     | Applied Materials, Inc.  |     |    | 423,903,888  |
+L243:    | 3,102,575  |    |     | Broadcom Ltd.  |     |    | 752,498,540  |
+L244:    | 35,855,976  |    |     | Intel Corp.  |     |    | 1,365,395,566  |
+L245:    | 1,196,799  |    |     | KLA-Tencor Corp.  |     |    | 126,860,694  |
+L246:    | 1,239,639  |    |     | Lam Research Corp.  |     |    | 229,382,801  |
+L247:    | 2,152,367  |    |     | Maxim Integrated Products, Inc.  |     |    | 102,689,430  |
+L248:    | 1,775,867  |    |     | Microchip Technology, Inc.  |     |    | 159,437,339  |
+L249:    | 8,500,933  |    |     | Micron Technology, Inc.^{(b)}  |     |    | 334,341,695  |
+L250:    | 4,578,380  |    |     | NVIDIA Corp.  |     |    | 818,476,993  |
+L251:    | 11,263,222  |    |     | QUALCOMM, Inc.  |     |    | 583,885,428  |
+L252:    | 1,402,114  |    |     | Skyworks Solutions, Inc.  |     |    | 142,875,417  |
+L253:    | 7,554,882  |    |     | Texas Instruments, Inc.  |     |    | 677,219,622  |
+L254:    | 1,896,985  |    |     | Xilinx, Inc.  |     |    | 134,363,448  |
+L255:  |  |  |     |  |     |    |    |
+L256:  |  |  |     |  |     |    | 6,093,081,571  |
+L257:  |  |  |     |  |     |    |    |
+L258:  |  |  |     | Software—12.6%  |
+L259:    | 5,760,464  |    |     | Activision Blizzard, Inc.  |     |    | 371,607,533  |
+L260:    | 3,764,970  |    |     | Adobe Systems, Inc.^{(b)}  |     |    | 561,658,225  |
+L261:    | 1,672,604  |    |     | Autodesk, Inc.^{(b)}  |     |    | 187,766,525  |
+L262:    | 3,214,535  |    |     | CA, Inc.  |     |    | 107,301,178  |
+L263:    | 1,247,182  |    |     | Check Point Software Technologies Ltd.^{(b)}  |     |    | 142,203,692  |
+L264:    | 1,156,150  |    |     | Citrix Systems, Inc.^{(b)}  |     |    | 88,815,443  |
+L265:    | 2,355,790  |    |     | Electronic Arts, Inc.^{(b)}  |     |    | 278,124,567  |
+L266:    | 1,955,101  |    |     | Intuit, Inc.  |     |    | 277,898,056  |
+L267:    | 58,772,378  |    |     | Microsoft Corp.  |     |    | 4,377,954,437  |
+L268:    | 4,689,306  |    |     | Symantec Corp.  |     |    | 153,856,130  |
+L269:  |  |  |     |  |     |    |    |
+L270:  |  |  |     |  |     |    | 6,547,185,786  |
+L271:  |  |  |     |  |     |    |    |
+L272:  |  |  |     | Specialty Retail—1.0%  |
+L273:    | 671,682  |    |     | O’reilly Automotive, Inc.^{(b)}  |     |    | 144,660,152  |
+L274:    | 2,969,675  |    |     | Ross Stores, Inc.  |     |    | 191,751,915  |
+L275:    | 966,772  |    |     | Tractor Supply Co.  |     |    | 61,187,000  |
+L276:    | 468,776  |    |     | Ulta Beauty, Inc.^{(b)}  |     |    | 105,971,502  |
+L277:  |  |  |     |  |     |    |    |
+L278:  |  |  |     |  |     |    | 503,570,569  |
+L279:  |  |  |     |  |     |    |    |
+L280:  |  |  |     | Technology Hardware, Storage & Peripherals—12.2%  |
+L281:    | 39,413,497  |    |     | Apple, Inc.  |     |    | 6,074,408,158  |
+L282:    | 2,196,363  |    |     | Seagate Technology PLC  |     |    | 72,853,361  |
+L283:    | 2,250,096  |    |     | Western Digital Corp.  |     |    | 194,408,294  |
+L284:  |  |  |     |  |     |    |    |
+L285:  |  |  |     |  |     |    | 6,341,669,813  |
+L286:  |  |  |     |  |     |    |    |
+L287:  |  |  |     | Trading Companies & Distributors—0.2%  |
+L288:    | 2,197,431  |    |     | Fastenal Co.  |     |    | 100,158,905  |
+L289:  |  |  |     |  |     |    |    |
+L290:  |  |  |  |  |  |  |  |
+L291: Number
+L292: of Shares  |    |     |    |     | Value  |
+L293:  |  |  |     | Common Stocks and Other Equity Interests (continued)  |
+L294:  |  |  |     | Wireless Telecommunication Services—0.9%  |
+L295:    | 6,341,371  |    |     | T-Mobile US, Inc.^{(b)}  |     | $  | 391,008,936  |
+L296:    | 3,545,726  |    |     | Vodafone Group PLC ADR  |     |    | 100,911,362  |
+L297:  |  |  |     |  |     |    |    |
+L298:  |  |  |     |  |     |    | 491,920,298  |
+L299:  |  |  |     |  |     |    |    |
+L300:  |  |  |     | Total Investments in Securities
+L301: (Cost $53,664,514,234)—100.0%  |     |    | 52,162,471,046  |
+L302:  |  |  |     | Other assets less liabilities—0.0%  |     |    | 15,163,683  |
+L303:  |  |  |     |  |     |    |    |
+L304:  |  |  |     | Net Assets—100.0%  |     | $  | 52,177,634,729  |

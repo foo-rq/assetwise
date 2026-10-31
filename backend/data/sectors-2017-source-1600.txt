@@ -1,0 +1,396 @@
+L1599: The Consumer Discretionary Select Sector SPDR Fund
+L1600: 
+L1601: SCHEDULE OF INVESTMENTS
+L1602: 
+L1603: September 30, 2017
+L1604:  |  |  |  |  |  |  |  |
+L1605: Security Description  |    | Shares  |    |    | Value  |
+L1606: COMMON STOCKS — 99.8%  |
+L1607: AUTO COMPONENTS — 1.8%  |
+L1608: BorgWarner, Inc  |    |    | 897,100  |    |    | $  | 45,958,433  |
+L1609: Delphi Automotive PLC  |    |    | 1,203,781  |    |    |    | 118,452,050  |
+L1610: Goodyear Tire & Rubber Co  |    |    | 1,129,516  |    |    |    | 37,556,407  |
+L1611:  |    |  |  |  |    |    |    |
+L1612:  |    |  |  |  |    |    | 201,966,890  |
+L1613:  |    |  |  |  |    |    |    |
+L1614: AUTOMOBILES — 4.2%  |    |  |  |  |    |  |  |
+L1615: Ford Motor Co  |    |    | 17,569,729  |    |    |    | 210,309,656  |
+L1616: General Motors Co  |    |    | 5,890,301  |    |    |    | 237,850,354  |
+L1617: Harley-Davidson, Inc. (a)  |    |    | 766,266  |    |    |    | 36,941,684  |
+L1618:  |    |  |  |  |    |    |    |
+L1619:  |    |  |  |  |    |    | 485,101,694  |
+L1620:  |    |  |  |  |    |    |    |
+L1621: DISTRIBUTORS — 1.0%  |
+L1622: Genuine Parts Co  |    |    | 662,282  |    |    |    | 63,347,273  |
+L1623: LKQ Corp. (b)  |    |    | 1,386,954  |    |    |    | 49,916,475  |
+L1624:  |    |  |  |  |    |    |    |
+L1625:  |    |  |  |  |    |    | 113,263,748  |
+L1626:  |    |  |  |  |    |    |    |
+L1627: DIVERSIFIED CONSUMER SERVICES — 0.2%  |
+L1628: H&R Block, Inc  |    |    | 927,047  |    |    |    | 24,548,205  |
+L1629:  |    |  |  |  |    |    |    |
+L1630: HOTELS, RESTAURANTS & LEISURE — 14.9%  |
+L1631: Carnival Corp  |    |    | 1,831,857  |    |    |    | 118,283,007  |
+L1632: Chipotle Mexican Grill, Inc. (a) (b)  |    |    | 112,704  |    |    |    | 34,693,672  |
+L1633: Darden Restaurants, Inc  |    |    | 557,265  |    |    |    | 43,901,337  |
+L1634: Hilton Worldwide Holdings, Inc  |    |    | 915,939  |    |    |    | 63,611,964  |
+L1635: Marriott International, Inc. Class A  |    |    | 1,405,413  |    |    |    | 154,960,837  |
+L1636: McDonald’s Corp  |    |    | 3,638,618  |    |    |    | 570,098,668  |
+L1637: MGM Resorts International  |    |    | 2,326,143  |    |    |    | 75,809,000  |
+L1638: Royal Caribbean Cruises, Ltd  |    |    | 772,974  |    |    |    | 91,628,338  |
+L1639: Starbucks Corp  |    |    | 6,488,526  |    |    |    | 348,498,731  |
+L1640: Wyndham Worldwide Corp  |    |    | 461,746  |    |    |    | 48,672,646  |
+L1641: Wynn Resorts, Ltd  |    |    | 357,871  |    |    |    | 53,294,149  |
+L1642: Yum! Brands, Inc  |    |    | 1,549,044  |    |    |    | 114,025,129  |
+L1643:  |    |  |  |  |    |    |    |
+L1644:  |    |  |  |  |    |    | 1,717,477,478  |
+L1645:  |    |  |  |  |    |    |    |
+L1646: HOUSEHOLD DURABLES — 3.7%  |
+L1647: D.R. Horton, Inc  |    |    | 1,524,816  |    |    |    | 60,885,903  |
+L1648: Garmin, Ltd. (a)  |    |    | 498,450  |    |    |    | 26,901,347  |
+L1649: Leggett & Platt, Inc  |    |    | 594,218  |    |    |    | 28,362,025  |
+L1650: Lennar Corp. Class A  |    |    | 912,488  |    |    |    | 48,179,366  |
+L1651: Mohawk Industries, Inc. (b)  |    |    | 283,039  |    |    |    | 70,054,983  |
+L1652: Newell Brands, Inc  |    |    | 2,201,790  |    |    |    | 93,950,379  |
+L1653: PulteGroup, Inc  |    |    | 1,246,824  |    |    |    | 34,075,700  |
+L1654: Whirlpool Corp  |    |    | 332,234  |    |    |    | 61,277,239  |
+L1655:  |    |  |  |  |    |    |    |
+L1656:  |    |  |  |  |    |    | 423,686,942  |
+L1657:  |    |  |  |  |    |    |    |
+L1658: INTERNET & CATALOG RETAIL — 22.4%  |
+L1659: Amazon.com, Inc. (b)  |    |    | 1,791,218  |    |    |    | 1,721,987,424  |
+L1660: Expedia, Inc. (a)  |    |    | 548,913  |    |    |    | 79,010,537  |
+L1661: Netflix, Inc. (b)  |    |    | 1,939,523  |    |    |    | 351,732,496  |
+L1662: Priceline Group, Inc. (b)  |    |    | 220,373  |    |    |    | 403,463,296  |
+L1663: TripAdvisor, Inc. (a) (b)  |    |    | 496,178  |    |    |    | 20,110,095  |
+L1664:  |    |  |  |  |    |    |    |
+L1665:  |    |  |  |  |    |    | 2,576,303,848  |
+L1666:  |    |  |  |  |    |    |    |
+L1667: LEISURE EQUIPMENT & PRODUCTS — 0.6%  |
+L1668: Hasbro, Inc  |    |    | 511,382  |    |    |    | 49,946,680  |
+L1669: Mattel, Inc. (a)  |    |    | 1,537,512  |    |    |    | 23,800,686  |
+L1670:  |    |  |  |  |    |    |    |
+L1671:  |    |  |  |  |    |    | 73,747,366  |
+L1672:  |    |  |  |  |    |    |    |
+L1673:  |  |
+L1674: MEDIA — 24.0%  |    |  |  |  |    |  |  |
+L1675: CBS Corp. Class B  |    |    | 1,635,336  |    |    | $  | 94,849,488  |
+L1676: Charter Communications, Inc.
+L1677: Class A (b)  |    |    | 903,382  |    |    |    | 328,307,086  |
+L1678: Comcast Corp. Class A  |    |    | 21,130,524  |    |    |    | 813,102,564  |
+L1679: Discovery Communications, Inc. Class A (a) (b)  |    |    | 686,889  |    |    |    | 14,623,867  |
+L1680: Discovery Communications, Inc. Class C (b)  |    |    | 948,043  |    |    |    | 19,207,351  |
+L1681: DISH Network Corp. Class A (b)  |    |    | 1,018,425  |    |    |    | 55,229,188  |
+L1682: Interpublic Group of Cos., Inc  |    |    | 1,785,531  |    |    |    | 37,121,189  |
+L1683: News Corp. Class A  |    |    | 1,718,596  |    |    |    | 22,788,583  |
+L1684: News Corp. Class B  |    |    | 532,979  |    |    |    | 7,275,163  |
+L1685: Omnicom Group, Inc  |    |    | 1,045,825  |    |    |    | 77,464,258  |
+L1686: Scripps Networks Interactive, Inc.
+L1687: Class A  |    |    | 430,071  |    |    |    | 36,938,798  |
+L1688: Time Warner, Inc  |    |    | 3,494,082  |    |    |    | 357,968,701  |
+L1689: Twenty-First Century Fox, Inc. Class A  |    |    | 4,728,292  |    |    |    | 124,732,343  |
+L1690: Twenty-First Century Fox, Inc. Class B  |    |    | 1,971,978  |    |    |    | 50,857,313  |
+L1691: Viacom, Inc. Class B  |    |    | 1,584,483  |    |    |    | 44,112,007  |
+L1692: Walt Disney Co  |    |    | 6,935,348  |    |    |    | 683,617,252  |
+L1693:  |    |  |  |  |    |    |    |
+L1694:  |    |  |  |  |    |    | 2,768,195,151  |
+L1695:  |    |  |  |  |    |    |    |
+L1696: MULTILINE RETAIL — 3.7%  |
+L1697: Dollar General Corp  |    |    | 1,170,427  |    |    |    | 94,863,108  |
+L1698: Dollar Tree, Inc. (b)  |    |    | 1,062,734  |    |    |    | 92,266,566  |
+L1699: Kohl’s Corp. (a)  |    |    | 766,139  |    |    |    | 34,974,245  |
+L1700: Macy’s, Inc  |    |    | 1,373,873  |    |    |    | 29,977,909  |
+L1701: Nordstrom, Inc. (a)  |    |    | 522,846  |    |    |    | 24,652,189  |
+L1702: Target Corp  |    |    | 2,453,468  |    |    |    | 144,779,147  |
+L1703:  |    |  |  |  |    |    |    |
+L1704:  |    |  |  |  |    |    | 421,513,164  |
+L1705:  |    |  |  |  |    |    |    |
+L1706: SPECIALTY RETAIL — 18.0%  |
+L1707: Advance Auto Parts, Inc  |    |    | 332,217  |    |    |    | 32,955,926  |
+L1708: AutoZone, Inc. (b)  |    |    | 126,616  |    |    |    | 75,350,448  |
+L1709: Best Buy Co., Inc  |    |    | 1,192,061  |    |    |    | 67,899,795  |
+L1710: CarMax, Inc. (b)  |    |    | 832,103  |    |    |    | 63,081,728  |
+L1711: Foot Locker, Inc  |    |    | 589,617  |    |    |    | 20,766,311  |
+L1712: Gap, Inc  |    |    | 987,580  |    |    |    | 29,163,237  |
+L1713: Home Depot, Inc  |    |    | 5,295,190  |    |    |    | 866,081,276  |
+L1714: L Brands, Inc. (a)  |    |    | 1,121,190  |    |    |    | 46,652,716  |
+L1715: Lowe’s Cos., Inc  |    |    | 3,792,167  |    |    |    | 303,145,830  |
+L1716: O’Reilly Automotive, Inc. (b)  |    |    | 395,308  |    |    |    | 85,137,484  |
+L1717: Ross Stores, Inc  |    |    | 1,761,298  |    |    |    | 113,727,012  |
+L1718: Signet Jewelers, Ltd. (a)  |    |    | 271,458  |    |    |    | 18,065,530  |
+L1719: Tiffany & Co  |    |    | 458,523  |    |    |    | 42,083,241  |
+L1720: TJX Cos., Inc  |    |    | 2,869,757  |    |    |    | 211,587,184  |
+L1721: Tractor Supply Co  |    |    | 577,833  |    |    |    | 36,571,051  |
+L1722: Ulta Salon Cosmetics & Fragrance, Inc. (b)  |    |    | 262,120  |    |    |    | 59,254,847  |
+L1723:  |    |  |  |  |    |    |    |
+L1724:  |    |  |  |  |    |    | 2,071,523,616  |
+L1725:  |    |  |  |  |    |    |    |
+L1726: TEXTILES, APPAREL & LUXURY GOODS — 5.3%  |
+L1727: Coach, Inc  |    |    | 1,259,377  |    |    |    | 50,727,705  |
+L1728: Hanesbrands, Inc. (a)  |    |    | 1,636,328  |    |    |    | 40,319,122  |
+L1729: Michael Kors Holdings, Ltd. (b)  |    |    | 700,621  |    |    |    | 33,524,715  |
+L1730: NIKE, Inc. Class B  |    |    | 5,902,398  |    |    |    | 306,039,336  |
+L1731: PVH Corp  |    |    | 350,447  |    |    |    | 44,177,349  |
+L1732: Ralph Lauren Corp  |    |    | 251,182  |    |    |    | 22,176,859  |
+L1733: Under Armour, Inc. Class A (a) (b)  |    |    | 815,292  |    |    |    | 13,436,012  |
+L1734: 
+L1735: 
+L1736: See accompanying notes to financial statements.
+L1737: 
+L1738: 
+L1739: 
+L1740: 41
+L1741: 
+L1742: * * *
+L1743: ##### cite0†Table of Contents L1744: 
+L1745: The Consumer Discretionary Select Sector SPDR Fund
+L1746: 
+L1747: SCHEDULE OF INVESTMENTS (continued)
+L1748: 
+L1749: September 30, 2017
+L1750:  |  |  |  |  |  |  |  |
+L1751: Security Description  |    | Shares  |    |    | Value  |
+L1752:  |  |
+L1753: Under Armour, Inc. Class C (a) (b)  |    |    | 820,298  |    |    | $  | 12,320,876  |
+L1754: VF Corp. (a)  |    |    | 1,467,756  |    |    |    | 93,305,249  |
+L1755:  |    |  |  |  |    |    |    |
+L1756:  |    |  |  |  |    |    | 616,027,223  |
+L1757:  |    |  |  |  |    |    |    |
+L1758: TOTAL COMMON STOCKS
+L1759: (Cost $11,448,559,838)  |    |  |  |  |    |    | 11,493,355,325  |
+L1760:  |    |  |  |  |    |    |    |
+L1761: SHORT-TERM INVESTMENTS — 0.4%  |
+L1762: State Street Institutional U.S. Government Money Market Fund, Class G Shares 0.96% (c) (d)  |    |    | 20,785,167  |    |    |    | 20,785,167  |
+L1763: State Street Navigator Securities Lending Government Money Market Portfolio (c) (e)  |    |    | 24,093,725  |    |    |    | 24,093,725  |
+L1764:  |    |  |  |  |    |    |    |
+L1765: TOTAL SHORT-TERM INVESTMENTS
+L1766: (Cost $44,878,892)  |    |  |  |  |    |    | 44,878,892  |
+L1767:  |    |  |  |  |    |    |    |
+L1768: TOTAL INVESTMENTS — 100.2%  |    |  |  |  |    |  |  |
+L1769: (Cost $11,493,438,730)  |    |  |  |  |    |    | 11,538,234,217  |
+L1770: LIABILITIES IN EXCESS OF OTHER ASSETS — (0.2)%  |    |  |  |  |    |    | (19,649,213  | )
+L1771:  |    |  |  |  |    |    |    |
+L1772: NET ASSETS — 100.0%  |    |  |  |  |    | $  | 11,518,585,004  |
+L1773:  |    |  |  |  |    |    |    |
+L1774: 
+L1775: 
+L1776: (a)  | All or a portion of the shares of the security are on loan at September 30, 2017.
+L1777: (b)  | Non-income producing security.
+L1778: (c)  | The Fund invested in certain money market funds managed by SSGA Funds Management, Inc. Amounts related to these transactions during the period ended September 30, 2017 are shown in the Affiliate Table below.
+L1779: (d)  | The rate shown is the annualized seven-day yield at September 30, 2017.
+L1780: (e)  | Investment of cash collateral for securities loaned.
+L1781: The following table summarizes the value of the Fund’s investments according to the fair value hierarchy as of September 30, 2017.
+L1782:  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+L1783: Description  |     | Level 1 —
+L1784: Quoted Prices  |    |     | Level 2 —
+L1785: Other Significant
+L1786: Observable Inputs  |    |     | Level 3 —
+L1787: Significant
+L1788: Unobservable Inputs  |    |     | Total  |
+L1789: ASSETS:  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L1790: INVESTMENTS:  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L1791: Common Stocks  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L1792: Auto Components  |     | $  | 201,966,890  |    |     | $  | —  |    |     | $  | —  |    |     | $  | 201,966,890  |
+L1793: Automobiles  |     |    | 485,101,694  |    |     |    | —  |    |     |    | —  |    |     |    | 485,101,694  |
+L1794: Distributors  |     |    | 113,263,748  |    |     |    | —  |    |     |    | —  |    |     |    | 113,263,748  |
+L1795: Diversified Consumer Services  |     |    | 24,548,205  |    |     |    | —  |    |     |    | —  |    |     |    | 24,548,205  |
+L1796: Hotels, Restaurants & Leisure  |     |    | 1,717,477,478  |    |     |    | —  |    |     |    | —  |    |     |    | 1,717,477,478  |
+L1797: Household Durables.  |     |    | 423,686,942  |    |     |    | —  |    |     |    | —  |    |     |    | 423,686,942  |
+L1798: Internet & Catalog Retail  |     |    | 2,576,303,848  |    |     |    | —  |    |     |    | —  |    |     |    | 2,576,303,848  |
+L1799: Leisure Equipment & Products  |     |    | 73,747,366  |    |     |    | —  |    |     |    | —  |    |     |    | 73,747,366  |
+L1800: Media  |     |    | 2,768,195,151  |    |     |    | —  |    |     |    | —  |    |     |    | 2,768,195,151  |
+L1801: Multiline Retail  |     |    | 421,513,164  |    |     |    | —  |    |     |    | —  |    |     |    | 421,513,164  |
+L1802: Specialty Retail  |     |    | 2,071,523,616  |    |     |    | —  |    |     |    | —  |    |     |    | 2,071,523,616  |
+L1803: Textiles, Apparel & Luxury Goods  |     |    | 616,027,223  |    |     |    | —  |    |     |    | —  |    |     |    | 616,027,223  |
+L1804: Short-Term Investments  |     |    | 44,878,892  |    |     |    | —  |    |     |    | —  |    |     |    | 44,878,892  |
+L1805:  |     |    |    |    |     |    |    |    |     |    |    |    |     |    |    |
+L1806: TOTAL INVESTMENTS  |     | $  | 11,538,234,217  |    |     | $  | —  |    |     | $  | —  |    |     | $  | 11,538,234,217  |
+L1807:  |     |    |    |    |     |    |    |    |     |    |    |    |     |    |    |
+L1808: 
+L1809: 
+L1810: See accompanying notes to financial statements.
+L1811: 
+L1812: 
+L1813: 
+L1814: 42
+L1815: 
+L1816: * * *
+L1817: ##### cite0†Table of Contents L1818: 
+L1819: The Consumer Discretionary Select Sector SPDR Fund
+L1820: 
+L1821: SCHEDULE OF INVESTMENTS (continued)
+L1822: 
+L1823: September 30, 2017
+L1824: 
+L1825: 
+L1826: 
+L1827: 
+L1828: 
+L1829: 
+L1830: 
+L1831: Affiliate Table
+L1832:  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+L1833:    |    | Number
+L1834: of Shares
+L1835: Held at
+L1836: 9/30/16  |    |    | Value At
+L1837: 9/30/16  |    |    | Cost of
+L1838: Purchases  |    |    | Proceeds from
+L1839: Shares Sold  |    |    | Realized
+L1840: Gain
+L1841: (Loss)  |    |    | Change in
+L1842: Unrealized
+L1843: Appreciation/
+L1844: Depreciation  |    |    | Number
+L1845: of Shares
+L1846: Held at
+L1847: 9/30/17  |    |    | Value at
+L1848: 9/30/17  |    |    | Dividend
+L1849: Income  |
+L1850: State Street Institutional Liquid Reserves Fund, Premier Class  |    |    | 28,497,239  |    |    | $  | 28,497,239  |    |    | $  | 3,877,033  |    |    | $  | 32,374,272  |    |    | $  | —  |    |    | $  | —  |    |    |    | —  |    |    | $  | —  |    |    | $  | 1,090  |
+L1851: State Street Institutional U.S. Government Money Market Fund, Class G Shares  |    |    | —  |    |    |    | —  |    |    |    | 140,492,974  |    |    |    | 119,707,807  |    |    |    | —  |    |    |    | —  |    |    |    | 20,785,167  |    |    |    | 20,785,167  |    |    |    | 95,147  |
+L1852: State Street Institutional U.S. Government Money Market Fund, Premier Class  |    |    | —  |    |    |    | —  |    |    |    | 200,127,032  |    |    |    | 200,127,032  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | 83,432  |
+L1853: State Street Navigator Securities Lending Government Money Market Portfolio*  |    |    | 50,785,017  |    |    |    | 50,785,017  |    |    |    | 294,684,532  |    |    |    | 321,375,824  |    |    |    | —  |    |    |    | —  |    |    |    | 24,093,725  |    |    |    | 24,093,725  |    |    |    | 875,559  |
+L1854:  |    |  |  |  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |  |  |  |    |    |    |    |    |    |    |
+L1855: TOTAL  |    |  |  |  |    | $  | 79,282,256  |    |    | $  | 639,181,571  |    |    | $  | 673,584,935  |    |    | $  | —  |    |    | $  | —  |    |    |  |  |  |    | $  | 44,878,892  |    |    | $  | 1,055,228  |
+L1856:  |    |  |  |  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |  |  |  |    |    |    |    |    |    |    |
+L1857: 
+L1858: 
+L1859: *  | Effective October 5, 2016, the name of State Street Navigator Securities Lending Prime Portfolio was changed to State Street Navigator Securities Lending Government Money Market Portfolio.
+L1860: 
+L1861: 
+L1862: 
+L1863: See accompanying notes to financial statements.
+L1864: 
+L1865: 
+L1866: 
+L1867: 43
+L1868: 
+L1869: * * *
+L1870: ##### cite0†Table of Contents L1871: 
+L1872: The Consumer Staples Select Sector SPDR Fund
+L1873: 
+L1874: SCHEDULE OF INVESTMENTS
+L1875: 
+L1876: September 30, 2017
+L1877:  |  |  |  |  |  |  |  |
+L1878: Security Description  |    | Shares  |    |    | Value  |
+L1879:  |  |
+L1880: COMMON STOCKS — 99.7%  |    |  |  |  |    |  |  |
+L1881: BEVERAGES — 24.5%  |    |  |  |  |    |  |  |
+L1882: Brown-Forman Corp. Class B  |    |    | 1,086,357  |    |    | $  | 58,989,185  |
+L1883: Coca-Cola Co  |    |    | 18,958,608  |    |    |    | 853,326,946  |
+L1884: Constellation Brands, Inc. Class A  |    |    | 881,417  |    |    |    | 175,798,621  |
+L1885: Dr. Pepper Snapple Group, Inc  |    |    | 970,454  |    |    |    | 85,856,065  |
+L1886: Molson Coors Brewing Co. Class B  |    |    | 990,281  |    |    |    | 80,846,541  |
+L1887: Monster Beverage Corp. (a)  |    |    | 2,165,151  |    |    |    | 119,624,593  |
+L1888: PepsiCo, Inc  |    |    | 7,056,821  |    |    |    | 786,341,564  |
+L1889:  |    |  |  |  |    |    |    |
+L1890:  |    |  |  |  |    |    | 2,160,783,515  |
+L1891:  |    |  |  |  |    |    |    |
+L1892: FOOD & STAPLES RETAILING — 20.0%  |
+L1893: Costco Wholesale Corp  |    |    | 2,205,638  |    |    |    | 362,364,267  |
+L1894: CVS Health Corp  |    |    | 5,023,762  |    |    |    | 408,532,326  |
+L1895: Kroger Co  |    |    | 4,747,888  |    |    |    | 95,242,633  |
+L1896: Sysco Corp  |    |    | 2,517,016  |    |    |    | 135,793,013  |
+L1897: Wal-Mart Stores, Inc  |    |    | 5,099,867  |    |    |    | 398,503,607  |
+L1898: Walgreens Boots Alliance, Inc  |    |    | 4,628,371  |    |    |    | 357,402,809  |
+L1899:  |    |  |  |  |    |    |    |
+L1900:  |    |  |  |  |    |    | 1,757,838,655  |
+L1901:  |    |  |  |  |    |    |    |
+L1902: FOOD PRODUCTS — 15.9%  |
+L1903: Archer-Daniels-Midland Co  |    |    | 2,927,071  |    |    |    | 124,429,788  |
+L1904: Campbell Soup Co  |    |    | 1,093,461  |    |    |    | 51,195,844  |
+L1905: Conagra Brands, Inc  |    |    | 2,244,334  |    |    |    | 75,723,829  |
+L1906: General Mills, Inc  |    |    | 2,972,594  |    |    |    | 153,861,466  |
+L1907: Hershey Co  |    |    | 756,952  |    |    |    | 82,636,450  |
+L1908: Hormel Foods Corp. (b)  |    |    | 1,534,943  |    |    |    | 49,333,068  |
+L1909: J.M. Smucker Co  |    |    | 620,746  |    |    |    | 65,134,878  |
+L1910: Kellogg Co  |    |    | 1,328,690  |    |    |    | 82,870,395  |
+L1911: Kraft Heinz Co  |    |    | 3,030,522  |    |    |    | 235,016,981  |
+L1912: McCormick & Co., Inc  |    |    | 653,443  |    |    |    | 67,069,390  |
+L1913: Mondelez International, Inc. Class A  |    |    | 7,605,246  |    |    |    | 309,229,302  |
+L1914: Tyson Foods, Inc. Class A  |    |    | 1,525,504  |    |    |    | 107,471,757  |
+L1915:  |    |  |  |  |    |    |    |
+L1916:  |    |  |  |  |    |    | 1,403,973,148  |
+L1917:  |    |  |  |  |    |    |    |
+L1918: HOUSEHOLD PRODUCTS — 20.9%  |
+L1919: Church & Dwight Co., Inc  |    |    | 1,364,990  |    |    |    | 66,133,766  |
+L1920: Clorox Co  |    |    | 686,876  |    |    |    | 90,605,813  |
+L1921: Colgate-Palmolive Co  |    |    | 4,439,114  |    |    |    | 323,389,455  |
+L1922:  |  |
+L1923: Kimberly-Clark Corp  |    |    | 1,800,225  |    |    | $  | 211,850,478  |
+L1924: Procter & Gamble Co  |    |    | 12,594,141  |    |    |    | 1,145,814,948  |
+L1925:  |    |  |  |  |    |    |    |
+L1926:  |    |  |  |  |    |    | 1,837,794,460  |
+L1927:  |    |  |  |  |    |    |    |
+L1928: PERSONAL PRODUCTS — 1.9%  |
+L1929: Coty, Inc. Class A (b)  |    |    | 2,719,884  |    |    |    | 44,959,682  |
+L1930: Estee Lauder Cos., Inc. Class A  |    |    | 1,164,719  |    |    |    | 125,603,297  |
+L1931:  |    |  |  |  |    |    |    |
+L1932:  |    |  |  |  |    |    | 170,562,979  |
+L1933:  |    |  |  |  |    |    |    |
+L1934: TOBACCO — 16.5%  |
+L1935: Altria Group, Inc  |    |    | 9,480,063  |    |    |    | 601,225,596  |
+L1936: Philip Morris International, Inc  |    |    | 7,670,225  |    |    |    | 851,471,677  |
+L1937:  |    |  |  |  |    |    |    |
+L1938:  |    |  |  |  |    |    | 1,452,697,273  |
+L1939:  |    |  |  |  |    |    |    |
+L1940: TOTAL COMMON STOCKS
+L1941: (Cost $9,358,481,776)  |    |  |  |  |    |    | 8,783,650,030  |
+L1942:  |    |  |  |  |    |    |    |
+L1943: SHORT-TERM INVESTMENT — 0.1%  |
+L1944: State Street Institutional U.S. Government Money Market Fund, Class G Shares 0.96% (c) (d)
+L1945: (Cost $3,856,474)  |    |    | 3,856,474  |    |    |    | 3,856,474  |
+L1946:  |    |  |  |  |    |    |    |
+L1947: TOTAL INVESTMENTS — 99.8%  |    |  |  |  |    |  |  |
+L1948: (Cost $9,362,338,250)  |    |  |  |  |    |    | 8,787,506,504  |
+L1949: OTHER ASSETS IN EXCESS OF LIABILITIES — 0.2%  |    |  |  |  |    |    | 21,396,559  |
+L1950:  |    |  |  |  |    |    |    |
+L1951: NET ASSETS — 100.0%  |    |  |  |  |    | $  | 8,808,903,063  |
+L1952:  |    |  |  |  |    |    |    |
+L1953: 
+L1954: 
+L1955: (a)  | Non-income producing security.
+L1956: (b)  | All or a portion of the shares of the security are on loan at September 30, 2017.
+L1957: (c)  | The Fund invested in certain money market funds managed by SSGA Funds Management, Inc. Amounts related to these transactions during the period ended September 30, 2017 are shown in the Affiliate Table below.
+L1958: (d)  | The rate shown is the annualized seven-day yield at September 30, 2017.
+L1959: The following table summarizes the value of the Fund’s investments according to the fair value hierarchy as of September 30, 2017.
+L1960:  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+L1961: Description  |     | Level 1 —
+L1962: Quoted Prices  |    |     | Level 2 —
+L1963: Other Significant
+L1964: Observable Inputs  |    |     | Level 3 —
+L1965: Significant
+L1966: Unobservable Inputs  |    |     | Total  |
+L1967: ASSETS:  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L1968: INVESTMENTS:  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L1969: Common Stocks  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L1970: Beverages  |     | $  | 2,160,783,515  |    |     | $  | —  |    |     | $  | —  |    |     | $  | 2,160,783,515  |
+L1971: Food & Staples Retailing  |     |    | 1,757,838,655  |    |     |    | —  |    |     |    | —  |    |     |    | 1,757,838,655  |
+L1972: Food Products  |     |    | 1,403,973,148  |    |     |    | —  |    |     |    | —  |    |     |    | 1,403,973,148  |
+L1973: Household Products  |     |    | 1,837,794,460  |    |     |    | —  |    |     |    | —  |    |     |    | 1,837,794,460  |
+L1974: Personal Products  |     |    | 170,562,979  |    |     |    | —  |    |     |    | —  |    |     |    | 170,562,979  |
+L1975: Tobacco  |     |    | 1,452,697,273  |    |     |    | —  |    |     |    | —  |    |     |    | 1,452,697,273  |
+L1976: Short-Term Investment  |     |    | 3,856,474  |    |     |    | —  |    |     |    | —  |    |     |    | 3,856,474  |
+L1977:  |     |    |    |    |     |    |    |    |     |    |    |    |     |    |    |
+L1978: TOTAL INVESTMENTS  |     | $  | 8,787,506,504  |    |     | $  | —  |    |     | $  | —  |    |     | $  | 8,787,506,504  |
+L1979:  |     |    |    |    |     |    |    |    |     |    |    |    |     |    |    |
+L1980: 
+L1981: 
+L1982: See accompanying notes to financial statements.
+L1983: 
+L1984: 
+L1985: 
+L1986: 44
+L1987: 
+L1988: * * *
+L1989: ##### cite0†Table of Contents L1990: 
+L1991: The Consumer Staples Select Sector SPDR Fund
+L1992: 
+L1993: SCHEDULE OF INVESTMENTS (continued)
+L1994: 
+L1995: September 30, 2017
+L1996: 
+L1997: 
+L1998: 

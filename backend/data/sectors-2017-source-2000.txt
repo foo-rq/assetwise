@@ -1,0 +1,396 @@
+L1999: 
+L2000: 
+L2001: 
+L2002: 
+L2003: Affiliate Table
+L2004:  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+L2005:    |    | Number
+L2006: of Shares
+L2007: Held at
+L2008: 9/30/16  |    |    | Value At
+L2009: 9/30/16  |    |    | Cost of
+L2010: Purchases  |    |    | Proceeds from
+L2011: Shares Sold  |    |    | Realized
+L2012: Gain
+L2013: (Loss)  |    |    | Change in
+L2014: Unrealized
+L2015: Appreciation/
+L2016: Depreciation  |    |    | Number
+L2017: of Shares
+L2018: Held at
+L2019: 9/30/17  |    |    | Value at
+L2020: 9/30/17  |    |    | Dividend
+L2021: Income  |
+L2022: State Street Institutional Liquid Reserves Fund, Premier Class  |    |    | 3,120,524  |    |    | $  | 3,120,524  |    |    | $  | 10,694,524  |    |    | $  | 13,815,048  |    |    | $  | —  |    |    | $  | —  |    |    |    | —  |    |    | $  | —  |    |    | $  | —  |
+L2023: State Street Institutional U.S. Government Money Market Fund, Class G Shares  |    |    | —  |    |    |    | —  |    |    |    | 477,589,396  |    |    |    | 473,732,922  |    |    |    | —  |    |    |    | —  |    |    |    | 3,856,474  |    |    |    | 3,856,474  |    |    |    | 89,429  |
+L2024: State Street Institutional U.S. Government Money Market Fund, Premier Class  |    |    | —  |    |    |    | —  |    |    |    | 229,410,325  |    |    |    | 229,410,325  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | 40,840  |
+L2025: State Street Navigator Securities Lending Government Money Market Portfolio*  |    |    | 180,000,000  |    |    |    | 180,000,000  |    |    |    | 550,258,252  |    |    |    | 730,258,252  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | 428,907  |
+L2026:  |    |  |  |  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |  |  |  |    |    |    |    |    |    |    |
+L2027: TOTAL  |    |  |  |  |    | $  | 183,120,524  |    |    | $  | 1,267,952,497  |    |    | $  | 1,447,216,547  |    |    | $  | —  |    |    | $  | —  |    |    |  |  |  |    | $  | 3,856,474  |    |    | $  | 559,176  |
+L2028:  |    |  |  |  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |  |  |  |    |    |    |    |    |    |    |
+L2029: 
+L2030: 
+L2031: *  | Effective October 5, 2016, the name of State Street Navigator Securities Lending Prime Portfolio was changed to State Street Navigator Securities Lending Government Money Market Portfolio.
+L2032: 
+L2033: 
+L2034: 
+L2035: See accompanying notes to financial statements.
+L2036: 
+L2037: 
+L2038: 
+L2039: 45
+L2040: 
+L2041: * * *
+L2042: ##### cite0†Table of Contents L2043: 
+L2044: The Energy Select Sector SPDR Fund
+L2045: 
+L2046: SCHEDULE OF INVESTMENTS
+L2047: 
+L2048: September 30, 2017
+L2049:  |  |  |  |  |  |  |  |
+L2050: Security Description  |    | Shares  |    |    | Value  |
+L2051: COMMON STOCKS — 99.9%  |
+L2052: ENERGY EQUIPMENT & SERVICES — 14.6%  |
+L2053: Baker Hughes a GE Co  |    |    | 5,883,944  |    |    | $  | 215,470,029  |
+L2054: Halliburton Co  |    |    | 11,348,174  |    |    |    | 522,356,449  |
+L2055: Helmerich & Payne, Inc. (a)  |    |    | 1,703,526  |    |    |    | 88,770,740  |
+L2056: National Oilwell Varco, Inc. (a)  |    |    | 5,288,801  |    |    |    | 188,968,860  |
+L2057: Schlumberger, Ltd  |    |    | 17,803,497  |    |    |    | 1,241,971,951  |
+L2058: TechnipFMC PLC (b)  |    |    | 6,190,881  |    |    |    | 172,849,397  |
+L2059:  |    |  |  |  |    |    |    |
+L2060:  |    |  |  |  |    |    | 2,430,387,426  |
+L2061:  |    |  |  |  |    |    |    |
+L2062: OIL, GAS & CONSUMABLE FUELS — 85.3%  |
+L2063: Anadarko Petroleum Corp  |    |    | 7,436,865  |    |    |    | 363,290,855  |
+L2064: Andeavor  |    |    | 1,995,510  |    |    |    | 205,836,857  |
+L2065: Apache Corp. (a)  |    |    | 5,192,896  |    |    |    | 237,834,637  |
+L2066: Cabot Oil & Gas Corp  |    |    | 6,499,774  |    |    |    | 173,868,955  |
+L2067: Chesapeake Energy Corp. (a) (b)  |    |    | 15,468,187  |    |    |    | 66,513,204  |
+L2068: Chevron Corp  |    |    | 24,082,313  |    |    |    | 2,829,671,778  |
+L2069: Cimarex Energy Co  |    |    | 1,356,385  |    |    |    | 154,180,283  |
+L2070: Concho Resources, Inc. (b)  |    |    | 2,011,740  |    |    |    | 264,986,393  |
+L2071: ConocoPhillips  |    |    | 15,720,859  |    |    |    | 786,828,993  |
+L2072: Devon Energy Corp  |    |    | 7,114,820  |    |    |    | 261,185,042  |
+L2073: EOG Resources, Inc  |    |    | 7,474,210  |    |    |    | 723,055,075  |
+L2074: EQT Corp. (a)  |    |    | 2,459,688  |    |    |    | 160,470,045  |
+L2075: Exxon Mobil Corp  |    |    | 46,845,813  |    |    |    | 3,840,419,750  |
+L2076: Hess Corp  |    |    | 3,789,432  |    |    |    | 177,686,466  |
+L2077: Kinder Morgan, Inc  |    |    | 25,160,821  |    |    |    | 482,584,547  |
+L2078: Marathon Oil Corp  |    |    | 12,022,672  |    |    |    | 163,027,432  |
+L2079: Marathon Petroleum Corp  |    |    | 6,713,457  |    |    |    | 376,490,669  |
+L2080: Newfield Exploration Co. (b)  |    |    | 3,109,321  |    |    |    | 92,253,554  |
+L2081: Noble Energy, Inc  |    |    | 6,769,113  |    |    |    | 191,972,045  |
+L2082: Occidental Petroleum Corp  |    |    | 9,927,092  |    |    |    | 637,418,577  |
+L2083: ONEOK, Inc  |    |    | 5,116,644  |    |    |    | 283,513,244  |
+L2084: Phillips 66  |    |    | 5,618,804  |    |    |    | 514,738,634  |
+L2085: Pioneer Natural Resources Co  |    |    | 2,266,261  |    |    |    | 334,364,148  |
+L2086: Range Resources Corp. (a)  |    |    | 3,717,932  |    |    |    | 72,759,929  |
+L2087:  |  |
+L2088: Valero Energy Corp  |    |    | 5,812,001  |    |    | $  | 447,117,237  |
+L2089: Williams Cos., Inc  |    |    | 11,029,314  |    |    |    | 330,989,713  |
+L2090:  |    |  |  |  |    |    |    |
+L2091:  |    |  |  |  |    |    | 14,173,058,062  |
+L2092:  |    |  |  |  |    |    |    |
+L2093: TOTAL COMMON STOCKS
+L2094: (Cost $19,386,711,077)  |    |  |  |  |    |    | 16,603,445,488  |
+L2095:  |    |  |  |  |    |    |    |
+L2096: SHORT-TERM INVESTMENTS — 0.3%  |
+L2097: State Street Institutional U.S. Government Money Market Fund, Class G Shares 0.96% (c) (d)  |    |    | 11,263,378  |    |    |    | 11,263,378  |
+L2098: State Street Navigator Securities Lending Government Money Market Portfolio (c) (e)  |    |    | 42,538,543  |    |    |    | 42,538,543  |
+L2099:  |    |  |  |  |    |    |    |
+L2100: TOTAL SHORT-TERM INVESTMENTS
+L2101: (Cost $53,801,921)  |    |  |  |  |    |    | 53,801,921  |
+L2102:  |    |  |  |  |    |    |    |
+L2103: TOTAL INVESTMENTS — 100.2%  |    |  |  |  |    |  |  |
+L2104: (Cost $19,440,512,998)  |    |  |  |  |    |    | 16,657,247,409  |
+L2105: LIABILITIES IN EXCESS OF OTHER ASSETS — (0.2)%  |    |  |  |  |    |    | (39,412,460  | )
+L2106:  |    |  |  |  |    |    |    |
+L2107: NET ASSETS — 100.0%  |    |  |  |  |    | $  | 16,617,834,949  |
+L2108:  |    |  |  |  |    |    |    |
+L2109: 
+L2110: 
+L2111: (a)  | All or a portion of the shares of the security are on loan at September 30, 2017.
+L2112: (b)  | Non-income producing security.
+L2113: (c)  | The Fund invested in certain money market funds managed by SSGA Funds Management, Inc. Amounts related to these transactions during the period ended September 30, 2017 are shown in the Affiliate Table below.
+L2114: (d)  | The rate shown is the annualized seven-day yield at September 30, 2017.
+L2115: (e)  | Investment of cash collateral for securities loaned.
+L2116: The following table summarizes the value of the Fund’s investments according to the fair value hierarchy as of September 30, 2017.
+L2117:  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+L2118: Description  |     | Level 1 —
+L2119: Quoted Prices  |    |     | Level 2 —
+L2120: Other Significant
+L2121: Observable Inputs  |    |     | Level 3 —
+L2122: Significant
+L2123: Unobservable Inputs  |    |     | Total  |
+L2124: ASSETS:  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L2125: INVESTMENTS:  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L2126: Common Stocks  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L2127: Energy Equipment & Services  |     | $  | 2,430,387,426  |    |     | $  | —  |    |     | $  | —  |    |     | $  | 2,430,387,426  |
+L2128: Oil, Gas & Consumable Fuels  |     |    | 14,173,058,062  |    |     |    | —  |    |     |    | —  |    |     |    | 14,173,058,062  |
+L2129: Short-Term Investments  |     |    | 53,801,921  |    |     |    | —  |    |     |    | —  |    |     |    | 53,801,921  |
+L2130:  |     |    |    |    |     |    |    |    |     |    |    |    |     |    |    |
+L2131: TOTAL INVESTMENTS  |     | $  | 16,657,247,409  |    |     | $  | —  |    |     | $  | —  |    |     | $  | 16,657,247,409  |
+L2132:  |     |    |    |    |     |    |    |    |     |    |    |    |     |    |    |
+L2133: 
+L2134: 
+L2135: See accompanying notes to financial statements.
+L2136: 
+L2137: 
+L2138: 
+L2139: 46
+L2140: 
+L2141: * * *
+L2142: ##### cite0†Table of Contents L2143: 
+L2144: The Energy Select Sector SPDR Fund
+L2145: 
+L2146: SCHEDULE OF INVESTMENTS (continued)
+L2147: 
+L2148: September 30, 2017
+L2149: 
+L2150: 
+L2151: 
+L2152: 
+L2153: 
+L2154: 
+L2155: 
+L2156: Affiliate Table
+L2157:  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+L2158:    |    | Number
+L2159: of Shares
+L2160: Held at
+L2161: 9/30/16  |    |    | Value At
+L2162: 9/30/16  |    |    | Cost of
+L2163: Purchases  |    |    | Proceeds from
+L2164: Shares Sold  |    |    | Realized
+L2165: Gain
+L2166: (Loss)  |    |    | Change in
+L2167: Unrealized
+L2168: Appreciation/
+L2169: Depreciation  |    |    | Number
+L2170: of Shares
+L2171: Held at
+L2172: 9/30/17  |    |    | Value at
+L2173: 9/30/17  |    |    | Dividend
+L2174: Income  |
+L2175: State Street Institutional Liquid Reserves Fund, Premier Class  |    |    | 4,913,487  |    |    | $  | 4,913,487  |    |    | $  | 922,513  |    |    | $  | 5,836,000  |    |    | $  | —  |    |    | $  | —  |    |    |    | —  |    |    | $  | —  |    |    | $  | —  |
+L2176: State Street Institutional U.S. Government Money Market Fund, Class G Shares  |    |    | —  |    |    |    | —  |    |    |    | 451,640,092  |    |    |    | 440,376,714  |    |    |    | —  |    |    |    | —  |    |    |    | 11,263,378  |    |    |    | 11,263,378  |    |    |    | 140,857  |
+L2177: State Street Institutional U.S. Government Money Market Fund, Premier Class  |    |    | —  |    |    |    | —  |    |    |    | 279,156,049  |    |    |    | 279,156,049  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | 81,771  |
+L2178: State Street Navigator Securities Lending Government Money Market Portfolio*  |    |    | 110,721,515  |    |    |    | 110,721,515  |    |    |    | 229,398,218  |    |    |    | 297,581,190  |    |    |    | —  |    |    |    | —  |    |    |    | 42,538,543  |    |    |    | 42,538,543  |    |    |    | 237,014  |
+L2179:  |    |  |  |  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |  |  |  |    |    |    |    |    |    |    |
+L2180: TOTAL  |    |  |  |  |    | $  | 115,635,002  |    |    | $  | 961,116,872  |    |    | $  | 1,022,949,953  |    |    | $  | —  |    |    | $  | —  |    |    |  |  |  |    | $  | 53,801,921  |    |    | $  | 459,642  |
+L2181:  |    |  |  |  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |  |  |  |    |    |    |    |    |    |    |
+L2182: 
+L2183: 
+L2184: *  | Effective October 5, 2016, the name of State Street Navigator Securities Lending Prime Portfolio was changed to State Street Navigator Securities Lending Government Money Market Portfolio.
+L2185: 
+L2186: 
+L2187: 
+L2188: See accompanying notes to financial statements.
+L2189: 
+L2190: 
+L2191: 
+L2192: 47
+L2193: 
+L2194: * * *
+L2195: ##### cite0†Table of Contents L2196: 
+L2197: The Financial Select Sector SPDR Fund
+L2198: 
+L2199: SCHEDULE OF INVESTMENTS
+L2200: 
+L2201: September 30, 2017
+L2202:  |  |  |  |  |  |  |  |
+L2203: Security Description  |    | Shares  |    |    | Value  |
+L2204:  |  |
+L2205: COMMON STOCKS — 99.8%  |    |  |  |  |    |  |  |
+L2206: BANKS — 44.1%  |    |  |  |  |    |  |  |
+L2207: Bank of America Corp  |    |    | 85,206,586  |    |    | $  | 2,159,134,889  |
+L2208: BB&T Corp  |    |    | 7,017,409  |    |    |    | 329,397,178  |
+L2209: Citigroup, Inc  |    |    | 23,659,591  |    |    |    | 1,720,998,649  |
+L2210: Citizens Financial Group, Inc  |    |    | 4,347,660  |    |    |    | 164,645,884  |
+L2211: Comerica, Inc  |    |    | 1,527,530  |    |    |    | 116,489,438  |
+L2212: Fifth Third Bancorp  |    |    | 6,397,775  |    |    |    | 179,009,745  |
+L2213: Huntington Bancshares, Inc  |    |    | 9,466,217  |    |    |    | 132,148,389  |
+L2214: JPMorgan Chase & Co  |    |    | 30,558,774  |    |    |    | 2,918,668,505  |
+L2215: KeyCorp  |    |    | 9,444,646  |    |    |    | 177,748,238  |
+L2216: M&T Bank Corp  |    |    | 1,319,148  |    |    |    | 212,435,594  |
+L2217: People’s United Financial, Inc. (a)  |    |    | 2,990,225  |    |    |    | 54,242,682  |
+L2218: PNC Financial Services Group, Inc  |    |    | 4,161,037  |    |    |    | 560,782,956  |
+L2219: Regions Financial Corp  |    |    | 10,378,468  |    |    |    | 158,064,068  |
+L2220: SunTrust Banks, Inc  |    |    | 4,168,162  |    |    |    | 249,131,043  |
+L2221: US Bancorp.  |    |    | 13,800,160  |    |    |    | 739,550,574  |
+L2222: Wells Fargo & Co  |    |    | 38,795,903  |    |    |    | 2,139,594,050  |
+L2223: Zions Bancorp  |    |    | 1,755,870  |    |    |    | 82,841,947  |
+L2224:  |    |  |  |  |    |    |    |
+L2225:  |    |  |  |  |    |    | 12,094,883,829  |
+L2226:  |    |  |  |  |    |    |    |
+L2227: CAPITAL MARKETS — 20.6%  |
+L2228: Affiliated Managers Group, Inc  |    |    | 486,002  |    |    |    | 92,257,760  |
+L2229: Ameriprise Financial, Inc  |    |    | 1,301,667  |    |    |    | 193,310,566  |
+L2230: Bank of New York Mellon Corp  |    |    | 8,971,670  |    |    |    | 475,677,943  |
+L2231: BlackRock, Inc  |    |    | 1,076,673  |    |    |    | 481,369,732  |
+L2232: CBOE Holdings, Inc. (a)  |    |    | 979,480  |    |    |    | 105,421,432  |
+L2233: Charles Schwab Corp  |    |    | 10,349,158  |    |    |    | 452,672,171  |
+L2234: CME Group, Inc  |    |    | 2,951,518  |    |    |    | 400,461,962  |
+L2235: E*TRADE Financial Corp. (b)  |    |    | 2,388,882  |    |    |    | 104,179,144  |
+L2236: Franklin Resources, Inc  |    |    | 2,857,423  |    |    |    | 127,183,898  |
+L2237: Goldman Sachs Group, Inc  |    |    | 3,124,001  |    |    |    | 740,981,797  |
+L2238: Intercontinental Exchange, Inc  |    |    | 5,110,388  |    |    |    | 351,083,656  |
+L2239: Invesco, Ltd  |    |    | 3,533,522  |    |    |    | 123,814,611  |
+L2240: Moody’s Corp  |    |    | 1,442,925  |    |    |    | 200,869,589  |
+L2241: Morgan Stanley  |    |    | 12,280,262  |    |    |    | 591,540,221  |
+L2242: Nasdaq, Inc  |    |    | 1,014,165  |    |    |    | 78,668,779  |
+L2243: Northern Trust Corp  |    |    | 1,865,123  |    |    |    | 171,460,757  |
+L2244: Raymond James Financial, Inc  |    |    | 1,114,858  |    |    |    | 94,015,975  |
+L2245: S&P Global, Inc  |    |    | 2,231,476  |    |    |    | 348,802,014  |
+L2246: State Street Corp. (c)  |    |    | 3,247,550  |    |    |    | 310,270,927  |
+L2247: T Rowe Price Group, Inc  |    |    | 2,086,866  |    |    |    | 189,174,403  |
+L2248:  |    |  |  |  |    |    |    |
+L2249:  |    |  |  |  |    |    | 5,633,217,337  |
+L2250:  |    |  |  |  |    |    |    |
+L2251: CONSUMER FINANCE — 5.0%  |
+L2252: American Express Co  |    |    | 6,371,701  |    |    |    | 576,384,072  |
+L2253: Capital One Financial Corp  |    |    | 4,200,312  |    |    |    | 355,598,414  |
+L2254: Discover Financial Services  |    |    | 3,233,898  |    |    |    | 208,521,743  |
+L2255: Navient Corp  |    |    | 2,379,875  |    |    |    | 35,745,722  |
+L2256: Synchrony Financial  |    |    | 6,491,693  |    |    |    | 201,567,068  |
+L2257:  |    |  |  |  |    |    |    |
+L2258:  |    |  |  |  |    |    | 1,377,817,019  |
+L2259:  |    |  |  |  |    |    |    |
+L2260: DIVERSIFIED FINANCIAL SERVICES — 11.4%  |
+L2261: Berkshire Hathaway, Inc. Class B (b)  |    |    | 16,709,627  |    |    |    | 3,063,208,822  |
+L2262: Leucadia National Corp  |    |    | 2,749,856  |    |    |    | 69,433,864  |
+L2263:  |    |  |  |  |    |    |    |
+L2264:  |    |  |  |  |    |    | 3,132,642,686  |
+L2265:  |    |  |  |  |    |    |    |
+L2266: INSURANCE — 18.7%  |
+L2267: Aflac, Inc  |    |    | 3,432,217  |    |    | $  | 279,348,142  |
+L2268: Allstate Corp  |    |    | 3,137,959  |    |    |    | 288,409,812  |
+L2269: American International Group, Inc  |    |    | 7,845,464  |    |    |    | 481,633,035  |
+L2270: Aon PLC  |    |    | 2,208,414  |    |    |    | 322,649,285  |
+L2271: Arthur J Gallagher & Co  |    |    | 1,564,758  |    |    |    | 96,310,855  |
+L2272: Assurant, Inc  |    |    | 467,858  |    |    |    | 44,689,796  |
+L2273: Brighthouse Financial, Inc. (b)  |    |    | 831,786  |    |    |    | 50,572,589  |
+L2274: Chubb, Ltd  |    |    | 4,042,000  |    |    |    | 576,187,100  |
+L2275: Cincinnati Financial Corp  |    |    | 1,295,773  |    |    |    | 99,217,339  |
+L2276: Everest Re Group, Ltd  |    |    | 356,802  |    |    |    | 81,490,009  |
+L2277: Hartford Financial Services Group, Inc  |    |    | 3,163,349  |    |    |    | 175,344,435  |
+L2278: Lincoln National Corp  |    |    | 1,923,950  |    |    |    | 141,371,846  |
+L2279: Loews Corp  |    |    | 2,396,833  |    |    |    | 114,712,427  |
+L2280: Marsh & McLennan Cos., Inc  |    |    | 4,450,835  |    |    |    | 373,024,481  |
+L2281: MetLife, Inc  |    |    | 9,229,379  |    |    |    | 479,466,239  |
+L2282: Principal Financial Group, Inc  |    |    | 2,333,669  |    |    |    | 150,148,264  |
+L2283: Progressive Corp  |    |    | 5,052,898  |    |    |    | 244,661,321  |
+L2284: Prudential Financial, Inc  |    |    | 3,708,126  |    |    |    | 394,247,956  |
+L2285: Torchmark Corp  |    |    | 939,068  |    |    |    | 75,209,956  |
+L2286: Travelers Cos., Inc  |    |    | 2,396,281  |    |    |    | 293,592,348  |
+L2287: Unum Group  |    |    | 1,959,393  |    |    |    | 100,183,764  |
+L2288: Willis Towers Watson PLC  |    |    | 1,166,293  |    |    |    | 179,877,369  |
+L2289: XL Group, Ltd  |    |    | 2,240,293  |    |    |    | 88,379,559  |
+L2290:  |    |  |  |  |    |    |    |
+L2291:  |    |  |  |  |    |    | 5,130,727,927  |
+L2292:  |    |  |  |  |    |    |    |
+L2293: TOTAL COMMON STOCKS
+L2294: (Cost $25,026,257,567)  |    |  |  |  |    |    | 27,369,288,798  |
+L2295:  |    |  |  |  |    |    |    |
+L2296: SHORT-TERM INVESTMENT — 0.2%  |
+L2297: State Street Institutional U.S. Government Money Market Fund, Class G Shares 0.96% (d) (e)
+L2298: (Cost $39,927,132)  |    |    | 39,927,132  |    |    |    | 39,927,132  |
+L2299:  |    |  |  |  |    |    |    |
+L2300: TOTAL INVESTMENTS — 100.0%  |    |  |  |  |    |  |  |
+L2301: (Cost $25,066,184,699)  |    |  |  |  |    |    | 27,409,215,930  |
+L2302: OTHER ASSETS IN EXCESS OF LIABILITIES — 0.0% (f)  |    |  |  |  |    |    | 9,635,786  |
+L2303:  |    |  |  |  |    |    |    |
+L2304: NET ASSETS — 100.0%  |    |  |  |  |    | $  | 27,418,851,716  |
+L2305:  |    |  |  |  |    |    |    |
+L2306: (a)  | All or a portion of the shares of the security are on loan at September 30, 2017.
+L2307: (b)  | Non-income producing security.
+L2308: (c)  | The Fund invested in an affiliated entity, State Street Corp. Amounts related to these transactions during the period ended September 30, 2017 are shown in the Affiliate Table below.
+L2309: (d)  | The Fund invested in certain money market funds managed by SSGA Funds Management, Inc. Amounts related to these transactions during the period ended September 30, 2017 are shown in the Affiliate Table below.
+L2310: (e)  | The rate shown is the annualized seven-day yield at September 30, 2017.
+L2311: (f)  | Amount is less than 0.05% of net assets.
+L2312: 
+L2313: 
+L2314: See accompanying notes to financial statements.
+L2315: 
+L2316: 
+L2317: 
+L2318: 48
+L2319: 
+L2320: * * *
+L2321: ##### cite0†Table of Contents L2322: 
+L2323: The Financial Select Sector SPDR Fund
+L2324: 
+L2325: SCHEDULE OF INVESTMENTS (continued)
+L2326: 
+L2327: September 30, 2017
+L2328: 
+L2329: 
+L2330: 
+L2331: 
+L2332: 
+L2333: 
+L2334: 
+L2335: The following table summarizes the value of the Fund’s investments according to the fair value hierarchy as of September 30, 2017.
+L2336:  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+L2337: Description  |     | Level 1 —
+L2338: Quoted Prices  |    |     | Level 2 —
+L2339: Other Significant
+L2340: Observable Inputs  |    |     | Level 3 —
+L2341: Significant
+L2342: Unobservable Inputs  |    |     | Total  |
+L2343: ASSETS:  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L2344: INVESTMENTS:  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L2345: Common Stocks  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L2346: Banks  |     | $  | 12,094,883,829  |    |     | $  | —  |    |     | $  | —  |    |     | $  | 12,094,883,829  |
+L2347: Capital Markets  |     |    | 5,633,217,337  |    |     |    | —  |    |     |    | —  |    |     |    | 5,633,217,337  |
+L2348: Consumer Finance  |     |    | 1,377,817,019  |    |     |    | —  |    |     |    | —  |    |     |    | 1,377,817,019  |
+L2349: Diversified Financial Services  |     |    | 3,132,642,686  |    |     |    | —  |    |     |    | —  |    |     |    | 3,132,642,686  |
+L2350: Insurance  |     |    | 5,130,727,927  |    |     |    | —  |    |     |    | —  |    |     |    | 5,130,727,927  |
+L2351: Short-Term Investment  |     |    | 39,927,132  |    |     |    | —  |    |     |    | —  |    |     |    | 39,927,132  |
+L2352:  |     |    |    |    |     |    |    |    |     |    |    |    |     |    |    |
+L2353: TOTAL INVESTMENTS  |     | $  | 27,409,215,930  |    |     | $  | —  |    |     | $  | —  |    |     | $  | 27,409,215,930  |
+L2354:  |     |    |    |    |     |    |    |    |     |    |    |    |     |    |    |
+L2355: Affiliate Table
+L2356:  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+L2357:    |    | Number
+L2358: of Shares
+L2359: Held at
+L2360: 9/30/16  |    |    | Value At
+L2361: 9/30/16  |    |    | Cost of
+L2362: Purchases  |    |    | Proceeds from
+L2363: Shares Sold  |    |    | Realized
+L2364: Gain
+L2365: (Loss)  |    |    | Change in
+L2366: Unrealized
+L2367: Appreciation/
+L2368: Depreciation  |    |    | Number
+L2369: of Shares
+L2370: Held at
+L2371: 9/30/17  |    |    | Value at
+L2372: 9/30/17  |    |    | Dividend
+L2373: Income  |
+L2374: State Street Corp.  |    |    | 1,830,359  |    |    | $  | 127,447,897  |    |    | $  | 292,859,193  |    |    | $  | 176,434,498  |    |    | $  | 16,619,598  |    |    | $  | 49,778,737  |    |    |    | 3,247,550  |    |    | $  | 310,270,927  |    |    | $  | 4,623,857  |
+L2375: State Street Institutional Liquid Reserves Fund, Premier Class  |    |    | 13,433,038  |    |    |    | 13,433,038  |    |    |    | 2,992,289  |    |    |    | 16,425,327  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |
+L2376:  | 219
+L2377:  |
+L2378: State Street Institutional U.S. Government Money Market Fund, Class G Shares  |    |    | —  |    |    |    | —  |    |    |    | 346,122,500  |    |    |    | 306,195,368  |    |    |    | —  |    |    |    | —  |    |    |    | 39,927,132  |    |    |    | 39,927,132  |    |    |    | 165,797  |
+L2379: State Street Institutional U.S. Government Money Market Fund, Premier Class  |    |    | —  |    |    |    | —  |    |    |    | 423,041,034  |    |    |    | 423,041,034  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | 99,671  |
+L2380: State Street Navigator Securities Lending Government Money Market Portfolio*  |    |    | 2,032,880  |    |    |    | 2,032,880  |    |    |    | 11,435  |    |    |    | 2,044,315  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | —  |    |    |    | —  |
+L2381: The Real Estate Select Sector SPDR Fund  |    |    | 540  |    |    |    | 17,696  |    |    |    | —  |    |    |    | 17,039  |    |    |    | (1,013  | )   |    |    | 356  |    |    |    | —  |    |    |    | —  |    |    |    | —  |
+L2382:  |    |  |  |  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |  |  |  |    |    |    |    |    |    |    |
+L2383: TOTAL  |    |  |  |  |    | $  | 142,931,511  |    |    | $  | 1,065,026,451  |    |    | $  | 924,157,581  |    |    | $  | 16,618,585  |    |    | $  | 49,779,093  |    |    |  |  |  |    | $  | 350,198,059  |    |    | $  | 4,889,544  |
+L2384:  |    |  |  |  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |  |  |  |    |    |    |    |    |    |    |
+L2385: 
+L2386: 
+L2387: *  | Effective October 5, 2016, the name of State Street Navigator Securities Lending Prime Portfolio was changed to State Street Navigator Securities Lending Government Money Market Portfolio.
+L2388: 
+L2389: 
+L2390: 
+L2391: See accompanying notes to financial statements.
+L2392: 
+L2393: 
+L2394: 
+L2395: 49
+L2396: 
+L2397: * * *
+L2398: ##### cite0†Table of Contents L2399: 

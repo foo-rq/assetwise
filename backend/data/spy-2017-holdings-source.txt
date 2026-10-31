@@ -1,0 +1,682 @@
+L60: cite10†Other Information |     |    | 21  |
+L61: * * *
+L62: ##### cite0†Table of Contents L63: 
+L64: SPDR S&P 500 ETF Trust
+L65: 
+L66: Schedule of Investments
+L67: 
+L68: September 30, 2017
+L69:  |  |  |  |  |  |  |  |
+L70: Common Stocks  |     | Shares  |    |     | Value  |
+L71:    |     |    |    |     |    |
+L72: 3M Co.  |     |    | 6,731,139  |    |     | $  | 1,412,866,076  |
+L73: Abbott Laboratories  |     |    | 19,546,204  |    |     |    | 1,042,985,445  |
+L74: AbbVie, Inc.  |     |    | 17,933,914  |    |     |    | 1,593,607,598  |
+L75: Accenture PLC Class A  |     |    | 6,958,642  |    |     |    | 939,903,775  |
+L76: Activision Blizzard, Inc.  |     |    | 8,515,357  |    |     |    | 549,325,680  |
+L77: Acuity Brands, Inc.  |     |    | 483,328  |    |     |    | 82,784,420  |
+L78: Adobe Systems, Inc.(a)  |     |    | 5,569,573  |    |     |    | 830,868,900  |
+L79: Advance Auto Parts, Inc.  |     |    | 814,485  |    |     |    | 80,796,912  |
+L80: Advanced Micro Devices, Inc.(a)  |     |    | 9,069,202  |    |     |    | 115,632,325  |
+L81: AES Corp.  |     |    | 7,311,394  |    |     |    | 80,571,562  |
+L82: Aetna, Inc.  |     |    | 3,728,371  |    |     |    | 592,848,273  |
+L83: Affiliated Managers Group, Inc.  |     |    | 638,417  |    |     |    | 121,190,699  |
+L84: Aflac, Inc.  |     |    | 4,450,250  |    |     |    | 362,205,847  |
+L85: Agilent Technologies, Inc.  |     |    | 3,632,935  |    |     |    | 233,234,427  |
+L86: Air Products & Chemicals, Inc.  |     |    | 2,438,697  |    |     |    | 368,779,760  |
+L87: Akamai Technologies, Inc.(a)  |     |    | 1,950,802  |    |     |    | 95,043,073  |
+L88: Alaska Air Group, Inc.  |     |    | 1,371,393  |    |     |    | 104,596,144  |
+L89: Albemarle Corp.  |     |    | 1,244,820  |    |     |    | 169,681,414  |
+L90: Alexandria Real Estate Equities, Inc. REIT  |     |    | 1,015,846  |    |     |    | 120,855,199  |
+L91: Alexion Pharmaceuticals, Inc.(a)  |     |    | 2,527,970  |    |     |    | 354,648,911  |
+L92: Align Technology, Inc.(a)  |     |    | 811,480  |    |     |    | 151,154,380  |
+L93: Allegion PLC  |     |    | 1,066,008  |    |     |    | 92,177,712  |
+L94: Allergan PLC  |     |    | 3,783,113  |    |     |    | 775,349,009  |
+L95: Alliance Data Systems Corp.  |     |    | 542,051  |    |     |    | 120,091,399  |
+L96: Alliant Energy Corp.  |     |    | 2,566,331  |    |     |    | 106,682,380  |
+L97: Allstate Corp.  |     |    | 4,108,745  |    |     |    | 377,634,753  |
+L98: Alphabet, Inc. Class A(a)  |     |    | 3,352,472  |    |     |    | 3,264,369,036  |
+L99: Alphabet, Inc. Class C(a)  |     |    | 3,399,937  |    |     |    | 3,260,913,576  |
+L100: Altria Group, Inc.  |     |    | 21,602,077  |    |     |    | 1,370,003,723  |
+L101: Amazon.com, Inc.(a)  |     |    | 4,490,272  |    |     |    | 4,316,722,987  |
+L102: Ameren Corp.  |     |    | 2,701,857  |    |     |    | 156,275,409  |
+L103: American Airlines Group, Inc.  |     |    | 4,867,113  |    |     |    | 231,139,196  |
+L104: American Electric Power Co., Inc.  |     |    | 5,533,986  |    |     |    | 388,707,177  |
+L105: American Express Co.  |     |    | 8,258,194  |    |     |    | 747,036,229  |
+L106: American International Group, Inc.  |     |    | 10,178,678  |    |     |    | 624,869,042  |
+L107: American Tower Corp. REIT  |     |    | 4,809,136  |    |     |    | 657,312,708  |
+L108: American Water Works Co., Inc.  |     |    | 2,007,122  |    |     |    | 162,396,241  |
+L109: Ameriprise Financial, Inc.  |     |    | 1,687,735  |    |     |    | 250,645,525  |
+L110: AmerisourceBergen Corp.  |     |    | 1,869,691  |    |     |    | 154,716,930  |
+L111: AMETEK, Inc.  |     |    | 2,605,707  |    |     |    | 172,080,890  |
+L112: Amgen, Inc.  |     |    | 8,215,564  |    |     |    | 1,531,791,908  |
+L113: Amphenol Corp. Class A  |     |    | 3,461,740  |    |     |    | 293,001,674  |
+L114: Anadarko Petroleum Corp.  |     |    | 6,269,622  |    |     |    | 306,271,035  |
+L115: Analog Devices, Inc.  |     |    | 4,133,849  |    |     |    | 356,213,768  |
+L116: Andeavor  |     |    | 1,623,904  |    |     |    | 167,505,698  |
+L117: ANSYS, Inc.(a)  |     |    | 957,390  |    |     |    | 117,500,475  |
+L118: Anthem, Inc.  |     |    | 2,975,167  |    |     |    | 564,924,710  |
+L119:  |  |  |  |  |  |  |  |
+L120: Common Stocks  |     | Shares  |    |     | Value  |
+L121:    |     |    |    |     |    |
+L122: AO Smith Corp.  |     |    | 1,647,470  |    |     | $  | 97,909,142  |
+L123: Aon PLC  |     |    | 2,862,112  |    |     |    | 418,154,563  |
+L124: Apache Corp.  |     |    | 4,257,829  |    |     |    | 195,008,568  |
+L125: Apartment Investment & Management Co. Class A REIT  |     |    | 1,737,173  |    |     |    | 76,192,408  |
+L126: Apple, Inc.  |     |    | 58,154,264  |    |     |    | 8,962,735,168  |
+L127: Applied Materials, Inc.  |     |    | 12,008,038  |    |     |    | 625,498,699  |
+L128: Archer-Daniels-Midland Co.  |     |    | 6,425,595  |    |     |    | 273,152,043  |
+L129: Arconic, Inc.  |     |    | 4,358,534  |    |     |    | 108,440,326  |
+L130: Arthur J Gallagher & Co.  |     |    | 2,021,827  |    |     |    | 124,443,452  |
+L131: Assurant, Inc.  |     |    | 625,964  |    |     |    | 59,792,081  |
+L132: AT&T, Inc.  |     |    | 69,250,683  |    |     |    | 2,712,549,253  |
+L133: Autodesk, Inc.(a)  |     |    | 2,474,171  |    |     |    | 277,750,436  |
+L134: Automatic Data Processing, Inc.  |     |    | 5,048,336  |    |     |    | 551,884,092  |
+L135: AutoZone, Inc.(a)  |     |    | 323,965  |    |     |    | 192,794,811  |
+L136: AvalonBay Communities, Inc. REIT  |     |    | 1,545,383  |    |     |    | 275,727,235  |
+L137: Avery Dennison Corp.  |     |    | 991,635  |    |     |    | 97,517,386  |
+L138: Baker Hughes a GE Co.  |     |    | 4,792,902  |    |     |    | 175,516,071  |
+L139: Ball Corp.  |     |    | 3,943,899  |    |     |    | 162,883,029  |
+L140: Bank of America Corp.  |     |    | 110,460,858  |    |     |    | 2,799,078,142  |
+L141: Bank of New York Mellon Corp.  |     |    | 11,671,956  |    |     |    | 618,847,107  |
+L142: Baxter International, Inc.  |     |    | 5,648,061  |    |     |    | 354,415,828  |
+L143: BB&T Corp.  |     |    | 9,136,618  |    |     |    | 428,872,849  |
+L144: Becton Dickinson and Co.  |     |    | 2,560,933  |    |     |    | 501,814,821  |
+L145: Berkshire Hathaway, Inc. Class B(a)  |     |    | 21,673,748  |    |     |    | 3,973,231,483  |
+L146: Best Buy Co., Inc.  |     |    | 3,048,029  |    |     |    | 173,615,732  |
+L147: Biogen, Inc.(a)  |     |    | 2,380,573  |    |     |    | 745,405,018  |
+L148: BlackRock, Inc.  |     |    | 1,396,230  |    |     |    | 624,240,471  |
+L149: Boeing Co.  |     |    | 6,255,274  |    |     |    | 1,590,153,204  |
+L150: BorgWarner, Inc.  |     |    | 2,246,592  |    |     |    | 115,092,908  |
+L151: Boston Properties, Inc. REIT  |     |    | 1,733,003  |    |     |    | 212,951,409  |
+L152: Boston Scientific Corp.(a)  |     |    | 15,425,245  |    |     |    | 449,954,397  |
+L153: Brighthouse Financial, Inc.(a)  |     |    | 1,117,678  |    |     |    | 67,954,822  |
+L154: Bristol-Myers Squibb Co.  |     |    | 18,465,205  |    |     |    | 1,176,972,167  |
+L155: Broadcom, Ltd.  |     |    | 4,579,775  |    |     |    | 1,110,778,628  |
+L156: Brown-Forman Corp. Class B  |     |    | 2,209,515  |    |     |    | 119,976,664  |
+L157: C.H. Robinson Worldwide, Inc.  |     |    | 1,587,019  |    |     |    | 120,772,146  |
+L158: C.R. Bard, Inc.  |     |    | 817,675  |    |     |    | 262,064,837  |
+L159: CA, Inc.  |     |    | 3,528,568  |    |     |    | 117,783,600  |
+L160: Cabot Oil & Gas Corp.  |     |    | 5,349,824  |    |     |    | 143,107,792  |
+L161: Cadence Design Systems, Inc.(a)  |     |    | 3,219,730  |    |     |    | 127,082,743  |
+L162: Campbell Soup Co.  |     |    | 2,174,594  |    |     |    | 101,814,491  |
+L163: Capital One Financial Corp.  |     |    | 5,415,181  |    |     |    | 458,449,223  |
+L164: Cardinal Health, Inc.  |     |    | 3,549,655  |    |     |    | 237,542,913  |
+L165: CarMax, Inc.(a)  |     |    | 2,105,248  |    |     |    | 159,598,851  |
+L166: 
+L167: 
+L168: 
+L169: 
+L170: See accompanying notes to financial statements.
+L171: 
+L172: 
+L173: 
+L174: 1
+L175: 
+L176: * * *
+L177: ##### cite0†Table of Contents L178: 
+L179: SPDR S&P 500 ETF Trust
+L180: 
+L181: Schedule of Investments (continued)
+L182: 
+L183: September 30, 2017
+L184:  |  |  |  |  |  |  |  |
+L185: Common Stocks  |     | Shares  |    |     | Value  |
+L186:    |     |    |    |     |    |
+L187: Carnival Corp.  |     |    | 4,589,828  |    |     | $  | 296,365,194  |
+L188: Caterpillar, Inc.  |     |    | 6,636,401  |    |     |    | 827,625,569  |
+L189: CBOE Holdings, Inc.  |     |    | 1,275,061  |    |     |    | 137,234,815  |
+L190: CBRE Group, Inc. Class A(a)  |     |    | 3,367,613  |    |     |    | 127,565,180  |
+L191: CBS Corp. Class B  |     |    | 4,098,811  |    |     |    | 237,731,038  |
+L192: Celgene Corp.(a)  |     |    | 8,795,269  |    |     |    | 1,282,526,126  |
+L193: Centene Corp.(a)  |     |    | 1,940,631  |    |     |    | 187,794,862  |
+L194: CenterPoint Energy, Inc.  |     |    | 4,771,588  |    |     |    | 139,378,085  |
+L195: CenturyLink, Inc.  |     |    | 6,181,819  |    |     |    | 116,836,379  |
+L196: Cerner Corp.(a)  |     |    | 3,552,084  |    |     |    | 253,334,631  |
+L197: CF Industries Holdings, Inc.  |     |    | 2,596,054  |    |     |    | 91,277,259  |
+L198: Charles Schwab Corp.  |     |    | 13,415,338  |    |     |    | 586,786,884  |
+L199: Charter Communications, Inc. Class A(a)  |     |    | 2,261,564  |    |     |    | 821,897,589  |
+L200: Chesapeake Energy Corp.(a)  |     |    | 10,258,958  |    |     |    | 44,113,519  |
+L201: Chevron Corp.  |     |    | 21,340,212  |    |     |    | 2,507,474,910  |
+L202: Chipotle Mexican Grill, Inc.(a)  |     |    | 281,650  |    |     |    | 86,700,320  |
+L203: Chubb, Ltd.  |     |    | 5,242,195  |    |     |    | 747,274,897  |
+L204: Church & Dwight Co., Inc.  |     |    | 2,879,801  |    |     |    | 139,526,358  |
+L205: Cigna Corp.  |     |    | 2,834,356  |    |     |    | 529,854,511  |
+L206: Cimarex Energy Co.  |     |    | 1,051,997  |    |     |    | 119,580,499  |
+L207: Cincinnati Financial Corp.  |     |    | 1,682,254  |    |     |    | 128,810,189  |
+L208: Cintas Corp.  |     |    | 962,612  |    |     |    | 138,885,659  |
+L209: Cisco Systems, Inc.  |     |    | 56,361,496  |    |     |    | 1,895,437,110  |
+L210: Citigroup, Inc.  |     |    | 30,674,668  |    |     |    | 2,231,275,350  |
+L211: Citizens Financial Group, Inc.  |     |    | 5,727,866  |    |     |    | 216,914,285  |
+L212: Citrix Systems, Inc.(a)  |     |    | 1,619,249  |    |     |    | 124,390,708  |
+L213: Clorox Co.  |     |    | 1,435,923  |    |     |    | 189,412,603  |
+L214: CME Group, Inc.  |     |    | 3,807,759  |    |     |    | 516,636,741  |
+L215: CMS Energy Corp.  |     |    | 3,108,259  |    |     |    | 143,974,557  |
+L216: Coach, Inc.  |     |    | 3,166,572  |    |     |    | 127,549,520  |
+L217: Coca-Cola Co.  |     |    | 43,314,395  |    |     |    | 1,949,580,919  |
+L218: Cognizant Technology Solutions Corp. Class A  |     |    | 6,635,921  |    |     |    | 481,369,709  |
+L219: Colgate-Palmolive Co.  |     |    | 9,945,351  |    |     |    | 724,518,820  |
+L220: Comcast Corp. Class A  |     |    | 52,964,242  |    |     |    | 2,038,064,032  |
+L221: Comerica, Inc.  |     |    | 1,979,501  |    |     |    | 150,956,746  |
+L222: Conagra Brands, Inc.  |     |    | 4,655,485  |    |     |    | 157,076,064  |
+L223: Concho Resources, Inc.(a)  |     |    | 1,668,028  |    |     |    | 219,712,648  |
+L224: ConocoPhillips  |     |    | 13,699,272  |    |     |    | 685,648,564  |
+L225: Consolidated Edison, Inc.  |     |    | 3,433,684  |    |     |    | 277,029,625  |
+L226: Constellation Brands, Inc. Class A  |     |    | 1,943,049  |    |     |    | 387,541,123  |
+L227: Cooper Cos., Inc.  |     |    | 543,684  |    |     |    | 128,912,913  |
+L228: Corning, Inc.  |     |    | 10,166,724  |    |     |    | 304,188,382  |
+L229: Costco Wholesale Corp.  |     |    | 4,940,647  |    |     |    | 811,698,896  |
+L230: Coty, Inc. Class A  |     |    | 5,294,616  |    |     |    | 87,520,002  |
+L231: Crown Castle International Corp. REIT  |     |    | 4,575,848  |    |     |    | 457,493,283  |
+L232: CSRA, Inc.  |     |    | 1,844,825  |    |     |    | 59,532,503  |
+L233:  |  |  |  |  |  |  |  |
+L234: Common Stocks  |     | Shares  |    |     | Value  |
+L235:    |     |    |    |     |    |
+L236: CSX Corp.  |     |    | 10,282,667  |    |     | $  | 557,937,511  |
+L237: Cummins, Inc.  |     |    | 1,775,064  |    |     |    | 298,264,004  |
+L238: CVS Health Corp.  |     |    | 11,476,059  |    |     |    | 933,233,118  |
+L239: D.R. Horton, Inc.  |     |    | 3,807,804  |    |     |    | 152,045,614  |
+L240: Danaher Corp.  |     |    | 6,866,612  |    |     |    | 589,017,977  |
+L241: Darden Restaurants, Inc.  |     |    | 1,400,807  |    |     |    | 110,355,575  |
+L242: DaVita, Inc.(a)  |     |    | 1,751,294  |    |     |    | 104,009,351  |
+L243: Deere & Co.  |     |    | 3,607,873  |    |     |    | 453,112,770  |
+L244: Delphi Automotive PLC  |     |    | 3,031,264  |    |     |    | 298,276,378  |
+L245: Delta Air Lines, Inc.  |     |    | 7,485,133  |    |     |    | 360,933,113  |
+L246: DENTSPLY SIRONA, Inc.  |     |    | 2,608,871  |    |     |    | 156,036,575  |
+L247: Devon Energy Corp.  |     |    | 5,921,436  |    |     |    | 217,375,916  |
+L248: Digital Realty Trust, Inc. REIT  |     |    | 2,314,503  |    |     |    | 273,875,140  |
+L249: Discover Financial Services  |     |    | 4,191,408  |    |     |    | 270,261,988  |
+L252: DISH Network Corp. Class A(a)  |     |    | 2,543,215  |    |     |    | 137,918,549  |
+L253: Dollar General Corp.  |     |    | 2,935,519  |    |     |    | 237,923,815  |
+L254: Dollar Tree, Inc.(a)  |     |    | 2,666,005  |    |     |    | 231,462,554  |
+L255: Dominion Energy, Inc.  |     |    | 7,239,320  |    |     |    | 556,920,888  |
+L256: Dover Corp.  |     |    | 1,753,343  |    |     |    | 160,238,017  |
+L257: DowDuPont, Inc.  |     |    | 26,296,159  |    |     |    | 1,820,483,088  |
+L258: Dr. Pepper Snapple Group, Inc.  |     |    | 2,073,414  |    |     |    | 183,434,937  |
+L259: DTE Energy Co.  |     |    | 2,019,656  |    |     |    | 216,830,268  |
+L260: Duke Energy Corp.  |     |    | 7,875,976  |    |     |    | 660,951,906  |
+L261: Duke Realty Corp. REIT  |     |    | 3,978,610  |    |     |    | 114,663,540  |
+L262: DXC Technology Co.  |     |    | 3,194,477  |    |     |    | 274,341,685  |
+L263: E*TRADE Financial Corp.(a)  |     |    | 3,121,885  |    |     |    | 136,145,405  |
+L264: Eastman Chemical Co.  |     |    | 1,655,145  |    |     |    | 149,774,071  |
+L265: Eaton Corp. PLC  |     |    | 5,057,313  |    |     |    | 388,351,065  |
+L266: eBay, Inc.(a)  |     |    | 11,206,356  |    |     |    | 430,996,452  |
+L267: Ecolab, Inc.  |     |    | 2,952,579  |    |     |    | 379,731,185  |
+L268: Edison International  |     |    | 3,666,897  |    |     |    | 282,974,441  |
+L269: Edwards Lifesciences Corp.(a)  |     |    | 2,374,663  |    |     |    | 259,574,413  |
+L270: Electronic Arts, Inc.(a)  |     |    | 3,470,435  |    |     |    | 409,719,556  |
+L271: Eli Lilly & Co.  |     |    | 10,937,235  |    |     |    | 935,571,082  |
+L272: Emerson Electric Co.  |     |    | 7,259,890  |    |     |    | 456,211,488  |
+L273: Entergy Corp.  |     |    | 2,019,146  |    |     |    | 154,181,989  |
+L274: Envision Healthcare Corp.(a)  |     |    | 1,305,370  |    |     |    | 58,676,382  |
+L275: EOG Resources, Inc.  |     |    | 6,502,469  |    |     |    | 629,048,851  |
+L276: EQT Corp.  |     |    | 1,923,651  |    |     |    | 125,498,991  |
+L277: Equifax, Inc.  |     |    | 1,349,388  |    |     |    | 143,021,634  |
+L278: Equinix, Inc. REIT  |     |    | 874,305  |    |     |    | 390,202,321  |
+L279: Equity Residential REIT  |     |    | 4,131,783  |    |     |    | 272,408,453  |
+L280: Essex Property Trust, Inc. REIT  |     |    | 738,954  |    |     |    | 187,716,485  |
+L281: Estee Lauder Cos., Inc. Class A  |     |    | 2,521,644  |    |     |    | 271,934,089  |
+L282: Everest Re Group, Ltd.  |     |    | 460,000  |    |     |    | 105,059,400  |
+L283: Eversource Energy  |     |    | 3,532,916  |    |     |    | 213,529,443  |
+L284: 
+L285: 
+L286: 
+L287: 
+L288: See accompanying notes to financial statements.
+L289: 
+L290: 
+L291: 
+L292: 2
+L293: 
+L294: * * *
+L295: ##### cite0†Table of Contents L296: 
+L297: SPDR S&P 500 ETF Trust
+L298: 
+L299: Schedule of Investments (continued)
+L300: 
+L301: September 30, 2017
+L302:  |  |  |  |  |  |  |  |
+L303: Common Stocks  |     | Shares  |    |     | Value  |
+L304:    |     |    |    |     |    |
+L305: Exelon Corp.  |     |    | 10,819,343  |    |     | $  | 407,564,651  |
+L306: Expedia, Inc.  |     |    | 1,355,034  |    |     |    | 195,043,594  |
+L307: Expeditors International of Washington, Inc.  |     |    | 2,020,058  |    |     |    | 120,920,672  |
+L308: Express Scripts Holding Co.(a)  |     |    | 6,500,184  |    |     |    | 411,591,651  |
+L309: Extra Space Storage, Inc. REIT  |     |    | 1,388,406  |    |     |    | 110,961,408  |
+L310: Exxon Mobil Corp.  |     |    | 47,723,481  |    |     |    | 3,912,370,972  |
+L311: F5 Networks, Inc.(a)  |     |    | 728,564  |    |     |    | 87,835,676  |
+L312: Facebook, Inc. Class A(a)  |     |    | 26,693,439  |    |     |    | 4,561,107,922  |
+L313: Fastenal Co.  |     |    | 3,217,844  |    |     |    | 146,669,330  |
+L314: Federal Realty Investment Trust REIT  |     |    | 811,394  |    |     |    | 100,783,249  |
+L315: FedEx Corp.  |     |    | 2,760,189  |    |     |    | 622,643,435  |
+L316: Fidelity National Information Services, Inc.  |     |    | 3,700,749  |    |     |    | 345,612,949  |
+L317: Fifth Third Bancorp  |     |    | 8,438,357  |    |     |    | 236,105,229  |
+L318: FirstEnergy Corp.  |     |    | 4,983,009  |    |     |    | 153,626,167  |
+L319: Fiserv, Inc.(a)  |     |    | 2,369,342  |    |     |    | 305,550,344  |
+L320: FLIR Systems, Inc.  |     |    | 1,523,081  |    |     |    | 59,263,082  |
+L321: Flowserve Corp.  |     |    | 1,443,279  |    |     |    | 61,469,253  |
+L322: Fluor Corp.  |     |    | 1,538,346  |    |     |    | 64,764,367  |
+L323: FMC Corp.  |     |    | 1,483,183  |    |     |    | 132,463,074  |
+L324: Foot Locker, Inc.  |     |    | 1,518,466  |    |     |    | 53,480,373  |
+L325: Ford Motor Co.  |     |    | 44,055,533  |    |     |    | 527,344,730  |
+L326: Fortive Corp.  |     |    | 3,388,229  |    |     |    | 239,852,731  |
+L327: Fortune Brands Home & Security, Inc.  |     |    | 1,697,624  |    |     |    | 114,131,262  |
+L328: Franklin Resources, Inc.  |     |    | 3,702,317  |    |     |    | 164,790,130  |
+L329: Freeport-McMoRan, Inc.(a)  |     |    | 14,858,979  |    |     |    | 208,620,065  |
+L330: Gap, Inc.  |     |    | 2,500,267  |    |     |    | 73,832,885  |
+L331: Garmin, Ltd.  |     |    | 1,300,690  |    |     |    | 70,198,239  |
+L332: Gartner, Inc.(a)  |     |    | 1,033,832  |    |     |    | 128,619,039  |
+L333: General Dynamics Corp.  |     |    | 3,134,988  |    |     |    | 644,490,833  |
+L334: General Electric Co.  |     |    | 97,485,114  |    |     |    | 2,357,190,057  |
+L335: General Mills, Inc.  |     |    | 6,526,446  |    |     |    | 337,808,845  |
+L336: General Motors Co.  |     |    | 14,754,440  |    |     |    | 595,784,287  |
+L337: Genuine Parts Co.  |     |    | 1,665,513  |    |     |    | 159,306,318  |
+L338: GGP, Inc. REIT  |     |    | 7,061,777  |    |     |    | 146,673,108  |
+L339: Gilead Sciences, Inc.  |     |    | 14,708,904  |    |     |    | 1,191,715,402  |
+L340: Global Payments, Inc.  |     |    | 1,711,042  |    |     |    | 162,600,321  |
+L341: Goldman Sachs Group, Inc.  |     |    | 4,050,071  |    |     |    | 960,636,340  |
+L342: Goodyear Tire & Rubber Co.  |     |    | 2,831,891  |    |     |    | 94,160,376  |
+L343: H&R Block, Inc.  |     |    | 2,330,735  |    |     |    | 61,717,863  |
+L344: Halliburton Co.  |     |    | 9,757,983  |    |     |    | 449,159,957  |
+L345: Hanesbrands, Inc.  |     |    | 4,208,513  |    |     |    | 103,697,760  |
+L346: Harley-Davidson, Inc.  |     |    | 1,983,895  |    |     |    | 95,643,578  |
+L347: Harris Corp.  |     |    | 1,348,184  |    |     |    | 177,528,869  |
+L348: Hartford Financial Services Group, Inc.  |     |    | 4,138,023  |    |     |    | 229,370,615  |
+L349: Hasbro, Inc.  |     |    | 1,244,914  |    |     |    | 121,590,750  |
+L350:  |  |  |  |  |  |  |  |
+L351: Common Stocks  |     | Shares  |    |     | Value  |
+L352:    |     |    |    |     |    |
+L353: HCA Healthcare, Inc.(a)  |     |    | 3,247,665  |    |     | $  | 258,481,657  |
+L354: HCP, Inc. REIT  |     |    | 5,201,525  |    |     |    | 144,758,441  |
+L355: Helmerich & Payne, Inc.  |     |    | 1,197,878  |    |     |    | 62,421,423  |
+L356: Henry Schein, Inc.(a)  |     |    | 1,782,250  |    |     |    | 146,126,677  |
+L357: Hershey Co.  |     |    | 1,582,703  |    |     |    | 172,783,687  |
+L358: Hess Corp.  |     |    | 2,992,127  |    |     |    | 140,300,835  |
+L359: Hewlett Packard Enterprise Co.  |     |    | 18,691,286  |    |     |    | 274,948,817  |
+L360: Hilton Worldwide Holdings, Inc.  |     |    | 2,295,200  |    |     |    | 159,401,640  |
+L361: Hologic, Inc.(a)  |     |    | 3,153,996  |    |     |    | 115,720,113  |
+L362: Home Depot, Inc.  |     |    | 13,270,647  |    |     |    | 2,170,547,023  |
+L363: Honeywell International, Inc.  |     |    | 8,586,981  |    |     |    | 1,217,118,687  |
+L364: Hormel Foods Corp.  |     |    | 2,985,350  |    |     |    | 95,949,149  |
+L365: Host Hotels & Resorts, Inc. REIT  |     |    | 8,332,358  |    |     |    | 154,065,299  |
+L366: HP, Inc.  |     |    | 18,805,484  |    |     |    | 375,357,461  |
+L367: Humana, Inc.  |     |    | 1,625,943  |    |     |    | 396,128,493  |
+L368: Huntington Bancshares, Inc.  |     |    | 12,090,188  |    |     |    | 168,779,024  |
+L369: IDEXX Laboratories, Inc.(a)  |     |    | 989,660  |    |     |    | 153,882,233  |
+L370: IHS Markit, Ltd.(a)  |     |    | 4,101,096  |    |     |    | 180,776,312  |
+L371: Illinois Tool Works, Inc.  |     |    | 3,509,559  |    |     |    | 519,274,350  |
+L372: Illumina, Inc.(a)  |     |    | 1,639,616  |    |     |    | 326,611,507  |
+L373: Incyte Corp.(a)  |     |    | 1,902,325  |    |     |    | 222,077,420  |
+L374: Ingersoll-Rand PLC  |     |    | 2,856,041  |    |     |    | 254,673,176  |
+L375: Intel Corp.  |     |    | 53,043,200  |    |     |    | 2,019,885,056  |
+L376: Intercontinental Exchange, Inc.(b)  |     |    | 6,625,888  |    |     |    | 455,198,506  |
+L377: International Business Machines Corp.  |     |    | 9,762,391  |    |     |    | 1,416,327,686  |
+L378: International Flavors & Fragrances, Inc.  |     |    | 882,033  |    |     |    | 126,051,336  |
+L379: International Paper Co.  |     |    | 4,650,944  |    |     |    | 264,266,638  |
+L380: Interpublic Group of Cos., Inc.  |     |    | 4,454,800  |    |     |    | 92,615,292  |
+L381: Intuit, Inc.  |     |    | 2,735,321  |    |     |    | 388,798,527  |
+L382: Intuitive Surgical, Inc.(a)  |     |    | 420,215  |    |     |    | 439,494,464  |
+L383: Invesco, Ltd.  |     |    | 4,613,580  |    |     |    | 161,659,843  |
+L384: Iron Mountain, Inc. REIT  |     |    | 2,981,572  |    |     |    | 115,983,151  |
+L385: J.M. Smucker Co.  |     |    | 1,278,299  |    |     |    | 134,131,914  |
+L386: Jacobs Engineering Group, Inc.  |     |    | 1,358,557  |    |     |    | 79,163,116  |
+L387: JB Hunt Transport Services, Inc.  |     |    | 986,739  |    |     |    | 109,606,968  |
+L388: Johnson & Johnson  |     |    | 30,222,031  |    |     |    | 3,929,166,250  |
+L389: Johnson Controls International PLC  |     |    | 10,524,272  |    |     |    | 424,022,919  |
+L390: JPMorgan Chase & Co.  |     |    | 39,619,347  |    |     |    | 3,784,043,832  |
+L391: Juniper Networks, Inc.  |     |    | 4,257,966  |    |     |    | 118,499,194  |
+L392: Kansas City Southern  |     |    | 1,202,997  |    |     |    | 130,741,714  |
+L393: Kellogg Co.  |     |    | 2,806,408  |    |     |    | 175,035,667  |
+L394: KeyCorp  |     |    | 12,344,113  |    |     |    | 232,316,207  |
+L395: Kimberly-Clark Corp.  |     |    | 4,006,929  |    |     |    | 471,535,405  |
+L396: Kimco Realty Corp. REIT  |     |    | 4,672,531  |    |     |    | 91,347,981  |
+L397: Kinder Morgan, Inc.  |     |    | 21,569,346  |    |     |    | 413,700,056  |
+L398: KLA-Tencor Corp.  |     |    | 1,763,926  |    |     |    | 186,976,156  |
+L399: 
+L400: 
+L401: 
+L402: 
+L403: See accompanying notes to financial statements.
+L404: 
+L405: 
+L406: 
+L407: 3
+L408: 
+L409: * * *
+L410: ##### cite0†Table of Contents L411: 
+L412: SPDR S&P 500 ETF Trust
+L413: 
+L414: Schedule of Investments (continued)
+L415: 
+L416: September 30, 2017
+L417:  |  |  |  |  |  |  |  |
+L418: Common Stocks  |     | Shares  |    |     | Value  |
+L419:    |     |    |    |     |    |
+L420: Kohl’s Corp.  |     |    | 1,981,128  |    |     | $  | 90,438,493  |
+L421: Kraft Heinz Co.  |     |    | 6,720,729  |    |     |    | 521,192,534  |
+L422: Kroger Co.  |     |    | 10,101,417  |    |     |    | 202,634,425  |
+L423: L Brands, Inc.  |     |    | 2,702,606  |    |     |    | 112,455,436  |
+L424: L3 Technologies, Inc.  |     |    | 877,447  |    |     |    | 165,337,338  |
+L425: Laboratory Corp. of America Holdings(a)  |     |    | 1,140,174  |    |     |    | 172,132,069  |
+L426: Lam Research Corp.  |     |    | 1,826,974  |    |     |    | 338,063,269  |
+L427: Leggett & Platt, Inc.  |     |    | 1,503,316  |    |     |    | 71,753,273  |
+L428: Lennar Corp. Class A  |     |    | 2,288,087  |    |     |    | 120,810,994  |
+L429: Leucadia National Corp.  |     |    | 3,697,492  |    |     |    | 93,361,673  |
+L430: Level 3 Communications, Inc.(a)  |     |    | 3,288,253  |    |     |    | 175,231,002  |
+L431: Lincoln National Corp.  |     |    | 2,565,626  |    |     |    | 188,522,198  |
+L432: LKQ Corp.(a)  |     |    | 3,412,338  |    |     |    | 122,810,045  |
+L433: Lockheed Martin Corp.  |     |    | 2,809,879  |    |     |    | 871,877,355  |
+L434: Loews Corp.  |     |    | 3,100,564  |    |     |    | 148,392,993  |
+L435: Lowe’s Cos., Inc.  |     |    | 9,503,699  |    |     |    | 759,725,698  |
+L436: LyondellBasell Industries NV Class A  |     |    | 3,653,642  |    |     |    | 361,893,240  |
+L437: M&T Bank Corp.  |     |    | 1,734,339  |    |     |    | 279,297,953  |
+L438: Macerich Co. REIT  |     |    | 1,223,884  |    |     |    | 67,276,903  |
+L439: Macy’s, Inc.  |     |    | 3,436,319  |    |     |    | 74,980,481  |
+L440: Marathon Oil Corp.  |     |    | 9,438,837  |    |     |    | 127,990,630  |
+L441: Marathon Petroleum Corp.  |     |    | 5,698,068  |    |     |    | 319,547,653  |
+L442: Marriott International, Inc. Class A  |     |    | 3,539,121  |    |     |    | 390,223,481  |
+L443: Marsh & McLennan Cos., Inc.  |     |    | 5,801,348  |    |     |    | 486,210,976  |
+L444: Martin Marietta Materials, Inc.  |     |    | 713,452  |    |     |    | 147,135,206  |
+L445: Masco Corp.  |     |    | 3,604,157  |    |     |    | 140,598,165  |
+L446: Mastercard, Inc. Class A  |     |    | 10,514,015  |    |     |    | 1,484,578,918  |
+L447: Mattel, Inc.  |     |    | 3,770,978  |    |     |    | 58,374,739  |
+L448: McCormick & Co., Inc.  |     |    | 1,340,329  |    |     |    | 137,571,369  |
+L449: McDonald’s Corp.  |     |    | 9,120,187  |    |     |    | 1,428,950,899  |
+L450: McKesson Corp.  |     |    | 2,379,605  |    |     |    | 365,531,124  |
+L451: Medtronic PLC  |     |    | 15,250,511  |    |     |    | 1,186,032,240  |
+L452: Merck & Co., Inc.  |     |    | 30,800,471  |    |     |    | 1,972,154,158  |
+L453: MetLife, Inc.  |     |    | 11,964,880  |    |     |    | 621,575,516  |
+L454: Mettler-Toledo International, Inc.(a)  |     |    | 293,315  |    |     |    | 183,662,120  |
+L455: MGM Resorts International  |     |    | 5,837,430  |    |     |    | 190,241,844  |
+L456: Michael Kors Holdings, Ltd.(a)  |     |    | 1,706,170  |    |     |    | 81,640,235  |
+L457: Microchip Technology, Inc.  |     |    | 2,584,272  |    |     |    | 232,015,940  |
+L458: Micron Technology, Inc.(a)  |     |    | 12,562,445  |    |     |    | 494,080,962  |
+L459: Microsoft Corp.  |     |    | 86,730,071  |    |     |    | 6,460,522,989  |
+L460: Mid-America Apartment Communities, Inc. REIT  |     |    | 1,262,648  |    |     |    | 134,951,818  |
+L461: Mohawk Industries, Inc.(a)  |     |    | 704,657  |    |     |    | 174,409,654  |
+L462: Molson Coors Brewing Co. Class B  |     |    | 2,079,848  |    |     |    | 169,798,791  |
+L463: Mondelez International, Inc. Class A  |     |    | 16,975,160  |    |     |    | 690,210,006  |
+L464:  |  |  |  |  |  |  |  |
+L465: Common Stocks  |     | Shares  |    |     | Value  |
+L466:    |     |    |    |     |    |
+L467: Monsanto Co.  |     |    | 4,943,001  |    |     | $  | 592,270,380  |
+L468: Monster Beverage Corp.(a)  |     |    | 4,673,087  |    |     |    | 258,188,057  |
+L469: Moody’s Corp.  |     |    | 1,878,413  |    |     |    | 261,493,874  |
+L470: Morgan Stanley  |     |    | 15,922,511  |    |     |    | 766,987,355  |
+L471: Mosaic Co.  |     |    | 3,908,496  |    |     |    | 84,384,429  |
+L502: Packaging Corp. of America  |     |    | 1,053,950  |    |     |    | 120,866,986  |
+L503: Parker-Hannifin Corp.  |     |    | 1,494,133  |    |     |    | 261,503,158  |
+L504: Patterson Cos., Inc.  |     |    | 926,932  |    |     |    | 35,825,922  |
+L505: Paychex, Inc.  |     |    | 3,612,637  |    |     |    | 216,613,715  |
+L506: PayPal Holdings, Inc.(a)  |     |    | 12,730,849  |    |     |    | 815,156,261  |
+L507: Pentair PLC  |     |    | 1,875,447  |    |     |    | 127,455,378  |
+L508: People’s United Financial, Inc.  |     |    | 3,878,511  |    |     |    | 70,356,190  |
+L509: PepsiCo, Inc.  |     |    | 16,090,633  |    |     |    | 1,792,979,235  |
+L510: PerkinElmer, Inc.  |     |    | 1,204,961  |    |     |    | 83,106,160  |
+L511: Perrigo Co. PLC  |     |    | 1,491,164  |    |     |    | 126,227,033  |
+L512: Pfizer, Inc.  |     |    | 67,221,877  |    |     |    | 2,399,821,009  |
+L513: PG&E Corp.  |     |    | 5,751,601  |    |     |    | 391,626,512  |
+L514: Philip Morris International, Inc.  |     |    | 17,494,805  |    |     |    | 1,942,098,303  |
+L515: Phillips 66  |     |    | 4,836,493  |    |     |    | 443,071,124  |
+L516: Pinnacle West Capital Corp.  |     |    | 1,231,628  |    |     |    | 104,146,464  |
+L517: 
+L518: 
+L519: 
+L520: 
+L521: See accompanying notes to financial statements.
+L522: 
+L523: 
+L524: 
+L525: 4
+L526: 
+L527: * * *
+L528: ##### cite0†Table of Contents L529: 
+L530: SPDR S&P 500 ETF Trust
+L531: 
+L532: Schedule of Investments (continued)
+L533: 
+L534: September 30, 2017
+L535:  |  |  |  |  |  |  |  |
+L536: Common Stocks  |     | Shares  |    |     | Value  |
+L537:    |     |    |    |     |    |
+L538: Pioneer Natural Resources Co.  |     |    | 1,910,961  |    |     | $  | 281,943,186  |
+L539: PNC Financial Services Group, Inc.  |     |    | 5,395,130  |    |     |    | 727,101,670  |
+L540: PPoG Industries, Inc.  |     |    | 2,892,558  |    |     |    | 314,305,352  |
+L541: PPL Corp.  |     |    | 7,649,926  |    |     |    | 290,314,692  |
+L542: Praxair, Inc.  |     |    | 3,202,173  |    |     |    | 447,471,655  |
+L543: Priceline Group, Inc.(a)  |     |    | 553,646  |    |     |    | 1,013,626,170  |
+L544: Principal Financial Group, Inc.  |     |    | 2,995,276  |    |     |    | 192,716,058  |
+L545: Procter & Gamble Co.  |     |    | 28,713,988  |    |     |    | 2,612,398,628  |
+L546: Progressive Corp.  |     |    | 6,543,544  |    |     |    | 316,838,400  |
+L547: Prologis, Inc. REIT  |     |    | 5,931,060  |    |     |    | 376,385,068  |
+L548: Prudential Financial, Inc.  |     |    | 4,825,175  |    |     |    | 513,012,606  |
+L549: Public Service Enterprise Group, Inc.  |     |    | 5,697,337  |    |     |    | 263,501,836  |
+L550: Public Storage REIT  |     |    | 1,673,345  |    |     |    | 358,079,097  |
+L551: PulteGroup, Inc.  |     |    | 3,217,212  |    |     |    | 87,926,404  |
+L552: PVH Corp.  |     |    | 907,753  |    |     |    | 114,431,343  |
+L553: Qorvo, Inc.(a)  |     |    | 1,425,321  |    |     |    | 100,741,688  |
+L554: QUALCOMM, Inc.  |     |    | 16,623,612  |    |     |    | 861,768,046  |
+L555: Quanta Services, Inc.(a)  |     |    | 1,683,672  |    |     |    | 62,918,823  |
+L556: Quest Diagnostics, Inc.  |     |    | 1,546,049  |    |     |    | 144,772,028  |
+L557: Quintiles IMS Holdings, Inc.(a)  |     |    | 1,709,960  |    |     |    | 162,565,897  |
+L558: Ralph Lauren Corp.  |     |    | 642,744  |    |     |    | 56,747,868  |
+L559: Range Resources Corp.  |     |    | 2,551,101  |    |     |    | 49,925,047  |
+L560: Raymond James Financial, Inc.  |     |    | 1,462,032  |    |     |    | 123,293,159  |
+L561: Raytheon Co.  |     |    | 3,293,889  |    |     |    | 614,573,810  |
+L562: Realty Income Corp. REIT  |     |    | 3,053,533  |    |     |    | 174,631,552  |
+L563: Red Hat, Inc.(a)  |     |    | 2,026,605  |    |     |    | 224,669,430  |
+L564: Regency Centers Corp. REIT  |     |    | 1,643,565  |    |     |    | 101,966,773  |
+L565: Regeneron Pharmaceuticals, Inc.(a)  |     |    | 856,247  |    |     |    | 382,845,159  |
+L566: Regions Financial Corp.  |     |    | 13,560,813  |    |     |    | 206,531,182  |
+L567: Republic Services, Inc.  |     |    | 2,593,217  |    |     |    | 171,307,915  |
+L568: ResMed, Inc.  |     |    | 1,586,640  |    |     |    | 122,107,814  |
+L569: Robert Half International, Inc.  |     |    | 1,451,504  |    |     |    | 73,068,711  |
+L570: Rockwell Automation, Inc.  |     |    | 1,455,160  |    |     |    | 259,324,064  |
+L571: Rockwell Collins, Inc.  |     |    | 1,826,988  |    |     |    | 238,805,601  |
+L572: Roper Technologies, Inc.  |     |    | 1,146,720  |    |     |    | 279,111,648  |
+L573: Ross Stores, Inc.  |     |    | 4,434,565  |    |     |    | 286,339,862  |
+L574: Royal Caribbean Cruises, Ltd.  |     |    | 1,938,337  |    |     |    | 229,770,468  |
+L575: S&P Global, Inc.  |     |    | 2,908,287  |    |     |    | 454,594,341  |
+L576: salesforce.com, Inc.(a)  |     |    | 7,691,768  |    |     |    | 718,564,967  |
+L577: SBA Communications Corp. REIT(a)  |     |    | 1,354,911  |    |     |    | 195,174,930  |
+L578: SCANA Corp.  |     |    | 1,584,764  |    |     |    | 76,845,206  |
+L579: Schlumberger, Ltd.  |     |    | 15,691,357  |    |     |    | 1,094,629,064  |
+L580: Scripps Networks Interactive, Inc. Class A  |     |    | 1,053,352  |    |     |    | 90,472,403  |
+L581: Seagate Technology PLC  |     |    | 3,284,277  |    |     |    | 108,939,468  |
+L582: Sealed Air Corp.  |     |    | 2,195,538  |    |     |    | 93,793,383  |
+L583: Sempra Energy  |     |    | 2,813,273  |    |     |    | 321,078,847  |
+L584: Sherwin-Williams Co.  |     |    | 913,947  |    |     |    | 327,229,584  |
+L585:  |  |  |  |  |  |  |  |
+L586: Common Stocks  |     | Shares  |    |     | Value  |
+L587:    |     |    |    |     |    |
+L588: Signet Jewelers, Ltd.  |     |    | 678,931  |    |     | $  | 45,182,858  |
+L589: Simon Property Group, Inc. REIT  |     |    | 3,516,825  |    |     |    | 566,243,993  |
+L590: Skyworks Solutions, Inc.  |     |    | 2,081,018  |    |     |    | 212,055,734  |
+L591: SL Green Realty Corp. REIT  |     |    | 1,146,732  |    |     |    | 116,186,886  |
+L592: Snap-on, Inc.  |     |    | 644,780  |    |     |    | 96,078,668  |
+L593: Southern Co.  |     |    | 11,256,181  |    |     |    | 553,128,734  |
+L594: Southwest Airlines Co.  |     |    | 6,188,660  |    |     |    | 346,441,187  |
+L595: Stanley Black & Decker, Inc.  |     |    | 1,717,504  |    |     |    | 259,291,579  |
+L596: Starbucks Corp.  |     |    | 16,311,955  |    |     |    | 876,115,103  |
+L597: State Street Corp.(c)  |     |    | 4,215,714  |    |     |    | 402,769,316  |
+L598: Stericycle, Inc.(a)  |     |    | 942,251  |    |     |    | 67,484,017  |
+L599: Stryker Corp.  |     |    | 3,625,015  |    |     |    | 514,824,630  |
+L600: SunTrust Banks, Inc.  |     |    | 5,403,767  |    |     |    | 322,983,154  |
+L601: Symantec Corp.  |     |    | 6,998,200  |    |     |    | 229,610,942  |
+L602: Synchrony Financial  |     |    | 8,413,708  |    |     |    | 261,245,633  |
+L603: Synopsys, Inc.(a)  |     |    | 1,685,911  |    |     |    | 135,766,413  |
+L604: Sysco Corp.  |     |    | 5,467,219  |    |     |    | 294,956,465  |
+L605: T Rowe Price Group, Inc.  |     |    | 2,706,640  |    |     |    | 245,356,916  |
+L606: Target Corp.  |     |    | 6,149,345  |    |     |    | 362,872,848  |
+L607: TE Connectivity, Ltd.  |     |    | 3,978,938  |    |     |    | 330,490,590  |
+L608: TechnipFMC PLC(a)  |     |    | 4,939,317  |    |     |    | 137,905,731  |
+L609: Texas Instruments, Inc.  |     |    | 11,147,234  |    |     |    | 999,238,056  |
+L610: Textron, Inc.  |     |    | 3,001,844  |    |     |    | 161,739,355  |
+L611: Thermo Fisher Scientific, Inc.  |     |    | 4,508,644  |    |     |    | 853,035,445  |
+L612: Tiffany & Co.  |     |    | 1,148,636  |    |     |    | 105,421,812  |
+L613: Time Warner, Inc.  |     |    | 8,715,496  |    |     |    | 892,902,565  |
+L614: TJX Cos., Inc.  |     |    | 7,163,563  |    |     |    | 528,169,500  |
+L615: Torchmark Corp.  |     |    | 1,247,541  |    |     |    | 99,915,559  |
+L616: Total System Services, Inc.  |     |    | 1,879,059  |    |     |    | 123,078,364  |
+L617: Tractor Supply Co.  |     |    | 1,482,646  |    |     |    | 93,836,665  |
+L618: TransDigm Group, Inc.  |     |    | 560,072  |    |     |    | 143,182,407  |
+L619: Travelers Cos., Inc.  |     |    | 3,146,630  |    |     |    | 385,525,108  |
+L620: TripAdvisor, Inc.(a)  |     |    | 1,264,223  |    |     |    | 51,238,958  |
+L621: Twenty-First Century Fox, Inc. Class A  |     |    | 11,900,379  |    |     |    | 313,931,998  |
+L622: Twenty-First Century Fox, Inc. Class B  |     |    | 4,934,871  |    |     |    | 127,270,323  |
+L623: Tyson Foods, Inc. Class A  |     |    | 3,260,884  |    |     |    | 229,729,278  |
+L624: UDR, Inc. REIT  |     |    | 2,962,153  |    |     |    | 112,650,679  |
+L625: Ulta Salon Cosmetics & Fragrance, Inc.(a)  |     |    | 655,124  |    |     |    | 148,097,331  |
+L626: Under Armour, Inc. Class A(a)  |     |    | 2,015,913  |    |     |    | 33,222,246  |
+L627: Under Armour, Inc. Class C(a)  |     |    | 2,029,312  |    |     |    | 30,480,266  |
+L628: Union Pacific Corp.  |     |    | 9,011,514  |    |     |    | 1,045,065,279  |
+L629: United Continental Holdings, Inc.(a)  |     |    | 2,906,529  |    |     |    | 176,949,486  |
+L630: United Parcel Service, Inc. Class B  |     |    | 7,736,489  |    |     |    | 929,074,964  |
+L631: United Rentals, Inc.(a)  |     |    | 945,265  |    |     |    | 131,146,066  |
+L632: United Technologies Corp.  |     |    | 8,364,604  |    |     |    | 970,963,232  |
+L633: 
+L634: 
+L635: 
+L636: 
+L637: See accompanying notes to financial statements.
+L638: 
+L639: 
+L640: 
+L641: 5
+L642: 
+L643: * * *
+L644: ##### cite0†Table of Contents L645: 
+L646: SPDR S&P 500 ETF Trust
+L647: 
+L648: Schedule of Investments (continued)
+L649: 
+L650: September 30, 2017
+L651:  |  |  |  |  |  |  |  |
+L652: Common Stocks  |     | Shares  |    |     | Value  |
+L653:    |     |    |    |     |    |
+L654: UnitedHealth Group, Inc.  |     |    | 10,888,440  |    |     | $  | 2,132,500,974  |
+L655: Universal Health Services, Inc. Class B  |     |    | 997,856  |    |     |    | 110,702,145  |
+L656: Unum Group  |     |    | 2,579,006  |    |     |    | 131,864,577  |
+L657: US Bancorp  |     |    | 17,932,295  |    |     |    | 960,991,689  |
+L658: Valero Energy Corp.  |     |    | 4,972,373  |    |     |    | 382,524,655  |
+L659: Varian Medical Systems, Inc.(a)  |     |    | 1,056,076  |    |     |    | 105,670,965  |
+L660: Ventas, Inc. REIT  |     |    | 3,972,773  |    |     |    | 258,746,705  |
+L661: VeriSign, Inc.(a)  |     |    | 1,001,330  |    |     |    | 106,531,499  |
+L662: Verisk Analytics, Inc.(a)  |     |    | 1,719,418  |    |     |    | 143,038,383  |
+L663: Verizon Communications, Inc.  |     |    | 45,950,816  |    |     |    | 2,274,105,884  |
+L664: Vertex Pharmaceuticals, Inc.(a)  |     |    | 2,839,798  |    |     |    | 431,762,888  |
+L665: VF Corp.  |     |    | 3,610,076  |    |     |    | 229,492,531  |
+L666: Viacom, Inc. Class B  |     |    | 3,968,096  |    |     |    | 110,471,793  |
+L667: Visa, Inc. Class A  |     |    | 20,596,788  |    |     |    | 2,167,605,969  |
+L668: Vornado Realty Trust REIT  |     |    | 1,936,961  |    |     |    | 148,913,562  |
+L669: Vulcan Materials Co.  |     |    | 1,478,987  |    |     |    | 176,886,845  |
+L670: W.W. Grainger, Inc.  |     |    | 609,282  |    |     |    | 109,518,439  |
+L671: Wal-Mart Stores, Inc.  |     |    | 16,479,757  |    |     |    | 1,287,728,212  |
+L672: Walgreens Boots Alliance, Inc.  |     |    | 10,378,626  |    |     |    | 801,437,500  |
+L673: Walt Disney Co.  |     |    | 17,401,296  |    |     |    | 1,715,245,747  |
+L674: Waste Management, Inc.  |     |    | 4,551,268  |    |     |    | 356,227,746  |
+L675: Waters Corp.(a)  |     |    | 899,238  |    |     |    | 161,431,206  |
+L676: WEC Energy Group, Inc.  |     |    | 3,554,628  |    |     |    | 223,159,546  |
+L677: Wells Fargo & Co.  |     |    | 50,302,090  |    |     |    | 2,774,160,263  |
+L678: Welltower, Inc. REIT  |     |    | 4,124,773  |    |     |    | 289,889,046  |
+L679: Western Digital Corp.  |     |    | 3,280,917  |    |     |    | 283,471,229  |
+L680: Western Union Co.  |     |    | 5,223,452  |    |     |    | 100,290,278  |
+L681:  |  |  |  |  |  |  |  |
+L682: Common Stocks  |     | Shares  |    |     | Value  |
+L683:    |     |    |    |     |    |
+L684: WestRock Co.  |     |    | 2,811,783  |    |     | $  | 159,512,450  |
+L685: Weyerhaeuser Co. REIT  |     |    | 8,430,081  |    |     |    | 286,875,656  |
+L686: Whirlpool Corp.  |     |    | 837,484  |    |     |    | 154,465,549  |
+L687: Williams Cos., Inc.  |     |    | 9,295,899  |    |     |    | 278,969,929  |
+L688: Willis Towers Watson PLC  |     |    | 1,513,821  |    |     |    | 233,476,613  |
+L689: Wyndham Worldwide Corp.  |     |    | 1,180,976  |    |     |    | 124,486,680  |
+L690: Wynn Resorts, Ltd.  |     |    | 901,847  |    |     |    | 134,303,055  |
+L691: Xcel Energy, Inc.  |     |    | 5,719,436  |    |     |    | 270,643,712  |
+L692: Xerox Corp.  |     |    | 2,388,801  |    |     |    | 79,523,185  |
+L693: Xilinx, Inc.  |     |    | 2,828,799  |    |     |    | 200,363,833  |
+L694: XL Group, Ltd.  |     |    | 3,020,278  |    |     |    | 119,149,967  |
+L695: Xylem, Inc.  |     |    | 2,024,199  |    |     |    | 126,775,583  |
+L696: Yum! Brands, Inc.  |     |    | 3,885,548  |    |     |    | 286,015,188  |
+L697: Zimmer Biomet Holdings, Inc.  |     |    | 2,263,596  |    |     |    | 265,044,456  |
+L698: Zions Bancorp  |     |    | 2,270,292  |    |     |    | 107,112,377  |
+L699: Zoetis, Inc.  |     |    | 5,532,660  |    |     |    | 352,762,407  |
+L700:  |     |  |  |  |     |    |    |
+L701: TOTAL COMMON STOCKS
+L702: (Cost $239,730,868,844)  |     |  |  |  |     | $  | 243,028,279,842  |
+L703:  |     |  |  |  |     |    |    |
+L704: 
+L705: 
+L706: (a)  | Non-income producing security.
+L707: (b)  | Affiliate of PDR Services LLC (the “Sponsor”). See the table below for more information.
+L708: (c)  | Affiliate of State Street Global Advisors Trust Company (the “Trustee”). See the table below for more information.
+L709: 
+L710: PLC = Public Limited Company
+L711: 
+L712: REIT = Real Estate Investment Trust
+L713: 
+L714: 
+L715: 
+L716: The following table summarizes the value of the Fund’s investments according to the fair value hierarchy as of September 30, 2017.
+L717:  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+L718: Description  |     | Level 1 —
+L719: Quoted
+L720: Prices  |    |     | Level 2 —
+L721: Other Significant
+L722: Observable
+L723: Inputs  |    |     | Level 3 —
+L724: Significant
+L725: Unobservable
+L726: Inputs  |    |     | Total  |
+L727: ASSETS:  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L728: INVESTMENTS:  |     |  |  |  |     |  |  |  |     |  |  |  |     |  |  |
+L729: Common Stocks  |     | $  | 243,028,279,842  |    |     | $  | —  |    |     | $  | —  |    |     | $  | 243,028,279,842  |
+L730: See accompanying notes to financial statements.
+L731: 
+L732: 
+L733: 
+L734: 6
+L735: 
+L736: * * *
+L737: ##### cite0†Table of Contents L738: 
+L739: SPDR S&P 500 ETF Trust
+L740: 
+L741: Schedule of Investments (continued)
+L742: 
+L743: September 30, 2017
+L744: 
+L745: 
+L746: 
+L747: 
+L748: 
+L749: 
+L750: 
+L751: INVESTMENTS IN AFFILIATES OF THE TRUSTEE AND THE SPONSOR
+L752: 
+L753: SPDR S&P 500 ETF Trust has invested in State Street Corp., which is considered an affiliate of the Trustee and Intercontinental Exchange, Inc., which is considered an affiliate of the Sponsor. Amounts related to these investments at September 30, 2017 and for the year then ended are (Note 3):
+L754:  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+L755:    |    | Number
+L756: of Shares
+L757: Held at
+L758: 9/30/16  |    |    | Value At
+L759: 9/30/16  |    |    | Cost of
+L760: Purchases*  |    |    | Proceeds
+L761: from
+L762: Shares
+L763: Sold*  |    |    | Realized
+L764: Gain (Loss)  |    |    | Change in
+L765: Unrealized
+L766: Appreciation/
+L767: Depreciation  |    |    | Number
+L768: of Shares
+L769: Held at
+L770: 9/30/17  |    |    | Value at
+L771: 9/30/17  |    |    | Dividend
+L772: Income  |
+L773: Intercontinental Exchange, Inc.  |    |    | 6,243,985  | **   |    | $  | 336,375,960  |    |    | $  | 376,735,885  |    |    | $  | 355,624,285  |    |    | $  | 59,951,429  |    |    | $  | 37,759,517  |    |    |    | 6,625,888  |    |    | $  | 455,198,506  |    |    | $  | 5,308,584  |
+L774: State Street Corp  |    |    | 3,879,436  |    |    |    | 270,125,129  |    |    |    | 331,844,872  |    |    |    | 304,321,550  |    |    |    | 29,590,003  |    |    |    | 75,530,862  |    |    |    | 4,215,714  |    |    |    | 402,769,316  |    |    |    | 6,533,859  |
+L775:  |    |  |  |  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |  |  |  |    |    |    |    |    |    |    |
+L776: TOTAL  |    |  |  |  |    | $  | 606,501,089  |    |    | $  | 708,580,757  |    |    | $  | 659,945,835  |    |    | $  | 89,541,432  |    |    | $  | 113,290,379  |    |    |  |  |  |    | $  | 857,967,822  |    |    | $  | 11,842,443  |
+L777:  |    |  |  |  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |  |  |  |    |    |    |    |    |    |    |
+L778: 
+L779: 
+L780: *  | Purchased and Sold figures include securities received or delivered from processing creations or redemptions of Units.
