@@ -15,6 +15,7 @@ def test_health_returns_ok():
     assert response.json() == {"status": "ok"}
 
 
+
 def test_workspace_is_served_without_exposing_repository_files():
     # The mount exposes only the interface folder while API routes remain separate
     with TestClient(app) as client:
@@ -22,5 +23,15 @@ def test_workspace_is_served_without_exposing_repository_files():
         script = client.get("/workspace/workspace.js")
         private = client.get("/workspace/context/background_information.txt")
     assert page.status_code == script.status_code == 200
-    assert "Simulated assets and returns" in page.text
+    assert "Before you begin" in page.text
+    assert "Simulated demo" not in page.text
     assert private.status_code == 404
+
+
+def test_root_redirect_and_cache_headers():
+    with TestClient(app) as client:
+        response = client.get("/", follow_redirects=False)
+        assert response.headers["location"] == "/workspace/"
+        page = client.get("/workspace/")
+        assert page.headers["cache-control"] == "no-cache"
+        assert page.headers["x-content-type-options"] == "nosniff"

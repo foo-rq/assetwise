@@ -2,15 +2,37 @@ from pathlib import Path
 from fastapi.staticfiles import StaticFiles
 from typing import Literal
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
 from pydantic import BaseModel
 
-from backend.simulation import SimulatedHistory, build_simulated_history
-from backend.analytics import AllocationRequest, PortfolioAnalysis, analyse_portfolio
-from backend.comparison import ComparisonRequest, PortfolioComparison, compare_portfolios
+from backend.api import router as portfolio_router
+from backend.storage import router as storage_router
 
 # Uvicorn imports this object when we start backend.main:app
 app = FastAPI(title="Assetwise API", version="0.1.0")
+app.include_router(portfolio_router)
+app.include_router(storage_router)
+
+# Opening the deployed site should reach the workspace without requiring a path to be typed
+@app.get("/", include_in_schema=False)
+def home():
+    return RedirectResponse("/workspace/")
+
+
+@app.middleware("http")
+async def refresh_workspace_files(request, call_next):
+    response = await call_next(request)
+
+    # Revalidate interface files so a cached page cannot pair old markup with new scripts
+    if request.url.path.startswith("/workspace"):
+        response.headers["Cache-Control"] = "no-cache"
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    response.headers["Referrer-Policy"] = "same-origin"
+    if request.url.path.startswith("/api/storage"):
+        # Private portfolios must never enter shared browser or proxy caches
+        response.headers["Cache-Control"] = "no-store"
+    return response
 
 # A fixed status value gives clients a predictable response and documents it in /docs
 class HealthResponse(BaseModel):
@@ -21,29 +43,6 @@ class HealthResponse(BaseModel):
 @app.get("/health", response_model=HealthResponse, tags=["health"])
 def health() -> HealthResponse:
     return HealthResponse()
-
-# Keep invented history on an explicitly named route with its source in every response
-@app.get("/demo/history", response_model=SimulatedHistory, tags=["demo"])
-def demo_history() -> SimulatedHistory:
-    return build_simulated_history()
-
-# Accept allocation percentages while keeping the simulated history controlled by the server
-@app.post("/demo/analysis", response_model=PortfolioAnalysis, tags=["demo"])
-def demo_analysis(allocation: AllocationRequest) -> PortfolioAnalysis:
-    try:
-        return analyse_portfolio(build_simulated_history(), allocation)
-    except ValueError as error:
-        # Invalid allocations need an actionable response rather than a server error
-        raise HTTPException(status_code=422, detail=str(error)) from error
-
-# Compare submitted allocations without saving or applying either one
-@app.post("/demo/comparison", response_model=PortfolioComparison, tags=["demo"])
-def demo_comparison(request: ComparisonRequest) -> PortfolioComparison:
-    try:
-        return compare_portfolios(build_simulated_history(), request)
-    except ValueError as error:
-        # Reject the whole comparison if either side cannot be calculated honestly
-        raise HTTPException(status_code=422, detail=str(error)) from error
 
 # Serve only the interface folder, never the repository or local context files
 # Resolve from this file so starting the server in another directory still works
