@@ -1,0 +1,2 @@
+# Preserve the exact bytes checked by the historical archive manifest
+backend/data/historical.json -text

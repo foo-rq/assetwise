@@ -1,0 +1,338 @@
+{
+  "dataset_version": "archive-2017-v2",
+  "source_url": "https://finance.yahoo.com/",
+  "publisher": "Yahoo Finance",
+  "source_version": "retained responses retrieved 2026-10-28",
+  "licence": "Provider terms apply; not the previous archive's CC0 licence",
+  "retrieved_on": "2026-10-28",
+  "start": "2013-01-02",
+  "end": "2017-11-10",
+  "observations": 1226,
+  "adjustment": "Provider adjusted closes for splits and distributions",
+  "limitations": "Selected surviving assets; revised historical data, not a point-in-time market universe",
+  "files": [
+    {
+      "symbol": "AAPL",
+      "name": "Apple",
+      "file": "AAPL.json",
+      "sha256": "d25ac2bd28081797174b7197de908e515c99c42b3fabd23e976f3a91ffa9b579",
+      "source_url": "https://finance.yahoo.com/quote/AAPL/history/"
+    },
+    {
+      "symbol": "MSFT",
+      "name": "Microsoft",
+      "file": "MSFT.json",
+      "sha256": "6c5276f5a7b1293f7cd8274d35043181a7dd5dfe2efb602f12cc6a282b85a22b",
+      "source_url": "https://finance.yahoo.com/quote/MSFT/history/"
+    },
+    {
+      "symbol": "JNJ",
+      "name": "Johnson & Johnson",
+      "file": "JNJ.json",
+      "sha256": "f9687271943d69ab3189f429317fa40dd8580c0eeae97493bcbd07e6b147ea78",
+      "source_url": "https://finance.yahoo.com/quote/JNJ/history/"
+    },
+    {
+      "symbol": "XOM",
+      "name": "Exxon Mobil",
+      "file": "XOM.json",
+      "sha256": "5f79f9648e1f65266a414738077ff3f83ff5086a0c1323d36dadb0bc4a023ef1",
+      "source_url": "https://finance.yahoo.com/quote/XOM/history/"
+    },
+    {
+      "symbol": "SPY",
+      "name": "SPDR S&P 500 ETF",
+      "file": "SPY.json",
+      "sha256": "9413bb374d019507fd5348a2f525fa3844451cca9cc223940c71a04cfd6d0458",
+      "source_url": "https://finance.yahoo.com/quote/SPY/history/"
+    },
+    {
+      "symbol": "QQQ",
+      "name": "Invesco QQQ ETF",
+      "file": "QQQ.json",
+      "sha256": "0562ae3843b2f0bee607dded5554d3cc8bdb4da7039b060a96152157bda5494f",
+      "source_url": "https://finance.yahoo.com/quote/QQQ/history/"
+    },
+    {
+      "symbol": "IWM",
+      "name": "iShares Russell 2000 ETF",
+      "file": "IWM.json",
+      "sha256": "9bfdbc1135768a3199761e8748189b284ecad89eb39e7065d0648525065adfcc",
+      "source_url": "https://finance.yahoo.com/quote/IWM/history/"
+    },
+    {
+      "symbol": "EFA",
+      "name": "iShares MSCI EAFE ETF",
+      "file": "EFA.json",
+      "sha256": "213e2f1ea1b63dde448f54bfabb977d8b1223cf20f5412733d0bec51dc7459eb",
+      "source_url": "https://finance.yahoo.com/quote/EFA/history/"
+    },
+    {
+      "symbol": "EEM",
+      "name": "iShares MSCI Emerging Markets ETF",
+      "file": "EEM.json",
+      "sha256": "7ffcda2a3258b2685d63151824797b9ff7f1c65a0e93d884a05a14e1ed301518",
+      "source_url": "https://finance.yahoo.com/quote/EEM/history/"
+    },
+    {
+      "symbol": "IEF",
+      "name": "iShares 7-10 Year Treasury Bond ETF",
+      "file": "IEF.json",
+      "sha256": "9f6c75d5370046e7a6ff9ae6705d8b3597f89ce577a040861245855d054db16d",
+      "source_url": "https://finance.yahoo.com/quote/IEF/history/"
+    },
+    {
+      "symbol": "TLT",
+      "name": "iShares 20+ Year Treasury Bond ETF",
+      "file": "TLT.json",
+      "sha256": "b6f9b4b68987cef8c85a26303d0fa86ae4fa752292a582cf581fa0467467ede5",
+      "source_url": "https://finance.yahoo.com/quote/TLT/history/"
+    },
+    {
+      "symbol": "SHY",
+      "name": "iShares 1-3 Year Treasury Bond ETF",
+      "file": "SHY.json",
+      "sha256": "63d7e19e68e7f93671cdc57c3bea39c6e7840a2c2d053810d7f4fa249d7ea6c5",
+      "source_url": "https://finance.yahoo.com/quote/SHY/history/"
+    },
+    {
+      "symbol": "AGG",
+      "name": "iShares Core US Aggregate Bond ETF",
+      "file": "AGG.json",
+      "sha256": "b6958276f23b96e2ff52e45624924f23285be59f4f85d2dd83d5ecd849cc4b04",
+      "source_url": "https://finance.yahoo.com/quote/AGG/history/"
+    },
+    {
+      "symbol": "LQD",
+      "name": "iShares Investment Grade Corporate Bond ETF",
+      "file": "LQD.json",
+      "sha256": "f5f7ad055a4366643cbed53d02a0952138d1fcb73b7719283d330ad49204b92d",
+      "source_url": "https://finance.yahoo.com/quote/LQD/history/"
+    },
+    {
+      "symbol": "GLD",
+      "name": "SPDR Gold Shares",
+      "file": "GLD.json",
+      "sha256": "64c0adc34fab37fe749e0acdad716157e7440588613de1ee3530638820865aaf",
+      "source_url": "https://finance.yahoo.com/quote/GLD/history/"
+    },
+    {
+      "symbol": "VNQ",
+      "name": "Vanguard Real Estate ETF",
+      "file": "VNQ.json",
+      "sha256": "24a27ea89d7557b77a8f66dec1ddf2b7eaf10cd8ddccfd782fab1d14580df7ab",
+      "source_url": "https://finance.yahoo.com/quote/VNQ/history/"
+    },
+    {
+      "symbol": "AMZN",
+      "name": "Amazon",
+      "file": "AMZN.json",
+      "sha256": "2fd1637a48af3851a5c8d6aec14baebe6f1d634c9e7da0acd12797472d743649",
+      "source_url": "https://finance.yahoo.com/quote/AMZN/history/"
+    },
+    {
+      "symbol": "GOOGL",
+      "name": "Alphabet Class A",
+      "file": "GOOGL.json",
+      "sha256": "e4166ee3ec9892be1c38d75611f26669e5227ea6668aabf2f9e6c867dcdd59f8",
+      "source_url": "https://finance.yahoo.com/quote/GOOGL/history/"
+    },
+    {
+      "symbol": "NVDA",
+      "name": "NVIDIA",
+      "file": "NVDA.json",
+      "sha256": "ae8765378c9ce8c000d079a672511809d628292c9394ac86e1b5545941a3d5fb",
+      "source_url": "https://finance.yahoo.com/quote/NVDA/history/"
+    },
+    {
+      "symbol": "TSLA",
+      "name": "Tesla",
+      "file": "TSLA.json",
+      "sha256": "b2795bfacc076fc2abc69164f9df1f1c0da455a6658ac9b60f66e01a7777dc77",
+      "source_url": "https://finance.yahoo.com/quote/TSLA/history/"
+    },
+    {
+      "symbol": "JPM",
+      "name": "JPMorgan Chase",
+      "file": "JPM.json",
+      "sha256": "6cff8cbcf0236fe94d100563752db4adcb0d6ae09535a5a47de7a95308860ea5",
+      "source_url": "https://finance.yahoo.com/quote/JPM/history/"
+    },
+    {
+      "symbol": "BAC",
+      "name": "Bank of America",
+      "file": "BAC.json",
+      "sha256": "bb2781c6e1c9a16e871801e0140c95e5657bd97c395974e1b40da2696342abc1",
+      "source_url": "https://finance.yahoo.com/quote/BAC/history/"
+    },
+    {
+      "symbol": "V",
+      "name": "Visa",
+      "file": "V.json",
+      "sha256": "e4c71789bee7a540da9bb4f0065c586dfbdff12756bad4bf57f7530c2c7d5b8c",
+      "source_url": "https://finance.yahoo.com/quote/V/history/"
+    },
+    {
+      "symbol": "WMT",
+      "name": "Walmart",
+      "file": "WMT.json",
+      "sha256": "24f3f199bff80641a79b1b0ccfd7cfae0caaa4aaab1c646ea8a6db31d75bd123",
+      "source_url": "https://finance.yahoo.com/quote/WMT/history/"
+    },
+    {
+      "symbol": "KO",
+      "name": "Coca-Cola",
+      "file": "KO.json",
+      "sha256": "d00c740008b38bbf74c29ceb854cee88d1b25698370d9bd89d256939ebc236d7",
+      "source_url": "https://finance.yahoo.com/quote/KO/history/"
+    },
+    {
+      "symbol": "PEP",
+      "name": "PepsiCo",
+      "file": "PEP.json",
+      "sha256": "74ca3e59e1693b07d466e1ea7a24c38c96a6a0fd23a1650710b5911c46d77ce8",
+      "source_url": "https://finance.yahoo.com/quote/PEP/history/"
+    },
+    {
+      "symbol": "PG",
+      "name": "Procter & Gamble",
+      "file": "PG.json",
+      "sha256": "28431175eff05bbeb5f5432d59f2eaba0f9ffe889556243fcb5b35028c1d50d9",
+      "source_url": "https://finance.yahoo.com/quote/PG/history/"
+    },
+    {
+      "symbol": "DIS",
+      "name": "Walt Disney",
+      "file": "DIS.json",
+      "sha256": "793e80a9c791dc594c6edda7431944aca2ec656a95be454405800bd986d038c9",
+      "source_url": "https://finance.yahoo.com/quote/DIS/history/"
+    },
+    {
+      "symbol": "UNH",
+      "name": "UnitedHealth Group",
+      "file": "UNH.json",
+      "sha256": "5b86c4cd053f9fe8fcd7d6e504661e11b09994236ed3e6a2c0b9cef75d1bff3f",
+      "source_url": "https://finance.yahoo.com/quote/UNH/history/"
+    },
+    {
+      "symbol": "PFE",
+      "name": "Pfizer",
+      "file": "PFE.json",
+      "sha256": "d85dc508b1f97b11ca5915e86f39f7c1da0640919dbbf61a0e6fb6d2494435cd",
+      "source_url": "https://finance.yahoo.com/quote/PFE/history/"
+    },
+    {
+      "symbol": "CVX",
+      "name": "Chevron",
+      "file": "CVX.json",
+      "sha256": "6d1849e9b8cc2a9eff2df1a627f4560caf9646ad94b95aa4758cc0db5f96e0eb",
+      "source_url": "https://finance.yahoo.com/quote/CVX/history/"
+    },
+    {
+      "symbol": "CAT",
+      "name": "Caterpillar",
+      "file": "CAT.json",
+      "sha256": "bbc2b3de2af07d3a163325effb6c57df55f052a2352597e5e2af125b552ef214",
+      "source_url": "https://finance.yahoo.com/quote/CAT/history/"
+    },
+    {
+      "symbol": "BA",
+      "name": "Boeing",
+      "file": "BA.json",
+      "sha256": "ca9ffd1c143b4cff44ac347e8bdf7eaa605dba73d3448f025a532c56d59f0f3c",
+      "source_url": "https://finance.yahoo.com/quote/BA/history/"
+    },
+    {
+      "symbol": "NEE",
+      "name": "NextEra Energy",
+      "file": "NEE.json",
+      "sha256": "dd2fe54e6133b8ceca832974d7926664e659a4829e6852e999fbea0347209d8c",
+      "source_url": "https://finance.yahoo.com/quote/NEE/history/"
+    },
+    {
+      "symbol": "VTI",
+      "name": "Vanguard Total Stock Market ETF",
+      "file": "VTI.json",
+      "sha256": "dce4f698360dfd7ca453c96ff4be88c155086e2ad63040033d9aeff9cfab55a0",
+      "source_url": "https://finance.yahoo.com/quote/VTI/history/"
+    },
+    {
+      "symbol": "IVV",
+      "name": "iShares Core S&P 500 ETF",
+      "file": "IVV.json",
+      "sha256": "10504de8a676f1ee5a687c13a2cc40c9c38013f84824f70a9fbf725395f3950a",
+      "source_url": "https://finance.yahoo.com/quote/IVV/history/"
+    },
+    {
+      "symbol": "VEA",
+      "name": "Vanguard FTSE Developed Markets ETF",
+      "file": "VEA.json",
+      "sha256": "f45cf8cc8e924d5a4388d9e3f8a26e6145485cbd2af05332e1923412fc24adcb",
+      "source_url": "https://finance.yahoo.com/quote/VEA/history/"
+    },
+    {
+      "symbol": "VWO",
+      "name": "Vanguard FTSE Emerging Markets ETF",
+      "file": "VWO.json",
+      "sha256": "eadfc274621507a1729cad69852e4718a4db67652eea664a5ebdfc98a55d8827",
+      "source_url": "https://finance.yahoo.com/quote/VWO/history/"
+    },
+    {
+      "symbol": "BND",
+      "name": "Vanguard Total Bond Market ETF",
+      "file": "BND.json",
+      "sha256": "e04705b669cc7bcc229b020a2eb1d68b48b211034e8cae44089a07b2171f9e7a",
+      "source_url": "https://finance.yahoo.com/quote/BND/history/"
+    },
+    {
+      "symbol": "TIP",
+      "name": "iShares TIPS Bond ETF",
+      "file": "TIP.json",
+      "sha256": "6ca44b28f0f61da61f6b8120e78abbad3fa45c94fb8911b5b8034f023a1175cb",
+      "source_url": "https://finance.yahoo.com/quote/TIP/history/"
+    },
+    {
+      "symbol": "HYG",
+      "name": "iShares iBoxx High Yield Corporate Bond ETF",
+      "file": "HYG.json",
+      "sha256": "266cac887f714b9defd95a9aff2122cd77a6d9df7704b1ac70ca1f7a0f5430da",
+      "source_url": "https://finance.yahoo.com/quote/HYG/history/"
+    },
+    {
+      "symbol": "SLV",
+      "name": "iShares Silver Trust",
+      "file": "SLV.json",
+      "sha256": "60d5d8195b0c842909171c3668e0c16338c1c50da12bc9a3f54c8b42ed00e344",
+      "source_url": "https://finance.yahoo.com/quote/SLV/history/"
+    },
+    {
+      "symbol": "XLF",
+      "name": "Financial Select Sector SPDR Fund",
+      "file": "XLF.json",
+      "sha256": "6f61ad65304be8e8ca6b239dc8a75c18831b328ab070e6e59d36b02819406ef5",
+      "source_url": "https://finance.yahoo.com/quote/XLF/history/"
+    },
+    {
+      "symbol": "XLK",
+      "name": "Technology Select Sector SPDR Fund",
+      "file": "XLK.json",
+      "sha256": "7c02b897569e6a8dc6d25b983b61913c57bd71b3e4799e69ba3018525d7510f8",
+      "source_url": "https://finance.yahoo.com/quote/XLK/history/"
+    },
+    {
+      "symbol": "XLV",
+      "name": "Health Care Select Sector SPDR Fund",
+      "file": "XLV.json",
+      "sha256": "e56a992ea27956009c1c76269a957dad758c9260a2fcdb0997c4d7996ebfba6b",
+      "source_url": "https://finance.yahoo.com/quote/XLV/history/"
+    },
+    {
+      "symbol": "XLE",
+      "name": "Energy Select Sector SPDR Fund",
+      "file": "XLE.json",
+      "sha256": "2ccbb67cc0526eaa9c535fa595defe17001eda12af6f646183da3f79009f9054",
+      "source_url": "https://finance.yahoo.com/quote/XLE/history/"
+    }
+  ],
+  "snapshot_sha256": "e4a58f895e5eeaf342bac7937b6078460d360fe029b138f2921be19559e233a9"
+}
