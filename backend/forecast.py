@@ -40,7 +40,7 @@ class ForecastComparison(BaseModel):
     assumptions: str = (
         "Annual estimates use 252 sessions; daily rebalancing; cash earns 0%; no costs or taxes. "
         "Values are nominal and exclude inflation. "
-        "Range is a normal-model approximation, not a calibrated guarantee. "
+        "Ranges use a normal-model approximation; real-world coverage is unverified. "
         "Changing market conditions and data errors can invalidate estimates."
     )
 
@@ -211,7 +211,7 @@ def forecast_comparison(model, current, proposed, horizon_years=None):
         unit = "year" if horizon_years == 1 else "years"
         assumptions = (f"Modelled compounded growth over {horizon_years:g} {unit} uses a lognormal approximation "
                        "with uncertainty in the fitted mean. Relative wealth compares proposed/current wealth. " +
-                       "The drawdown screen is a conservative path-loss bound under this model, not a guaranteed maximum loss. " +
+                       "The drawdown screen estimates peak-to-trough losses under the model. Actual losses can be larger. " +
                        assumptions)
     return ForecastComparison(model=model["model"], validation_windows=model["validation_windows"],
         validation_return_rmse=model["validation_return_rmse"],

@@ -46,13 +46,13 @@ test('forecast preview sends preferences and leads with growth for the selected 
   assert.match(elements['proposal-results'].innerHTML, /86.00%/);
   assert.match(elements['proposal-results'].innerHTML, /9.00%/);
   assert.match(elements['proposal-results'].innerHTML, /<summary>Historical comparison/);
-  assert.match(elements['proposal-explanation'].textContent, /growth over 9 years rises/);
+  assert.match(elements['proposal-explanation'].textContent, /growth over 9 years: 72.00% to 86.00%/);
   assert.doesNotMatch(elements['proposal-results'].innerHTML, /Next 12 months/);
   assert.match(elements['proposal-results'].innerHTML, /final value relative to current: -15.00% to 25.00%/);
   assert.match(elements['proposal-results'].innerHTML, /<th scope="row">Growth range, lower end<\/th><td class="number">-20.00%<\/td><td class="number">-10.00%<\/td>/);
   assert.match(elements['proposal-results'].innerHTML, /<th scope="row">Growth range, upper end<\/th><td class="number">180.00%<\/td><td class="number">170.00%<\/td>/);
   assert.match(elements['proposal-results'].innerHTML, /<th scope="row">Drawdown screen<\/th><td class="number">60.00%<\/td><td class="number">50.00%<\/td>/);
-  assert.match(elements['proposal-results'].innerHTML, /peak-to-trough loss estimate during this period, not a guaranteed maximum/);
+  assert.match(elements['proposal-results'].innerHTML, /Actual losses can be larger/);
 });
 
 test('forecast distinguishes estimator disagreement from future-outcome uncertainty', () => {
@@ -184,4 +184,44 @@ test('comparing identical allocations explains why Apply is disabled', async () 
   await context.previewPortfolio('Same portfolio', { A: 70, B: 0 });
   assert.equal(elements['apply-proposal'].disabled, true);
   assert.match(elements['proposal-explanation'].textContent, /no change to apply/);
+});
+
+for (const experience of ['new', 'some', 'confident']) {
+  test(`${experience}: lower-growth explanations identify the actual preference trade-off`, () => {
+    const { context } = setup(response);
+    const comparison = { current: { maximum_drawdown: .15 }, forecast: {
+      horizon_years: 3,
+      current: { projected_growth: .5, estimated_annual_volatility: .2, drawdown_screen: .3, projected_growth_range: [-.25, 1] },
+      proposed: { projected_growth: .2, estimated_annual_volatility: .1 }
+    } };
+    const base = { experience, goal: 'growth', capacity: 'spare', max_loss_percent: 10 };
+    const limited = context.explainComparison(comparison, base);
+    assert.match(limited, /exceeds your 10.00% loss limit/);
+    assert.match(limited, /gives up estimated growth/);
+    assert.match(limited, /50.00% to 20.00%/);
+    const preserve = context.explainComparison(comparison, { ...base, goal: 'preserve', max_loss_percent: 80 });
+    assert.match(preserve, /chose to protect your money/);
+    const essential = context.explainComparison(comparison, { ...base, capacity: 'essential', max_loss_percent: null });
+    assert.match(essential, /covers essential needs/);
+    const explore = context.explainComparison(comparison, { ...base, goal: 'learn', max_loss_percent: null });
+    assert.match(explore, /trades some estimated growth/);
+    assert.doesNotMatch(explore, /exceeds your|protect your money/);
+    // A manual comparison can lower growth and increase risk; never call that a risk reduction
+    comparison.forecast.proposed.estimated_annual_volatility = .3;
+    assert.match(context.explainComparison(comparison, { ...base, max_loss_percent: null }), /without reducing fluctuations/);
+    comparison.forecast.horizon_years = null;
+    comparison.forecast.current.projected_growth = null;
+    comparison.forecast.proposed.projected_growth = null;
+    assert.doesNotMatch(context.explainComparison(comparison, base), /growth over|gives up/);
+  });
+}
+
+test('analysis limits separate essential caveats from optional calculations', () => {
+  const html = readFileSync(join(__dirname, '../../prototype/index.html'), 'utf8');
+  const dialog = html.slice(html.indexOf('<dialog id="analysis-dialog"'), html.indexOf('<!-- Saved snapshots'));
+  assert.match(dialog, /<summary>Calculation details<\/summary>/);
+  assert.match(dialog, /<summary>Data coverage<\/summary>/);
+  assert.match(dialog, /<summary>Forecast assumptions<\/summary>/);
+  assert.doesNotMatch(dialog, /<details[^>]* open/);
+  assert.match(dialog, /Cash earns 0%/);
 });

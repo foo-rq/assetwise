@@ -5,6 +5,36 @@ let proposalController;
 let proposalSerial = 0;
 let proposalWeights = null;
 
+function explainComparison(comparison, profile) {
+  // Cards and previews use the same figures and preference reason so a growth sacrifice stays explicit
+  const forecast = comparison.forecast;
+  const { current, proposed, horizon_years: years } = forecast;
+  const limit = profile?.max_loss_percent;
+  // Match the three loss checks used for suggestions, including the lower growth bound.
+  const outsideLimit = Number.isFinite(limit) && (
+    comparison.current.maximum_drawdown * 100 > limit + 1e-10 ||
+    current.drawdown_screen * 100 > limit + 1e-10 ||
+    current.projected_growth_range?.[0] * 100 < -limit - 1e-10);
+  const lowerRisk = proposed.estimated_annual_volatility < current.estimated_annual_volatility;
+  // An unanswered horizon must not turn an annual estimate into a period-growth claim.
+  const hasGrowth = years != null && Number.isFinite(current.projected_growth) && Number.isFinite(proposed.projected_growth);
+  const lowerGrowth = hasGrowth && proposed.projected_growth < current.projected_growth - 1e-10;
+  let reason = "";
+  if (lowerGrowth) {
+    if (!lowerRisk) reason = "This option has lower estimated growth without reducing fluctuations. ";
+    else if (outsideLimit) reason = `Your current mix exceeds your ${percent(limit)} loss limit in the risk checks. This option gives up estimated growth to reduce that risk. `;
+    else if (profile?.capacity === "essential") reason = "You said this money covers essential needs. This option prioritises reducing risk over growth. ";
+    else if (profile?.goal === "preserve") reason = "You chose to protect your money. This option trades some estimated growth for smaller fluctuations. ";
+    else reason = "This option trades some estimated growth for smaller fluctuations. ";
+  }
+  const growth = hasGrowth ? `Estimated growth over ${years} ${years === 1 ? "year" : "years"}: ${percent(current.projected_growth * 100)} to ${percent(proposed.projected_growth * 100)}. ` : "";
+  const risk = `Annual fluctuations: ${percent(current.estimated_annual_volatility * 100)} to ${percent(proposed.estimated_annual_volatility * 100)}.`;
+  // Preserve disagreement between return estimators even when the headline estimate improves.
+  const disagreement = forecast.return_change_model_range?.[0] < 0 && forecast.return_change_model_range?.[1] >= 0
+    ? " Return estimates disagree." : "";
+  return reason + growth + risk + disagreement;
+}
+
 function forecastTable(forecast) {
   if (!forecast) return "";
   const years = forecast.horizon_years;
@@ -21,10 +51,10 @@ function forecastTable(forecast) {
   const growthRangeRows = ["Growth range, lower end", "Growth range, upper end"].map((label, index) =>
     `<tr><th scope="row">${label}</th>${[forecast.current, forecast.proposed].map(side =>
       `<td class="number">${side.projected_growth_range ? percent(side.projected_growth_range[index] * 100) : "Unavailable"}</td>`).join("")}</tr>`).join("");
-  const projected = years == null ? "" : `<table><caption>Period estimates over ${years} ${years === 1 ? "year" : "years"}</caption><thead><tr><th>Estimate</th><th class="number">Current</th><th class="number">Proposed</th></tr></thead><tbody>${growthRangeRows}<tr><th scope="row">Drawdown screen</th>${[forecast.current, forecast.proposed].map(side => `<td class="number">${percent(side.drawdown_screen * 100)}</td>`).join("")}</tr><tr><th scope="row">Expected annual return</th>${[forecast.current, forecast.proposed].map(side => `<td class="number">${percent(side.expected_annual_return * 100)}</td>`).join("")}</tr></tbody></table><p>Growth range: approximate 90% model range. Drawdown screen: a conservative peak-to-trough loss estimate during this period, not a guaranteed maximum.</p>`;
+  const projected = years == null ? "" : `<table><caption>Period estimates over ${years} ${years === 1 ? "year" : "years"}</caption><thead><tr><th>Estimate</th><th class="number">Current</th><th class="number">Proposed</th></tr></thead><tbody>${growthRangeRows}<tr><th scope="row">Drawdown screen</th>${[forecast.current, forecast.proposed].map(side => `<td class="number">${percent(side.drawdown_screen * 100)}</td>`).join("")}</tr><tr><th scope="row">Expected annual return</th>${[forecast.current, forecast.proposed].map(side => `<td class="number">${percent(side.expected_annual_return * 100)}</td>`).join("")}</tr></tbody></table><p>Growth range: approximate 90% model range. Drawdown screen: a conservative estimate of the largest fall during this period. Actual losses can be larger.</p>`;
   const periodNote = years == null ? "Choose an investment period in Your preferences to compare growth." : forecast.projection_notice;
   return `<table><caption>Forecast as of ${escapeHTML(forecast.as_of)}</caption><thead><tr><th>Estimate</th><th class="number">Current</th><th class="number">Proposed</th></tr></thead><tbody>${rows.map(([label, key]) =>
-    `<tr><th scope="row">${label}</th>${[forecast.current, forecast.proposed].map(side => `<td class="number">${Number.isFinite(side[key]) ? percent(side[key] * 100) : "Unavailable"}</td>`).join("")}</tr>`).join("")}</tbody></table>${periodNote ? `<p>${escapeHTML(periodNote)}</p>` : ""}<details><summary>Uncertainty and assumptions</summary>${projected}${relativeNote}${estimates}<p>Annual return difference: ${range} percentage points (approximate 90% model range). A negative result means the change could earn less.</p><p>${escapeHTML(forecast.assumptions)}</p><p>These ranges are model estimates, not reliable limits on future outcomes.</p></details>`;
+    `<tr><th scope="row">${label}</th>${[forecast.current, forecast.proposed].map(side => `<td class="number">${Number.isFinite(side[key]) ? percent(side[key] * 100) : "Unavailable"}</td>`).join("")}</tr>`).join("")}</tbody></table>${periodNote ? `<p>${escapeHTML(periodNote)}</p>` : ""}<details><summary>Uncertainty and assumptions</summary>${projected}${relativeNote}${estimates}<p>Annual return difference: ${range} percentage points (approximate 90% model range). A negative result means the change could earn less.</p><details><summary>Model calculations</summary><p>${escapeHTML(forecast.assumptions)}</p></details><p>Actual outcomes can fall outside these ranges.</p></details>`;
 }
 
 function validateForecast(forecast, asOf, profile = investorProfile) {
@@ -139,10 +169,7 @@ async function previewPortfolio(name, next) {
       : comparison.proposed[key] > comparison.current[key] ? higher : "is unchanged";
     $("proposal-explanation").textContent = `In this sample, volatility ${direction("annualised_volatility", "falls", "rises")}, return ${direction("annualised_arithmetic_return", "falls", "rises")} and the largest peak-to-low loss ${direction("maximum_drawdown", "shrinks", "grows")}. Applying changes your hypothetical portfolio only.`;
     if (comparison.forecast) {
-      const { current, proposed, horizon_years: years } = comparison.forecast;
-      const growth = years == null || !Number.isFinite(current.projected_growth) || !Number.isFinite(proposed.projected_growth)
-        ? "" : ` Modelled growth over ${years} ${years === 1 ? "year" : "years"} ${proposed.projected_growth < current.projected_growth ? "falls" : proposed.projected_growth > current.projected_growth ? "rises" : "is unchanged"}.`;
-      $("proposal-explanation").textContent = `The model estimates ${proposed.estimated_annual_volatility < current.estimated_annual_volatility ? "lower" : "higher or unchanged"} annual volatility.${growth} These estimates can be wrong. Applying changes your hypothetical portfolio only.`;
+      $("proposal-explanation").textContent = explainComparison(comparison, investorProfile);
     }
     // Show both removed and added symbols by taking the union of current/proposed holdings
     const symbols = [...new Set([...Object.keys(weights), ...Object.keys(next)])];
@@ -217,7 +244,7 @@ $("show-detail").addEventListener("click", () => {
       table.innerHTML = `<caption>Return correlations</caption><thead><tr><th>Pair</th><th class="number">Correlation</th></tr></thead><tbody>${result.asset_correlations.map(pair => `<tr><th scope="row">${escapeHTML(pair.asset_a)}/${escapeHTML(pair.asset_b)}</th><td class="number">${pair.value === null ? "Undefined" : pair.value.toFixed(2)}</td></tr>`).join("")}</tbody>`;
       content.append(table);
       const explanation = document.createElement("p");
-      explanation.textContent = "Values near 1 moved together; near -1 moved oppositely. Constant returns have undefined correlation. These sample relationships are not forecasts.";
+      explanation.textContent = "Values near 1 moved together; near -1 moved oppositely. Constant returns have undefined correlation. These relationships can change over time.";
       content.append(explanation);
     }
   }
