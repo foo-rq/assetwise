@@ -6,7 +6,7 @@ const source = readFileSync(require('node:path').join(__dirname, '../../prototyp
 
 function setup(apiPlanning) {
   const nodes = {};
-  const makeNode = () => ({ children: [], hidden: false, textContent: '', listeners: {},
+  const makeNode = () => ({ style: {}, offsetHeight: 0, children: [], hidden: false, textContent: '', listeners: {},
     classList: { toggle() {} }, addEventListener(name, action) { this.listeners[name] = action; },
     setAttribute() {}, append(...items) { this.children.push(...items); },
     replaceChildren() { this.children = []; } });
@@ -23,6 +23,8 @@ function setup(apiPlanning) {
     document: { addEventListener() {}, createElement: makeNode, querySelector: makeNode },
     $: id => nodes[id] ||= makeNode()
   });
+  const planning = readFileSync(require('node:path').join(__dirname, '../../prototype/planning.js'), 'utf8');
+  vm.runInContext(planning.slice(planning.indexOf('function explainComparison'), planning.indexOf('function forecastTable')), context);
   vm.runInContext(source, context);
   return { context, nodes };
 }
@@ -175,7 +177,7 @@ test('editing while suggestions are pending cannot reveal stale proposals', asyn
 test('empty results allow no change and failures offer retry', async () => {
   const first = setup(async () => ({ dataset_version: 'archive', proposals: [] }));
   await first.context.loadSuggestions();
-  assert.match(first.nodes['suggestion-state'].textContent, /Keeping this mix/);
+  assert.match(first.nodes['suggestion-state'].textContent, /Keep this mix/);
   const second = setup(async () => { throw new Error('Offline'); });
   await second.context.loadSuggestions();
   assert.equal(second.nodes['retry-suggestions'].hidden, false);
@@ -187,7 +189,7 @@ test('a missing investment period shows the server recovery instruction rather t
   const { context, nodes } = setup(async () => ({ dataset_version: 'archive', proposals: [], evaluated: 0, criteria: reason }));
   await context.loadSuggestions();
   assert.equal(nodes['suggestion-state'].textContent, reason);
-  assert.doesNotMatch(nodes['suggestion-state'].textContent, /Keeping this mix/);
+  assert.doesNotMatch(nodes['suggestion-state'].textContent, /Keep this mix/);
 });
 
 test('a suggestion from another dataset never reaches the list', async () => {

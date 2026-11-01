@@ -135,6 +135,8 @@ function refreshExperience() {
   $("portfolio-analysis").hidden = !hasRows;
   $("suggestions").hidden = !invested;
   document.querySelector(".workspace").classList.toggle("empty-workspace", !hasRows);
+  // Retain the last layout during recalculation; aria-busy hides its stale values
+  if (hasRows && $("portfolio-analysis").ariaBusy === "true") return;
   if (!latestAnalysis || !hasRows) {
     // Old exposure and loss figures must not accompany a newly edited allocation
     $("portfolio-reading").textContent = "";
@@ -203,8 +205,8 @@ function refreshExperience() {
     context.push(`You prefer smaller losses; this mix fell ${percent(latestAnalysis.maximum_drawdown * 100)} from its peak in this sample. Future losses could be larger.`);
   }
   if (investorProfile?.goal === "income") context.push("Income payments are not modelled separately, so these figures cannot assess your income goal.");
-  if (invested && !breaches.length && investorProfile?.goal === "preserve") context.push("Lower volatility does not guarantee that your original investment is protected.");
-  if (invested && !breaches.length && investorProfile?.goal === "growth") context.push("Compare the return trade-off as well as volatility. Lower fluctuations alone do not establish a better growth portfolio.");
+  if (invested && !breaches.length && investorProfile?.goal === "preserve") context.push("Even portfolios with smaller fluctuations can lose money.");
+  if (invested && !breaches.length && investorProfile?.goal === "growth") context.push("Compare estimated growth and possible losses before choosing a change.");
   $("profile-reading").textContent = context.join(" ");
 }
 
@@ -213,6 +215,8 @@ function invalidateSuggestions() {
   ++suggestionSerial;
   suggestionController?.abort();
   clearTimeout(suggestionTimer);
+  // Prevent a temporary empty list from pulling the page upward while new suggestions load
+  $("suggestion-list").style.minHeight = `${$("suggestion-list").offsetHeight}px`;
   $("suggestion-list").replaceChildren();
   $("suggestion-state").textContent = "Updating suggestions";
   $("retry-suggestions").hidden = true;
@@ -227,6 +231,8 @@ document.addEventListener("analysis:pending", () => {
   refreshExperience();
 });
 document.addEventListener("analysis:failed", () => {
+  refreshExperience();
+  $("suggestion-list").style.minHeight = "";
   $("suggestion-state").textContent = "Suggestions need a successful analysis. Use Retry above.";
 });
 document.addEventListener("portfolio:analysed", () => {
@@ -267,9 +273,9 @@ async function loadSuggestions() {
     // A missing answer can prevent evaluation entirely; keep the server's recovery instruction visible
     const stopped = results.every(result => result.evaluated === 0) ? results[0].criteria : "";
     $("suggestion-state").textContent = proposals.length
-      ? `${results[0].criteria || "Lower historical volatility"}. Preview a change before applying.`
+      ? "Compare the trade-offs before applying a change. You can keep your current mix."
       : stopped ? stopped
-      : "None of the tested changes met the comparison rules for your preferences. Keeping this mix is an option; this does not prove it suits your goals.";
+      : "No tested change met your preferences. Keep this mix or edit your holdings and preferences.";
     for (const proposal of proposals) {
       const symbol = proposal.name;
       const before = proposal.comparison.current;
@@ -285,13 +291,7 @@ async function loadSuggestions() {
       const reason = document.createElement("p");
       reason.textContent = `Volatility is ${percent((before.annualised_volatility - after.annualised_volatility) * 100).replace("%", " percentage points")} lower in this sample.`;
       if (proposal.comparison.forecast) {
-        const forecast = proposal.comparison.forecast;
-        reason.textContent = `Estimated annual volatility falls from ${percent(forecast.current.estimated_annual_volatility * 100)} to ${percent(forecast.proposed.estimated_annual_volatility * 100)}. Returns may still be lower.`;
-        if (forecast.return_change_model_range?.[0] < -1e-12) {
-          const tradeoff = forecast.return_change_model_range[1] >= -1e-12
-            ? "Return estimates disagree; returns could be lower." : "Return estimates are lower.";
-          reason.textContent = reason.textContent.replace("Returns may still be lower.", tradeoff);
-        }
+        reason.textContent = explainComparison(proposal.comparison, investorProfile);
       }
       const tradeoff = document.createElement("p");
       tradeoff.hidden = true;
@@ -306,12 +306,6 @@ async function loadSuggestions() {
       preview.setAttribute("aria-label", `Preview ${name}`);
       preview.addEventListener("click", () => previewPortfolio(title.textContent, proposal.weights));
       article.append(title, reason, tradeoff, preview);
-      // Reuse the preview's table so the same units and unavailable states appear in both places
-      const resultsTable = document.createElement("div");
-      resultsTable.className = "suggestion-comparison";
-      resultsTable.innerHTML = proposal.comparison.forecast
-        ? forecastTable(proposal.comparison.forecast) : comparisonTable(proposal.comparison);
-      article.append(resultsTable);
       $("suggestion-list").append(article);
     }
   } catch (error) {
@@ -319,6 +313,8 @@ async function loadSuggestions() {
     $("suggestion-state").textContent = "Suggestions could not load. Your holdings are unchanged. Retry when the server is available.";
     $("retry-suggestions").hidden = false;
   } finally {
+    // An aborted older request must not release space reserved by its replacement.
+    if (serial === suggestionSerial) $("suggestion-list").style.minHeight = "";
     clearTimeout(timeout);
   }
 }
