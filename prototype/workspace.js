@@ -82,6 +82,8 @@ function render() {
   $("error").textContent = ""; search();
 
   // Refresh analysis after every accepted edit, including Undo and Reset
+  // Mark the report busy before listeners can combine new weights with the old analysis
+  $("portfolio-analysis").ariaBusy = "true";
   document.dispatchEvent(new Event("portfolio:changed"));
   updateAnalysis();
 }
@@ -219,6 +221,7 @@ async function updateAnalysis() {
   analysisRequest = controller;
   const timeout = setTimeout(() => controller.abort(), 10000);
 
+  $("portfolio-analysis").ariaBusy = "true";
   // Hide stale numbers without changing their space while the new allocation is calculated
   for (const id of Object.keys(metricFields)) {
     $(id).classList.add("pending");
@@ -227,8 +230,6 @@ async function updateAnalysis() {
   $("sharpe").classList.remove("available");
   $("expected-return").textContent = "Calculating";
   $("estimated-volatility").textContent = "Calculating";
-  $("forecast-details").hidden = true;
-  $("forecast-period-note").textContent = "";
   latestAnalysis = null;
   document.dispatchEvent(new Event("analysis:pending"));
   $("analysis-state").textContent = "Calculating";
@@ -266,7 +267,7 @@ async function updateAnalysis() {
     const growth = years == null ? forecast?.current.expected_annual_return : forecast.current.projected_growth;
     $("forecast-growth-label").textContent = years == null ? "Expected annual return"
       : `Modelled growth over ${years} ${years === 1 ? "year" : "years"}`;
-    $("forecast-growth-hint").textContent = years == null ? "Model estimate, not a promised return"
+    $("forecast-growth-hint").textContent = years == null ? "Estimated annual return"
       : "Compound growth before inflation, costs and taxes";
     $("expected-return").textContent = Number.isFinite(growth) ? percent(growth * 100) : "Unavailable";
     $("estimated-volatility").textContent = forecast ? percent(forecast.current.estimated_annual_volatility * 100) : "Unavailable";
@@ -278,12 +279,14 @@ async function updateAnalysis() {
     if (forecast) {
       // Keep the range beside its model assumptions without adding more headline metrics
       const range = forecast.current.projected_growth_range;
-      const projection = range ? `<p>Growth over ${years} ${years === 1 ? "year" : "years"}: ${range.map(value => percent(value * 100)).join(" to ")} (approximate 90% model range).</p>` : "";
-      const annual = years == null ? "" : `<p>Expected annual return: ${percent(forecast.current.expected_annual_return * 100)}.</p>`;
-      const drawdown = years == null ? "" : `<p>Drawdown screen over ${years} ${years === 1 ? "year" : "years"}: ${percent(forecast.current.drawdown_screen * 100)}. A conservative peak-to-trough loss estimate, not a guaranteed maximum.</p>`;
-      $("forecast-detail-content").innerHTML = `${projection}${drawdown}${annual}<p>${escapeHTML(forecast.assumptions)}</p><p>These ranges are model estimates, not reliable limits on future outcomes.</p>`;
+      // Put figures in aligned rows and keep the detailed model explanation behind its own disclosure
+      const projection = range ? `<tr><th scope="row">Growth over ${years} ${years === 1 ? "year" : "years"}</th><td class="number">${range.map(value => percent(value * 100)).join(" to ")}</td></tr>` : "";
+      const annual = `<tr><th scope="row">Expected annual return</th><td class="number">${percent(forecast.current.expected_annual_return * 100)}</td></tr>`;
+      const drawdown = years == null ? "" : `<tr><th scope="row">Modelled peak-to-trough loss</th><td class="number">${percent(forecast.current.drawdown_screen * 100)}</td></tr>`;
+      $("forecast-detail-content").innerHTML = `<p>Possible outcomes over your chosen period.</p><table><tbody>${projection}${drawdown}${annual}</tbody></table><p class="subtle">Approximate 90% model range. Actual growth and losses can fall outside these estimates.</p><details><summary>How the estimates work</summary><p>${escapeHTML(forecast.assumptions)}</p></details>`;
     }
     latestAnalysis = result;
+    $("portfolio-analysis").ariaBusy = "false";
     document.dispatchEvent(new Event("portfolio:analysed"));
     $("analysis-state").textContent = observationLabel(result.return_observations);
   } catch (error) {
@@ -299,6 +302,9 @@ async function updateAnalysis() {
     for (const id of ["expected-return", "estimated-volatility"]) $(id).classList.remove("available");
     $("expected-return").textContent = "Unavailable";
     $("estimated-volatility").textContent = "Unavailable";
+    $("portfolio-analysis").ariaBusy = "false";
+    $("forecast-details").hidden = true;
+    $("forecast-period-note").textContent = "";
     $("retry-analysis").hidden = false;
     document.dispatchEvent(new Event("analysis:failed"));
   } finally {
@@ -310,7 +316,7 @@ $("retry-analysis").addEventListener("click", updateAnalysis);
 let saveSerial = 0;
 function savingFailed(error) {
   // This message has no fade timer because a failed save needs to stay visible until recovery
-  $("save-state").textContent = `${error.message || "Saving failed."} Changes are not confirmed saved.`;
+  $("save-state").textContent = `${(error.message || "Saving failed").replace(/[.!?]+$/, "")}. Changes are not confirmed saved. Export a backup before reloading.`;
   $("retry-save").hidden = false;
 }
 async function savePortfolio() {
@@ -393,11 +399,11 @@ async function loadAssets() {
     $("data-notice").textContent = `Historical prices: ${historyDates[0]} to ${historyDates.at(-1)}. Corrected prices; saved weights are recalculated.`;
     $("analysis-basis").textContent = `Forecast as of ${historyDates.at(-1)}`;
     $("search-note").textContent = `Browse ${data.assets.length} supported stocks and funds or search by name. Prices cover 2013 to 2017.`;
-    $("analysis-dialog-copy").textContent = `${data.notice} ${data.value_basis}. Weights rebalance each trading session. Cash earns 0%; costs and taxes are excluded. Return is the arithmetic mean multiplied by 252; volatility uses the square root of 252. Maximum drawdown is the largest decline from a prior peak. Sharpe uses monthly US Treasury-bill returns converted to daily equivalents from the Kenneth French Data Library. Annualisation assumes uncorrelated daily excess returns. Underlying fund exposure is not included in these return calculations. The archive covers a fixed selection of assets that survived this period, which can make results look better than a wider market sample. Suggestions use a separate model fitted only to this archive. Your investment period sets its compound-growth projection. The model assumes its estimated returns and risks persist; it does not predict later economic events. Forecasts and their uncertainty appear in the suggestion preview. Historical statistics describe the observed sample.`;
+    $("analysis-data-copy").textContent = `${data.notice} ${data.value_basis}.`;
     // Link directly to the archive provenance without adding another source picker
     $("source-link").hidden = !data.source_url;
     if (data.source_url) $("source-link").href = data.source_url;
-    $("proposal-assumptions").textContent = "2017 adjusted prices. The model assumes daily trades to keep these percentages. Leaving holdings untouched changes the risk. Cash earns 0%; costs and taxes are excluded.";
+    $("proposal-assumptions").textContent = "Estimates use 2017 data and fixed allocations. Actual outcomes can differ. Applying updates this practice portfolio.";
     // The detailed chart shares the loaded source limitation instead of retaining the old fictional label
     $("detail-assumptions").textContent = "2017 adjusted prices. Dated sector and overlap coverage is shown in the portfolio report. Uncovered funds remain unknown.";
     weights = {};

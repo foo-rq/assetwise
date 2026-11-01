@@ -17,7 +17,7 @@
 
 </head>
 <body>
-  <header class="brand"><a href="index.html">Asset<span>wise</span></a></header>
+  <header class="brand"><a href="index.html">asset<span>wise</span></a></header>
   <main>
     <noscript><p>Enable JavaScript to edit allocations and calculate your portfolio. Your saved portfolios remain stored on the server.</p></noscript>
     <section id="onboarding" class="survey" aria-labelledby="survey-title">
@@ -28,7 +28,7 @@
           <label>How familiar are you with investing?<select name="experience" required><option value="">Choose</option><option value="new">I'm new to investing</option><option value="some">I've invested; I want guidance</option><option value="confident">I'm comfortable with finance</option></select></label>
           <label>What is your main aim?<select name="goal" required><option value="">Choose</option><option value="learn">Learn and experiment</option><option value="growth">Grow money over time</option><option value="preserve">Protect money I may need</option></select></label>
           <label>In how many years might you need this money?<input name="horizon_years" type="number" min="0.25" max="40" step="0.25" placeholder="Leave blank if unsure"><small>Used to compare modelled growth over your investment period.</small></label>
-          <label>What loss could you accept without affecting this plan?<input name="max_loss_percent" type="number" min="0" max="100" step="1" placeholder="Loss in %, or leave blank if unsure"><small>For example, 20% means $1,000 falling to $800. This is a screening limit, not protection against larger losses.</small></label>
+          <label>What loss could you accept without affecting this plan?<input name="max_loss_percent" type="number" min="0" max="100" step="1" placeholder="Loss in %, or leave blank if unsure"><small>For example, 20% means $1,000 falling to $800. Actual losses can exceed this limit.</small></label>
           <label>How would a loss affect your needs?<select name="capacity" required><option value="">Choose</option><option value="essential">It could affect essential expenses</option><option value="spare">Separate from essential needs</option><option value="unsure">I'm not sure yet</option></select></label>
           <label>Total amount to explore (USD)<input name="amount" type="number" min="0" max="1000000000000" step="0.01" placeholder="Optional"><small>Enter an amount to allocate in dollars, or leave blank to use percentages.</small></label>
         </div>
@@ -75,11 +75,11 @@
 
         <!-- State the role in words as well as styling: this area reports results and takes no allocation input -->
         <div class="analysis-header"><h2 id="analysis-title">Portfolio analysis</h2><p id="analysis-basis">Loading</p></div>
-        <dl class="metrics"><div><dt><span id="forecast-growth-label">Expected annual return</span><small id="forecast-growth-hint">Model estimate, not a promised return</small></dt><dd id="expected-return">Unavailable</dd></div><div><dt>Estimated annual volatility<small>How widely returns may fluctuate on a yearly scale</small></dt><dd id="estimated-volatility">Unavailable</dd></div></dl>
+        <dl class="metrics"><div><dt><span id="forecast-growth-label">Expected annual return</span><small id="forecast-growth-hint">Estimated annual return</small></dt><dd id="expected-return">Unavailable</dd></div><div><dt>Estimated annual volatility<small>How widely returns may fluctuate on a yearly scale</small></dt><dd id="estimated-volatility">Unavailable</dd></div></dl>
         <p id="forecast-period-note" class="subtle"></p>
         <details id="forecast-details" hidden><summary>Forecast range and assumptions</summary><div id="forecast-detail-content"></div></details>
-        <details><summary>Historical performance</summary>
-        <dl class="metrics"><div><dt><span class="metric-label">Annualised volatility <button type="button" class="info-button" aria-label="About volatility" data-help="How much daily returns fluctuate, expressed on a yearly scale using 252 trading days. Lower means a smoother path in this sample. It does not measure every risk or tell you the most you could lose."><img src="info-outline.svg" width="16" height="16" alt=""></button></span><small class="beginner-copy">How widely returns fluctuated</small></dt><dd id="volatility">Unavailable</dd></div><div><dt><span class="metric-label">Annualised return (arithmetic) <button type="button" class="info-button" aria-label="About annualised return" data-help="The average daily percentage return multiplied by 252. This is a sample average, not compound yearly growth or a forecast. A positive average can still include large losses."><img src="info-outline.svg" width="16" height="16" alt=""></button></span><small class="beginner-copy">Average daily return expressed per year, not a forecast</small></dt><dd id="return">Unavailable</dd></div><div><dt><span class="metric-label">Maximum drawdown <button type="button" class="info-button" aria-label="About drawdown" data-help="The largest percentage fall from an earlier peak to a later low in the calculated portfolio path. A 20% drawdown means a fall from 100 to 80. Future losses could be larger."><img src="info-outline.svg" width="16" height="16" alt=""></button></span><small class="beginner-copy">Largest fall from a previous peak in this sample</small></dt><dd id="drawdown">Unavailable</dd></div><div><dt><span class="metric-label">Sharpe ratio <button type="button" class="info-button" aria-label="About Sharpe ratio" data-help="Average daily excess return divided by its variability, annualised using the square root of 252. The Treasury-bill reference converts monthly returns to daily equivalents; it is not an observed daily rate. Higher means more excess return per unit of fluctuation in this sample, not a guarantee of better future results."><img src="info-outline.svg" width="16" height="16" alt=""></button></span><small class="beginner-copy">Return above Treasury bills per unit of fluctuation</small></dt><dd id="sharpe">Unavailable</dd></div></dl>
+        <details><summary>Historical performance</summary><p class="subtle">What happened during the archive period.</p>
+        <dl class="metrics"><div><dt><span class="metric-label">Annualised volatility <button type="button" class="info-button" aria-label="About volatility" data-help="How much daily returns fluctuate, expressed on a yearly scale using 252 trading days. Lower means a smoother path in this sample. Other risks and larger losses remain possible."><img src="info-outline.svg" width="16" height="16" alt=""></button></span><small class="beginner-copy">How widely returns fluctuated</small></dt><dd id="volatility">Unavailable</dd></div><div><dt><span class="metric-label">Annualised return (arithmetic) <button type="button" class="info-button" aria-label="About annualised return" data-help="The average daily percentage return multiplied by 252. This is a sample average, not compound yearly growth or a forecast. A positive average can still include large losses."><img src="info-outline.svg" width="16" height="16" alt=""></button></span><small class="beginner-copy">Average daily return expressed per year</small></dt><dd id="return">Unavailable</dd></div><div><dt><span class="metric-label">Maximum drawdown <button type="button" class="info-button" aria-label="About drawdown" data-help="The largest percentage fall from an earlier peak to a later low in the calculated portfolio path. A 20% drawdown means a fall from 100 to 80. Future losses could be larger."><img src="info-outline.svg" width="16" height="16" alt=""></button></span><small class="beginner-copy">Largest fall from a previous peak in this sample</small></dt><dd id="drawdown">Unavailable</dd></div><div><dt><span class="metric-label">Sharpe ratio <button type="button" class="info-button" aria-label="About Sharpe ratio" data-help="Average daily excess return divided by its variability, annualised using the square root of 252. The Treasury-bill reference converts monthly returns to daily equivalents; the daily rates are reconstructed. Higher means more excess return per unit of fluctuation in this sample. Future results can differ."><img src="info-outline.svg" width="16" height="16" alt=""></button></span><small class="beginner-copy">Return above Treasury bills per unit of fluctuation</small></dt><dd id="sharpe">Unavailable</dd></div></dl>
         </details>
         <p id="portfolio-reading" class="reading"></p>
         <p id="overlap-reading"></p>
@@ -100,7 +100,7 @@
       <p id="suggestion-state" role="status"></p>
       <div id="suggestion-list"></div>
       <button id="retry-suggestions" type="button" hidden>Retry suggestions</button>
-      <details><summary>How these suggestions are calculated</summary><p>We start with 15% and 30% asset allocations and show up to 3 changes. We also test adding cash to each mix when needed to meet your loss screens, so final percentages may be smaller. Other positions scale proportionally; protected cash stays available. Your period sets the growth comparison. Your loss limit checks past drawdown and modelled losses along the way. Future losses can exceed both. Volatility must fall by 0.1 percentage points, except when a smaller reduction meets your loss limit. Growth and preservation use different rankings. Keeping your portfolio is also an option.</p></details>
+      <details><summary>How these suggestions are calculated</summary><p>We compare asset mixes and cash reserves, then show up to 3 options that meet your preferences.</p><ul><li>Growth aims to improve estimated growth while reducing fluctuations. If your current mix exceeds your loss limit, reducing risk takes priority.</li><li>Preservation and essential needs prioritise smaller potential losses.</li><li>We start asset allocations at 15% and 30%, scale other holdings proportionally and add cash when needed. Protected cash is retained.</li><li>Volatility normally needs to fall by 0.1 percentage points. A smaller reduction is accepted when repairing a breached loss limit.</li></ul><p>Your horizon sets the comparison period. Loss checks cover historical drawdown, modelled peak-to-trough losses and the lower growth estimate. Actual losses can exceed these estimates.</p></details>
     </section>
     </div>
 
@@ -110,7 +110,32 @@
     <!-- A native dialog sits above the page, so opening this explanation cannot push other sections down -->
     <dialog id="analysis-dialog" aria-labelledby="analysis-dialog-title" aria-describedby="analysis-dialog-copy">
       <h2 id="analysis-dialog-title">Analysis limits</h2>
-      <p id="analysis-dialog-copy">Historical prices include provider adjustments for splits and distributions. Future returns are estimates. Weights rebalance every session. Cash earns 0%; costs and taxes are excluded. Return is the arithmetic mean multiplied by 252; volatility uses the square root of 252. Maximum drawdown is the largest decline from a previous peak. Sharpe uses monthly Treasury-bill returns converted to daily equivalents. Forecasts use only data through the displayed decision date. Dated fund holdings have partial coverage, shown in the portfolio report.</p>
+      <p id="analysis-dialog-copy">Estimates use historical prices. Future outcomes can differ.</p>
+      <ul>
+        <li>Cash earns 0% in the model. Fees, taxes and inflation are excluded.</li>
+        <li>Calculations keep allocation percentages fixed. Actual holdings drift as prices change.</li>
+        <li>Fund holdings coverage is partial. Unknown exposure appears in the report.</li>
+      </ul>
+      <details>
+        <summary>Data coverage</summary>
+        <p id="analysis-data-copy"></p>
+        <p>The archive contains selected surviving assets, which can make results look better than a wider market sample. Fund holdings describe 1 dated snapshot.</p>
+      </details>
+      <details>
+        <summary>Forecast assumptions</summary>
+        <p>Forecasts use prices available by the displayed decision date. Your investment period sets the growth projection. Estimated returns and risks are assumed to persist; market shocks can produce larger losses.</p>
+        <p>Keeping model weights fixed assumes daily rebalancing. Trading less often changes the results.</p>
+      </details>
+      <details>
+        <summary>Calculation details</summary>
+        <ul>
+          <li>Annual return: average daily return multiplied by 252.</li>
+          <li>Volatility: daily return variability multiplied by the square root of 252.</li>
+          <li>Maximum drawdown: the largest fall from a previous peak.</li>
+          <li>Sharpe: return above a Treasury-bill reference per unit of fluctuation. Monthly reference returns from the Kenneth French Data Library are converted to daily equivalents. Annualisation assumes uncorrelated daily excess returns.</li>
+        </ul>
+        <p>Return calculations use asset prices. Fund holdings are used separately to assess exposure and overlap.</p>
+      </details>
 
       <p><a id="source-link" href="https://www.kaggle.com/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs" target="_blank" rel="noopener noreferrer" hidden>Archive source and publisher licence</a></p>
 

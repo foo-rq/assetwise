@@ -45,10 +45,10 @@ test('analysis sends survey answers and displays cumulative growth separately fr
   assert.equal(nodes['forecast-growth-label'].textContent, 'Modelled growth over 9 years');
   assert.equal(nodes['expected-return'].textContent, '72.00%');
   assert.equal(nodes['estimated-volatility'].textContent, '20.00%');
-  assert.match(nodes['forecast-detail-content'].innerHTML, /Expected annual return: 8.00%/);
+  assert.match(nodes['forecast-detail-content'].innerHTML, /Expected annual return<\/th><td class="number">8.00%/);
   assert.match(nodes['forecast-detail-content'].innerHTML, /-20.00% to 180.00%/);
-  assert.match(nodes['forecast-detail-content'].innerHTML, /Drawdown screen over 9 years: 60.00%/);
-  assert.match(nodes['forecast-detail-content'].innerHTML, /peak-to-trough loss estimate, not a guaranteed maximum/);
+  assert.match(nodes['forecast-detail-content'].innerHTML, /Modelled peak-to-trough loss<\/th><td class="number">60.00%/);
+  assert.match(nodes['forecast-detail-content'].innerHTML, /Actual growth and losses can fall outside/);
   assert.equal(nodes['forecast-details'].hidden, false);
 });
 
@@ -70,4 +70,24 @@ test('analysis rejects a response for an old investment period', async () => {
   assert.equal(nodes['retry-analysis'].hidden, false);
   assert.equal(nodes['forecast-details'].hidden, true);
   assert.equal(context.latestAnalysis, null);
+});
+
+
+test('pending analysis retains disclosure layout and clears busy state after success or failure', async () => {
+  let finish;
+  const { context, nodes } = setup(() => new Promise(resolve => { finish = resolve; }), { horizon_years: 9 });
+  const first = context.updateAnalysis();
+  nodes['forecast-details'] = { hidden: false };
+  nodes['forecast-period-note'] = { textContent: 'Existing period' };
+  finish({ ok: true, json: async () => result });
+  await first;
+  const pending = context.updateAnalysis();
+  assert.equal(nodes['portfolio-analysis'].ariaBusy, 'true');
+  assert.equal(nodes['forecast-details'].hidden, false);
+  assert.equal(context.latestAnalysis, null);
+  finish({ ok: false });
+  await pending;
+  assert.equal(nodes['portfolio-analysis'].ariaBusy, 'false');
+  assert.equal(nodes['forecast-details'].hidden, true);
+  assert.equal(nodes['retry-analysis'].hidden, false);
 });
